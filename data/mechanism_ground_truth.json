@@ -1,0 +1,77 @@
+{
+  "V82A": {
+    "mechanism": "Val82 is a beta-branched residue lining the S1/S1' subpocket whose side chain packs against the P1/P1' groups of protease inhibitors. V82A removes hydrophobic bulk, enlarging the subpocket and weakening van der Waals contacts with the inhibitor's P1/P1' substituents.",
+    "source": "IAS-USA 2022 PI resistance mutations; King et al. 2004",
+    "affects_drugs": ["ATV", "IDV", "LPV", "NFV", "SQV"]
+  },
+  "V82F": {
+    "mechanism": "Val82 lines the S1 subpocket. Substituting the large aromatic phenylalanine (V82F) reshapes and constricts the subpocket, distorting the van der Waals packing against inhibitor P1 groups.",
+    "source": "IAS-USA 2022; Weber & Agniswamy 2009",
+    "affects_drugs": ["ATV", "IDV", "LPV", "SQV"]
+  },
+  "I84V": {
+    "mechanism": "Ile84 makes direct hydrophobic contact with inhibitor P1'/P2 substituents in the active site. I84V removes a methyl group, reducing van der Waals packing against essentially all PIs and producing broad cross-resistance.",
+    "source": "IAS-USA 2022; Weber & Agniswamy 2009",
+    "affects_drugs": ["ATV", "DRV", "IDV", "LPV", "NFV", "SQV"]
+  },
+  "L90M": {
+    "mechanism": "Leu90 does not contact the inhibitor directly. L90M repositions the side chain against the catalytic Asp25 loop (residues 23-25), perturbing active-site geometry and the catalytic aspartate environment, which indirectly weakens inhibitor binding.",
+    "source": "IAS-USA 2022; Hong et al. 2000",
+    "affects_drugs": ["ATV", "IDV", "NFV", "SQV"]
+  },
+  "D30N": {
+    "mechanism": "Asp30 forms a specific hydrogen bond / salt-bridge interaction with the P2 aniline amide of nelfinavir. D30N removes the carboxylate, abolishing this drug-specific hydrogen bond; the effect is highly specific to nelfinavir.",
+    "source": "IAS-USA 2022; Wlodawer & Vondrasek 1998",
+    "affects_drugs": ["NFV"]
+  },
+  "N88S": {
+    "mechanism": "Asn88 sits near the Asp30 / active-site loop and participates in a hydrogen-bonding network that positions Asp30. N88S disrupts this network and repositions the D30 loop, reducing binding of nelfinavir, atazanavir and indinavir.",
+    "source": "IAS-USA 2022; Mitsuya et al.",
+    "affects_drugs": ["ATV", "IDV", "NFV"]
+  },
+  "V32I": {
+    "mechanism": "Val32 lines the S2/S2' subpocket. V32I introduces a bulkier beta-branched side chain that alters packing against the inhibitor P2/P2' groups; a key residue in the darunavir/amprenavir resistance pathway.",
+    "source": "IAS-USA 2022",
+    "affects_drugs": ["ATV", "DRV", "FPV", "IDV", "LPV"]
+  },
+  "L33F": {
+    "mechanism": "Leu33 lies near the flap/substrate cleft. L33F introduces an aromatic side chain that alters hydrophobic packing against the inhibitor; an accessory mutation in the darunavir/fosamprenavir/atazanavir pathways.",
+    "source": "IAS-USA 2022",
+    "affects_drugs": ["ATV", "DRV", "FPV"]
+  },
+  "M46I": {
+    "mechanism": "Met46 is a flap residue that does not contact the inhibitor directly. M46I is an accessory flap mutation that alters flap dynamics and closure and compensates for active-site mutations, broadly contributing to PI resistance.",
+    "source": "IAS-USA 2022",
+    "affects_drugs": ["ATV", "IDV", "LPV", "NFV"]
+  },
+  "I47V": {
+    "mechanism": "Ile47 is a flap residue lining the S2' subpocket. I47V removes a methyl group, reducing hydrophobic contact with the inhibitor as the flaps close; contributes to lopinavir and darunavir resistance.",
+    "source": "IAS-USA 2022",
+    "affects_drugs": ["DRV", "FPV", "LPV"]
+  },
+  "G48V": {
+    "mechanism": "Gly48 sits at the highly conserved flap tip. Introducing a bulky valine (G48V) causes steric hindrance that impairs flap closure over the inhibitor, most strongly reducing saquinavir binding.",
+    "source": "IAS-USA 2022",
+    "affects_drugs": ["ATV", "SQV"]
+  },
+  "I50V": {
+    "mechanism": "Ile50 at the flap tip makes van der Waals contact with the inhibitor as the flaps close over the active site. I50V removes a methyl group, reducing this flap-inhibitor contact; a signature mutation for darunavir, amprenavir and lopinavir.",
+    "source": "IAS-USA 2022",
+    "affects_drugs": ["DRV", "FPV", "LPV"]
+  },
+  "I50L": {
+    "mechanism": "Ile50 at the flap tip contacts the inhibitor. I50L reshapes flap-tip packing in a way that selectively reduces atazanavir binding (while often increasing susceptibility to other PIs); an atazanavir signature mutation.",
+    "source": "IAS-USA 2022; Colonno et al. 2004",
+    "affects_drugs": ["ATV"]
+  },
+  "I54M": {
+    "mechanism": "Ile54 in the flap modulates flap flexibility and hydrophobic packing. I54M alters flap dynamics and inhibitor contacts, contributing broadly to PI resistance as part of flap-mutation pathways.",
+    "source": "IAS-USA 2022",
+    "affects_drugs": ["ATV", "DRV", "LPV"]
+  },
+  "L76V": {
+    "mechanism": "Leu76 packs in the hydrophobic core adjacent to the active site. L76V reduces hydrophobic packing, decreasing binding of darunavir, lopinavir, fosamprenavir and indinavir (while re-sensitizing atazanavir and saquinavir).",
+    "source": "IAS-USA 2022",
+    "affects_drugs": ["DRV", "FPV", "IDV", "LPV"]
+  }
+}
