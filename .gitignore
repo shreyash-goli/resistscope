@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+
+# Secrets / env
+.env
+*.key
+
+# Large, regenerable data artifacts (rebuild with scripts/01-03).
+# downloaded Rhee dataset + 3OXC PDB:
+data/raw/
+# wildtype + 285 mutant PDB/PDBQT (~111 MB):
+data/structures/
+
+# Deploy bundle
+*.tar.gz
+
+# NOTE: these small, expensive-to-regenerate outputs are committed on purpose
+# (not ignored): data/panels/, data/docking_results/, data/validation/,
+# data/ligands/, data/mechanism_ground_truth.json

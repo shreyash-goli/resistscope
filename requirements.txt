@@ -1,0 +1,25 @@
+# ResistScope Python dependencies.
+#
+# NOTE: The scientific stack (rdkit, openmm, pdbfixer, vina) is best installed
+# via conda — see environment.yml. This file lists the pip-installable subset
+# for reference and for environments where conda is unavailable.
+
+# --- Cheminformatics / docking (prefer conda; see environment.yml) ---
+# rdkit
+# openmm
+# pdbfixer
+# vina
+
+# --- pip packages ---
+numpy
+scipy
+pandas
+matplotlib
+biopython
+meeko
+gemmi          # required by meeko 0.7.x; not pulled in automatically
+fastapi
+uvicorn
+requests
+anthropic
+pyarrow

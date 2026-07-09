@@ -1,0 +1,24 @@
+name: resistscope
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - rdkit
+  - openmm
+  - pdbfixer
+  - vina
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - biopython
+  - pip
+  - pip:
+    - meeko
+    - gemmi          # required by meeko 0.7.x; not pulled in automatically
+    - fastapi
+    - uvicorn
+    - requests
+    - anthropic
+    - pyarrow
