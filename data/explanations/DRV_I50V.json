@@ -1,0 +1,48 @@
+{
+  "drug": "DRV",
+  "mutation": "I50V",
+  "delta_delta_g": 0.1850000000000005,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 5.7,
+    "min_distance_to_ligand_angstrom": 2.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": 0.1850000000000005,
+    "delta_g": -8.827
+  },
+  "explanation": "The I50V mutation reduces darunavir binding through loss of critical van der Waals contacts in the flap region: isoleucine's larger branched side chain makes extensive hydrophobic interactions with darunavir at the 2.2 \u00c5 minimum distance, while valine's smaller aliphatic residue (26.7 \u0172 volume decrease) creates a hydrophobic cavity that cannot maintain optimal packing interactions with the inhibitor. Though the mutation preserves net hydrophobicity in this lipophilic subpocket, the geometric mismatch between the reduced flap contact surface and darunavir's rigid molecular structure destabilizes binding without requiring compensatory conformational changes (as supported by the flap conformation studies cited in Front Microbiol 2016). This modest but measurable destabilization (+0.19 kcal/mol) accumulates during the binding transition state, explaining how I50V serves as a common escape mutation that subtly erodes darunavir potency without imposing severe fitness costs.",
+  "citations": [
+    {
+      "pmid": "26870021",
+      "title": "Unique Flap Conformation in an HIV-1 Protease with High-Level Darunavir Resistance",
+      "year": "2016",
+      "journal": "Front Microbiol",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26870021/"
+    },
+    {
+      "pmid": "23834142",
+      "title": "A contribution to the drug resistance mechanism of darunavir, amprenavir, indinavir, and saquinavir complexes with HIV-1 protease due to flap mutation I50V: a systematic MM-PBSA and thermodynamic integration study",
+      "year": "2013",
+      "journal": "J Chem Inf Model",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23834142/"
+    },
+    {
+      "pmid": "19629548",
+      "title": "Insights into drug resistance of mutations D30N and I50V to HIV-1 protease inhibitor TMC-114: free energy calculation and molecular dynamic simulation",
+      "year": "2010",
+      "journal": "J Mol Model",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19629548/"
+    }
+  ],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T04:57:16.447837+00:00"
+}

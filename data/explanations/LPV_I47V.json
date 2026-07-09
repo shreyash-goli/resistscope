@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "I47V",
+  "delta_delta_g": 0.08500000000000085,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": 0.08500000000000085,
+    "delta_g": -10.014
+  },
+  "explanation": "The I47V mutation reduces a hydrophobic side chain volume by ~27 \u00c5\u00b3 in the flap region while maintaining direct contact with lopinavir at 2.8 \u00c5, creating a cavity that weakens van der Waals interactions critical for binding affinity. The loss of the bulkier isoleucyl methyl groups removes conformational constraints that normally stabilize the inhibitor through tight hydrophobic packing, allowing suboptimal positioning of lopinavir within the binding pocket. This modest destabilization (~0.09 kcal/mol) reflects that the flap-proximal position tolerates some size reduction, but the maintained direct contact indicates meaningful loss of interaction energy rather than mere steric relief.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:44.204782+00:00"
+}

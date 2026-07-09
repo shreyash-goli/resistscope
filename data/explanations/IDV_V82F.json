@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "V82F",
+  "delta_delta_g": -0.9879999999999995,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.9879999999999995,
+    "delta_g": -11.245
+  },
+  "explanation": "The V82F mutation introduces a bulkier aromatic side chain that creates steric clash with indinavir's ligand scaffold near the S1/S1' subpocket interface, where the residue makes direct contact at 3.3 \u00c5. This unfavorable steric interaction destabilizes the inhibitor's binding pose despite the increased hydrophobic surface area, as the phenylalanine ring cannot be accommodated without displacing the ligand or adopting a suboptimal conformation. The net result is weakened van der Waals complementarity between the expanded residue and indinavir's binding geometry, reducing overall binding affinity by ~1 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:53:03.450408+00:00"
+}

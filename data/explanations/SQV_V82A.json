@@ -1,0 +1,25 @@
+{
+  "drug": "SQV",
+  "mutation": "V82A",
+  "delta_delta_g": 0.798,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.798,
+    "delta_g": -10.732
+  },
+  "explanation": "The V82A mutation creates a cavity within the S1/S1' subpocket by reducing side-chain volume by ~51 \u0172, destabilizing the critical van der Waals contacts that saquinavir makes at the 3.3 \u0172 interface where valine directly contacts the ligand. This loss of favorable hydrophobic packing (despite the minimal 2.4 unit hydrophobicity decrease) fundamentally weakens the enthalpic contribution from ligand-protein interactions in this central binding pocket. The smaller alanine cannot maintain the tight geometric complementarity that saquinavir's rigid scaffold requires, resulting in suboptimal positioning and reduced binding affinity despite the mutation occurring ~10 \u0172 away from the ligand centroid.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:50:46.032205+00:00"
+}

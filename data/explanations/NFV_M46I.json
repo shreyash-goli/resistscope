@@ -1,0 +1,25 @@
+{
+  "drug": "NFV",
+  "mutation": "M46I",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -10.894
+  },
+  "explanation": "The M46I substitution reduces nelfinavir binding through indirect allosteric destabilization of the protease flap region. Methionine's longer, flexible sulfur-containing sidechain at position 46 provides more favorable van der Waals contacts and conformational adaptability within the flap architecture than the more compact, branched isoleucine, even though they have similar hydrophobicity; this subtle loss of conformational optimization propagates through the flap domain to subtly perturb the active site geometry at a distance of ~7 \u00c5, compromising the precise positioning required for optimal nelfinavir coordination. Since the mutation introduces minimal volume change despite occurring in this critical structural region, the resistance mechanism operates through loss of energetically favorable interactions rather than steric clash, making M46I a classical example of flap-mediated indirect resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:52:09.487437+00:00"
+}

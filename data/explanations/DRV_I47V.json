@@ -1,0 +1,48 @@
+{
+  "drug": "DRV",
+  "mutation": "I47V",
+  "delta_delta_g": -0.19500000000000028,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.19500000000000028,
+    "delta_g": -9.207
+  },
+  "explanation": "The I47V substitution in the flap region reduces darunavir binding by creating a cavity that weakens critical van der Waals contacts between the inhibitor and the protease. Isoleucine's larger branched side chain maintains tight packing interactions with darunavir at the 2.8 \u00c5 contact distance, whereas valine's smaller hydrophobic surface (26.7 \u00c5\u00b3 volume loss) generates unfavorable binding geometry and diminishes the stabilizing hydrophobic interactions essential for inhibitor recognition. The modest energetic penalty (-0.20 kcal/mol) reflects a localized rather than catastrophic loss of binding complementarity, consistent with literature describing how I47V in the flap region induces conformational adjustments that preserve overall protease architecture while selectively compromising darunavir's positioning (Biochem Biophys Res Commun 2019; Front Microbiol 2016).",
+  "citations": [
+    {
+      "pmid": "26870021",
+      "title": "Unique Flap Conformation in an HIV-1 Protease with High-Level Darunavir Resistance",
+      "year": "2016",
+      "journal": "Front Microbiol",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26870021/"
+    },
+    {
+      "pmid": "31092330",
+      "title": "Structural studies of antiviral inhibitor with HIV-1 protease bearing drug resistant substitutions of V32I, I47V and V82I",
+      "year": "2019",
+      "journal": "Biochem Biophys Res Commun",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31092330/"
+    },
+    {
+      "pmid": "19147519",
+      "title": "Mutations associated with virological response to darunavir/ritonavir in HIV-1-infected protease inhibitor-experienced patients",
+      "year": "2009",
+      "journal": "J Antimicrob Chemother",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19147519/"
+    }
+  ],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T04:57:28.844903+00:00"
+}

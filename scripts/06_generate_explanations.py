@@ -45,6 +45,9 @@ def main() -> int:
                         help="Cap the number of pairs (for a cheap test run).")
     parser.add_argument("--sleep", type=float, default=0.5,
                         help="Seconds to sleep between API calls (rate limiting).")
+    parser.add_argument("--cite", action="store_true",
+                        help="Ground each explanation in real PubMed literature "
+                             "(NCBI E-utilities) and store citations.")
     args = parser.parse_args()
 
     if not args.docking.exists():
@@ -94,7 +97,7 @@ def main() -> int:
             context = build_structural_context(
                 mut, {"delta_delta_g": ddg, "delta_g": row.get("delta_g")}
             )
-            expl = generate_explanation(drug, mut, ddg, context)
+            expl = generate_explanation(drug, mut, ddg, context, cite=args.cite)
             if cached:
                 n_cached += 1
             else:

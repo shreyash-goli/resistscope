@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "V32I",
+  "delta_delta_g": 0.6620000000000008,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": 0.6620000000000008,
+    "delta_g": -9.437
+  },
+  "explanation": "The V32I substitution introduces a larger branched side chain that creates unfavorable steric clashes with lopinavir within the S2/S2' subpocket, where the residue directly contacts the inhibitor at 4.1 \u00c5. Although isoleucine is only marginally more hydrophobic than valine, its additional 26.7 \u0172 of volume cannot be accommodated without disrupting the precise van der Waals contact geometry that lopinavir requires for optimal binding, resulting in the measured 0.66 kcal/mol binding penalty. The mutation's position at the subpocket periphery (10.7 \u00c5 from ligand centroid) suggests it propagates local conformational strain that indirectly destabilizes the inhibitor's binding pose rather than causing a direct steric blockade.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:50:52.332533+00:00"
+}

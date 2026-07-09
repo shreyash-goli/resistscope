@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "G48V",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The G48V substitution introduces a ~80 \u0172 bulky valine side chain into the flap region at a position that makes direct contact with atazanavir (3.2 \u00c5 minimum distance), creating a steric clash that destabilizes the inhibitor's binding pose without requiring conformational rearrangement of the protein backbone. This volumetric expansion in a functionally constrained region near the ligand binding interface reduces favorable van der Waals contacts and forces suboptimal positioning of atazanavir's critical binding elements. The increased hydrophobicity accompanying this mutation likely provides only marginal compensatory interactions, insufficient to offset the entropic and enthalpic cost of the steric incompatibility.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:52:55.582428+00:00"
+}

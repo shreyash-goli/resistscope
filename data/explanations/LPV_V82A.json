@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "V82A",
+  "delta_delta_g": 0.22900000000000098,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.22900000000000098,
+    "delta_g": -9.87
+  },
+  "explanation": "The V82A substitution reduces a bulky hydrophobic residue to a smaller one within direct contact distance of lopinavir (3.3 \u00c5), creating a cavity in the S1/S1' subpocket that destabilizes van der Waals interactions critical for binding. This 51 \u00c5\u00b3 volume loss weakens the hydrophobic packing interface that normally constrains lopinavir's conformation, allowing the inhibitor greater conformational flexibility and reducing the favorable contact surface energy. The reduced hydrophobicity at this pocket-lining position further diminishes the enthalpic benefit of burying the nonpolar inhibitor surface, collectively accounting for the ~0.23 kcal/mol binding penalty.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:31.761156+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "V82F",
+  "delta_delta_g": -0.23399999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.23399999999999999,
+    "delta_g": -9.831
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain (~50 \u00c5\u00b3 larger) into the S1/S1' subpocket where atazanavir makes critical contacts, creating a steric clash that destabilizes the inhibitor's binding pose despite minimal distance separation (3.3 \u00c5 to nearest ligand atoms). The phenylalanine's rigid benzene ring cannot accommodate the same conformational flexibility as valine's branched aliphatic side chain, forcing atazanavir to adopt a suboptimal binding geometry that weakens van der Waals contacts and positioning of the inhibitor's anchor groups. Although the hydrophobicity decreases slightly, the entropic cost of constraining atazanavir's binding orientation outweighs any marginal hydrophobic gains, resulting in weaker overall binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:52:37.364224+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "drug": "DRV",
+  "mutation": "I84V",
+  "delta_delta_g": -0.36299999999999955,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.36299999999999955,
+    "delta_g": -9.375
+  },
+  "explanation": "The I84V mutation reduces darunavir binding through a subtle loss of van der Waals contacts within the S1/S1' subpocket. Despite the minimal energetic penalty (0.36 kcal/mol), isoleucine's larger branched side chain makes optimal hydrophobic contacts with darunavir's ligand surface, whereas the smaller valine creates a localized cavity that weakens these interactions\u2014a deficit not fully compensated by darunavir's conformational flexibility. This effect is particularly significant because position 84 maintains close proximity (2.4 \u00c5 minimum distance) to the inhibitor while remaining structurally remote from the active site centroid, indicating it functions as a specificity determinant rather than a catalytic element, making the protease-inhibitor interface vulnerable to this seemingly conservative substitution.",
+  "citations": [
+    {
+      "pmid": "30506751",
+      "title": "An in silico pharmacological approach toward the discovery of potent inhibitors to combat drug resistance HIV-1 protease variants",
+      "year": "2019",
+      "journal": "J Cell Biochem",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30506751/"
+    },
+    {
+      "pmid": "39431267",
+      "title": "Design, Synthesis, and Biological Evaluation of Darunavir Analogs as HIV-1 Protease Inhibitors",
+      "year": "2024",
+      "journal": "ACS Bio Med Chem Au",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39431267/"
+    },
+    {
+      "pmid": "17243183",
+      "title": "Atomic resolution crystal structures of HIV-1 protease and mutants V82A and I84V with saquinavir",
+      "year": "2007",
+      "journal": "Proteins",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17243183/"
+    }
+  ],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T04:57:35.692771+00:00"
+}

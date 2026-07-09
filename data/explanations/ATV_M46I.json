@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "M46I",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.09199999999999875,
+    "delta_g": -9.505
+  },
+  "explanation": "The M46I substitution in the flap region introduces a conformational rigidity that indirectly destabilizes atazanavir binding despite minimal volume change; methionine's longer, flexible side chain allows dynamic accommodation of the inhibitor's binding geometry, while isoleucine's branched, compact structure restricts the flap's conformational sampling needed to optimize van der Waals contacts with the ligand. At 7.0 \u00c5 minimum distance, residue 46 doesn't directly contact atazanavir but instead modulates flap positioning\u2014the loss of methionine's conformational plasticity shifts the flap substate ensemble away from the optimal binding pose, reducing the overall complementarity and weakening inhibitor stabilization through entropic and indirect steric effects.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:41.375343+00:00"
+}

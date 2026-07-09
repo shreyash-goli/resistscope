@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "V32I",
+  "delta_delta_g": 0.2370000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": 0.2370000000000001,
+    "delta_g": -10.02
+  },
+  "explanation": "The V32I substitution introduces a bulkier branched side chain that encroaches into the S2/S2' subpocket where indinavir's P2 group makes critical van der Waals contacts; this modest increase in local steric strain (26.7 \u0172 volume expansion) destabilizes the optimal positioning of the inhibitor despite the mutation occurring at the periphery of the binding site (4.1 \u00c5 minimum distance). The enhanced hydrophobicity from the additional methyl branch may also create suboptimal packing interactions with indinavir's aromatic and alkyl moieties in this region, collectively accounting for the measurable loss in binding affinity without requiring a conformational rearrangement of the protease core.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:27.404047+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "L76V",
+  "delta_delta_g": 0.46300000000000097,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": 0.46300000000000097,
+    "delta_g": -9.636
+  },
+  "explanation": "The L76V substitution reduces a large hydrophobic side chain to a smaller one within the protease core scaffold, creating a ~27 \u0172 cavity that is no longer optimally filled by lopinavir's binding surface despite the residue's 4.8 \u00c5 proximity to the ligand. This loss of van der Waals contact surface area between the protease scaffold and the inhibitor destabilizes the bound complex through reduced hydrophobic packing interactions, explaining the modest but measurable weakening of binding affinity. The mutation's location in the structural core rather than directly at the active site suggests it functions as an allosteric destabilizer that subtly distorts the local geometry required for tight inhibitor accommodation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:50:55.819513+00:00"
+}

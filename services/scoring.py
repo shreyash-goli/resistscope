@@ -64,8 +64,8 @@ def compute_robustness_scores(
     simple_mean = float(np.mean(ddg))
     weighted = float(np.average(ddg, weights=weights)) if weights.sum() > 0 else simple_mean
     worst = float(np.max(ddg))
-    # Map 0 kcal/mol -> 100, 3 kcal/mol -> 0 (clamped at 0).
-    robustness = max(0.0, 100.0 - weighted * 33.3)
+    # Map 0 kcal/mol -> 100, 3 kcal/mol -> 0, clamped to [0, 100].
+    robustness = max(0.0, min(100.0, 100.0 - weighted * 33.3))
 
     return {
         "simple_mean_ddg": simple_mean,

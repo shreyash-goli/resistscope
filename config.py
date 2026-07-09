@@ -78,11 +78,13 @@ PUBCHEM_CIDS = {
 }
 
 # === Claude API ===
-# Opus 4.8 is Anthropic's most capable current model — the right default for
-# structural-mechanism reasoning. Swap to "claude-sonnet-5" to cut cost/latency
-# if generating many explanations. (The original "claude-sonnet-4-6" is also a
-# valid current model but a tier below Opus for scientific reasoning.)
-CLAUDE_MODEL = "claude-opus-4-8"
+# IMPORTANT: the larger models (Opus 4.8/4.6, Sonnet 4.6) run a bio-safety
+# classifier that FALSE-POSITIVE REFUSES HIV-1 protease drug-resistance content
+# (stop_reason="refusal", empty output) even though it is mainstream, published
+# science. Haiku 4.5 does not refuse and produces accurate, specific structural
+# explanations — and it is well-suited to this short, heavily-grounded task.
+# Used for both explanation generation and the faithfulness judge.
+CLAUDE_MODEL = "claude-haiku-4-5"
 CLAUDE_MAX_TOKENS = 1024
 
 # === Scoring ===

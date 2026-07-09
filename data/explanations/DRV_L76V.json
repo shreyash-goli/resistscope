@@ -1,0 +1,48 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The L76V mutation reduces darunavir binding through destabilization of the protease core scaffold rather than direct ligand contact. Although L76V does not directly contact the inhibitor (4.8 \u00c5 distance), the loss of ~27 \u0172 of hydrophobic volume in the enzyme's internal core\u2014as established in Biochemistry 2011\u2014compromises dimer stability and creates conformational dynamics that propagate to the ligand binding site. This conformational flexibility, documented in Biomolecules 2021 as a key mechanism of darunavir failure, allows the protease to sample unfavorable conformations that are poorly complementary to darunavir's binding geometry, offsetting the modest thermodynamic penalty (\u22120.33 kcal/mol) through entropic effects and reduced induced-fit optimization of the active site geometry.",
+  "citations": [
+    {
+      "pmid": "36108568",
+      "title": "HIV-1 protease with 10 lopinavir and darunavir resistance mutations exhibits altered inhibition, structural rearrangements and extreme dynamics",
+      "year": "2022",
+      "journal": "J Mol Graph Model",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36108568/"
+    },
+    {
+      "pmid": "33805099",
+      "title": "Acquired HIV-1 Protease Conformational Flexibility Associated with Lopinavir Failure May Shape the Outcome of Darunavir Therapy after Antiretroviral Therapy Switch",
+      "year": "2021",
+      "journal": "Biomolecules",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33805099/"
+    },
+    {
+      "pmid": "21446746",
+      "title": "The L76V drug resistance mutation decreases the dimer stability and rate of autoprocessing of HIV-1 protease by reducing internal hydrophobic contacts",
+      "year": "2011",
+      "journal": "Biochemistry",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21446746/"
+    }
+  ],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T04:57:32.358780+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "drug": "SQV",
+  "mutation": "V82F",
+  "delta_delta_g": 0.2599999999999998,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.2599999999999998,
+    "delta_g": -11.27
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain that creates a steric clash with saquinavir's P1/P1' region, as the phenylalanine's additional ~50 \u0172 of volume encroaches into binding space normally occupied by the inhibitor at the 3.3 \u00c5 contact distance. Although the mutation maintains hydrophobic character, the rigid aromatic ring geometry of phenylalanine is incompatible with saquinavir's ligand conformation compared to valine's flexible aliphatic side chain, forcing unfavorable van der Waals repulsion that destabilizes the inhibitor-protease complex. This steric incompatibility specifically within the S1/S1' subpocket\u2014a critical recognition region\u2014reduces binding affinity despite the increased overall hydrophobicity, explaining the modest but significant resistance phenotype.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:20.080166+00:00"
+}

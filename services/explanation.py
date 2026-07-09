@@ -16,9 +16,55 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import requests
 from Bio.PDB import PDBParser
 
 import config
+
+# NCBI E-utilities (public, no key required) for PubMed literature grounding —
+# the standalone-app equivalent of the Claude for Life Sciences PubMed connector.
+_EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
+
+
+def fetch_pubmed_citations(drug: str, mutation: str, max_results: int = 3,
+                           timeout: int = 20) -> list[dict]:
+    """Return up to ``max_results`` relevant PubMed citations for a mutation.
+
+    Queries NCBI E-utilities for '{drug} HIV-1 protease {mutation} resistance',
+    falling back to a drug-agnostic query. Returns dicts with pmid/title/year/
+    journal/url. Best-effort: returns [] on any network/parse failure.
+    """
+    drug_full = config.PI_DRUGS.get(drug, drug)
+    queries = [
+        f"HIV-1 protease {mutation} {drug_full} resistance",
+        f"HIV-1 protease {mutation} resistance mechanism",
+    ]
+    try:
+        ids = []
+        for term in queries:
+            r = requests.get(f"{_EUTILS}/esearch.fcgi", timeout=timeout, params={
+                "db": "pubmed", "term": term, "retmax": max_results,
+                "retmode": "json", "sort": "relevance"})
+            ids = r.json().get("esearchresult", {}).get("idlist", [])
+            if ids:
+                break
+        if not ids:
+            return []
+        summ = requests.get(f"{_EUTILS}/esummary.fcgi", timeout=timeout, params={
+            "db": "pubmed", "id": ",".join(ids), "retmode": "json"}).json().get("result", {})
+        cites = []
+        for pid in ids:
+            d = summ.get(pid, {})
+            cites.append({
+                "pmid": pid,
+                "title": (d.get("title", "") or "").rstrip("."),
+                "year": (d.get("pubdate", "") or "")[:4],
+                "journal": d.get("source", ""),
+                "url": f"https://pubmed.ncbi.nlm.nih.gov/{pid}/",
+            })
+        return cites
+    except Exception:  # noqa: BLE001 - literature grounding is best-effort
+        return []
 
 # --- Amino-acid physicochemical properties ---
 # volume (A^3, Zamyatnin 1972), charge at pH 7, Kyte-Doolittle hydrophobicity.
@@ -223,11 +269,14 @@ def generate_explanation(
     structural_context: dict,
     cache_dir: Path = None,
     model: str = None,
+    cite: bool = False,
 ) -> str:
     """Return a cached or freshly-generated mechanistic explanation.
 
     Cache key is ``{drug}_{mutation}.json`` in ``cache_dir``. On a cache hit the
-    stored explanation is returned without an API call.
+    stored explanation is returned without an API call. When ``cite`` is set,
+    relevant PubMed literature is fetched and passed to Claude so the explanation
+    is grounded in real papers; the citations are stored in the cache record.
     """
     if cache_dir is None:
         cache_dir = config.EXPLANATIONS_DIR
@@ -246,11 +295,21 @@ def generate_explanation(
         if delta_delta_g is not None
         else "not available"
     )
+    citations = fetch_pubmed_citations(drug, mutation) if cite else []
+    cite_block = ""
+    if citations:
+        cite_block = (
+            "\n\nRelevant peer-reviewed literature (ground your explanation in "
+            "these findings; you may reference them by journal/year):\n"
+            + "\n".join(f"- {c['journal']} {c['year']} (PMID {c['pmid']}): {c['title']}"
+                        for c in citations)
+        )
     user_prompt = (
         f"Drug: {drug_full} ({drug}), an HIV-1 protease inhibitor\n"
         f"Mutation: {mutation}\n"
         f"Predicted delta-delta-G: {ddg_str}\n"
-        f"Structural context:\n{json.dumps(structural_context, indent=2)}\n\n"
+        f"Structural context:\n{json.dumps(structural_context, indent=2)}"
+        f"{cite_block}\n\n"
         f"Explain the structural mechanism by which {mutation} likely reduces "
         f"{drug_full} binding."
     )
@@ -272,6 +331,7 @@ def generate_explanation(
         "delta_delta_g": (float(delta_delta_g) if delta_delta_g is not None else None),
         "structural_context": structural_context,
         "explanation": explanation,
+        "citations": citations,
         "model": model,
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }

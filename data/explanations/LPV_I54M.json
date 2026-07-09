@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "I54M",
+  "delta_delta_g": 0.3100000000000005,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.3100000000000005,
+    "delta_g": -9.789
+  },
+  "explanation": "The I54M substitution in the protease flap region reduces lopinavir binding through a loss of critical hydrophobic packing interactions despite maintaining similar overall volume. Although isoleucine's branched aliphatic side chain is replaced by methionine's longer but thinner sulfur-containing chain, the resultant decrease in hydrophobicity (+2.6 unit loss) weakens van der Waals contacts with lopinavir's nonpolar binding surface approximately 6.7 \u00c5 away, destabilizing the inhibitor pose without introducing compensatory interactions. This subtle hydrophobic erosion in a strategically positioned flap region residue accumulates sufficient energetic penalty to measurably impair binding affinity despite the mutation occurring outside direct ligand contact, reflecting how peripheral conformational changes in the protease's dynamic binding pocket architecture compromise inhibitor accommodation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:16.732940+00:00"
+}

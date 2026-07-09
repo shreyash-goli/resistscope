@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "delta_delta_g": -0.136000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.136000000000001,
+    "delta_g": -9.733
+  },
+  "explanation": "The V32I mutation introduces an additional methyl group that expands the hydrophobic volume by ~27 \u0172 in the S2/S2' subpocket, creating a steric clash with atazanavir's ligand scaffold at the 4.1 \u00c5 contact interface. This volumetric incompatibility disrupts optimal van der Waals packing between the mutation and atazanavir's nonpolar binding surface, while the slight increase in hydrophobicity fails to compensate through enhanced favorable interactions given the fixed geometry of the drug. The destabilization manifests as weakened binding affinity despite the mutation's location 10.7 \u00c5 from the ligand centroid, indicating that even peripheral subpocket perturbations can propagate unfavorable conformational strain at the direct contact points.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:52:12.823984+00:00"
+}

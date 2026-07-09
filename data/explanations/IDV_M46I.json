@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "M46I",
+  "delta_delta_g": -0.24200000000000088,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.24200000000000088,
+    "delta_g": -10.499
+  },
+  "explanation": "The M46I mutation at the flap region introduces a modest reduction in side-chain volume (3.8 \u00c5\u00b3 smaller) while maintaining hydrophobicity, creating a small cavity that destabilizes the precise geometric fit required for indinavir binding in the protease active site. Although the mutation does not directly contact the ligand, its position 7 \u00c5 from indinavir influences the conformational dynamics and structural integrity of the flap\u2014a critical mobile element that must adopt a specific conformation to optimally position the inhibitor and form stabilizing interactions through its neighboring residues. This subtle loss of van der Waals complementarity in the flap architecture weakly destabilizes the protease-inhibitor complex without introducing steric clashes or unfavorable electrostatic changes, resulting in the modest but measurable loss of binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:52:40.658620+00:00"
+}

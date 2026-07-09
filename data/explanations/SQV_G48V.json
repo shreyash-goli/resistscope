@@ -1,0 +1,25 @@
+{
+  "drug": "SQV",
+  "mutation": "G48V",
+  "delta_delta_g": 0.39700000000000024,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": 0.39700000000000024,
+    "delta_g": -11.133
+  },
+  "explanation": "The G48V mutation introduces a bulky valine side chain (~80 \u0172 increase) into the flap region where glycine's flexibility was critical for accommodating saquinavir's binding geometry. This steric encroachment at 3.2 \u00c5 from the ligand creates unfavorable van der Waals contacts that destabilize the inhibitor's positioning, particularly in conformations saquinavir adopts when engaging the active site. The loss of glycine's conformational freedom\u2014which normally allows the flap to adopt multiple states during ligand binding\u2014forces the protein into a less optimal conformation for inhibitor interaction, reducing binding affinity without requiring charge or polarity changes.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:04.698415+00:00"
+}

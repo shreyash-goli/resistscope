@@ -1,0 +1,48 @@
+{
+  "drug": "DRV",
+  "mutation": "I54M",
+  "delta_delta_g": 0.33800000000000097,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.33800000000000097,
+    "delta_g": -8.674
+  },
+  "explanation": "The I54M substitution in the flap region reduces darunavir binding through loss of hydrophobic contact strength rather than direct disruption. Although isoleucine and methionine have nearly identical volumes, the replacement of isoleucine's branched aliphatic side chain with methionine's linear, sulfur-containing backbone introduces a ~2.6 unit decrease in hydrophobicity; at a distance of 6.7 \u00c5ngstr\u00f6ms from the ligand, this subtle change weakens the cumulative van der Waals interactions that normally stabilize darunavir's positioning against the protease flap. The flap region's conformational flexibility means that the loss of this secondary hydrophobic anchor allows greater sampling of non-productive conformational states, destabilizing the inhibitor complex without creating obvious steric clashes\u2014a mechanism consistent with darunavir's high genetic barrier to resistance, where resistance typically emerges through accumulation of subtle, distributed changes rather than single dramatic mutations.",
+  "citations": [
+    {
+      "pmid": "39431267",
+      "title": "Design, Synthesis, and Biological Evaluation of Darunavir Analogs as HIV-1 Protease Inhibitors",
+      "year": "2024",
+      "journal": "ACS Bio Med Chem Au",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39431267/"
+    },
+    {
+      "pmid": "29511083",
+      "title": "Mechanism of Darunavir (DRV)'s High Genetic Barrier to HIV-1 Resistance: A Key V32I Substitution in Protease Rarely Occurs, but Once It Occurs, It Predisposes HIV-1 To Develop DRV Resistance",
+      "year": "2018",
+      "journal": "mBio",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29511083/"
+    },
+    {
+      "pmid": "20640812",
+      "title": "Structural basis for the resilience of Darunavir (TMC114) resistance major flap mutations of HIV-1 protease",
+      "year": "2009",
+      "journal": "Interdiscip Sci",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20640812/"
+    }
+  ],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T04:57:11.987247+00:00"
+}

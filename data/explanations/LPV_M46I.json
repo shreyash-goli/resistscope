@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "M46I",
+  "delta_delta_g": 0.745000000000001,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.745000000000001,
+    "delta_g": -9.354
+  },
+  "explanation": "The M46I substitution in the flap region reduces lopinavir binding through a subtle conformational disruption rather than direct contact loss. Methionine's longer, flexible side chain at position 46 normally allows the flap to adopt a conformation that optimally positions the binding pocket; isoleucine's shorter, branched side chain creates a rigid constraint that slightly shifts flap geometry, indirectly distorting the lopinavir binding pocket ~7 \u00c5 away and destabilizing critical van der Waals contacts between the inhibitor and distal binding sites. Although the volume change is minimal, the loss of methionine's conformational plasticity combined with increased hydrophobic packing rigidity forces a suboptimal binding mode that propagates through the flexible flap architecture to weaken drug positioning.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:50:49.177692+00:00"
+}

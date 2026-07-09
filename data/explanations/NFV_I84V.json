@@ -1,0 +1,25 @@
+{
+  "drug": "NFV",
+  "mutation": "I84V",
+  "delta_delta_g": 0.25,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.25,
+    "delta_g": -10.525
+  },
+  "explanation": "The I84V mutation removes ~27 \u0172 of hydrophobic surface area from the S1/S1' subpocket, creating a cavity that destabilizes van der Waals contacts between nelfinavir's nonpolar scaffold and the protease binding pocket at the close 2.4 \u00c5 interface. While the mutation preserves hydrophobic character (minimal charge or polarity change), the reduced branching of valine compared to isoleucine's larger isobutyl side chain diminishes favorable dispersion interactions that normally lock the inhibitor in optimal binding geometry. This energetic penalty of ~0.25 kcal/mol reflects accumulated loss of contact optimization rather than introduction of steric clash, effectively loosening nelfinavir's grip on the protease while leaving the binding site fundamentally competent.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:23.772818+00:00"
+}

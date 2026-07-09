@@ -1,0 +1,25 @@
+{
+  "drug": "NFV",
+  "mutation": "N88S",
+  "delta_delta_g": -0.09799999999999898,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 15.3,
+    "min_distance_to_ligand_angstrom": 7.3,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.09799999999999898,
+    "delta_g": -10.873
+  },
+  "explanation": "The N88S mutation reduces nelfinavir binding through a subtle allosteric mechanism rather than direct contact: asparagine's larger polar side chain maintains a network of water-mediated interactions and conformational stability in the C-terminal dimer region, and its replacement with the smaller serine creates a local cavity that destabilizes the protease geometry without directly contacting the inhibitor. Although the mutation lies 7.3 \u00c5 from the ligand, this distal perturbation likely propagates conformational strain through the dimer interface, compromising the precise active site architecture required for optimal nelfinavir accommodation despite the relatively modest energetic penalty.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:57.300284+00:00"
+}

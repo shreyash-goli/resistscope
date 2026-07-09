@@ -1,0 +1,48 @@
+{
+  "drug": "DRV",
+  "mutation": "L33F",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -9.131
+  },
+  "explanation": "The L33F mutation introduces a rigid aromatic ring at position 33 in the flap hinge region, which acts as a molecular anchor that restricts the conformational flexibility of the protease's mobile loops\u2014a structural constraint that indirectly destabilizes darunavir binding by preventing the dynamic reorientation of the binding pocket required for optimal inhibitor accommodation. Although the mutation does not directly contact darunavir (at 9.1 \u00c5 minimum distance), the increased van der Waals volume and loss of hydrophobic character create a more constrained local environment that propagates allosteric effects through the flap architecture, reducing the energetic favorability of the DRV-bound state relative to the apo conformation. This mechanism explains darunavir's elevated genetic barrier to L33F resistance compared to other protease mutations: the rigid aromatic substitution must be precisely tolerated by the protease catalytic machinery while simultaneously reducing inhibitor binding, making this a structurally costly adaptation that only manifests after other compensatory mutations have already compromised drug binding.",
+  "citations": [
+    {
+      "pmid": "29124158",
+      "title": "The L33F darunavir resistance mutation acts as a molecular anchor reducing the flexibility of the HIV-1 protease 30s and 80s loops",
+      "year": "2015",
+      "journal": "Biochem Biophys Rep",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29124158/"
+    },
+    {
+      "pmid": "29875244",
+      "title": "HIV-1 Protease Evolvability Is Affected by Synonymous Nucleotide Recoding",
+      "year": "2018",
+      "journal": "J Virol",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29875244/"
+    },
+    {
+      "pmid": "29511083",
+      "title": "Mechanism of Darunavir (DRV)'s High Genetic Barrier to HIV-1 Resistance: A Key V32I Substitution in Protease Rarely Occurs, but Once It Occurs, It Predisposes HIV-1 To Develop DRV Resistance",
+      "year": "2018",
+      "journal": "mBio",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29511083/"
+    }
+  ],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T04:57:24.907622+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "delta_delta_g": -0.11299999999999955,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.11299999999999955,
+    "delta_g": -9.125
+  },
+  "explanation": "The V32I substitution introduces a branched methyl group that increases local hydrophobic volume by ~27 \u0172 within the S2/S2' subpocket, creating a steric clash with darunavir's scaffold despite the modest 4.1 \u00c5 minimum distance to the ligand. This volumetric expansion disrupts the precise van der Waals contact geometry that darunavir exploits for high-affinity binding in this critical recognition pocket, reducing binding enthalpy without compensatory interactions. The literature (mBio 2018, J Mol Graph Model 2015) indicates that V32I destabilizes the conformational landscape of the protease flaps that frame this subpocket, compromising the druggable geometry even though the mutation itself is rarely selected\u2014explaining why this substitution, when it does occur, acts as a predisposing step toward broader DRV resistance.",
+  "citations": [
+    {
+      "pmid": "29511083",
+      "title": "Mechanism of Darunavir (DRV)'s High Genetic Barrier to HIV-1 Resistance: A Key V32I Substitution in Protease Rarely Occurs, but Once It Occurs, It Predisposes HIV-1 To Develop DRV Resistance",
+      "year": "2018",
+      "journal": "mBio",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29511083/"
+    },
+    {
+      "pmid": "25562662",
+      "title": "Exploring the drug resistance of V32I and M46L mutant HIV-1 protease to inhibitor TMC114: flap dynamics and binding mechanism",
+      "year": "2015",
+      "journal": "J Mol Graph Model",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25562662/"
+    },
+    {
+      "pmid": "31092330",
+      "title": "Structural studies of antiviral inhibitor with HIV-1 protease bearing drug resistant substitutions of V32I, I47V and V82I",
+      "year": "2019",
+      "journal": "Biochem Biophys Res Commun",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31092330/"
+    }
+  ],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T04:57:20.678133+00:00"
+}

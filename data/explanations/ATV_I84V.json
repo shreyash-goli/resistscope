@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "I84V",
+  "delta_delta_g": 0.39700000000000024,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.39700000000000024,
+    "delta_g": -9.2
+  },
+  "explanation": "The I84V mutation reduces the hydrophobic packing environment within the S1/S1' subpocket by removing ~27 \u0172 of buried nonpolar surface area, despite maintaining direct van der Waals contacts with atazanavir at 2.4 \u0172. This creates a cavity that destabilizes the ligand's binding pose, as the smaller valine side chain cannot provide equivalent hydrophobic contact density that atazanavir requires for optimal active site positioning. The resulting loss of favorable van der Waals interactions outweighs any entropic benefit from reduced steric strain, manifesting as measurably weakened binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:51:01.554827+00:00"
+}

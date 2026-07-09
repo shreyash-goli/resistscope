@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "N88S",
+  "delta_delta_g": -0.22799999999999976,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 15.3,
+    "min_distance_to_ligand_angstrom": 7.3,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.22799999999999976,
+    "delta_g": -10.485
+  },
+  "explanation": "The N88S mutation reduces indinavir binding through an indirect allosteric mechanism rather than direct contact loss. Asparagine's larger polar side chain (with its amide group) maintains specific hydrogen bonding networks and van der Waals packing in the C-terminal dimer region that stabilize the protease's overall geometry for optimal inhibitor accommodation; serine's smaller, more flexible hydroxyl group cannot maintain this same structural scaffold, causing a subtle conformational relaxation that propagates through the dimer interface despite being 7.3 \u00c5 from the ligand. This geometric destabilization weakly disfavors the protease conformation that indinavir requires for productive binding, despite the mutation not directly contacting the drug.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-09T03:52:34.086127+00:00"
+}
