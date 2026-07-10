@@ -1,0 +1,316 @@
+{
+  "target_id": "FLU_NA",
+  "label": "Influenza A neuraminidase",
+  "source_pdb": "2HU4",
+  "structure": {
+    "title": "N1 NEURAMINIDASE IN COMPLEX WITH OSELTAMIVIR 2",
+    "chains": [
+      {
+        "id": "A",
+        "n_residues": 385,
+        "kind": "protein"
+      },
+      {
+        "id": "B",
+        "n_residues": 385,
+        "kind": "protein"
+      },
+      {
+        "id": "C",
+        "n_residues": 385,
+        "kind": "protein"
+      },
+      {
+        "id": "D",
+        "n_residues": 385,
+        "kind": "protein"
+      },
+      {
+        "id": "E",
+        "n_residues": 385,
+        "kind": "protein"
+      },
+      {
+        "id": "F",
+        "n_residues": 385,
+        "kind": "protein"
+      },
+      {
+        "id": "G",
+        "n_residues": 385,
+        "kind": "protein"
+      },
+      {
+        "id": "H",
+        "n_residues": 385,
+        "kind": "protein"
+      }
+    ],
+    "ligands": [
+      {
+        "hetcode": "G39",
+        "chain": "A",
+        "n_atoms": 20,
+        "centroid": [
+          0.383,
+          81.705,
+          109.195
+        ]
+      },
+      {
+        "hetcode": "G39",
+        "chain": "B",
+        "n_atoms": 20,
+        "centroid": [
+          1.397,
+          18.788,
+          108.764
+        ]
+      },
+      {
+        "hetcode": "G39",
+        "chain": "C",
+        "n_atoms": 20,
+        "centroid": [
+          -30.578,
+          49.698,
+          108.006
+        ]
+      },
+      {
+        "hetcode": "G39",
+        "chain": "D",
+        "n_atoms": 20,
+        "centroid": [
+          32.208,
+          50.742,
+          110.083
+        ]
+      },
+      {
+        "hetcode": "G39",
+        "chain": "E",
+        "n_atoms": 20,
+        "centroid": [
+          -38.294,
+          -114.067,
+          87.238
+        ]
+      },
+      {
+        "hetcode": "G39",
+        "chain": "F",
+        "n_atoms": 20,
+        "centroid": [
+          -29.652,
+          -79.209,
+          35.198
+        ]
+      },
+      {
+        "hetcode": "G39",
+        "chain": "G",
+        "n_atoms": 20,
+        "centroid": [
+          -31.718,
+          -122.928,
+          44.118
+        ]
+      },
+      {
+        "hetcode": "G39",
+        "chain": "H",
+        "n_atoms": 20,
+        "centroid": [
+          -36.552,
+          -70.261,
+          78.449
+        ]
+      }
+    ],
+    "suggested": {
+      "chains": [
+        "A",
+        "B"
+      ],
+      "mutate_chains": [
+        "A"
+      ],
+      "ligand_hetcode": "G39",
+      "docking_center": [
+        0.383,
+        81.705,
+        109.195
+      ]
+    }
+  },
+  "biology": {
+    "target_id": "FLU_NA",
+    "label": "Influenza A neuraminidase",
+    "organism": "Influenza A virus",
+    "drug_class": "neuraminidase inhibitor",
+    "binding_site": "catalytic sialic acid pocket",
+    "drugs": [
+      {
+        "abbrev": "OSE",
+        "name": "oseltamivir"
+      },
+      {
+        "abbrev": "ZAN",
+        "name": "zanamivir"
+      },
+      {
+        "abbrev": "PER",
+        "name": "peramivir"
+      },
+      {
+        "abbrev": "LAN",
+        "name": "laninamivir"
+      }
+    ],
+    "resistance_mutations": [
+      {
+        "mutation": "H275Y",
+        "note": "Well-characterized oseltamivir resistance marker; common in H1N1"
+      },
+      {
+        "mutation": "E119V",
+        "note": "Cross-resistance to oseltamivir, zanamivir, peramivir in N1 subtype; high-level resistance"
+      },
+      {
+        "mutation": "R292K",
+        "note": "High-level oseltamivir resistance in N2 subtype (>10,000-fold IC50 increase); reduced susceptibility to multiple NAIs"
+      },
+      {
+        "mutation": "N294S",
+        "note": "Oseltamivir resistance in both N1 and N2 subtypes; framework mutation"
+      },
+      {
+        "mutation": "H274Y",
+        "note": "Oseltamivir and peramivir resistance in N1 subtype"
+      },
+      {
+        "mutation": "E119D",
+        "note": "Single and double (E119D/H274Y) mutations conferring oseltamivir resistance"
+      }
+    ],
+    "reference_pdb": "4B7Q",
+    "dataset": {
+      "exists": true,
+      "name": "WHO FluSurfer and CDC FluNet/GISAID databases",
+      "notes": "Global influenza surveillance networks track oseltamivir and zanamivir resistance; public sequence databases (GISAID, NCBI) contain genotype-phenotype data; no single consolidated public dataset was explicitly identified in PubMed, but surveillance data is integrated across WHO, CDC and GISAID systems"
+    },
+    "confidence": "high",
+    "citation_pmids": [
+      "39964293",
+      "31783761",
+      "21172786",
+      "31773463",
+      "23675925",
+      "25042157",
+      "26153242",
+      "30299356",
+      "17705169",
+      "32152244",
+      "32750468",
+      "17302366",
+      "21253602",
+      "17919743",
+      "20037767"
+    ]
+  },
+  "citations": [
+    {
+      "pmid": "39964293",
+      "title": "Neuraminidase reassortment and oseltamivir resistance in clade 2.3.4.4b A(H5N1) viruses circulating among Canadian poultry, 2024",
+      "year": "2025",
+      "journal": "Emerg Microbes Infect"
+    },
+    {
+      "pmid": "31783761",
+      "title": "Influenza A virus hemagglutinin mutations associated with use of neuraminidase inhibitors correlate with decreased inhibition by anti-influenza antibodies",
+      "year": "2019",
+      "journal": "Virol J"
+    },
+    {
+      "pmid": "21172786",
+      "title": "Pandemic H1N1 2009 influenza virus with the H275Y oseltamivir resistance neuraminidase mutation shows a small compromise in enzyme activity and viral fitness",
+      "year": "2011",
+      "journal": "J Antimicrob Chemother"
+    },
+    {
+      "pmid": "31773463",
+      "title": "Source of oseltamivir resistance due to single E119D and double E119D/H274Y mutations in pdm09H1N1 influenza neuraminidase",
+      "year": "2020",
+      "journal": "J Comput Aided Mol Des"
+    },
+    {
+      "pmid": "23675925",
+      "title": "Emergence of oseltamivir resistance: control and management of influenza before, during and after the pandemic",
+      "year": "2013",
+      "journal": "Infect Disord Drug Targets"
+    },
+    {
+      "pmid": "25042157",
+      "title": "Influenza A(H1N1)pdm09 resistance and cross-decreased susceptibility to oseltamivir and zanamivir antiviral drugs",
+      "year": "2015",
+      "journal": "J Med Virol"
+    },
+    {
+      "pmid": "26153242",
+      "title": "Peramivir: an intravenous neuraminidase inhibitor",
+      "year": "2015",
+      "journal": "Expert Opin Pharmacother"
+    },
+    {
+      "pmid": "30299356",
+      "title": "Neuraminidase inhibitor resistance in influenza: a clinical perspective",
+      "year": "2018",
+      "journal": "Curr Opin Infect Dis"
+    },
+    {
+      "pmid": "17705169",
+      "title": "Neuraminidase inhibitor resistance in influenza viruses",
+      "year": "2007",
+      "journal": "J Med Virol"
+    },
+    {
+      "pmid": "32152244",
+      "title": "Antivirals Targeting the Neuraminidase",
+      "year": "2022",
+      "journal": "Cold Spring Harb Perspect Med"
+    },
+    {
+      "pmid": "32750468",
+      "title": "Functional neuraminidase inhibitor resistance motifs in avian influenza A(H5Nx) viruses",
+      "year": "2020",
+      "journal": "Antiviral Res"
+    },
+    {
+      "pmid": "17302366",
+      "title": "Impact of neuraminidase mutations conferring influenza resistance to neuraminidase inhibitors in the N1 and N2 genetic backgrounds",
+      "year": "2006",
+      "journal": "Antivir Ther"
+    },
+    {
+      "pmid": "21253602",
+      "title": "Detection of resistance mutations to antivirals oseltamivir and zanamivir in avian influenza A viruses isolated from wild birds",
+      "year": "2011",
+      "journal": "PLoS One"
+    },
+    {
+      "pmid": "17919743",
+      "title": "Activity of the neuraminidase inhibitor A-315675 against oseltamivir-resistant influenza neuraminidases of N1 and N2 subtypes",
+      "year": "2008",
+      "journal": "Antiviral Res"
+    },
+    {
+      "pmid": "20037767",
+      "title": "Molecular prediction of oseltamivir efficiency against probable influenza A (H1N1-2009) mutants: molecular modeling approach",
+      "year": "2010",
+      "journal": "Amino Acids"
+    }
+  ],
+  "provenance": "byo-agent",
+  "status": "draft \u2014 confirm pocket + mutations, then build receptors on the GPU worker"
+}
