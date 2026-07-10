@@ -1,4 +1,7 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, Fragment, lazy, Suspense } from "react";
+
+// NGL is ~1.3 MB; only load it when a user actually expands a mutation row.
+const StructureViewer = lazy(() => import("./StructureViewer"));
 
 const SEV = {
   high: "bg-red-100 text-red-700",
@@ -7,7 +10,7 @@ const SEV = {
   unknown: "bg-slate-100 text-slate-500",
 };
 
-export default function MutationTable({ mutations }) {
+export default function MutationTable({ mutations, target = "HIV1_PR" }) {
   const [sortKey, setSortKey] = useState("delta_delta_g");
   const [asc, setAsc] = useState(false);
   const [open, setOpen] = useState(null);
@@ -55,9 +58,8 @@ export default function MutationTable({ mutations }) {
             const w = (Math.abs(m.delta_delta_g || 0) / maxAbs) * 50; // % of half-width
             const pos = (m.delta_delta_g || 0) >= 0;
             return (
-              <>
+              <Fragment key={m.mutation}>
                 <tr
-                  key={m.mutation}
                   onClick={() => setOpen(isOpen ? null : m.mutation)}
                   className="border-b border-slate-100 hover:bg-slate-50 cursor-pointer"
                 >
@@ -92,45 +94,66 @@ export default function MutationTable({ mutations }) {
                 </tr>
                 {isOpen && (
                   <tr className="bg-slate-50">
-                    <td colSpan={4} className="px-4 py-3 text-slate-600 text-sm leading-relaxed">
-                      {m.explanation ? (
-                        <>
-                          <span className="text-xs uppercase tracking-wide text-slate-400">
-                            Mechanistic hypothesis (Claude)
-                          </span>
-                          <p className="mt-1">{m.explanation}</p>
-                          {m.citations && m.citations.length > 0 && (
-                            <div className="mt-3">
+                    <td colSpan={4} className="px-4 py-3">
+                      <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 items-start">
+                        <div className="lg:col-span-2">
+                          <Suspense
+                            fallback={
+                              <div className="h-[300px] rounded border border-slate-200 flex items-center justify-center text-xs text-slate-400">
+                                loading 3D viewer…
+                              </div>
+                            }
+                          >
+                            <StructureViewer
+                              mutation={m.mutation}
+                              position={parseInt(m.mutation.slice(1, -1), 10)}
+                              severity={m.severity}
+                              target={target}
+                            />
+                          </Suspense>
+                        </div>
+                        <div className="lg:col-span-3 text-slate-600 text-sm leading-relaxed">
+                          {m.explanation ? (
+                            <>
                               <span className="text-xs uppercase tracking-wide text-slate-400">
-                                Literature (PubMed)
+                                Mechanistic hypothesis (Claude)
                               </span>
-                              <ul className="mt-1 space-y-0.5">
-                                {m.citations.map((c) => (
-                                  <li key={c.pmid} className="text-xs">
-                                    <a
-                                      href={c.url}
-                                      target="_blank"
-                                      rel="noreferrer"
-                                      className="text-teal-600 hover:underline"
-                                    >
-                                      {c.journal} {c.year}
-                                    </a>
-                                    <span className="text-slate-500"> — {c.title}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
+                              <p className="mt-1">{m.explanation}</p>
+                              {m.citations && m.citations.length > 0 && (
+                                <div className="mt-3">
+                                  <span className="text-xs uppercase tracking-wide text-slate-400">
+                                    Literature (PubMed)
+                                  </span>
+                                  <ul className="mt-1 space-y-0.5">
+                                    {m.citations.map((c) => (
+                                      <li key={c.pmid} className="text-xs">
+                                        <a
+                                          href={c.url}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          className="text-teal-600 hover:underline"
+                                        >
+                                          {c.journal} {c.year}
+                                        </a>
+                                        <span className="text-slate-500"> — {c.title}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+                            </>
+                          ) : (
+                            <span className="text-slate-400 italic">
+                              No cached explanation for this mutation. The 3D view still shows where
+                              this residue sits relative to the inhibitor pocket.
+                            </span>
                           )}
-                        </>
-                      ) : (
-                        <span className="text-slate-400 italic">
-                          No cached explanation for this mutation.
-                        </span>
-                      )}
+                        </div>
+                      </div>
                     </td>
                   </tr>
                 )}
-              </>
+              </Fragment>
             );
           })}
         </tbody>
