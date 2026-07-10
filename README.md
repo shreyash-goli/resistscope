@@ -9,8 +9,29 @@ PubMed literature), and validates the whole pipeline against real measured
 fold-resistance data (Rhee et al. 2006, Stanford HIVdb). Built for the
 *Built with Claude: Life Sciences* hackathon (Gladstone Institutes).
 
-MVP scope: HIV-1 protease inhibitors. Reverse transcriptase is a post-hackathon
-extension.
+**Highlights**
+- **Interactive 3D structure viewer** (Mol\*/NGL) — every mutation renders in the
+  receptor with the inhibitor in the pocket, the mutated residue highlighted and
+  colored by ΔΔG, right next to Claude's explanation.
+- **Agentic literature grounding** — a Claude tool-use agent (`scripts/09`)
+  researches each mutation's mechanism over live PubMed, cites the papers it
+  actually read, and self-verifies grounding before an entry enters the
+  benchmark. This is how the resistance-mechanism ground truth is built.
+- **Rigorous, honest validation** (`scripts/08`) — every claim carries a
+  significance test or CI: permutation p-values + bootstrap CIs on DRM
+  enrichment, ROC/PR-AUC for DRM recovery, and an explicit de-confounding
+  analysis that reports what the method *cannot* do.
+- **Two targets** — HIV-1 protease (validated) and HIV-1 reverse transcriptase
+  (NNRTI pocket); the whole pipeline + API + UI are target-aware.
+- **Bring your own target** — in the app, upload a receptor PDB and name a
+  protein; the structure is parsed for the pocket and a Claude agent researches
+  its inhibitors + resistance mutations from PubMed, producing a new triage
+  target in seconds (demonstrated on influenza neuraminidase / Tamiflu — the
+  agent recovers H275Y, E119V, R292K, …). Triage generalizes to any target;
+  validation attaches wherever a resistance dataset exists.
+- **Live docking, no precompute** — a custom SMILES docks live through a
+  pluggable backend (local CPU, or a remote **GPU worker** you connect via
+  `RESISTSCOPE_DOCKING_URL`); benchmark drugs stay a precomputed cache.
 
 ---
 
@@ -34,13 +55,17 @@ extension.
        │  services/explanation.py           │   Claude (Haiku 4.5) +
        │  structural context -> mechanism   │   PubMed citations +
        │  + faithfulness eval (Claude judge) │   0-2 faithfulness score
+       │  services/literature_agent.py      │   agentic PubMed research
+       │  structural context -> mechanism   │   + self-verified ground truth
        └────────────────┬───────────────────┘
                         │
-          api/main.py (FastAPI)  ──►  frontend/ (React + Vite + Tailwind)
-          demo.py (CLI)          ──►  notebooks/demo.ipynb
+          api/main.py (FastAPI, target-aware)  ──►  frontend/ (React + Vite + Tailwind
+          demo.py (CLI)                        ──►    + NGL 3D viewer, target selector)
+                                               ──►  notebooks/demo.ipynb
 
-  data pipeline: scripts/01 download → 02 panels → 03 mutant cache →
-                 04 dock → 05 validate → 06 explain → 07 faithfulness
+  data pipeline: scripts/01 download → 02 panels → 03 mutant cache → 04 dock →
+                 05 validate → 06 explain → 07 faithfulness →
+                 08 rigorous benchmark → 09 agentic ground truth
 ```
 
 Key data:
@@ -76,9 +101,11 @@ Explanations + faithfulness need an Anthropic key (uses **Claude Haiku 4.5** —
 the larger models refuse HIV drug-resistance content via a bio-safety classifier):
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...
+export ANTHROPIC_API_KEY=sk-ant-...   # or put it in .env (auto-loaded)
+python scripts/09_build_ground_truth.py --primary --cite   # agentic PubMed ground truth
 python scripts/06_generate_explanations.py --ground-truth --cite   # + PubMed citations
-python scripts/07_faithfulness_eval.py
+python scripts/07_faithfulness_eval.py    # Claude-judge faithfulness (curated + agent split)
+python scripts/08_benchmark.py            # permutation p / bootstrap CI / ROC-AUC / de-confounding
 ```
 
 ---
@@ -116,23 +143,57 @@ Benchmark drugs load instantly (precomputed); a custom SMILES runs live docking
 
 ---
 
+## Live docking (custom SMILES, no precompute)
+
+Benchmark drugs are a precomputed cache, but any custom SMILES docks **live** —
+`/triage` runs it against the resistance panel through a pluggable backend
+([services/docking_backend.py](services/docking_backend.py)), resolved once at
+startup:
+
+| Backend | When | How |
+|---|---|---|
+| **Remote GPU** | `RESISTSCOPE_DOCKING_URL` set | API forwards to a Uni-Dock worker you run — **this is how you "connect a GPU"** |
+| **Local** | docking stack installed on the API host | in-process CPU Vina (or GPU Uni-Dock) |
+| **None** | neither | clean **503** with how-to-enable guidance (never an opaque 500) |
+
+**Connect a GPU** (fast live docking, seconds instead of minutes):
+
+```bash
+# on a GPU box (e.g. A100) — one-time
+bash deploy/setup_a100.sh && conda activate resistscope_gpu
+python scripts/03_build_mutant_cache.py --target pr    # build receptors on this box
+python docking_worker.py                                # serves POST /dock on :9000
+
+# point the API at it (any host)
+RESISTSCOPE_DOCKING_URL=http://<gpu-host>:9000 python -m uvicorn api.main:app --port 8000
+```
+
+The web app shows a live-docking status dot (green = a backend is ready) so users
+know a custom SMILES will actually run before they submit it.
+
 ## Validation results
 
 Validated against measured Rhee fold-resistance across 6 PIs (1,591 drug-mutation
 pairs). Honest summary:
 
+Every number below carries a significance test or confidence interval
+(`scripts/08_benchmark.py`: permutation p-values, bootstrap CIs, ROC/PR-AUC):
+
 | metric | result |
 |---|---|
-| Per-mutation Spearman ρ (pooled) | **≈ 0.00** — weak; the measured target is confounded by co-occurring mutations |
+| Top-40 ΔΔG **DRM enrichment** | **2.86×** (95% CI 1.63–4.08, permutation p < 0.001) — top predictions recover known DRMs |
+| Pooled **DRM-recovery ROC-AUC** | **0.51** (95% CI 0.46–0.56) — ≈ chance as a *global* ranker |
 | Darunavir major-DRM Spearman ρ | **≈ 0.40** (p = 0.03) — strong per-drug signal |
-| Top-40 ΔΔG **DRM enrichment** | **≈ 2.9×** (35% vs 12% base rate) — top predictions recover known DRMs |
-| Explanation **faithfulness** | **72%** correctly identify the expert mechanism (mean 1.61 / 2, n = 46) |
+| Per-mutation Spearman ρ (pooled) | **≈ 0.00** — the measured target is confounded by co-occurring mutations |
+| **De-confounding** (single-/≤2-mutation isolates) | does **not** rescue the magnitude correlation (ρ ≤ 0) — an honest bound |
+| Explanation **faithfulness** | **72%** correctly identify the expert mechanism (mean 1.65 / 2, n = 46) |
 
-The headline is not a single correlation: rigid single-mutation docking does *not*
-quantitatively predict pooled clinical fold-resistance, **but** its top-ranked
-predictions are meaningfully enriched for real resistance mutations, darunavir
-validates well, and the LLM explanations agree with expert-annotated mechanisms
-72% of the time.
+The honest headline: rigid single-mutation docking ΔΔG is a **coarse DRM-triage
+flag, not a quantitative resistance predictor** — its extreme predictions are
+significantly enriched for real resistance mutations (≈3×, p < 0.001) even though
+it ranks at chance overall, and de-confounding the target does not rescue the
+magnitude correlation. Darunavir validates well per-drug, and the LLM
+explanations agree with expert-annotated mechanisms 72% of the time.
 
 ---
 
@@ -152,12 +213,19 @@ validates well, and the LLM explanations agree with expert-annotated mechanisms
 
 ## Future work
 
-- Reverse transcriptase target (NRTIs/NNRTIs are in the same Rhee dataset).
-- Flexible-receptor / ensemble docking; explicit flap water.
-- Deconfounded target (e.g. Stanford HIVdb penalty scores) and leave-one-drug-out
-  cross-validation.
-- Native *Claude for Life Sciences* connectors (PubMed/ChEMBL MCP) in an
-  enterprise context; wet-lab validation.
+- **Reverse transcriptase (NNRTI) target** — now wired end-to-end and its two
+  data blockers are resolved (docking box + het code confirmed from 3V81; note the
+  co-crystal ligand is nevirapine/`NVP`, *not* rilpivirine as first assumed). Real
+  NNRTI panels are built and agent ground truth is seeded; the remaining step is
+  the GPU docking run (`docs/RT_BUILD.md`).
+- **Flexible-receptor / ensemble docking; explicit flap water** — the most likely
+  path to a docking signal that beats the DRM-enrichment flag.
+- **Stanford HIVdb penalty-score target** — single-mutation-isolate
+  de-confounding was tested and does *not* rescue the correlation
+  (`scripts/08`); the expert-derived penalty scores are the next de-confounded
+  target to try, with leave-one-drug-out CV.
+- **Wet-lab validation** and native *Claude for Life Sciences* MCP connectors
+  (the literature agent already grounds in live PubMed via tool use).
 
 ## Citations
 
