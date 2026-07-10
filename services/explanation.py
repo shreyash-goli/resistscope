@@ -20,24 +20,53 @@ import requests
 from Bio.PDB import PDBParser
 
 import config
+from targets import Target
 
 # NCBI E-utilities (public, no key required) for PubMed literature grounding —
 # the standalone-app equivalent of the Claude for Life Sciences PubMed connector.
 _EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
 
+def _resolve(target: Target | None) -> Target:
+    """Default an optional target to the active one."""
+    return target if target is not None else config.ACTIVE_TARGET
+
+
+# --- Target-specific prose (enzyme noun, drug class, binding-site noun) -------
+# Kept here (not on Target) so the RT copy can be refined without touching the
+# foundation. The enzyme noun drives the PubMed query and prompt framing.
+_ENZYME_NOUN = {
+    "HIV1_PR": "HIV-1 protease",
+    "HIV1_RT": "HIV-1 reverse transcriptase",
+}
+_DRUG_CLASS = {
+    "HIV1_PR": "HIV-1 protease inhibitor",
+    "HIV1_RT": "non-nucleoside reverse transcriptase inhibitor (NNRTI)",
+}
+_BINDING_SITE = {
+    "HIV1_PR": "active site",
+    "HIV1_RT": "allosteric NNRTI-binding pocket",
+}
+
+
+def _enzyme_noun(t: Target) -> str:
+    return _ENZYME_NOUN.get(t.name, t.label)
+
+
 def fetch_pubmed_citations(drug: str, mutation: str, max_results: int = 3,
-                           timeout: int = 20) -> list[dict]:
+                           timeout: int = 20, target: Target | None = None) -> list[dict]:
     """Return up to ``max_results`` relevant PubMed citations for a mutation.
 
-    Queries NCBI E-utilities for '{drug} HIV-1 protease {mutation} resistance',
+    Queries NCBI E-utilities for '{enzyme} {mutation} {drug} resistance',
     falling back to a drug-agnostic query. Returns dicts with pmid/title/year/
     journal/url. Best-effort: returns [] on any network/parse failure.
     """
-    drug_full = config.PI_DRUGS.get(drug, drug)
+    t = _resolve(target)
+    enzyme = _enzyme_noun(t)
+    drug_full = t.drugs.get(drug, drug)
     queries = [
-        f"HIV-1 protease {mutation} {drug_full} resistance",
-        f"HIV-1 protease {mutation} resistance mechanism",
+        f"{enzyme} {mutation} {drug_full} resistance",
+        f"{enzyme} {mutation} resistance mechanism",
     ]
     try:
         ids = []
@@ -91,12 +120,13 @@ AA_PROPERTIES = {
     "V": {"name": "Val", "volume": 140.0, "charge": "neutral",  "hydrophobicity": 4.2},
 }
 
-# --- HIV-1 protease subpocket / structural region by residue position ---
-# Coarse, single-region-per-position assignment for interpretability. Ranges are
-# grounded in HIV-1 protease structural biology (catalytic dyad ~25, flaps
-# 43-58, S1 subpocket lining ~78-85 incl. V82/I84). ``(start, end)`` is inclusive
-# on start, exclusive on end.
-SUBPOCKET_REGIONS = [
+# --- Subpocket / structural region by residue position, per target ---
+# Coarse, single-region-per-position assignment for interpretability.
+# ``range(start, end)`` is inclusive on start, exclusive on end.
+#
+# HIV-1 protease: grounded in protease structural biology (catalytic dyad ~25,
+# flaps 43-58, S1 subpocket lining ~78-85 incl. V82/I84).
+_PR_SUBPOCKET_REGIONS = [
     (range(1, 10), "N_terminal_region"),
     (range(10, 23), "beta_sheet_scaffold"),
     (range(23, 28), "catalytic_dyad_region"),        # 23,24,25(Asp),26,27
@@ -108,37 +138,60 @@ SUBPOCKET_REGIONS = [
     (range(86, 100), "C_terminal_dimer_region"),      # incl. N88,L90
 ]
 
-# A residue atom within this distance of any ligand (ROC) atom is a direct
-# van der Waals contact.
+# HIV-1 RT (p66) NNRTI-pocket-centric map. VERIFY WITH A STRUCTURAL EXPERT before
+# trusting the region labels — the NNRTI binding pocket (NNIBP) is formed by
+# discontiguous residues, so a coarse range map is approximate. Grounded in the
+# canonical NNIBP lining: L100/K101/K103/V106/V108 (rim), V179/Y181/Y188/G190
+# (core), F227/W229/L234/P236 (primer-grip wall); YMDD catalytic motif 183-186.
+_RT_SUBPOCKET_REGIONS = [
+    (range(1, 100), "fingers_palm_subdomain"),        # incl. NRTI/TAM sites (out of NNRTI scope)
+    (range(100, 111), "NNRTI_pocket_rim"),            # L100,K101,K103,V106,T107,V108
+    (range(111, 179), "palm_catalytic_core"),         # incl. D110
+    (range(179, 191), "NNRTI_pocket_core"),           # V179,Y181,YMDD 183-186,Y188,G190
+    (range(191, 227), "connection_subdomain"),
+    (range(227, 237), "primer_grip_NNRTI_wall"),      # F227,W229,L234,P236
+    (range(237, 561), "connection_RNaseH_region"),
+]
+
+SUBPOCKET_REGIONS_BY_TARGET = {
+    "HIV1_PR": _PR_SUBPOCKET_REGIONS,
+    "HIV1_RT": _RT_SUBPOCKET_REGIONS,
+}
+
+# A residue atom within this distance of any ligand atom is a direct van der
+# Waals contact.
 LIGAND_CONTACT_THRESHOLD_A = 4.5
 
-# Lazily-loaded coordinates of the co-crystal ligand (saquinavir / ROC) atoms
-# from the raw 3OXC structure — used for accurate residue-ligand contact
-# distances (the cleaned wildtype has the ligand stripped).
-_LIGAND_COORDS = None
+# Lazily-loaded co-crystal ligand atom coords, per target (protease ROC from
+# 3OXC, RT RIL from 3V81) — used for accurate residue-ligand contact distances
+# (the cleaned wildtype has the ligand stripped). Keyed by target name; False
+# sentinel = unavailable.
+_LIGAND_COORDS_CACHE: dict = {}
 
 
-def _ligand_atom_coords():
-    """Return an (N, 3) array of ROC ligand atom coords from raw 3OXC, or None."""
-    global _LIGAND_COORDS
-    if _LIGAND_COORDS is None:
-        raw = config.RAW_DIR / f"{config.WILDTYPE_PDB_ID}.pdb"
+def _ligand_atom_coords(target: Target):
+    """Return an (N, 3) array of the target's co-crystal ligand coords, or None."""
+    t = target
+    if t.name not in _LIGAND_COORDS_CACHE:
+        raw = config.RAW_DIR / f"{t.pdb_id}.pdb"
         if not raw.exists():
-            _LIGAND_COORDS = False  # sentinel: unavailable
+            _LIGAND_COORDS_CACHE[t.name] = False  # sentinel: unavailable
         else:
-            codes = {c.strip().upper() for c in config.LIGAND_HETCODES_TO_STRIP}
+            codes = {c.strip().upper() for c in t.ligand_hetcodes}
             struct = PDBParser(QUIET=True).get_structure("raw", str(raw))
             coords = [
                 atom.coord
                 for atom in struct[0].get_atoms()
                 if atom.get_parent().get_resname().strip().upper() in codes
             ]
-            _LIGAND_COORDS = np.array(coords, dtype=float) if coords else False
-    return None if _LIGAND_COORDS is False else _LIGAND_COORDS
+            _LIGAND_COORDS_CACHE[t.name] = np.array(coords, dtype=float) if coords else False
+    cached = _LIGAND_COORDS_CACHE[t.name]
+    return None if cached is False else cached
 
 
-def _region_for(position: int) -> str:
-    for rng, label in SUBPOCKET_REGIONS:
+def _region_for(position: int, target: Target) -> str:
+    regions = SUBPOCKET_REGIONS_BY_TARGET.get(target.name, [])
+    for rng, label in regions:
         if position in rng:
             return label
     return "other_region"
@@ -175,17 +228,20 @@ def build_structural_context(
     mutation: str,
     docking_result: dict = None,
     wildtype_pdb: Path = None,
+    target: Target | None = None,
 ) -> dict:
     """Assemble the structural context Claude will reason over.
 
     ``docking_result`` may carry ``delta_g``/``delta_delta_g`` (optional; passed
     through for convenience). Distances are measured from the mutated residue's
-    CA (chain A) to ``config.DOCKING_CENTER`` (the ligand centroid).
+    CA (chain A — protease monomer A / RT p66) to the target's docking center
+    (the ligand centroid).
 
     Returns a dict matching the explanation-cache ``structural_context`` schema.
     """
+    t = _resolve(target)
     if wildtype_pdb is None:
-        wildtype_pdb = config.STRUCTURES_DIR / "wildtype.pdb"
+        wildtype_pdb = t.structures_dir / "wildtype.pdb"
     wt_aa, position, mut_aa = _parse_mutation(mutation)
 
     if wt_aa not in AA_PROPERTIES or mut_aa not in AA_PROPERTIES:
@@ -194,15 +250,15 @@ def build_structural_context(
     # Distance from the residue CA to the docking-box center (ligand centroid),
     # plus the accurate minimum distance from any residue atom to any ligand atom.
     structure = PDBParser(QUIET=True).get_structure("wt", str(wildtype_pdb))
-    center = np.array(config.DOCKING_CENTER, dtype=float)
-    ligand = _ligand_atom_coords()
+    center = np.array(t.docking_center, dtype=float)
+    ligand = _ligand_atom_coords(t)
     distance = None          # CA -> ligand centroid
     min_lig_dist = None      # nearest residue atom -> nearest ligand atom
     chain_a = next((c for c in structure[0] if c.id == "A"), None)
     if chain_a is not None:
         residues = list(chain_a)
         if 1 <= position <= len(residues):
-            res = residues[position - 1]  # chain A is protease residues 1-99
+            res = residues[position - 1]  # chain A ordinal: protease 1-99 / RT p66
             ca = res["CA"] if "CA" in res else next(iter(res), None)
             if ca is not None:
                 distance = float(np.linalg.norm(np.asarray(ca.coord) - center))
@@ -239,7 +295,7 @@ def build_structural_context(
         "contacts_ligand_directly": (
             bool(min_lig_dist is not None and min_lig_dist < LIGAND_CONTACT_THRESHOLD_A)
         ),
-        "region": _region_for(position),
+        "region": _region_for(position, t),
     }
     if docking_result:
         if docking_result.get("delta_delta_g") is not None:
@@ -249,17 +305,26 @@ def build_structural_context(
     return context
 
 
-SYSTEM_PROMPT = (
-    "You are a structural biologist specializing in HIV-1 protease drug "
-    "resistance. Given structural context about a point mutation and its effect "
-    "on inhibitor binding, provide a 2-3 sentence mechanistic hypothesis for WHY "
-    "this mutation causes resistance to this specific drug. Ground your "
-    "explanation in the structural facts provided (residue size/charge change, "
-    "distance to the active site, subpocket). Be specific about molecular "
-    "interactions (van der Waals contacts, hydrogen bonds, steric clashes, "
-    "electrostatic changes). Do not speculate beyond the given data, and do not "
-    "restate the numbers back — interpret them. No preamble."
-)
+def _system_prompt(t: Target) -> str:
+    """Build the explanation system prompt for the target's enzyme/binding site."""
+    enzyme = _enzyme_noun(t)
+    site = _BINDING_SITE.get(t.name, "binding site")
+    return (
+        f"You are a structural biologist specializing in {enzyme} drug "
+        "resistance. Given structural context about a point mutation and its "
+        "effect on inhibitor binding, provide a 2-3 sentence mechanistic "
+        "hypothesis for WHY this mutation causes resistance to this specific "
+        "drug. Ground your explanation in the structural facts provided (residue "
+        f"size/charge change, distance to the {site}, subpocket). Be specific "
+        "about molecular interactions (van der Waals contacts, hydrogen bonds, "
+        "steric clashes, electrostatic changes). Do not speculate beyond the "
+        "given data, and do not restate the numbers back — interpret them. "
+        "No preamble."
+    )
+
+
+# Backward-compatible protease system prompt (unchanged default).
+SYSTEM_PROMPT = _system_prompt(config.get_target("HIV1_PR"))
 
 
 def generate_explanation(
@@ -270,16 +335,19 @@ def generate_explanation(
     cache_dir: Path = None,
     model: str = None,
     cite: bool = False,
+    target: Target | None = None,
 ) -> str:
     """Return a cached or freshly-generated mechanistic explanation.
 
-    Cache key is ``{drug}_{mutation}.json`` in ``cache_dir``. On a cache hit the
-    stored explanation is returned without an API call. When ``cite`` is set,
-    relevant PubMed literature is fetched and passed to Claude so the explanation
-    is grounded in real papers; the citations are stored in the cache record.
+    Cache key is ``{drug}_{mutation}.json`` in ``cache_dir`` (defaults to the
+    target's explanations dir). On a cache hit the stored explanation is returned
+    without an API call. When ``cite`` is set, relevant PubMed literature is
+    fetched and passed to Claude so the explanation is grounded in real papers;
+    the citations are stored in the cache record.
     """
+    t = _resolve(target)
     if cache_dir is None:
-        cache_dir = config.EXPLANATIONS_DIR
+        cache_dir = t.explanations_dir
     cache_dir = Path(cache_dir)
     cache_path = cache_dir / f"{drug}_{mutation}.json"
 
@@ -289,13 +357,14 @@ def generate_explanation(
     import anthropic
 
     model = model or config.CLAUDE_MODEL
-    drug_full = config.PI_DRUGS.get(drug, drug)
+    drug_full = t.drugs.get(drug, drug)
+    drug_class = _DRUG_CLASS.get(t.name, "inhibitor")
     ddg_str = (
         f"{delta_delta_g:+.2f} kcal/mol (positive = weaker binding = resistance)"
         if delta_delta_g is not None
         else "not available"
     )
-    citations = fetch_pubmed_citations(drug, mutation) if cite else []
+    citations = fetch_pubmed_citations(drug, mutation, target=t) if cite else []
     cite_block = ""
     if citations:
         cite_block = (
@@ -305,7 +374,7 @@ def generate_explanation(
                         for c in citations)
         )
     user_prompt = (
-        f"Drug: {drug_full} ({drug}), an HIV-1 protease inhibitor\n"
+        f"Drug: {drug_full} ({drug}), a {drug_class}\n"
         f"Mutation: {mutation}\n"
         f"Predicted delta-delta-G: {ddg_str}\n"
         f"Structural context:\n{json.dumps(structural_context, indent=2)}"
@@ -318,7 +387,7 @@ def generate_explanation(
     response = client.messages.create(
         model=model,
         max_tokens=config.CLAUDE_MAX_TOKENS,
-        system=SYSTEM_PROMPT,
+        system=_system_prompt(t),
         messages=[{"role": "user", "content": user_prompt}],
     )
     explanation = next(
@@ -342,14 +411,20 @@ def generate_explanation(
 
 # --- Faithfulness evaluation (Claude-as-judge) -------------------------------
 
-JUDGE_SYSTEM_PROMPT = (
-    "You are evaluating whether an AI-generated explanation of HIV-1 protease "
-    "drug resistance correctly identifies the known structural mechanism. Score "
-    "0 if the explanation contradicts the known mechanism, 1 if it is consistent "
-    "but vague or misses the key interaction, 2 if it correctly identifies the "
-    "primary structural basis. Judge only structural/mechanistic agreement, not "
-    "writing style, and give a one-sentence justification."
-)
+def _judge_system_prompt(t: Target) -> str:
+    """Faithfulness-judge system prompt for the target's enzyme."""
+    return (
+        f"You are evaluating whether an AI-generated explanation of {_enzyme_noun(t)} "
+        "drug resistance correctly identifies the known structural mechanism. Score "
+        "0 if the explanation contradicts the known mechanism, 1 if it is consistent "
+        "but vague or misses the key interaction, 2 if it correctly identifies the "
+        "primary structural basis. Judge only structural/mechanistic agreement, not "
+        "writing style, and give a one-sentence justification."
+    )
+
+
+# Backward-compatible protease judge prompt (unchanged default).
+JUDGE_SYSTEM_PROMPT = _judge_system_prompt(config.get_target("HIV1_PR"))
 
 # Structured-output schema so the 0/1/2 score is always machine-readable.
 FAITHFULNESS_SCHEMA = {
@@ -363,17 +438,19 @@ FAITHFULNESS_SCHEMA = {
 }
 
 
-def _faithfulness_pairs(explanations_dir: Path, ground_truth: dict) -> list[dict]:
+def _faithfulness_pairs(explanations_dir: Path, ground_truth: dict,
+                        target: Target | None = None) -> list[dict]:
     """Enumerate cached explanations that have a ground-truth mechanism.
 
     For each mutation in ``ground_truth``, finds cached ``{drug}_{mutation}.json``
     explanations for the drugs it affects. Returns dicts with keys
     ``mutation, drug, explanation, mechanism`` — no API calls.
     """
+    t = _resolve(target)
     explanations_dir = Path(explanations_dir)
     pairs = []
     for mutation, gt in ground_truth.items():
-        drugs = gt.get("affects_drugs") or list(config.PI_DRUGS)
+        drugs = gt.get("affects_drugs") or list(t.drugs)
         for drug in drugs:
             cache = explanations_dir / f"{drug}_{mutation}.json"
             if not cache.exists():
@@ -391,21 +468,23 @@ def evaluate_faithfulness(
     explanations_dir: Path = None,
     ground_truth_path: Path = None,
     model: str = None,
+    target: Target | None = None,
 ) -> pd.DataFrame:
     """Score cached explanations against curated ground-truth mechanisms.
 
     Uses Claude as a judge (0=contradicts, 1=consistent-but-vague, 2=correct)
     with a structured-output schema so scores parse reliably. Returns a
     DataFrame with columns ``mutation, drug, score, justification`` (empty if no
-    cached explanation overlaps the ground truth).
+    cached explanation overlaps the ground truth). Paths default to the target's.
     """
+    t = _resolve(target)
     if explanations_dir is None:
-        explanations_dir = config.EXPLANATIONS_DIR
+        explanations_dir = t.explanations_dir
     if ground_truth_path is None:
         ground_truth_path = config.DATA_DIR / "mechanism_ground_truth.json"
 
     ground_truth = json.loads(Path(ground_truth_path).read_text())
-    pairs = _faithfulness_pairs(explanations_dir, ground_truth)
+    pairs = _faithfulness_pairs(explanations_dir, ground_truth, target=t)
     if not pairs:
         return pd.DataFrame(
             columns=["mutation", "drug", "score", "justification"]
@@ -415,12 +494,13 @@ def evaluate_faithfulness(
 
     model = model or config.CLAUDE_MODEL
     client = anthropic.Anthropic()
+    judge_system = _judge_system_prompt(t)
 
     rows = []
     for p in pairs:
         user_prompt = (
             f"Mutation: {p['mutation']}\n"
-            f"Drug: {config.PI_DRUGS.get(p['drug'], p['drug'])} ({p['drug']})\n\n"
+            f"Drug: {t.drugs.get(p['drug'], p['drug'])} ({p['drug']})\n\n"
             f"Known structural mechanism (ground truth):\n{p['mechanism']}\n\n"
             f"AI-generated explanation to evaluate:\n{p['explanation']}\n\n"
             f"Score how faithfully the explanation captures the known mechanism."
@@ -428,7 +508,7 @@ def evaluate_faithfulness(
         response = client.messages.create(
             model=model,
             max_tokens=512,
-            system=JUDGE_SYSTEM_PROMPT,
+            system=judge_system,
             messages=[{"role": "user", "content": user_prompt}],
             output_config={"format": {"type": "json_schema", "schema": FAITHFULNESS_SCHEMA}},
         )

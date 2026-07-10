@@ -33,11 +33,18 @@ pd.set_option("display.max_rows", 200)
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--docking", type=Path,
-                        default=config.DOCKING_DIR / "benchmark_docking.parquet")
-    parser.add_argument("--out-plot", type=Path,
-                        default=config.VALIDATION_DIR / "validation_plot.png")
+    parser.add_argument("--target", default="HIV1_PR",
+                        help="Docking target: HIV1_PR / pr (default) or HIV1_RT / rt.")
+    parser.add_argument("--docking", type=Path, default=None)
+    parser.add_argument("--out-plot", type=Path, default=None)
     args = parser.parse_args()
+
+    t = config.set_active_target(args.target)
+    if args.docking is None:
+        args.docking = config.DOCKING_DIR / "benchmark_docking.parquet"
+    if args.out_plot is None:
+        args.out_plot = config.VALIDATION_DIR / "validation_plot.png"
+    print(f"Target: {t.name} ({t.label})")
 
     if not args.docking.exists():
         print(f"ERROR: docking results not found at {args.docking}\n"

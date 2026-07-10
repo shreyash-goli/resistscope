@@ -55,13 +55,16 @@ def _correlate(predictor: pd.Series, target: pd.Series) -> dict:
 
 def build_merged(
     docking_parquet: Path = None,
-    panels_dir: Path = config.PANELS_DIR,
+    panels_dir: Path = None,
 ) -> pd.DataFrame:
     """Join docking results with panels into one per-mutation table.
 
     Columns: drug, mutation, delta_g, delta_delta_g, mean_log_fold_resistance,
-    n_isolates, is_primary. WT rows and failed docks are dropped.
+    n_isolates, is_primary. WT rows and failed docks are dropped. Paths default
+    to the active target's dirs.
     """
+    if panels_dir is None:
+        panels_dir = config.PANELS_DIR
     if docking_parquet is None:
         docking_parquet = config.DOCKING_DIR / "benchmark_docking.parquet"
     docking = pd.read_parquet(docking_parquet)
@@ -118,15 +121,20 @@ def per_drug_correlation(merged: pd.DataFrame) -> pd.DataFrame:
 
 def run_full_validation(
     docking_parquet: Path = None,
-    panels_dir: Path = config.PANELS_DIR,
-    output_dir: Path = config.VALIDATION_DIR,
+    panels_dir: Path = None,
+    output_dir: Path = None,
 ) -> pd.DataFrame:
     """Correlate every scoring method vs measured fold-resistance.
 
     Computes per-drug and pooled (``OVERALL``) Spearman/Pearson for each method,
     saves the per-mutation merge and the correlation table to ``output_dir``,
     and returns the correlation table (matching the Validation Output schema).
+    Paths default to the active target's dirs.
     """
+    if panels_dir is None:
+        panels_dir = config.PANELS_DIR
+    if output_dir is None:
+        output_dir = config.VALIDATION_DIR
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -151,7 +159,7 @@ def run_full_validation(
 def plot_validation(
     results: pd.DataFrame,
     output_path: Path = None,
-    panels_dir: Path = config.PANELS_DIR,
+    panels_dir: Path = None,
     merged_path: Path = None,
 ) -> Path:
     """Three-panel figure: per-mutation scatter, top-N enrichment, per-drug ρ."""
@@ -179,7 +187,7 @@ def plot_validation(
     ax1.axhline(0, color="0.7", lw=0.8, zorder=0)
     ax1.set_xlabel("Measured mean log$_{10}$ fold-resistance")
     ax1.set_ylabel(r"Predicted $\Delta\Delta G$ (kcal/mol)")
-    ax1.set_title(f"Per-mutation (all PIs pooled)\n"
+    ax1.set_title(f"Per-mutation (all drugs pooled)\n"
                   f"Spearman ρ = {overall['spearman_rho']:.2f} "
                   f"(n = {int(overall['n_mutations'])}) — weak by design")
     ax1.legend(fontsize=8, ncol=2, framealpha=0.9)

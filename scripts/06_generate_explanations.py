@@ -29,8 +29,9 @@ from services.mutation_panel import load_panel  # noqa: E402
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--docking", type=Path,
-                        default=config.DOCKING_DIR / "benchmark_docking.parquet")
+    parser.add_argument("--target", default="HIV1_PR",
+                        help="Docking target: HIV1_PR / pr (default) or HIV1_RT / rt.")
+    parser.add_argument("--docking", type=Path, default=None)
     parser.add_argument("--min-ddg", type=float, default=config.DDG_WARNING_THRESHOLD,
                         help="Only explain pairs with |delta_delta_g| >= this (kcal/mol).")
     parser.add_argument("--drugs", nargs="+", default=None,
@@ -49,6 +50,11 @@ def main() -> int:
                         help="Ground each explanation in real PubMed literature "
                              "(NCBI E-utilities) and store citations.")
     args = parser.parse_args()
+
+    t = config.set_active_target(args.target)
+    if args.docking is None:
+        args.docking = config.DOCKING_DIR / "benchmark_docking.parquet"
+    print(f"Target: {t.name} ({t.label})")
 
     if not args.docking.exists():
         print(f"ERROR: docking results not found at {args.docking}. Run scripts/04 first.")
@@ -95,9 +101,9 @@ def main() -> int:
         cached = cache_path.exists()
         try:
             context = build_structural_context(
-                mut, {"delta_delta_g": ddg, "delta_g": row.get("delta_g")}
+                mut, {"delta_delta_g": ddg, "delta_g": row.get("delta_g")}, target=t
             )
-            expl = generate_explanation(drug, mut, ddg, context, cite=args.cite)
+            expl = generate_explanation(drug, mut, ddg, context, cite=args.cite, target=t)
             if cached:
                 n_cached += 1
             else:

@@ -43,6 +43,8 @@ def _select_subset(panel: pd.DataFrame, subset: str, min_isolates: int) -> pd.Da
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--target", default="HIV1_PR",
+                        help="Docking target: HIV1_PR / pr (default) or HIV1_RT / rt.")
     parser.add_argument("--subset", choices=["primary", "prevalence", "all"],
                         default="primary", help="Which mutations to dock.")
     parser.add_argument("--min-isolates", type=int, default=20,
@@ -64,11 +66,18 @@ def main() -> int:
                              "each Vina using all cores; robust for long runs).")
     parser.add_argument("--cpu-per-worker", type=int, default=None,
                         help="Vina threads per worker when --workers > 1.")
-    parser.add_argument("--out", type=Path,
-                        default=config.DOCKING_DIR / "benchmark_docking.parquet")
+    parser.add_argument("--out", type=Path, default=None)
     args = parser.parse_args()
 
-    smiles = get_benchmark_smiles()
+    t = config.set_active_target(args.target)
+    if args.out is None:
+        args.out = config.DOCKING_DIR / "benchmark_docking.parquet"
+    print(f"Target: {t.name} ({t.label})")
+
+    # Target-scoped benchmark-SMILES cache so RT never reuses PI's cached SMILES.
+    ligands_cache = (config.DATA_DIR / t.subdir if t.subdir else config.DATA_DIR) \
+        / "ligands" / "benchmark_drugs.json"
+    smiles = get_benchmark_smiles(cache_path=ligands_cache)
 
     # Drugs with both a SMILES and a panel on disk.
     drugs = args.drugs or [
@@ -91,6 +100,8 @@ def main() -> int:
         t0 = time.time()
         res = dock_against_panel(
             smiles[drug], drug, sub,
+            structures_dir=t.structures_dir,
+            mutants_dir=t.mutants_dir,
             exhaustiveness=args.exhaustiveness,
             replicates=args.replicates,
             n_workers=args.workers,

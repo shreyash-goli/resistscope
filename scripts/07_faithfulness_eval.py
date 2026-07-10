@@ -10,8 +10,10 @@ scripts/06 has generated explanations for at least some ground-truth mutations.
 Usage::
 
     python scripts/07_faithfulness_eval.py
+    python scripts/07_faithfulness_eval.py --target rt
 """
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -30,9 +32,16 @@ pd.set_option("display.max_rows", 200)
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--target", default="HIV1_PR",
+                        help="Docking target: HIV1_PR / pr (default) or HIV1_RT / rt.")
+    args = parser.parse_args()
+    t = config.set_active_target(args.target)
+    print(f"Target: {t.name} ({t.label})")
+
     gt_path = config.DATA_DIR / "mechanism_ground_truth.json"
     ground_truth = json.loads(gt_path.read_text())
-    pairs = _faithfulness_pairs(config.EXPLANATIONS_DIR, ground_truth)
+    pairs = _faithfulness_pairs(config.EXPLANATIONS_DIR, ground_truth, target=t)
 
     print(f"Ground-truth mechanisms: {len(ground_truth)}")
     print(f"Cached explanations matching ground truth: {len(pairs)}")
@@ -43,7 +52,7 @@ def main() -> int:
 
     print(f"Judging {len(pairs)} explanation(s) with model={config.CLAUDE_MODEL} ...\n")
     try:
-        results = evaluate_faithfulness()
+        results = evaluate_faithfulness(target=t)
     except Exception as exc:  # noqa: BLE001
         msg = str(exc)
         if "authentication" in msg.lower() or "api_key" in msg.lower():

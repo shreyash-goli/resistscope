@@ -109,6 +109,8 @@ def dock_receptor_batch(receptor_pdbqt: Path, ligand_files: dict, search_mode: s
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--target", default="HIV1_PR",
+                        help="Docking target: HIV1_PR / pr (default) or HIV1_RT / rt.")
     parser.add_argument("--subset", choices=["primary", "prevalence", "all"],
                         default="all")
     parser.add_argument("--min-isolates", type=int, default=20)
@@ -118,11 +120,18 @@ def main() -> int:
     parser.add_argument("--replicates", type=int, default=1)
     parser.add_argument("--n-poses", type=int, default=config.VINA_NUM_POSES)
     parser.add_argument("--unidock-bin", default="unidock")
-    parser.add_argument("--out", type=Path,
-                        default=config.DOCKING_DIR / "benchmark_docking.parquet")
+    parser.add_argument("--out", type=Path, default=None)
     args = parser.parse_args()
 
-    smiles = get_benchmark_smiles()
+    t = config.set_active_target(args.target)
+    if args.out is None:
+        args.out = config.DOCKING_DIR / "benchmark_docking.parquet"
+    print(f"Target: {t.name} ({t.label})")
+
+    # Target-scoped benchmark-SMILES cache so RT never reuses PI's cached SMILES.
+    ligands_cache = (config.DATA_DIR / t.subdir if t.subdir else config.DATA_DIR) \
+        / "ligands" / "benchmark_drugs.json"
+    smiles = get_benchmark_smiles(cache_path=ligands_cache)
     drugs = args.drugs or [
         d for d in config.PI_DRUGS
         if (config.PANELS_DIR / f"{d}.parquet").exists() and d in smiles
