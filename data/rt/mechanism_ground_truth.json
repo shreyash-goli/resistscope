@@ -1,0 +1,130 @@
+{
+  "K103N": {
+    "mechanism": "K103N disrupts a critical electrostatic interaction in the NNRTI binding pocket, with the lysine's positive charge contributing to NNRTI stabilization. The substitution to asparagine eliminates this positive charge while introducing a polar but uncharged residue, which directly weakens Kon (5-fold reduction in nevirapine binding kinetics). The conformational rigidity imposed by K103N, together with disruption of this key stabilizing electrostatic interaction, impairs drug binding affinity more severely than steric effects alone, making nevirapine and first-generation NNRTIs unable to achieve high-affinity enzyme inhibition.",
+    "affects_drugs": [
+      "NVP",
+      "DLV",
+      "EFV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 9405155, PMID 11080630, PMID 18230722, PMID 25232099",
+    "key_interaction": "Loss of K103 positive charge; replacement with polar but uncharged N103 destabilizes NNRTI binding through loss of electrostatic complementarity in the pocket.",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "9405155",
+        "title": "Resistance to nevirapine of HIV-1 reverse transcriptase mutants: loss of stabilizing interactions and thermodynamic or steric barriers are induced by different single amino acid substitutions",
+        "year": "1997",
+        "journal": "J Mol Biol"
+      },
+      {
+        "pmid": "11080630",
+        "title": "Structural basis for the resilience of efavirenz (DMP-266) to drug resistance mutations in HIV-1 reverse transcriptase",
+        "year": "2000",
+        "journal": "Structure"
+      },
+      {
+        "pmid": "18230722",
+        "title": "High-resolution structures of HIV-1 reverse transcriptase/TMC278 complexes: strategic flexibility explains potency against resistance mutations",
+        "year": "2008",
+        "journal": "Proc Natl Acad Sci U S A"
+      },
+      {
+        "pmid": "25232099",
+        "title": "Mechanism of allosteric inhibition of HIV-1 reverse transcriptase revealed by single-molecule and ensemble fluorescence",
+        "year": "2014",
+        "journal": "Nucleic Acids Res"
+      },
+      {
+        "pmid": "22095671",
+        "title": "Multiple drugs and multiple targets: an analysis of the electrostatic determinants of binding between non-nucleoside HIV-1 reverse transcriptase inhibitors and variants of HIV-1 RT",
+        "year": "2012",
+        "journal": "Proteins"
+      }
+    ],
+    "built_at": "2026-07-10T08:44:03.823982+00:00"
+  },
+  "Y181C": {
+    "mechanism": "Y181C replaces the bulky aromatic tyrosine with a smaller cysteine, enlarging the NNRTI binding pocket cavity. This expansion reduces steric clashes with inhibitors and weakens favorable van der Waals and \u03c0-stacking interactions (particularly with Phe227 and Pro236), thereby decreasing NNRTI binding affinity and conferring cross-resistance to multiple first-generation and second-generation NNRTIs including nevirapine, efavirenz, and rilpivirine.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "RPV",
+      "ETR"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 33352387, PMID 31160281, PMID 22037848, PMID 21953939",
+    "key_interaction": "Loss of aromatic \u03c0-stacking from Tyr181 and reduction in binding pocket steric constraints",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "33352387",
+        "title": "Novel indolylarylsulfone derivatives as covalent HIV-1 reverse transcriptase inhibitors specifically targeting the drug-resistant mutant Y181C",
+        "year": "2021",
+        "journal": "Bioorg Med Chem"
+      },
+      {
+        "pmid": "31160281",
+        "title": "Nonnucleoside Reverse Transcriptase Inhibitor Hypersusceptibility and Resistance by Mutation of Residue 181 in HIV-1 Reverse Transcriptase",
+        "year": "2019",
+        "journal": "Antimicrob Agents Chemother"
+      },
+      {
+        "pmid": "22037848",
+        "title": "F18, a novel small-molecule nonnucleoside reverse transcriptase inhibitor, inhibits HIV-1 replication using distinct binding motifs as demonstrated by resistance selection and docking analysis",
+        "year": "2012",
+        "journal": "Antimicrob Agents Chemother"
+      },
+      {
+        "pmid": "21953939",
+        "title": "Docking analysis and resistance evaluation of clinically relevant mutations associated with the HIV-1 non-nucleoside reverse transcriptase inhibitors nevirapine, efavirenz and etravirine",
+        "year": "2011",
+        "journal": "ChemMedChem"
+      }
+    ],
+    "built_at": "2026-07-10T08:44:20.015078+00:00"
+  },
+  "Y188L": {
+    "mechanism": "Y188L replaces a tyrosine with leucine in the NNRTI binding pocket core, eliminating the aromatic hydroxyl group's capacity for hydrogen bonding and introducing steric constraints. This mutation increases both the dissociation rate (koff) and reduces the binding rate (kon) for NNRTIs like nevirapine and efavirenz, thereby conferring 17\u201390-fold resistance through loss of stabilizing interactions and increased thermodynamic/steric barriers to inhibitor binding.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "DLV",
+      "TMC125"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 9405155, PMID 12785806, PMID 11333879, PMID 7544302",
+    "key_interaction": "Loss of hydroxyl hydrogen bonding from tyrosine at position 188 and steric perturbation of the NNRTI binding pocket",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "9405155",
+        "title": "Resistance to nevirapine of HIV-1 reverse transcriptase mutants: loss of stabilizing interactions and thermodynamic or steric barriers are induced by different single amino acid substitutions",
+        "year": "1997",
+        "journal": "J Mol Biol"
+      },
+      {
+        "pmid": "12785806",
+        "title": "Validation of a model for the complex of HIV-1 reverse transcriptase with nonnucleoside inhibitor TMC125",
+        "year": "2003",
+        "journal": "J Am Chem Soc"
+      },
+      {
+        "pmid": "11333879",
+        "title": "Genotypic correlates of phenotypic resistance to efavirenz in virus isolates from patients failing nonnucleoside reverse transcriptase inhibitor therapy",
+        "year": "2001",
+        "journal": "J Virol"
+      },
+      {
+        "pmid": "7544302",
+        "title": "Simultaneous mutations at Tyr-181 and Tyr-188 in HIV-1 reverse transcriptase prevents inhibition of RNA-dependent DNA polymerase activity by the bisheteroarylpiperazine (BHAP) U-90152s",
+        "year": "1995",
+        "journal": "FEBS Lett"
+      }
+    ],
+    "built_at": "2026-07-10T08:44:33.760310+00:00"
+  }
+}

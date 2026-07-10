@@ -15,6 +15,7 @@ drugs, mutations); **method** constants (Vina effort, ΔΔG thresholds, Claude
 model) stay in ``config.py`` because they are shared across targets.
 """
 
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -101,6 +102,21 @@ class Target:
     def validation_dir(self) -> Path:
         return self._dir("validation")
 
+    @property
+    def ground_truth_path(self) -> Path:
+        """Curated/literature-derived resistance-mechanism reference for this target.
+
+        Target-scoped so RT mechanisms never collide with the committed PI file:
+        PI -> ``data/mechanism_ground_truth.json``; RT -> ``data/rt/...``.
+        """
+        base = DATA_DIR / self.subdir if self.subdir else DATA_DIR
+        return base / "mechanism_ground_truth.json"
+
+    @property
+    def is_user(self) -> bool:
+        """True for a bring-your-own target loaded from ``data/user_targets/``."""
+        return self.subdir.startswith("user/")
+
 
 # =============================================================================
 # HIV-1 protease (the original, validated target)
@@ -176,11 +192,11 @@ HIV1_PR = Target(
 #   docking of a nucleoside analog will not capture it. So this target is
 #   scoped to the NNRTI pocket and the NNRTI drugs only.
 #
-# TWO VALUES TO CONFIRM BEFORE A PRODUCTION RUN (both self-verify, see below):
-#   1. docking_center — placeholder here. structure_prep.clean_structure() prints
-#      the occupancy-weighted centroid of `ligand_hetcodes` for THIS PDB; set the
-#      printed value here (same workflow the PR box used). Until then, RT docking
-#      is not physically meaningful.
+# STATUS OF THE TWO VALUES THAT NEEDED CONFIRMATION (both now resolved):
+#   1. docking_center — CONFIRMED. Set to the occupancy-weighted centroid of the
+#      chain-A NVP (nevirapine) atoms in 3V81 = (41.105, 52.332, 49.098), the
+#      NNRTI pocket of the A/B heterodimer. structure_prep.clean_structure() will
+#      re-print this centroid during step 03 as a cross-check.
 #   2. reference_seq — consensus-B RT over positions 1-240. Anchored below with
 #      assertions on canonical DRM residues so a transcription error fails loudly
 #      at import; still cross-check against Stanford HIVdb consensus B before a
@@ -196,23 +212,26 @@ _RT_REFERENCE_SEQ = (
     "YQYMDDLYVGSDLEIGQHRTKIEELRQHLLRWGLTTPDKKHQKEPPFLWMGYELHPDKWT"  # 181-240
 )
 
-# 3V81: HIV-1 RT in complex with rilpivirine (an NNRTI) in the allosteric
-# pocket. p66 (chain A) carries the pocket; p51 (chain B) is structural. We keep
-# both chains but only mutate p66 (chain A), where the RT DRMs act.
-# NOTE: het code + docking box must be confirmed after downloading this PDB.
+# 3V81: HIV-1 RT with an NNRTI (nevirapine, het NVP) bound in the allosteric
+# pocket. CONFIRMED from the deposited coordinates: the ligand present in the
+# NNRTI pocket is NEVIRAPINE (het NVP), not rilpivirine — the "TMC278/RIL" in the
+# paper title refers to a related structure in the same study, not to 3V81's
+# coordinates. The asymmetric unit holds two heterodimers (A/B and C/D) plus DNA
+# (T/P, E/F); we keep the A/B copy: chain A = p66 (555 res, carries the pocket),
+# chain B = p51 (412 res, structural). Only p66 (chain A) is mutated.
 HIV1_RT = Target(
     name="HIV1_RT",
     label="HIV-1 reverse transcriptase (NNRTI pocket)",
     subdir="rt",  # data/rt/structures, data/rt/panels, ... (never touches PI data)
     pdb_id="3V81",
     pdb_url="https://files.rcsb.org/download/3V81.pdb",
-    ligand_hetcodes=("RIL",),      # rilpivirine (TMC278) in 3V81 — CONFIRM het code
+    ligand_hetcodes=("NVP",),      # nevirapine in the NNRTI pocket of 3V81 (CONFIRMED)
     chains=("A", "B"),             # p66 (A) + p51 (B) heterodimer
     mutate_chains=("A",),          # RT DRMs act on the p66 subunit only
     reference_seq=_RT_REFERENCE_SEQ,
     n_positions=240,
     protonation=None,              # no catalytic-dyad protonation fix-up for RT
-    docking_center=(0.0, 0.0, 0.0),           # PLACEHOLDER — set from clean_structure() print
+    docking_center=(41.105, 52.332, 49.098),  # occ-weighted centroid of chain-A NVP
     docking_box_size=(24, 24, 24),            # NNRTI pocket is roomy; refine after box check
     dataset_filename="NNRTI_DataSet.txt",
     dataset_urls=(
@@ -271,6 +290,75 @@ def get_target(name: str) -> Target:
         f"Unknown target {name!r}. Known: {sorted(TARGETS)} "
         f"(aliases: {sorted(_ALIASES)})."
     )
+
+
+# =============================================================================
+# Bring-your-own (user) targets — triage-only, loaded from data/user_targets/
+# =============================================================================
+# A user target is assembled in the app (upload a PDB → confirm the pocket →
+# a Claude agent proposes the drugs + resistance mutations) and persisted as a
+# draft JSON. It becomes a first-class Target here (so the selector, structure
+# viewer, and triage path all work) but with no genotype dataset — hence no
+# reference sequence / panels / validation. Its "panel" is the agent's mutation
+# list (see the API's resistance-panel fallback).
+
+USER_TARGETS_DIR = DATA_DIR / "user_targets"
+
+
+def _resolve_draft(d: dict) -> dict:
+    """Normalise a draft (scripts/10 nested form OR a flat confirmed form)."""
+    struct = d.get("structure", {})
+    sugg = struct.get("suggested", {})
+    bio = d.get("biology", {})
+    drugs = d.get("drugs") or bio.get("drugs", [])
+    muts = d.get("mutations") or [m["mutation"] for m in bio.get("resistance_mutations", [])]
+    pdb_id = (d.get("pdb_id") or Path(d.get("source_pdb", d["target_id"])).stem).upper()
+    center = d.get("docking_center") or sugg.get("docking_center") or (0.0, 0.0, 0.0)
+    return {
+        "target_id": d["target_id"].upper(),
+        "label": d.get("label", d["target_id"]),
+        "pdb_id": pdb_id,
+        "ligand_hetcode": d.get("ligand_hetcode") or sugg.get("ligand_hetcode"),
+        "docking_center": tuple(float(x) for x in center),
+        "chains": tuple(d.get("chains") or sugg.get("chains") or ("A",)),
+        "mutate_chains": tuple(d.get("mutate_chains") or sugg.get("mutate_chains") or ("A",)),
+        "drugs": {x["abbrev"]: x["name"] for x in drugs},
+        "mutations": [m for m in muts if m],
+    }
+
+
+def target_from_draft(d: dict) -> Target:
+    """Build a triage-only :class:`Target` from a user-target draft dict."""
+    r = _resolve_draft(d)
+    het = r["ligand_hetcode"]
+    return Target(
+        name=r["target_id"], label=r["label"], subdir=f"user/{r['target_id']}",
+        pdb_id=r["pdb_id"], pdb_url="",
+        ligand_hetcodes=((het,) if het else ()),
+        chains=r["chains"], mutate_chains=r["mutate_chains"],
+        reference_seq="", n_positions=0, protonation=None,
+        docking_center=r["docking_center"], docking_box_size=(24, 24, 24),
+        dataset_filename="", dataset_urls=(), drug_columns=tuple(r["drugs"].keys()),
+        drugs=r["drugs"], pubchem_cids={}, primary_mutations=frozenset(r["mutations"]),
+    )
+
+
+def load_user_targets() -> list[str]:
+    """Load every draft in ``data/user_targets/`` into the registry; return names."""
+    added = []
+    if not USER_TARGETS_DIR.exists():
+        return added
+    for f in sorted(USER_TARGETS_DIR.glob("*.json")):
+        try:
+            t = target_from_draft(json.loads(f.read_text()))
+        except Exception:  # noqa: BLE001 - a malformed draft must not break startup
+            continue
+        TARGETS[t.name] = t
+        added.append(t.name)
+    return added
+
+
+load_user_targets()
 
 
 # --- Integrity checks: fail loudly at import if a reference sequence drifted ---
