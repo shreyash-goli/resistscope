@@ -39,11 +39,19 @@ def main() -> int:
     t = config.set_active_target(args.target)
     print(f"Target: {t.name} ({t.label})")
 
-    gt_path = config.DATA_DIR / "mechanism_ground_truth.json"
+    gt_path = t.ground_truth_path
+    if not gt_path.exists():
+        print(f"\nNo ground truth for {t.name} at {gt_path}.\n"
+              f"Build it agentically first:  python scripts/09_build_ground_truth.py "
+              f"--target {args.target} --primary")
+        return 1
     ground_truth = json.loads(gt_path.read_text())
     pairs = _faithfulness_pairs(config.EXPLANATIONS_DIR, ground_truth, target=t)
 
-    print(f"Ground-truth mechanisms: {len(ground_truth)}")
+    n_curated = sum(1 for v in ground_truth.values() if v.get("provenance") != "agent")
+    n_agent = len(ground_truth) - n_curated
+    print(f"Ground-truth mechanisms: {len(ground_truth)} "
+          f"({n_curated} curated, {n_agent} agent-built)")
     print(f"Cached explanations matching ground truth: {len(pairs)}")
     if not pairs:
         print("\nNothing to evaluate. Generate explanations first:")
@@ -81,6 +89,13 @@ def main() -> int:
     print(f"Mean faithfulness   : {mean_score:.2f} / 2")
     print(f"Correct mechanism   : {pct_correct:.0f}% scored 2")
     print(f"Non-contradictory   : {pct_ok:.0f}% scored >= 1")
+    # Split by ground-truth provenance so the score on the independent
+    # hand-curated set is visible separately from agent-built entries.
+    if "provenance" in results.columns and results["provenance"].nunique() > 1:
+        print("-" * 60)
+        for prov, g in results.groupby("provenance"):
+            print(f"  {prov:8s}: n={len(g):3d}  mean={g['score'].mean():.2f}  "
+                  f"correct={100.0 * (g['score'] == 2).mean():.0f}%")
     print("=" * 60)
     print(f"Saved: {out}")
     return 0

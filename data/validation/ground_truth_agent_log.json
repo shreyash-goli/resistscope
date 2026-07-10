@@ -1,0 +1,90 @@
+{
+  "I54V": {
+    "mechanism": "The I54V mutation in the flap region reduces van der Waals contacts with protease inhibitors by decreasing the side-chain volume (\u221226.7 \u0172), which creates a cavity that weakens hydrophobic interactions. Structurally, the replacement of isoleucine with the smaller valine leads to loss of water-mediated hydrogen bonding interactions with flap residues (Ile50/Ile50'), compromising critical stabilizing contacts that maintain inhibitor binding geometry and the active site architecture.",
+    "affects_drugs": [
+      "FPV",
+      "APV",
+      "DRV",
+      "LPV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 18052235, PMID 26317593, PMID 22350569, PMID 25136270",
+    "key_interaction": "Loss of water-mediated hydrogen bonds to Ile50/Ile50' flap residues and reduced van der Waals packing",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "18052235",
+        "title": "Caught in the Act: the 1.5 A resolution crystal structures of the HIV-1 protease and the I54V mutant reveal a tetrahedral reaction intermediate",
+        "year": "2007",
+        "journal": "Biochemistry"
+      },
+      {
+        "pmid": "26317593",
+        "title": "A Comparative Insight into Amprenavir Resistance of Mutations V32I, G48V, I50V, I54V, and I84V in HIV-1 Protease Based on Thermodynamic Integration and MM-PBSA Methods",
+        "year": "2015",
+        "journal": "J Chem Inf Model"
+      },
+      {
+        "pmid": "22350569",
+        "title": "Energetic basis for drug resistance of HIV-1 protease mutants against amprenavir",
+        "year": "2012",
+        "journal": "J Comput Aided Mol Des"
+      },
+      {
+        "pmid": "25136270",
+        "title": "Drug Resistance Mutations Alter Dynamics of Inhibitor-Bound HIV-1 Protease",
+        "year": "2014",
+        "journal": "J Chem Theory Comput"
+      },
+      {
+        "pmid": "26012849",
+        "title": "Effects of drug-resistant mutations on the dynamic properties of HIV-1 protease and inhibition by Amprenavir and Darunavir",
+        "year": "2015",
+        "journal": "Sci Rep"
+      }
+    ],
+    "built_at": "2026-07-10T08:23:26.007321+00:00",
+    "verify_note": "The proposed mechanism is well-supported by the abstracts. PMID 18052235 directly confirms the loss of water-mediated hydrogen bond interactions with Ile50/Ile50' flap residues in the I54V mutant, which is a core claim in the mechanism. The decrease in van der Waals contacts (\u221226.7 \u0172) is consistent with multiple studies: PMID 26317593 and 22350569 both identify van der Waals interaction loss as the primary driver of I54V resistance, and PMID 26012849 emphasizes the importance of hydrophobic interactions in maintaining closed flap conformation. The mechanism correctly attributes resistance to both cavity creation (reduced volume of valine vs isoleucine) and loss of stabilizing water-mediated hydrogen bonds. All citations are directly relevant to I54V and either experimentally validate or computationally support the proposed structural mechanism. No invented specifics beyond domain expert acceptance are present\u2014the claims are grounded in crystallographic and molecular dynamics evidence.",
+    "n_searches": 5,
+    "error": ""
+  },
+  "V82T": {
+    "mechanism": "The V82T mutation reduces the hydrophobic volume of the S1/S1' binding pocket by replacing a bulky isopropyl valine side chain with a smaller, more polar threonine residue. This substitution introduces a hydrophilic moiety (the threonine hydroxyl group) into the predominantly hydrophobic active site, creating unfavorable polar contacts with inhibitors like FPV and generating a destabilizing cavity in the binding pocket. The combined loss of hydrophobic interactions and disruption of tight ligand contacts reduces inhibitor binding affinity while the protease's structural integrity and enzymatic function remain intact.",
+    "affects_drugs": [
+      "FPV",
+      "IDV",
+      "APV",
+      "DRV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 7665551, PMID 26012849, PMID 11790852",
+    "key_interaction": "Replacement of hydrophobic valine with polar threonine, reducing van der Waals interactions and introducing unfavorable hydrophilicity in the S1/S1' pocket",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "7665551",
+        "title": "Three-dimensional structure of a mutant HIV-1 protease displaying cross-resistance to all protease inhibitors in clinical trials",
+        "year": "1995",
+        "journal": "J Biol Chem"
+      },
+      {
+        "pmid": "26012849",
+        "title": "Effects of drug-resistant mutations on the dynamic properties of HIV-1 protease and inhibition by Amprenavir and Darunavir",
+        "year": "2015",
+        "journal": "Sci Rep"
+      },
+      {
+        "pmid": "11790852",
+        "title": "Lack of synergy for inhibitors targeting a multi-drug-resistant HIV-1 protease",
+        "year": "2002",
+        "journal": "Protein Sci"
+      }
+    ],
+    "built_at": "2026-07-10T08:23:43.220392+00:00",
+    "verify_note": "",
+    "n_searches": 6,
+    "error": ""
+  }
+}

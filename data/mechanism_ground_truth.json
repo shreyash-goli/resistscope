@@ -2,76 +2,224 @@
   "V82A": {
     "mechanism": "Val82 is a beta-branched residue lining the S1/S1' subpocket whose side chain packs against the P1/P1' groups of protease inhibitors. V82A removes hydrophobic bulk, enlarging the subpocket and weakening van der Waals contacts with the inhibitor's P1/P1' substituents.",
     "source": "IAS-USA 2022 PI resistance mutations; King et al. 2004",
-    "affects_drugs": ["ATV", "IDV", "LPV", "NFV", "SQV"]
+    "affects_drugs": [
+      "ATV",
+      "IDV",
+      "LPV",
+      "NFV",
+      "SQV"
+    ]
   },
   "V82F": {
     "mechanism": "Val82 lines the S1 subpocket. Substituting the large aromatic phenylalanine (V82F) reshapes and constricts the subpocket, distorting the van der Waals packing against inhibitor P1 groups.",
     "source": "IAS-USA 2022; Weber & Agniswamy 2009",
-    "affects_drugs": ["ATV", "IDV", "LPV", "SQV"]
+    "affects_drugs": [
+      "ATV",
+      "IDV",
+      "LPV",
+      "SQV"
+    ]
   },
   "I84V": {
     "mechanism": "Ile84 makes direct hydrophobic contact with inhibitor P1'/P2 substituents in the active site. I84V removes a methyl group, reducing van der Waals packing against essentially all PIs and producing broad cross-resistance.",
     "source": "IAS-USA 2022; Weber & Agniswamy 2009",
-    "affects_drugs": ["ATV", "DRV", "IDV", "LPV", "NFV", "SQV"]
+    "affects_drugs": [
+      "ATV",
+      "DRV",
+      "IDV",
+      "LPV",
+      "NFV",
+      "SQV"
+    ]
   },
   "L90M": {
     "mechanism": "Leu90 does not contact the inhibitor directly. L90M repositions the side chain against the catalytic Asp25 loop (residues 23-25), perturbing active-site geometry and the catalytic aspartate environment, which indirectly weakens inhibitor binding.",
     "source": "IAS-USA 2022; Hong et al. 2000",
-    "affects_drugs": ["ATV", "IDV", "NFV", "SQV"]
+    "affects_drugs": [
+      "ATV",
+      "IDV",
+      "NFV",
+      "SQV"
+    ]
   },
   "D30N": {
     "mechanism": "Asp30 forms a specific hydrogen bond / salt-bridge interaction with the P2 aniline amide of nelfinavir. D30N removes the carboxylate, abolishing this drug-specific hydrogen bond; the effect is highly specific to nelfinavir.",
     "source": "IAS-USA 2022; Wlodawer & Vondrasek 1998",
-    "affects_drugs": ["NFV"]
+    "affects_drugs": [
+      "NFV"
+    ]
   },
   "N88S": {
     "mechanism": "Asn88 sits near the Asp30 / active-site loop and participates in a hydrogen-bonding network that positions Asp30. N88S disrupts this network and repositions the D30 loop, reducing binding of nelfinavir, atazanavir and indinavir.",
     "source": "IAS-USA 2022; Mitsuya et al.",
-    "affects_drugs": ["ATV", "IDV", "NFV"]
+    "affects_drugs": [
+      "ATV",
+      "IDV",
+      "NFV"
+    ]
   },
   "V32I": {
     "mechanism": "Val32 lines the S2/S2' subpocket. V32I introduces a bulkier beta-branched side chain that alters packing against the inhibitor P2/P2' groups; a key residue in the darunavir/amprenavir resistance pathway.",
     "source": "IAS-USA 2022",
-    "affects_drugs": ["ATV", "DRV", "FPV", "IDV", "LPV"]
+    "affects_drugs": [
+      "ATV",
+      "DRV",
+      "FPV",
+      "IDV",
+      "LPV"
+    ]
   },
   "L33F": {
     "mechanism": "Leu33 lies near the flap/substrate cleft. L33F introduces an aromatic side chain that alters hydrophobic packing against the inhibitor; an accessory mutation in the darunavir/fosamprenavir/atazanavir pathways.",
     "source": "IAS-USA 2022",
-    "affects_drugs": ["ATV", "DRV", "FPV"]
+    "affects_drugs": [
+      "ATV",
+      "DRV",
+      "FPV"
+    ]
   },
   "M46I": {
     "mechanism": "Met46 is a flap residue that does not contact the inhibitor directly. M46I is an accessory flap mutation that alters flap dynamics and closure and compensates for active-site mutations, broadly contributing to PI resistance.",
     "source": "IAS-USA 2022",
-    "affects_drugs": ["ATV", "IDV", "LPV", "NFV"]
+    "affects_drugs": [
+      "ATV",
+      "IDV",
+      "LPV",
+      "NFV"
+    ]
   },
   "I47V": {
     "mechanism": "Ile47 is a flap residue lining the S2' subpocket. I47V removes a methyl group, reducing hydrophobic contact with the inhibitor as the flaps close; contributes to lopinavir and darunavir resistance.",
     "source": "IAS-USA 2022",
-    "affects_drugs": ["DRV", "FPV", "LPV"]
+    "affects_drugs": [
+      "DRV",
+      "FPV",
+      "LPV"
+    ]
   },
   "G48V": {
     "mechanism": "Gly48 sits at the highly conserved flap tip. Introducing a bulky valine (G48V) causes steric hindrance that impairs flap closure over the inhibitor, most strongly reducing saquinavir binding.",
     "source": "IAS-USA 2022",
-    "affects_drugs": ["ATV", "SQV"]
+    "affects_drugs": [
+      "ATV",
+      "SQV"
+    ]
   },
   "I50V": {
     "mechanism": "Ile50 at the flap tip makes van der Waals contact with the inhibitor as the flaps close over the active site. I50V removes a methyl group, reducing this flap-inhibitor contact; a signature mutation for darunavir, amprenavir and lopinavir.",
     "source": "IAS-USA 2022",
-    "affects_drugs": ["DRV", "FPV", "LPV"]
+    "affects_drugs": [
+      "DRV",
+      "FPV",
+      "LPV"
+    ]
   },
   "I50L": {
     "mechanism": "Ile50 at the flap tip contacts the inhibitor. I50L reshapes flap-tip packing in a way that selectively reduces atazanavir binding (while often increasing susceptibility to other PIs); an atazanavir signature mutation.",
     "source": "IAS-USA 2022; Colonno et al. 2004",
-    "affects_drugs": ["ATV"]
+    "affects_drugs": [
+      "ATV"
+    ]
   },
   "I54M": {
     "mechanism": "Ile54 in the flap modulates flap flexibility and hydrophobic packing. I54M alters flap dynamics and inhibitor contacts, contributing broadly to PI resistance as part of flap-mutation pathways.",
     "source": "IAS-USA 2022",
-    "affects_drugs": ["ATV", "DRV", "LPV"]
+    "affects_drugs": [
+      "ATV",
+      "DRV",
+      "LPV"
+    ]
   },
   "L76V": {
     "mechanism": "Leu76 packs in the hydrophobic core adjacent to the active site. L76V reduces hydrophobic packing, decreasing binding of darunavir, lopinavir, fosamprenavir and indinavir (while re-sensitizing atazanavir and saquinavir).",
     "source": "IAS-USA 2022",
-    "affects_drugs": ["DRV", "FPV", "IDV", "LPV"]
+    "affects_drugs": [
+      "DRV",
+      "FPV",
+      "IDV",
+      "LPV"
+    ]
+  },
+  "I54V": {
+    "mechanism": "The I54V mutation in the flap region reduces van der Waals contacts with protease inhibitors by decreasing the side-chain volume (\u221226.7 \u0172), which creates a cavity that weakens hydrophobic interactions. Structurally, the replacement of isoleucine with the smaller valine leads to loss of water-mediated hydrogen bonding interactions with flap residues (Ile50/Ile50'), compromising critical stabilizing contacts that maintain inhibitor binding geometry and the active site architecture.",
+    "affects_drugs": [
+      "FPV",
+      "APV",
+      "DRV",
+      "LPV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 18052235, PMID 26317593, PMID 22350569, PMID 25136270",
+    "key_interaction": "Loss of water-mediated hydrogen bonds to Ile50/Ile50' flap residues and reduced van der Waals packing",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "18052235",
+        "title": "Caught in the Act: the 1.5 A resolution crystal structures of the HIV-1 protease and the I54V mutant reveal a tetrahedral reaction intermediate",
+        "year": "2007",
+        "journal": "Biochemistry"
+      },
+      {
+        "pmid": "26317593",
+        "title": "A Comparative Insight into Amprenavir Resistance of Mutations V32I, G48V, I50V, I54V, and I84V in HIV-1 Protease Based on Thermodynamic Integration and MM-PBSA Methods",
+        "year": "2015",
+        "journal": "J Chem Inf Model"
+      },
+      {
+        "pmid": "22350569",
+        "title": "Energetic basis for drug resistance of HIV-1 protease mutants against amprenavir",
+        "year": "2012",
+        "journal": "J Comput Aided Mol Des"
+      },
+      {
+        "pmid": "25136270",
+        "title": "Drug Resistance Mutations Alter Dynamics of Inhibitor-Bound HIV-1 Protease",
+        "year": "2014",
+        "journal": "J Chem Theory Comput"
+      },
+      {
+        "pmid": "26012849",
+        "title": "Effects of drug-resistant mutations on the dynamic properties of HIV-1 protease and inhibition by Amprenavir and Darunavir",
+        "year": "2015",
+        "journal": "Sci Rep"
+      }
+    ],
+    "built_at": "2026-07-10T08:23:26.007440+00:00"
+  },
+  "V82T": {
+    "mechanism": "The V82T mutation reduces the hydrophobic volume of the S1/S1' binding pocket by replacing a bulky isopropyl valine side chain with a smaller, more polar threonine residue. This substitution introduces a hydrophilic moiety (the threonine hydroxyl group) into the predominantly hydrophobic active site, creating unfavorable polar contacts with inhibitors like FPV and generating a destabilizing cavity in the binding pocket. The combined loss of hydrophobic interactions and disruption of tight ligand contacts reduces inhibitor binding affinity while the protease's structural integrity and enzymatic function remain intact.",
+    "affects_drugs": [
+      "FPV",
+      "IDV",
+      "APV",
+      "DRV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 7665551, PMID 26012849, PMID 11790852",
+    "key_interaction": "Replacement of hydrophobic valine with polar threonine, reducing van der Waals interactions and introducing unfavorable hydrophilicity in the S1/S1' pocket",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "7665551",
+        "title": "Three-dimensional structure of a mutant HIV-1 protease displaying cross-resistance to all protease inhibitors in clinical trials",
+        "year": "1995",
+        "journal": "J Biol Chem"
+      },
+      {
+        "pmid": "26012849",
+        "title": "Effects of drug-resistant mutations on the dynamic properties of HIV-1 protease and inhibition by Amprenavir and Darunavir",
+        "year": "2015",
+        "journal": "Sci Rep"
+      },
+      {
+        "pmid": "11790852",
+        "title": "Lack of synergy for inhibitors targeting a multi-drug-resistant HIV-1 protease",
+        "year": "2002",
+        "journal": "Protein Sci"
+      }
+    ],
+    "built_at": "2026-07-10T08:23:43.220474+00:00"
   }
 }

@@ -163,7 +163,7 @@ SUBPOCKET_REGIONS_BY_TARGET = {
 LIGAND_CONTACT_THRESHOLD_A = 4.5
 
 # Lazily-loaded co-crystal ligand atom coords, per target (protease ROC from
-# 3OXC, RT RIL from 3V81) — used for accurate residue-ligand contact distances
+# 3OXC, RT NVP/nevirapine from 3V81) — used for accurate residue-ligand contact distances
 # (the cleaned wildtype has the ligand stripped). Keyed by target name; False
 # sentinel = unavailable.
 _LIGAND_COORDS_CACHE: dict = {}
@@ -460,6 +460,7 @@ def _faithfulness_pairs(explanations_dir: Path, ground_truth: dict,
                 pairs.append({
                     "mutation": mutation, "drug": drug,
                     "explanation": expl, "mechanism": gt["mechanism"],
+                    "provenance": gt.get("provenance", "curated"),
                 })
     return pairs
 
@@ -481,13 +482,13 @@ def evaluate_faithfulness(
     if explanations_dir is None:
         explanations_dir = t.explanations_dir
     if ground_truth_path is None:
-        ground_truth_path = config.DATA_DIR / "mechanism_ground_truth.json"
+        ground_truth_path = t.ground_truth_path
 
     ground_truth = json.loads(Path(ground_truth_path).read_text())
     pairs = _faithfulness_pairs(explanations_dir, ground_truth, target=t)
     if not pairs:
         return pd.DataFrame(
-            columns=["mutation", "drug", "score", "justification"]
+            columns=["mutation", "drug", "score", "justification", "provenance"]
         )
 
     import anthropic
@@ -495,6 +496,14 @@ def evaluate_faithfulness(
     model = model or config.CLAUDE_MODEL
     client = anthropic.Anthropic()
     judge_system = _judge_system_prompt(t)
+    # Structured 0/1/2 output via a forced tool call. (The installed SDK has no
+    # output_config/response_format; a forced tool is the version-robust way to
+    # guarantee a machine-readable verdict.)
+    judge_tool = {
+        "name": "report_score",
+        "description": "Report the faithfulness score and a one-sentence justification.",
+        "input_schema": FAITHFULNESS_SCHEMA,
+    }
 
     rows = []
     for p in pairs:
@@ -510,15 +519,18 @@ def evaluate_faithfulness(
             max_tokens=512,
             system=judge_system,
             messages=[{"role": "user", "content": user_prompt}],
-            output_config={"format": {"type": "json_schema", "schema": FAITHFULNESS_SCHEMA}},
+            tools=[judge_tool],
+            tool_choice={"type": "tool", "name": "report_score"},
         )
-        text = next((b.text for b in response.content if b.type == "text"), "{}")
-        verdict = json.loads(text)
+        verdict = next((b.input for b in response.content
+                        if b.type == "tool_use" and b.name == "report_score"),
+                       {"score": 0, "justification": ""})
         rows.append({
             "mutation": p["mutation"],
             "drug": p["drug"],
             "score": int(verdict["score"]),
             "justification": verdict.get("justification", ""),
+            "provenance": p.get("provenance", "curated"),
         })
 
     return pd.DataFrame(rows)
