@@ -1,0 +1,171 @@
+{
+  "n_pairs": 1591,
+  "drm_base_rate": 0.12256442489000628,
+  "enrichment": [
+    {
+      "top_n": 20,
+      "precision": 0.3,
+      "base_rate": 0.12256442489000628,
+      "enrichment": 2.4476923076923076,
+      "perm_p": 0.0242,
+      "ci_low": 0.815897435897436,
+      "ci_high": 4.079487179487179,
+      "n_drms_in_top": 6
+    },
+    {
+      "top_n": 40,
+      "precision": 0.35,
+      "base_rate": 0.12256442489000628,
+      "enrichment": 2.8556410256410256,
+      "perm_p": 0.0,
+      "ci_low": 1.631794871794872,
+      "ci_high": 4.079487179487179,
+      "n_drms_in_top": 14
+    },
+    {
+      "top_n": 60,
+      "precision": 0.3,
+      "base_rate": 0.12256442489000628,
+      "enrichment": 2.4476923076923076,
+      "perm_p": 0.0,
+      "ci_low": 1.4958119658119657,
+      "ci_high": 3.39957264957265,
+      "n_drms_in_top": 18
+    },
+    {
+      "top_n": 100,
+      "precision": 0.23,
+      "base_rate": 0.12256442489000628,
+      "enrichment": 1.8765641025641027,
+      "perm_p": 0.0008,
+      "ci_low": 1.2238461538461538,
+      "ci_high": 2.610871794871795,
+      "n_drms_in_top": 23
+    }
+  ],
+  "ranking": [
+    {
+      "drug": "ATV",
+      "roc_auc": 0.5327946127946128,
+      "pr_auc": 0.2163656942833871,
+      "base_rate": 0.12790697674418605,
+      "n": 258,
+      "n_drms": 33,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "DRV",
+      "roc_auc": 0.46154562383612663,
+      "pr_auc": 0.15023780636161432,
+      "base_rate": 0.14354066985645933,
+      "n": 209,
+      "n_drms": 30,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "IDV",
+      "roc_auc": 0.3884020932213703,
+      "pr_auc": 0.09424192212828429,
+      "base_rate": 0.11702127659574468,
+      "n": 282,
+      "n_drms": 33,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "LPV",
+      "roc_auc": 0.5519480519480519,
+      "pr_auc": 0.20344371129591315,
+      "base_rate": 0.11870503597122302,
+      "n": 278,
+      "n_drms": 33,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "NFV",
+      "roc_auc": 0.6151152963901968,
+      "pr_auc": 0.23110801054189356,
+      "base_rate": 0.11619718309859155,
+      "n": 284,
+      "n_drms": 33,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "SQV",
+      "roc_auc": 0.67200343516133,
+      "pr_auc": 0.21954408383690935,
+      "base_rate": 0.11785714285714285,
+      "n": 280,
+      "n_drms": 33,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "OVERALL",
+      "roc_auc": 0.509916611564176,
+      "pr_auc": 0.16194327307455297,
+      "base_rate": 0.12256442489000628,
+      "n": 1591,
+      "n_drms": 195,
+      "roc_auc_ci_low": 0.464887570068061,
+      "roc_auc_ci_high": 0.5574924774419826
+    }
+  ],
+  "deconfounding": [
+    {
+      "subset": "all isolates (confounded)",
+      "max_mutations_per_isolate": "\u221e",
+      "n_isolates_used": 2171,
+      "min_isolates_per_mutation": 3,
+      "n_pairs": 1591,
+      "spearman_rho": 0.001986832172498399,
+      "spearman_pvalue": 0.9368836898789789
+    },
+    {
+      "subset": "\u22643 mutations",
+      "max_mutations_per_isolate": "3",
+      "n_isolates_used": 204,
+      "min_isolates_per_mutation": 3,
+      "n_pairs": 178,
+      "spearman_rho": -0.24467625015230893,
+      "spearman_pvalue": 0.000996312182424544
+    },
+    {
+      "subset": "\u22642 mutations",
+      "max_mutations_per_isolate": "2",
+      "n_isolates_used": 102,
+      "min_isolates_per_mutation": 2,
+      "n_pairs": 137,
+      "spearman_rho": -0.1613458399623862,
+      "spearman_pvalue": 0.05962433090672608
+    },
+    {
+      "subset": "single-mutation only",
+      "max_mutations_per_isolate": "1",
+      "n_isolates_used": 29,
+      "min_isolates_per_mutation": 1,
+      "n_pairs": 63,
+      "spearman_rho": -0.1518485043101167,
+      "spearman_pvalue": 0.23482204503156123
+    }
+  ],
+  "headline": {
+    "best_enrichment": 2.8556410256410256,
+    "best_enrichment_top_n": 40,
+    "best_enrichment_perm_p": 0.0,
+    "best_enrichment_ci": [
+      1.631794871794872,
+      4.079487179487179
+    ],
+    "pooled_roc_auc": 0.509916611564176,
+    "pooled_roc_auc_ci": [
+      0.464887570068061,
+      0.5574924774419826
+    ],
+    "deconfounding_rescues_correlation": false
+  }
+}
