@@ -16,6 +16,11 @@ __pycache__/
 data/raw/
 # wildtype + 285 mutant PDB/PDBQT (~111 MB):
 data/structures/
+# RT (reverse transcriptase) receptors — same rationale, regenerable:
+data/rt/structures/
+
+# Frontend build output
+frontend/dist/
 
 # Deploy bundle
 *.tar.gz
@@ -23,3 +28,5 @@ data/structures/
 # NOTE: these small, expensive-to-regenerate outputs are committed on purpose
 # (not ignored): data/panels/, data/docking_results/, data/validation/,
 # data/ligands/, data/mechanism_ground_truth.json
+
+PLAN.md
