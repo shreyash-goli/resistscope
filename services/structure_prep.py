@@ -1,17 +1,20 @@
 """PDB download, cleaning, point mutagenesis, and PDBQT conversion.
 
-Prepares the HIV-1 protease receptor (PDB 3OXC) and its resistance mutants for
-AutoDock Vina docking. The scientific validity of every downstream score
-depends on a handful of non-obvious details enforced here:
+Prepares a receptor (the active :class:`~targets.Target`'s wildtype PDB) and its
+resistance mutants for AutoDock Vina docking. The scientific validity of every
+downstream score depends on a handful of non-obvious, *target-specific* details,
+all sourced from the Target so protease and RT are handled by one code path:
 
-- The co-crystallized ligand in 3OXC is **saquinavir with het code ``ROC``**
-  (not ``SQV`` / ``938``). Its occupancy-weighted centroid defines the docking
-  box center.
-- HIV-1 protease is a **C2-symmetric homodimer**; both chains A and B are kept
-  and every point mutation is applied to both chains.
-- The catalytic **Asp25 dyad is asymmetrically protonated** — chain A neutral
-  (protonated), chain B charged (deprotonated). This is fixed after adding
-  hydrogens, for the wildtype and every mutant.
+- The co-crystallized ligand's occupancy-weighted centroid (``target.
+  ligand_hetcodes``) defines the docking box center (e.g. ``ROC`` = saquinavir
+  in protease's 3OXC).
+- ``target.chains`` are kept; a point mutation is applied to ``target.
+  mutate_chains`` — both monomers for the protease homodimer (A+B), only p66
+  (A) for the RT heterodimer.
+- ``target.protonation`` (protease only): the catalytic Asp25 dyad is
+  asymmetrically protonated — chain A neutral (``ASH``), chain B charged
+  (``ASP``) — fixed after adding hydrogens for wildtype and every mutant. RT
+  sets ``protonation=None`` and uses standard pH-7 hydrogens.
 
 Dependencies: pdbfixer (from OpenMM), biopython, meeko.
 """
@@ -26,6 +29,7 @@ from openmm.app import PDBFile
 from pdbfixer import PDBFixer
 
 import config
+from targets import Protonation, Target
 
 # One-letter -> three-letter amino acid code, for PDBFixer mutation strings.
 AA_ONE_TO_THREE = {
@@ -35,12 +39,14 @@ AA_ONE_TO_THREE = {
     "S": "SER", "T": "THR", "W": "TRP", "Y": "TYR", "V": "VAL",
 }
 
-# The catalytic aspartate residue number in each protease monomer.
-ASP25_RESNUM = 25
-
 # Cached OpenMM force field for the clash-relief minimization of mutant side
 # chains (created lazily on first use).
 _FORCEFIELD = None
+
+
+def _resolve(target: Target | None) -> Target:
+    """Default an optional target to the active one."""
+    return target if target is not None else config.ACTIVE_TARGET
 
 
 def _get_forcefield():
@@ -125,23 +131,28 @@ class _ReceptorSelect(Select):
 
 def clean_structure(
     pdb_path: Path,
-    chains_to_keep: list[str] = config.CHAINS_TO_KEEP,
-    het_codes_to_strip: list[str] = config.LIGAND_HETCODES_TO_STRIP,
+    chains_to_keep: list[str] = None,
+    het_codes_to_strip: list[str] = None,
     strip_waters: bool = True,
     output_path: Path = None,
+    target: Target | None = None,
 ) -> Path:
-    """Strip ligand/ions/waters, keep chains A+B, save as ``wildtype.pdb``.
+    """Strip ligand/ions/waters, keep the target's chains, save ``wildtype.pdb``.
 
     BEFORE stripping, the occupancy-weighted centroid of the ligand
-    (``het_codes_to_strip``, default ``["ROC"]`` = saquinavir) is computed and
-    PRINTED — this is the value to use for ``config.DOCKING_CENTER``. The
-    printout also reports the offset from the current configured center.
-
-    Note: the co-crystal ligand het code in 3OXC is ``ROC``, not ``938``.
+    (``het_codes_to_strip``, default = the target's ``ligand_hetcodes``) is
+    computed and PRINTED — this is the value to set as the target's
+    ``docking_center`` in targets.py. The printout also reports the offset from
+    the currently configured center (for RT this reveals the placeholder box).
     """
+    t = _resolve(target)
+    if chains_to_keep is None:
+        chains_to_keep = list(t.chains)
+    if het_codes_to_strip is None:
+        het_codes_to_strip = list(t.ligand_hetcodes)
     pdb_path = Path(pdb_path)
     if output_path is None:
-        output_path = config.STRUCTURES_DIR / "wildtype.pdb"
+        output_path = t.structures_dir / "wildtype.pdb"
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -152,15 +163,15 @@ def clean_structure(
     center = _ligand_centroid(structure, het_codes_to_strip)
     cx, cy, cz = center
     print(
-        f"Ligand ({','.join(het_codes_to_strip)}) occupancy-weighted centroid: "
-        f"({cx:.3f}, {cy:.3f}, {cz:.3f})"
+        f"[{t.name}] Ligand ({','.join(het_codes_to_strip)}) occupancy-weighted "
+        f"centroid: ({cx:.3f}, {cy:.3f}, {cz:.3f})"
     )
-    dcx, dcy, dcz = config.DOCKING_CENTER
+    dcx, dcy, dcz = t.docking_center
     print(
-        f"  config.DOCKING_CENTER = ({dcx:.3f}, {dcy:.3f}, {dcz:.3f}); "
+        f"  {t.name}.docking_center = ({dcx:.3f}, {dcy:.3f}, {dcz:.3f}); "
         f"offset = ({cx - dcx:+.3f}, {cy - dcy:+.3f}, {cz - dcz:+.3f}) A"
     )
-    print("  -> Set this as DOCKING_CENTER in config.py if it differs.")
+    print("  -> Set this as docking_center for this target in targets.py if it differs.")
 
     # --- Strip and write the receptor ---
     io = PDBIO()
@@ -175,63 +186,70 @@ def clean_structure(
 
 # --- Hydrogens & catalytic-dyad protonation ----------------------------------
 
-def _asp25_variants(topology) -> list:
-    """Build a per-residue variants list for asymmetric Asp25 protonation.
+def _dyad_variants(topology, protonation: Protonation) -> list:
+    """Build a per-residue variants list for asymmetric catalytic-dyad protonation.
 
     Returns a list aligned to ``topology.residues()`` (the shape
-    ``Modeller.addHydrogens`` expects): the catalytic Asp25 (the 25th residue)
-    of ``config.ASP25_PROTONATED_CHAIN`` is set to ``"ASH"`` (protonated,
-    neutral) and of ``config.ASP25_DEPROTONATED_CHAIN`` to ``"ASP"``
-    (deprotonated, charged); every other residue is ``None`` (pH default).
+    ``Modeller.addHydrogens`` expects): the catalytic residue (the
+    ``protonation.resnum``-th residue) of ``protonation.protonated_chain`` is set
+    to ``"ASH"`` (protonated, neutral) and of ``protonation.deprotonated_chain``
+    to ``"ASP"`` (deprotonated, charged); every other residue is ``None`` (pH
+    default).
 
-    Locating Asp25 by ordinal position is robust to PDBFixer's chain-B
-    renumbering (chain B -> residues 101-199).
+    Locating the catalytic residue by ordinal position is robust to PDBFixer's
+    chain-B renumbering (chain B -> residues 101-199).
     """
-    prot_chain = config.ASP25_PROTONATED_CHAIN.upper()
-    deprot_chain = config.ASP25_DEPROTONATED_CHAIN.upper()
+    prot_chain = protonation.protonated_chain.upper()
+    deprot_chain = protonation.deprotonated_chain.upper()
+    ordinal = protonation.resnum
     variants: list = []
     for chain in topology.chains():
         cid = chain.id.upper()
         for i, res in enumerate(chain.residues()):
-            is_catalytic = (i == ASP25_RESNUM - 1) and res.name in ("ASP", "ASH")
+            is_catalytic = (i == ordinal - 1) and res.name in ("ASP", "ASH")
             if is_catalytic and cid == prot_chain:
-                variants.append("ASH")
+                variants.append(protonation.resname_protonated)
             elif is_catalytic and cid == deprot_chain:
-                variants.append("ASP")
+                variants.append(protonation.resname_deprotonated)
             else:
                 variants.append(None)
     return variants
 
 
-def _add_hydrogens_with_asp25_fix(fixer: PDBFixer, ph: float = 7.0) -> None:
-    """Add hydrogens to a PDBFixer structure with correct Asp25 protonation.
+def _add_hydrogens(fixer: PDBFixer, protonation: Protonation | None,
+                   ph: float = 7.0) -> None:
+    """Add hydrogens to a PDBFixer structure.
 
-    Uses ``openmm.app.Modeller.addHydrogens`` with a per-residue ``variants``
-    list so the catalytic dyad is built asymmetrically (chain A ASH / chain B
-    ASP) with proper hydrogen geometry, instead of hand-editing atoms
-    afterwards. Updates ``fixer.topology`` and ``fixer.positions`` in place.
+    When ``protonation`` is given (HIV protease), uses ``Modeller.addHydrogens``
+    with a per-residue ``variants`` list so the catalytic dyad is built
+    asymmetrically (chain A ASH / chain B ASP). When ``None`` (e.g. RT), adds
+    standard pH-``ph`` hydrogens. Updates ``fixer.topology``/``positions`` in place.
     """
     from openmm.app import Modeller
 
     modeller = Modeller(fixer.topology, fixer.positions)
-    variants = _asp25_variants(modeller.topology)
+    variants = _dyad_variants(modeller.topology, protonation) if protonation else None
     modeller.addHydrogens(pH=ph, variants=variants)
     fixer.topology = modeller.topology
     fixer.positions = modeller.positions
 
 
-def add_hydrogens_and_fix_protonation(pdb_path: Path, ph: float = 7.0) -> Path:
-    """Add missing atoms/hydrogens and enforce the Asp25 protonation asymmetry.
+def add_hydrogens_and_fix_protonation(
+    pdb_path: Path, ph: float = 7.0, target: Target | None = None,
+) -> Path:
+    """Add missing atoms/hydrogens, enforcing the target's dyad protonation.
 
-    Overwrites ``pdb_path`` in place with the hydrogenated, protonation-fixed
-    structure and returns it.
+    For a target with ``protonation`` (protease) this builds the asymmetric
+    Asp25 dyad; for ``protonation=None`` (RT) it adds standard hydrogens.
+    Overwrites ``pdb_path`` in place and returns it.
     """
+    t = _resolve(target)
     pdb_path = Path(pdb_path)
     fixer = PDBFixer(filename=str(pdb_path))
     fixer.findMissingResidues()
     fixer.findMissingAtoms()
     fixer.addMissingAtoms()
-    _add_hydrogens_with_asp25_fix(fixer, ph)
+    _add_hydrogens(fixer, t.protonation, ph)
 
     with open(pdb_path, "w") as fh:
         PDBFile.writeFile(fixer.topology, fixer.positions, fh, keepIds=True)
@@ -279,21 +297,24 @@ def _minimize_mutated_residues(fixer: PDBFixer, mutated_atom_indices: set) -> bo
 
 def generate_mutant(
     wildtype_pdb: Path,
-    chain_id: str,          # kept for signature compatibility; both chains used
+    chain_id: str,          # kept for signature compatibility; target drives chains
     position: int,
     wildtype_aa: str,
     mutant_aa: str,
-    output_dir: Path = config.MUTANTS_DIR,
+    output_dir: Path = None,
+    target: Target | None = None,
 ) -> Path:
     """Generate a point-mutant receptor PDB using PDBFixer.
 
-    The mutation is applied to BOTH chains A and B (HIV protease is a homodimer,
-    and the major DRMs occur in both monomers). Missing atoms/hydrogens are
-    rebuilt and the Asp25 protonation asymmetry is re-applied. Saves to
+    The mutation is applied to every chain in ``target.mutate_chains`` — both
+    monomers for the protease homodimer (A+B), only p66 (A) for the RT
+    heterodimer. Missing atoms/hydrogens are rebuilt and the target's dyad
+    protonation (protease only) is re-applied. Saves to
     ``{output_dir}/{wt}{position}{mut}.pdb`` and returns that path.
     """
+    t = _resolve(target)
     wildtype_pdb = Path(wildtype_pdb)
-    output_dir = Path(output_dir)
+    output_dir = Path(output_dir) if output_dir is not None else t.mutants_dir
     output_dir.mkdir(parents=True, exist_ok=True)
 
     from openmm.app import Modeller
@@ -305,35 +326,38 @@ def generate_mutant(
     fixer = PDBFixer(filename=str(wildtype_pdb))
 
     # Start from a clean heavy-atom topology: strip any pre-existing hydrogens so
-    # the mutated residue and the Asp25 dyad are rehydrogenated consistently.
+    # the mutated residue and (protease) the catalytic dyad are rehydrogenated
+    # consistently.
     modeller = Modeller(fixer.topology, fixer.positions)
     modeller.delete([a for a in modeller.topology.atoms() if a.element == hydrogen])
     fixer.topology, fixer.positions = modeller.topology, modeller.positions
 
-    # Map the protease position to each chain's actual residue by ordinal
-    # position. This is robust to PDBFixer's chain-B renumbering (101-199), where
-    # protease residue 82 is stored as residue 182. We mutate FROM the residue
-    # actually present in the structure, not the consensus wildtype: 3OXC carries
-    # a few natural/engineered variants (e.g. I33, A67, A95), so a consensus-named
+    # Map the position to each mutated chain's actual residue by ordinal position.
+    # This is robust to PDBFixer's chain renumbering (protease chain B -> 101-199,
+    # where residue 82 is stored as 182). We mutate FROM the residue actually
+    # present in the structure, not the consensus wildtype: e.g. 3OXC carries a
+    # few natural/engineered variants (I33, A67, A95), so a consensus-named
     # mutation like "L33F" must be applied as ILE-33-PHE on this structure.
-    keep = {c.upper() for c in config.CHAINS_TO_KEEP}
-    targets: list[tuple[str, int, str]] = []  # (chain, resseq, current_resname)
+    # NOTE: ordinal mapping assumes no unresolved residues before `position` in
+    # the mutated chain; verify for RT crystal structures with N-terminal gaps.
+    mutate = {c.upper() for c in t.mutate_chains}
+    sites: list[tuple[str, int, str]] = []  # (chain, resseq, current_resname)
     for chain in fixer.topology.chains():
         cid = chain.id.upper()
-        if cid not in keep:
+        if cid not in mutate:
             continue
         residues = list(chain.residues())
         if position - 1 >= len(residues):
             continue
-        target = residues[position - 1]
-        targets.append((cid, int(target.id), target.name))
+        res = residues[position - 1]
+        sites.append((cid, int(res.id), res.name))
 
-    if not targets:
+    if not sites:
         raise ValueError(f"{mutation_name}: no target chains found for mutation.")
 
-    # Apply to BOTH chains of the homodimer, skipping chains that already carry
-    # the target residue (a 3OXC polymorphism matching the mutation target).
-    for cid, resseq, current in targets:
+    # Apply to each mutated chain, skipping chains that already carry the target
+    # residue (a structural polymorphism matching the mutation target).
+    for cid, resseq, current in sites:
         if current == mut3:
             continue
         fixer.applyMutations([f"{current}-{resseq}-{mut3}"], cid)
@@ -344,11 +368,12 @@ def generate_mutant(
 
     # Relieve clashes from the rigidly-placed side chain: add a standard-
     # protonation H set, minimize only the mutated residues (rest frozen), then
-    # re-hydrogenate with the correct asymmetric Asp25 protonation.
+    # re-hydrogenate with the target's dyad protonation (protease) or standard
+    # hydrogens (RT).
     fixer.addMissingHydrogens(7.0)
     mutated_atom_indices: set = set()
     for chain in fixer.topology.chains():
-        if chain.id.upper() in keep:
+        if chain.id.upper() in mutate:
             res = list(chain.residues())[position - 1]
             mutated_atom_indices.update(a.index for a in res.atoms())
     _minimize_mutated_residues(fixer, mutated_atom_indices)
@@ -356,7 +381,7 @@ def generate_mutant(
     strip = Modeller(fixer.topology, fixer.positions)
     strip.delete([a for a in strip.topology.atoms() if a.element == hydrogen])
     fixer.topology, fixer.positions = strip.topology, strip.positions
-    _add_hydrogens_with_asp25_fix(fixer, 7.0)
+    _add_hydrogens(fixer, t.protonation, 7.0)
 
     out_path = output_dir / f"{mutation_name}.pdb"
     with open(out_path, "w") as fh:
@@ -417,22 +442,25 @@ def prepare_receptor_pdbqt(pdb_path: Path) -> Path:
 def prepare_wildtype(
     raw_pdb: Path = None,
     force: bool = False,
+    target: Target | None = None,
 ) -> dict[str, Path]:
     """Run the full wildtype receptor pipeline: clean -> H+protonation -> PDBQT.
 
-    Returns ``{"pdb": wildtype.pdb, "pdbqt": wildtype.pdbqt}``. If both outputs
-    already exist and ``force`` is False, the (cheap) clean + hydrogen steps are
-    still re-run only when the PDB is missing; a present PDBQT is left as-is.
+    Returns ``{"pdb": wildtype.pdb, "pdbqt": wildtype.pdbqt}`` under the target's
+    structures dir. If both outputs already exist and ``force`` is False, the
+    (cheap) clean + hydrogen steps are still re-run only when the PDB is missing;
+    a present PDBQT is left as-is.
     """
+    t = _resolve(target)
     if raw_pdb is None:
-        raw_pdb = config.RAW_DIR / f"{config.WILDTYPE_PDB_ID}.pdb"
+        raw_pdb = config.RAW_DIR / f"{t.pdb_id}.pdb"
     raw_pdb = Path(raw_pdb)
 
-    wt_pdb = config.STRUCTURES_DIR / "wildtype.pdb"
-    wt_pdbqt = config.STRUCTURES_DIR / "wildtype.pdbqt"
+    wt_pdb = t.structures_dir / "wildtype.pdb"
+    wt_pdbqt = t.structures_dir / "wildtype.pdbqt"
 
     if wt_pdbqt.exists() and wt_pdb.exists() and not force:
-        print(f"Wildtype already prepared: {wt_pdb.name}, {wt_pdbqt.name}")
+        print(f"[{t.name}] Wildtype already prepared: {wt_pdb.name}, {wt_pdbqt.name}")
         return {"pdb": wt_pdb, "pdbqt": wt_pdbqt}
 
     if not raw_pdb.exists():
@@ -440,24 +468,28 @@ def prepare_wildtype(
             f"Raw PDB not found at {raw_pdb}. Run scripts/01_download_data.py."
         )
 
-    clean_structure(raw_pdb)
-    add_hydrogens_and_fix_protonation(wt_pdb)
+    clean_structure(raw_pdb, target=t)
+    add_hydrogens_and_fix_protonation(wt_pdb, target=t)
     pdbqt = prepare_receptor_pdbqt(wt_pdb)
-    print(f"Wildtype receptor ready: {wt_pdb.name}, {pdbqt.name}")
+    print(f"[{t.name}] Wildtype receptor ready: {wt_pdb.name}, {pdbqt.name}")
     return {"pdb": wt_pdb, "pdbqt": pdbqt}
 
 
 # --- Mutant cache builder ----------------------------------------------------
 
 def collect_unique_mutations(
-    panels_dir: Path = config.PANELS_DIR,
+    panels_dir: Path = None,
+    target: Target | None = None,
 ) -> list[tuple[str, int, str, str]]:
-    """Return the union of unique mutations across all panels.
+    """Return the union of unique mutations across all of the target's panels.
 
     Each item is ``(mutation_name, position, wildtype_aa, mutant_aa)``, sorted
-    by position then mutant residue.
+    by position then mutant residue. ``panels_dir`` defaults to the target's.
     """
     from services.mutation_panel import load_panel
+
+    t = _resolve(target)
+    panels_dir = Path(panels_dir) if panels_dir is not None else t.panels_dir
 
     mutations: dict[str, tuple[int, str, str]] = {}
     for parquet in sorted(Path(panels_dir).glob("*.parquet")):
@@ -477,36 +509,39 @@ def collect_unique_mutations(
 
 
 def build_mutant_cache(
-    panels_dir: Path = config.PANELS_DIR,
+    panels_dir: Path = None,
     limit: int = None,
+    target: Target | None = None,
 ) -> list[Path]:
-    """Generate mutant PDB + PDBQT for every unique mutation across all panels.
+    """Generate mutant PDB + PDBQT for every unique mutation across the panels.
 
     Skips mutations whose PDBQT already exists. ``limit`` caps the number of
     mutations processed (useful for a quick smoke test). Returns the list of
-    PDBQT paths that exist after the run.
+    PDBQT paths that exist after the run. All paths default to the target's dirs.
     """
-    wildtype_pdb = config.STRUCTURES_DIR / "wildtype.pdb"
+    t = _resolve(target)
+    panels_dir = Path(panels_dir) if panels_dir is not None else t.panels_dir
+    wildtype_pdb = t.structures_dir / "wildtype.pdb"
     if not wildtype_pdb.exists():
         raise FileNotFoundError(
             f"Wildtype receptor not found at {wildtype_pdb}. "
             f"Run structure_prep.prepare_wildtype() first."
         )
 
-    ordered = collect_unique_mutations(panels_dir)
+    ordered = collect_unique_mutations(panels_dir, target=t)
     if limit is not None:
         ordered = ordered[:limit]
     total = len(ordered)
 
     pdbqt_paths: list[Path] = []
     for i, (name, pos, wt, mut) in enumerate(ordered, start=1):
-        pdbqt_path = config.MUTANTS_DIR / f"{name}.pdbqt"
+        pdbqt_path = t.mutants_dir / f"{name}.pdbqt"
         if pdbqt_path.exists():
             print(f"Skipping {name} (cached) ({i}/{total})")
             pdbqt_paths.append(pdbqt_path)
             continue
         try:
-            mutant_pdb = generate_mutant(wildtype_pdb, "A", pos, wt, mut)
+            mutant_pdb = generate_mutant(wildtype_pdb, "A", pos, wt, mut, target=t)
             pdbqt_paths.append(prepare_receptor_pdbqt(mutant_pdb))
             print(f"Generated {name} ({i}/{total})")
         except Exception as exc:  # noqa: BLE001 - keep the batch alive

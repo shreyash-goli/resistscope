@@ -1,19 +1,21 @@
-"""01: Download the Rhee PI dataset and the 3OXC PDB structure.
+"""01: Download the target's genotype-phenotype dataset and its PDB structure.
 
-Downloads two inputs into ``data/raw/``:
+Downloads two inputs into ``data/raw/`` for the chosen target:
 
-1. The HIV-1 protease genotype-phenotype (PI) dataset from Stanford HIVdb.
-2. PDB structure 3OXC (wildtype HIV-1 protease + saquinavir) from RCSB.
+1. The Stanford HIVdb genotype-phenotype dataset (protease PI, or RT NNRTI).
+2. The wildtype receptor PDB (protease 3OXC, or RT 3V81) from RCSB.
 
 The Stanford landing page is a JavaScript app that does not embed the file
 links in its HTML, so we cannot reliably scrape it. We still *try* to parse it
-for a PI .txt/.tsv link, then fall back to the known canonical download URLs.
+for a matching .txt/.tsv link, then fall back to the target's canonical URLs.
 
 Run from anywhere::
 
-    python scripts/01_download_data.py
+    python scripts/01_download_data.py              # protease (default)
+    python scripts/01_download_data.py --target rt  # reverse transcriptase (NNRTIs)
 """
 
+import argparse
 import re
 import sys
 from pathlib import Path
@@ -31,19 +33,8 @@ import config  # noqa: E402
 # Landing page for the Rhee 2006 PNAS analysis (mostly JS-rendered).
 RHEE_LANDING_PAGE = config.RHEE_DATASET_URL
 
-# Known-good direct URLs for the PI dataset, tried in order. The first is the
-# canonical Stanford HIVdb download path (verified ~654 KB TSV).
-PI_DATASET_CANDIDATE_URLS = [
-    "https://hivdb.stanford.edu/download/GenoPhenoDatasets/PI_DataSet.txt",
-    "https://hivdb.stanford.edu/pages/published_analysis/genophenoPNAS2006/DATA/PI_DataSet.txt",
-    "https://hivdb.stanford.edu/download/GenoPhenoDatasets/PI_DataSet.Full.txt",
-]
-
-PI_DATASET_FILENAME = "PI_DataSet.txt"
-PDB_FILENAME = "3OXC.pdb"
-
 REQUEST_TIMEOUT = 60  # seconds
-HEADERS = {"User-Agent": "ResistScope/0.1 (HIV-1 protease resistance triage)"}
+HEADERS = {"User-Agent": "ResistScope/0.1 (HIV drug-resistance triage)"}
 
 
 # --- Helpers -----------------------------------------------------------------
@@ -110,11 +101,12 @@ def download_file(url: str, dest: Path, min_bytes: int = 1) -> bool:
     return True
 
 
-def find_pi_links_on_page(url: str) -> list[str]:
-    """Fetch the landing page and return absolute URLs to PI .txt/.tsv files.
+def find_dataset_links_on_page(url: str, match_token: str) -> list[str]:
+    """Fetch the landing page and return absolute URLs to matching .txt/.tsv files.
 
     Best-effort: returns an empty list if the page can't be fetched or has no
-    matching links (the page is JS-rendered, so this usually finds nothing).
+    links whose href contains ``match_token`` (the page is JS-rendered, so this
+    usually finds nothing and we fall back to the target's canonical URLs).
     """
     try:
         resp = requests.get(url, timeout=REQUEST_TIMEOUT, headers=HEADERS)
@@ -123,52 +115,53 @@ def find_pi_links_on_page(url: str) -> list[str]:
         print(f"  Could not fetch landing page ({exc}); using fallback URLs.")
         return []
 
+    token = match_token.lower()
     hrefs = re.findall(r'href=["\']([^"\']+)["\']', resp.text, flags=re.I)
     links: list[str] = []
     for href in hrefs:
         low = href.lower()
-        if ("pi" in low) and (low.endswith(".txt") or low.endswith(".tsv")):
+        if (token in low) and (low.endswith(".txt") or low.endswith(".tsv")):
             links.append(requests.compat.urljoin(url, href))
     # De-duplicate while preserving order.
     seen: set[str] = set()
     unique = [x for x in links if not (x in seen or seen.add(x))]
     if unique:
-        print(f"  Found {len(unique)} candidate PI link(s) on the page.")
+        print(f"  Found {len(unique)} candidate link(s) on the page.")
     return unique
 
 
 # --- Downloads ---------------------------------------------------------------
 
-def download_pi_dataset(raw_dir: Path) -> Path:
-    """Download the Rhee PI genotype-phenotype dataset to ``raw_dir``."""
-    print("[1/2] Rhee PI genotype-phenotype dataset")
-    dest = raw_dir / PI_DATASET_FILENAME
+def download_dataset(raw_dir: Path, target) -> Path:
+    """Download the target's genotype-phenotype dataset to ``raw_dir``."""
+    print(f"[1/2] {target.label} genotype-phenotype dataset")
+    dest = raw_dir / target.dataset_filename
 
-    # PI datasets are hundreds of KB; guard against a truncated/HTML error page.
+    # These datasets are hundreds of KB; guard against a truncated/HTML error page.
     min_bytes = 50_000
 
-    # Prefer any link discovered on the page, then the known canonical URLs.
-    candidates = find_pi_links_on_page(RHEE_LANDING_PAGE) + PI_DATASET_CANDIDATE_URLS
+    # Prefer any link discovered on the page, then the target's canonical URLs.
+    token = target.dataset_filename.split("_")[0]  # "PI" / "NNRTI"
+    candidates = find_dataset_links_on_page(RHEE_LANDING_PAGE, token) + list(target.dataset_urls)
     for url in candidates:
         if download_file(url, dest, min_bytes=min_bytes):
             return dest
 
     raise ConnectionError(
-        "Failed to download the PI dataset from all known sources. "
-        "Check network access or update PI_DATASET_CANDIDATE_URLS."
+        f"Failed to download the {target.name} dataset from all known sources. "
+        f"Check network access or update {target.name}.dataset_urls in targets.py."
     )
 
 
-def download_pdb_structure(raw_dir: Path) -> Path:
-    """Download PDB structure 3OXC to ``raw_dir``."""
-    print(f"[2/2] PDB structure {config.WILDTYPE_PDB_ID}")
-    dest = raw_dir / PDB_FILENAME
+def download_pdb_structure(raw_dir: Path, target) -> Path:
+    """Download the target's wildtype PDB structure to ``raw_dir``."""
+    print(f"[2/2] PDB structure {target.pdb_id}")
+    dest = raw_dir / f"{target.pdb_id}.pdb"
     # A real PDB file is tens/hundreds of KB; a 404 stub would be far smaller.
-    if download_file(config.WILDTYPE_PDB_URL, dest, min_bytes=10_000):
+    if download_file(target.pdb_url, dest, min_bytes=10_000):
         return dest
     raise ConnectionError(
-        f"Failed to download PDB {config.WILDTYPE_PDB_ID} from "
-        f"{config.WILDTYPE_PDB_URL}"
+        f"Failed to download PDB {target.pdb_id} from {target.pdb_url}"
     )
 
 
@@ -179,17 +172,26 @@ def verify_nonempty(path: Path) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--target", default="HIV1_PR",
+        help="Docking target: HIV1_PR / pr (default) or HIV1_RT / rt.",
+    )
+    args = parser.parse_args()
+    t = config.set_active_target(args.target)
+
     raw_dir = config.RAW_DIR
     raw_dir.mkdir(parents=True, exist_ok=True)
-    print(f"Download target: {raw_dir}\n")
+    print(f"Target: {t.name} ({t.label})")
+    print(f"Download dir: {raw_dir}\n")
 
-    pi_path = download_pi_dataset(raw_dir)
+    data_path = download_dataset(raw_dir, t)
     print()
-    pdb_path = download_pdb_structure(raw_dir)
+    pdb_path = download_pdb_structure(raw_dir, t)
     print()
 
     print("Verifying downloads...")
-    for path in (pi_path, pdb_path):
+    for path in (data_path, pdb_path):
         verify_nonempty(path)
         print(f"  OK  {path}  ({_human(path.stat().st_size)})")
 

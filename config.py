@@ -1,85 +1,140 @@
+import os
 from pathlib import Path
 
+import targets
+from targets import Target, get_target, TARGETS  # noqa: F401 (re-exported)
+
 # === Paths ===
-PROJECT_ROOT = Path(__file__).parent
-DATA_DIR = PROJECT_ROOT / "data"
-RAW_DIR = DATA_DIR / "raw"
-STRUCTURES_DIR = DATA_DIR / "structures"
-MUTANTS_DIR = STRUCTURES_DIR / "mutants"
-PANELS_DIR = DATA_DIR / "panels"
-DOCKING_DIR = DATA_DIR / "docking_results"
-EXPLANATIONS_DIR = DATA_DIR / "explanations"
-VALIDATION_DIR = DATA_DIR / "validation"
-
-# === PDB ===
-# 3OXC: wildtype HIV-1 protease complexed with saquinavir, 1.16 Angstrom
-# We strip the ligand. Using a ligand-bound structure (then stripping) gives
-# a more realistic closed-flap pocket conformation than apo structures like
-# 2PC0 where flaps are open and not representative of drug binding.
-WILDTYPE_PDB_ID = "3OXC"
-WILDTYPE_PDB_URL = "https://files.rcsb.org/download/3OXC.pdb"
-LIGAND_HETCODES_TO_STRIP = ["ROC"]   # Saquinavir in 3OXC (not SQV or 938)
-CHAINS_TO_KEEP = ["A", "B"]  # HIV-1 protease is a homodimer
-
-# === Docking box ===
-# Centered on the catalytic Asp25/Asp25' dyad region.
-# These coordinates are for cleaned 3OXC after ligand stripping.
-# IMPORTANT: Verify these after structure prep by checking that the box
-# encompasses the active site cavity. Use the co-crystallized saquinavir
-# position as a reference before stripping it.
-DOCKING_CENTER = (5.341, -1.893, 14.179)  # Occupancy-weighted centroid of ROC
-                                           # altLoc A: (5.100, -3.435, 15.307)
-                                           # altLoc B: (5.592, -0.287, 13.006)
-DOCKING_BOX_SIZE = (22, 22, 22)      # Angstroms, generous for PI binding
-VINA_EXHAUSTIVENESS = 16             # Balance speed vs accuracy; 32 for final
-VINA_NUM_POSES = 5
-VINA_NUM_CPUS = 0                    # 0 = use all available
-
-#Also worth noting for the clean_structure() function: because saquinavir has two altLoc conformations (A and B), the PDB parser may return duplicate atom records. When you're computing the ligand centroid programmatically (before stripping) to confirm these coordinates match, use BioPython's is_disordered() check and take only altLoc A atoms, or average across both weighted by occupancy. The occupancy-weighted number you just computed manually (5.341, -1.893, 14.179) is the ground truth — the script just needs to reproduce it consistently.
+PROJECT_ROOT = targets.PROJECT_ROOT
 
 
-# === Protonation ===
-# HIV protease catalytic mechanism requires one Asp25 protonated, one not.
-# Chain A Asp25: protonated (neutral, ASH)
-# Chain B Asp25: deprotonated (charged, ASP)
-# PDBFixer addMissingHydrogens at pH 7.0 will deprotonate both by default.
-# We must manually fix this after hydrogen addition.
-ASP25_PROTONATED_CHAIN = "A"
-ASP25_DEPROTONATED_CHAIN = "B"
+# === .env loading (zero-dependency) ===
+def _load_dotenv(path: Path) -> None:
+    """Populate os.environ from a .env file, without overwriting existing vars.
 
-# === Dataset ===
+    A tiny, dependency-free parser (no python-dotenv): ``KEY=VALUE`` per line,
+    ``#`` comments and blank lines ignored, optional surrounding quotes and a
+    leading ``export`` stripped. Existing environment variables win, so an
+    explicitly exported key still overrides the file. Runs once on import, so
+    every entrypoint (CLI, scripts, API) sees ANTHROPIC_API_KEY from .env.
+    """
+    if not path.exists():
+        return
+    for raw in path.read_text().splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line[len("export "):].lstrip()
+        key, sep, value = line.partition("=")
+        if not sep:
+            continue
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+_load_dotenv(PROJECT_ROOT / ".env")
+
+# Shared across all targets.
+DATA_DIR = targets.DATA_DIR
+RAW_DIR = targets.RAW_DIR
+
+
+# =============================================================================
+# Active target
+# =============================================================================
+# All *target-specific* constants below (paths, PDB, docking box, drugs,
+# mutations) are re-exported from ACTIVE_TARGET under their legacy names so the
+# existing pipeline and committed data keep working unchanged. HIV-1 protease is
+# the default; the data-generation scripts switch it per run with
+# ``config.set_active_target("rt")`` (see targets.py).
+#
+# Because these are module-level names read at *call time*, a switch propagates
+# to any code that does ``config.X``. Functions that captured a value as a
+# default argument (e.g. ``dock_single(center=config.DOCKING_CENTER)``) keep the
+# import-time target — the target-aware entrypoints accept an explicit target or
+# directory instead of relying on the mutated global.
+
+ACTIVE_TARGET: Target = targets.HIV1_PR
+
+
+def _bind(t: Target) -> None:
+    """Re-export ``t``'s fields under the legacy module-level names."""
+    g = globals()
+    g["ACTIVE_TARGET"] = t
+
+    # --- per-target data directories ---
+    g["STRUCTURES_DIR"] = t.structures_dir
+    g["MUTANTS_DIR"] = t.mutants_dir
+    g["PANELS_DIR"] = t.panels_dir
+    g["DOCKING_DIR"] = t.docking_dir
+    g["EXPLANATIONS_DIR"] = t.explanations_dir
+    g["VALIDATION_DIR"] = t.validation_dir
+
+    # --- receptor structure ---
+    g["WILDTYPE_PDB_ID"] = t.pdb_id
+    g["WILDTYPE_PDB_URL"] = t.pdb_url
+    g["LIGAND_HETCODES_TO_STRIP"] = list(t.ligand_hetcodes)
+    g["CHAINS_TO_KEEP"] = list(t.chains)
+    g["MUTATE_CHAINS"] = list(t.mutate_chains)
+    g["REFERENCE_SEQUENCE"] = t.reference_seq
+    g["N_POSITIONS"] = t.n_positions
+
+    # --- docking box ---
+    g["DOCKING_CENTER"] = t.docking_center
+    g["DOCKING_BOX_SIZE"] = t.docking_box_size
+
+    # --- catalytic-dyad protonation (HIV protease only; None for RT) ---
+    g["PROTONATION"] = t.protonation
+    g["ASP25_PROTONATED_CHAIN"] = t.protonation.protonated_chain if t.protonation else None
+    g["ASP25_DEPROTONATED_CHAIN"] = t.protonation.deprotonated_chain if t.protonation else None
+
+    # --- resistance dataset + drug panel ---
+    g["DATASET_FILENAME"] = t.dataset_filename
+    g["DATASET_URLS"] = list(t.dataset_urls)
+    g["DRUG_COLUMNS"] = list(t.drug_columns)
+    g["DRUGS"] = t.drugs
+    g["PUBCHEM_CIDS"] = t.pubchem_cids
+    g["PRIMARY_MUTATIONS"] = t.primary_mutations
+    # Legacy aliases (protease-era names), kept so existing code/imports work.
+    g["PI_DRUGS"] = t.drugs
+    g["PRIMARY_PI_MUTATIONS"] = t.primary_mutations
+
+
+def set_active_target(name) -> Target:
+    """Switch the active target (by name/alias or Target) and re-bind globals.
+
+    Call this once, early, in a data-generation script (before other modules
+    read ``config.X``). Returns the resolved Target.
+    """
+    t = name if isinstance(name, Target) else get_target(name)
+    _bind(t)
+    return t
+
+
+_bind(ACTIVE_TARGET)
+
+# Landing page for the Rhee 2006 PNAS analysis (best-effort scrape in 01).
 RHEE_DATASET_URL = (
     "https://hivdb.stanford.edu/pages/published_analysis/"
     "genophenoPNAS2006/"
 )
-# The PI dataset is a TSV. Format:
-# Row = one isolate. Columns = drug fold-resistance values + binary mutation
-# indicators. Response variable is log fold-resistance (continuous).
-# Mutation columns are binary (0/1) indicating presence of amino acid change.
-PI_DRUGS = {
-    "ATV": "atazanavir",
-    "DRV": "darunavir",
-    "LPV": "lopinavir",
-    "SQV": "saquinavir",
-    "IDV": "indinavir",
-    "NFV": "nelfinavir",
-    "RTV": "ritonavir",
-}
 
-# PubChem CIDs for SMILES lookup
-PUBCHEM_CIDS = {
-    "ATV": 148192,
-    "DRV": 213039,
-    "LPV": 92727,
-    "SQV": 441243,
-    "IDV": 5362440,
-    "NFV": 64143,
-    "RTV": 392622,
-}
+
+# =============================================================================
+# Method constants (shared across all targets)
+# =============================================================================
+
+# === Docking (AutoDock Vina / Uni-Dock) ===
+VINA_EXHAUSTIVENESS = 16             # Balance speed vs accuracy; 32 for final
+VINA_NUM_POSES = 5
+VINA_NUM_CPUS = 0                    # 0 = use all available
 
 # === Claude API ===
 # IMPORTANT: the larger models (Opus 4.8/4.6, Sonnet 4.6) run a bio-safety
-# classifier that FALSE-POSITIVE REFUSES HIV-1 protease drug-resistance content
+# classifier that FALSE-POSITIVE REFUSES HIV drug-resistance content
 # (stop_reason="refusal", empty output) even though it is mainstream, published
 # science. Haiku 4.5 does not refuse and produces accurate, specific structural
 # explanations — and it is well-suited to this short, heavily-grounded task.
@@ -88,31 +143,6 @@ CLAUDE_MODEL = "claude-haiku-4-5"
 CLAUDE_MAX_TOKENS = 1024
 
 # === Scoring ===
-# Delta-delta-G thresholds (kcal/mol) for flagging concerning mutations
+# Delta-delta-G thresholds (kcal/mol) for flagging concerning mutations.
 DDG_WARNING_THRESHOLD = 0.5    # Mild concern
 DDG_DANGER_THRESHOLD = 1.5     # Likely resistance
-
-# === Primary (major) PI resistance mutations ===
-# Curated set of MAJOR protease-inhibitor resistance mutations, used to flag
-# panel rows with is_primary=True and to drive the "count known DRMs" baseline.
-# Source: IAS-USA 2019/2022 "Update of the Drug Resistance Mutations in HIV-1"
-# (Wensing et al.) major PI mutations + Stanford HIVdb major PI list. Each entry
-# is a specific wildtype-position-mutant substitution (accessory/minor mutations
-# and polymorphisms are intentionally excluded).
-PRIMARY_PI_MUTATIONS = frozenset({
-    "L23I",
-    "L24I",
-    "D30N",
-    "V32I",
-    "L33F",
-    "M46I", "M46L",
-    "I47V", "I47A",
-    "G48V", "G48M",
-    "I50L", "I50V",
-    "I54V", "I54L", "I54M", "I54A", "I54T", "I54S",
-    "L76V",
-    "V82A", "V82T", "V82F", "V82S", "V82L", "V82M", "V82C",
-    "I84V", "I84A", "I84C",
-    "N88S", "N88D",
-    "L90M",
-})
