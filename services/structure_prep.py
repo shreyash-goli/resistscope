@@ -295,6 +295,27 @@ def _minimize_mutated_residues(fixer: PDBFixer, mutated_atom_indices: set) -> bo
         return False
 
 
+def _residue_at(residues: list, position: int):
+    """Residue at author number ``position`` (resSeq), else ordinal fallback.
+
+    resSeq-first is correct for structures whose numbering matches the mutation
+    convention (e.g. an uploaded influenza NA where residue 275 is author-numbered
+    275, or any structure not numbered from 1). The ordinal fallback preserves the
+    original behaviour for chains PDBFixer renumbers (protease chain B -> 101-199,
+    where consensus residue 82 lives at index 81). Returns ``None`` if neither
+    resolves.
+    """
+    for r in residues:
+        try:
+            if int(r.id) == position:
+                return r
+        except (TypeError, ValueError):
+            continue
+    if 0 <= position - 1 < len(residues):
+        return residues[position - 1]
+    return None
+
+
 def generate_mutant(
     wildtype_pdb: Path,
     chain_id: str,          # kept for signature compatibility; target drives chains
@@ -346,10 +367,9 @@ def generate_mutant(
         cid = chain.id.upper()
         if cid not in mutate:
             continue
-        residues = list(chain.residues())
-        if position - 1 >= len(residues):
+        res = _residue_at(list(chain.residues()), position)
+        if res is None:
             continue
-        res = residues[position - 1]
         sites.append((cid, int(res.id), res.name))
 
     if not sites:
@@ -374,8 +394,9 @@ def generate_mutant(
     mutated_atom_indices: set = set()
     for chain in fixer.topology.chains():
         if chain.id.upper() in mutate:
-            res = list(chain.residues())[position - 1]
-            mutated_atom_indices.update(a.index for a in res.atoms())
+            res = _residue_at(list(chain.residues()), position)
+            if res is not None:
+                mutated_atom_indices.update(a.index for a in res.atoms())
     _minimize_mutated_residues(fixer, mutated_atom_indices)
 
     strip = Modeller(fixer.topology, fixer.positions)
@@ -492,7 +513,8 @@ def collect_unique_mutations(
     panels_dir = Path(panels_dir) if panels_dir is not None else t.panels_dir
 
     mutations: dict[str, tuple[int, str, str]] = {}
-    for parquet in sorted(Path(panels_dir).glob("*.parquet")):
+    parquets = sorted(Path(panels_dir).glob("*.parquet")) if Path(panels_dir).exists() else []
+    for parquet in parquets:
         panel = load_panel(parquet.stem, panels_dir)
         for _, row in panel.iterrows():
             mutations[row["mutation"]] = (
@@ -500,6 +522,15 @@ def collect_unique_mutations(
                 str(row["wildtype_aa"]),
                 str(row["mutant_aa"]),
             )
+    if not mutations and t.primary_mutations:
+        # User/BYO target: no genotype panels — derive the build list from the
+        # target's resistance-mutation set (wt + position + mut parsed from the
+        # mutation string, e.g. "H275Y").
+        for m in t.primary_mutations:
+            try:
+                mutations[m] = (int(m[1:-1]), m[0].upper(), m[-1].upper())
+            except (ValueError, IndexError):
+                continue
     return [
         (name, pos, wt, mut)
         for name, (pos, wt, mut) in sorted(
