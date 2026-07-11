@@ -1,0 +1,121 @@
+{
+  "target_id": "SARS2_MPRO",
+  "label": "SARS-CoV-2 Main Protease (Mpro)",
+  "pdb_id": "SARS2_MPRO",
+  "source_pdb": "SARS2_MPRO",
+  "ligand_hetcode": "A1BVT",
+  "docking_center": [
+    -13.242,
+    -28.103,
+    0.01
+  ],
+  "chains": [
+    "A"
+  ],
+  "mutate_chains": [
+    "A"
+  ],
+  "drugs": [
+    {
+      "abbrev": "NMV",
+      "name": "Nirmatrelvir (Paxlovid)"
+    },
+    {
+      "abbrev": "ENS",
+      "name": "Ensitrelvir (Xocova)"
+    },
+    {
+      "abbrev": "IBZ",
+      "name": "Ibuzatrelvir"
+    },
+    {
+      "abbrev": "BOF",
+      "name": "Bofutrelvir"
+    },
+    {
+      "abbrev": "GC376",
+      "name": "GC376"
+    }
+  ],
+  "mutations": [
+    "S144M",
+    "S144F",
+    "S144A",
+    "M165T",
+    "E166V",
+    "E166M",
+    "E166A",
+    "H172Q",
+    "H172F",
+    "Q192T",
+    "Q192S",
+    "L50F",
+    "M49L",
+    "E166H",
+    "T169I"
+  ],
+  "biology": {
+    "binding_site": "Catalytic active site (substrate-binding pocket with catalytic Cys145)",
+    "dataset": {
+      "exists": true
+    }
+  },
+  "citations": [
+    {
+      "pmid": "37637734",
+      "title": "Naturally Occurring Mutations of SARS-CoV-2 Main Protease Confer Drug Resistance to Nirmatrelvir",
+      "year": "2023",
+      "journal": "ACS Cent Sci"
+    },
+    {
+      "pmid": "36326185",
+      "title": "Predicting Antiviral Resistance Mutations in SARS-CoV-2 Main Protease with Computational and Experimental Screening",
+      "year": "2022",
+      "journal": "Biochemistry"
+    },
+    {
+      "pmid": "36119652",
+      "title": "Naturally occurring mutations of SARS-CoV-2 main protease confer drug resistance to nirmatrelvir",
+      "year": "2022",
+      "journal": "bioRxiv"
+    },
+    {
+      "pmid": "37390404",
+      "title": "Systematic Analyses of the Resistance Potential of Drugs Targeting SARS-CoV-2 Main Protease",
+      "year": "2023",
+      "journal": "ACS Infect Dis"
+    },
+    {
+      "pmid": "40454888",
+      "title": "Structural basis for varying drug resistance of SARS-CoV-2 Mpro E166 variants",
+      "year": "2025",
+      "journal": "mBio"
+    },
+    {
+      "pmid": "41088534",
+      "title": "SARS-CoV-2 Mpro inhibitor ensitrelvir: asymmetrical cross-resistance with nirmatrelvir and emerging resistance hotspots",
+      "year": "2025",
+      "journal": "Emerg Microbes Infect"
+    },
+    {
+      "pmid": "36989354",
+      "title": "Transmissible SARS-CoV-2 variants with resistance to clinical protease inhibitors",
+      "year": "2023",
+      "journal": "Sci Adv"
+    },
+    {
+      "pmid": "42396917",
+      "title": "Predicting Nirmatrelvir Resistance in SARS-CoV-2 Mpro Mutants with an Integrated Computational Framework",
+      "year": "2026",
+      "journal": "J Phys Chem B"
+    },
+    {
+      "pmid": "41710745",
+      "title": "Characterization of the Cross-Resistance of SARS-CoV\u20112 Main Protease Inhibitors, Ibuzatrelvir, Ensitrelvir, and Nirmatrelvir",
+      "year": "2026",
+      "journal": "ACS Pharmacol Transl Sci"
+    }
+  ],
+  "provenance": "byo-app",
+  "status": "draft \u2014 build receptors on the GPU worker to enable docking"
+}

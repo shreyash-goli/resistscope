@@ -9,6 +9,14 @@ PubMed literature), and validates the whole pipeline against real measured
 fold-resistance data (Rhee et al. 2006, Stanford HIVdb). Built for the
 *Built with Claude: Life Sciences* hackathon (Gladstone Institutes).
 
+**Who it's for.** An antiviral medicinal chemist has 20 candidate protease
+inhibitors and needs to decide which ones to push into (slow, expensive)
+phenotypic resistance assays. They can't run all 20. ResistScope ranks the
+candidates by how well their predicted binding holds up across the panel of
+known clinical resistance mutations, flags *which* mutations break each
+compound, and — grounded in PubMed — explains *why*, so the chemist prioritizes
+the compounds least vulnerable to escape before committing wet-lab time.
+
 **Highlights**
 - **Interactive 3D structure viewer** (Mol\*/NGL) — every mutation renders in the
   receptor with the inhibitor in the pocket, the mutated residue highlighted and
@@ -140,6 +148,32 @@ cd frontend && npm install && npm run dev     # http://localhost:5173
 
 Benchmark drugs load instantly (precomputed); a custom SMILES runs live docking
 (~2-5 min on CPU).
+
+### Demo path (no docking stack required)
+
+The reliable walkthrough — everything below is served from the committed cache,
+so it works with **just the API + frontend running**, no conda docking env, no
+GPU, no Anthropic key:
+
+1. **Pick a benchmark drug** — start with **darunavir (DRV)** or **saquinavir
+   (SQV)**. It loads instantly and returns a full scored panel.
+2. **Read the robustness score** and open the worst mutations (highest ΔΔG).
+3. **Click a mutation** — the 3D viewer highlights the mutated residue in the
+   pocket and shows Claude's PubMed-cited mechanistic explanation.
+4. **Open the Validation tab** — the honest headline: top ΔΔG predictions are
+   ~3× enriched for real resistance mutations (p < 0.001), but this is a *coarse
+   triage flag, not a quantitative fold-resistance predictor*.
+
+A **custom SMILES** is the optional live path — it only runs when a docking
+backend is configured (local stack or a `RESISTSCOPE_DOCKING_URL` GPU worker);
+otherwise it returns a clean 503 with how-to-enable guidance, never an error.
+
+**Smoke test** (confirms the app boots and serves cached results, in seconds):
+
+```bash
+python -m uvicorn api.main:app --port 8000    # in one terminal
+python scripts/smoke_test.py                  # checks /health, /targets, /benchmark, /drug/DRV
+```
 
 ---
 
