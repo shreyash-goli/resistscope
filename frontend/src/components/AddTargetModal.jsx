@@ -31,7 +31,7 @@ export default function AddTargetModal({ onClose, onSaved }) {
     const f = e.target.files?.[0];
     if (!f) return;
     const reader = new FileReader();
-    reader.onload = () => { setPdbText(String(reader.result)); setPdbId(f.name.replace(/\.pdb$/i, "")); };
+    reader.onload = () => { setPdbText(String(reader.result)); setPdbId(f.name.replace(/\.(pdb|cif)$/i, "")); };
     reader.readAsText(f);
   }
 
@@ -123,7 +123,7 @@ export default function AddTargetModal({ onClose, onSaved }) {
                 <input value={pdbId} onChange={(e) => { setPdbId(e.target.value); setPdbText(null); }}
                   placeholder="e.g. 2HU4" className="mt-1 w-full border border-slate-300 rounded px-2 py-1.5 font-mono text-sm" />
               </label>
-              <div className="text-xs text-slate-400">or upload a .pdb file: <input type="file" accept=".pdb" onChange={onFile} className="text-xs" /></div>
+              <div className="text-xs text-slate-400">or upload a .pdb / .cif file: <input type="file" accept=".pdb,.cif,.mmcif" onChange={onFile} className="text-xs" /></div>
               <label className="block text-sm">
                 <span className="text-slate-500">Protein / target name</span>
                 <input value={protein} onChange={(e) => setProtein(e.target.value)}

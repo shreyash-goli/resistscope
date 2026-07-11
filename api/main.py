@@ -208,7 +208,10 @@ def targets_save(req: SaveTargetRequest) -> dict:
     raw_id = (req.pdb_id or tid).upper()
     raw_path = config.RAW_DIR / f"{raw_id}.pdb"
     if req.pdb_text:
-        raw_path.write_text(req.pdb_text)
+        # Uploaded content may be mmCIF; store as PDB so the viewer + ligand
+        # extraction + docking pipeline stay PDB-only.
+        from services.pdb_intake import to_pdb_text
+        raw_path.write_text(to_pdb_text(req.pdb_text))
     elif req.pdb_id and not raw_path.exists():
         raw_path.write_text(_fetch_pdb(req.pdb_id))
 

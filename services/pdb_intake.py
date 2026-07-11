@@ -12,10 +12,11 @@ No docking stack needed (BioPython only), so this runs on the thin API host.
 
 from __future__ import annotations
 
+import io
 from pathlib import Path
 
 import numpy as np
-from Bio.PDB import PDBParser
+from Bio.PDB import MMCIFParser, PDBIO, PDBParser
 
 # Het codes that are solvent / ions / cryo-additives, never the pocket ligand.
 _NON_LIGAND = {
@@ -23,6 +24,59 @@ _NON_LIGAND = {
     "NA", "K", "MG", "CA", "ZN", "MN", "CD", "NAG", "MAN", "BMA", "FUC", "DMS",
     "IOD", "BR", "NO3", "TRS", "MES", "EPE", "CO3", "PG4", "1PE",
 }
+
+
+def _is_cif(text: str) -> bool:
+    """Heuristic: mmCIF has ``_atom_site.`` loops / a leading ``data_`` block."""
+    head = text.lstrip()[:400]
+    return "_atom_site." in text or head.startswith("data_")
+
+
+def _read(source) -> str:
+    if isinstance(source, Path):
+        return source.read_text()
+    if isinstance(source, str) and "\n" not in source and len(source) < 4096 and Path(source).exists():
+        return Path(source).read_text()
+    return str(source)
+
+
+def _parse(text: str):
+    """Parse PDB *or* mmCIF text into a Bio.PDB Structure; returns (structure, fmt)."""
+    if _is_cif(text):
+        return MMCIFParser(QUIET=True).get_structure("up", io.StringIO(text)), "cif"
+    return PDBParser(QUIET=True).get_structure("up", io.StringIO(text)), "pdb"
+
+
+def _cif_title(text: str) -> str:
+    try:
+        from Bio.PDB.MMCIF2Dict import MMCIF2Dict
+        d = MMCIF2Dict(io.StringIO(text))
+        for k in ("_struct.title", "_entity.pdbx_description"):
+            v = d.get(k)
+            if v:
+                return (v[0] if isinstance(v, list) else v) or ""
+    except Exception:  # noqa: BLE001
+        pass
+    return ""
+
+
+def to_pdb_text(source) -> str:
+    """Return PDB-format text for a PDB *or* mmCIF input (converting mmCIF).
+
+    Storing everything as PDB keeps the viewer, ligand extraction, and the
+    docking pipeline unchanged. NOTE: PDB format has hard limits (<=99,999 atoms,
+    single-character chain ids), so a very large mmCIF assembly converts lossily
+    — fine for a single receptor + ligand, not for a whole ribosome.
+    """
+    text = _read(source)
+    struct, fmt = _parse(text)
+    if fmt == "pdb":
+        return text
+    buf = io.StringIO()
+    w = PDBIO()
+    w.set_structure(struct)
+    w.save(buf)
+    return buf.getvalue()
 
 
 def _centroid(atoms) -> tuple:
@@ -42,20 +96,13 @@ def parse_pdb(source: str | Path) -> dict:
       ``title``           – PDB header title (feeds the agent as a hint)
     Best-effort; a caller should let the user confirm the suggestion.
     """
-    # Distinguish a filesystem path from raw PDB text: PDB content has newlines
-    # (and is long), a path does not — so never feed a 2 MB string to Path().
-    if isinstance(source, Path):
-        text = source.read_text()
-    elif isinstance(source, str) and "\n" not in source and len(source) < 4096 and Path(source).exists():
-        text = Path(source).read_text()
+    text = _read(source)
+    struct, fmt = _parse(text)  # handles PDB and mmCIF
+    if fmt == "cif":
+        title = _cif_title(text)
     else:
-        text = str(source)
-    # Title from the header (helps the agent identify the protein).
-    title = " ".join(l[10:80].strip() for l in text.splitlines()
-                     if l.startswith("TITLE")).strip()
-
-    import io
-    struct = PDBParser(QUIET=True).get_structure("up", io.StringIO(text))
+        title = " ".join(l[10:80].strip() for l in text.splitlines()
+                         if l.startswith("TITLE")).strip()
     model = next(iter(struct))
 
     chains, ligands = [], {}
