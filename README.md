@@ -1,21 +1,37 @@
 # ResistScope
 
-**Resistance-aware triage for antiviral compounds targeting HIV-1 protease.**
-Paste a SMILES string for a candidate protease inhibitor and ResistScope docks it
-against wildtype HIV-1 protease and a panel of clinical resistance mutants,
-computes a robustness score (how much binding degrades across the panel),
-generates a per-mutation mechanistic explanation with Claude (grounded in
-PubMed literature), and validates the whole pipeline against real measured
-fold-resistance data (Rhee et al. 2006, Stanford HIVdb). Built for the
-*Built with Claude: Life Sciences* hackathon (Gladstone Institutes).
+**Resistance-aware triage for antiviral compounds — for any target.**
+Paste a candidate inhibitor's SMILES and ResistScope docks it against a wildtype
+receptor plus a panel of clinical resistance mutants, scores how well its binding
+*survives* the panel (a 0–100 robustness score), and — grounded in PubMed —
+explains, per mutation, *why* each one threatens the compound. It's built to
+answer two questions that are usually asked separately:
 
-**Who it's for.** An antiviral medicinal chemist has 20 candidate protease
-inhibitors and needs to decide which ones to push into (slow, expensive)
-phenotypic resistance assays. They can't run all 20. ResistScope ranks the
-candidates by how well their predicted binding holds up across the panel of
-known clinical resistance mutations, flags *which* mutations break each
-compound, and — grounded in PubMed — explains *why*, so the chemist prioritizes
-the compounds least vulnerable to escape before committing wet-lab time.
+1. **Does the prediction hold up?** A benchmark against measured
+   fold-resistance ([scripts/08](scripts/08_benchmark.py)): top-ΔΔG predictions
+   are **~3× enriched** for real resistance mutations (p < 0.001), reported with
+   every confidence interval and caveat — including where the method is only
+   chance-level.
+2. **Does the *explanation* hold up?** A faithfulness check
+   ([scripts/07](scripts/07_faithfulness_eval.py)) that scores each LLM-written
+   mechanism against expert-annotated biology (IAS-USA mutation lists), Claude as
+   judge — **72%** recover the correct primary mechanism. Most tools in this space
+   score; almost none ask whether the model's *reasoning* matches known biology.
+
+The method is **target-agnostic**: it ships validated on **HIV-1 protease**
+(Rhee et al. 2006, Stanford HIVdb), is wired end-to-end for **HIV-1 reverse
+transcriptase**, and a Claude agent stands up a brand-new target — influenza
+neuraminidase, SARS-CoV-2 Mpro, whatever PDB/mmCIF you upload — in seconds. Built
+for the *Built with Claude: Life Sciences* hackathon (Gladstone Institutes).
+
+**Who it's for.** An antiviral medicinal chemist has 20 candidate inhibitors
+(for HIV protease, SARS-CoV-2 Mpro, influenza NA — pick a target) and needs to
+decide which ones to push into (slow, expensive) phenotypic resistance assays.
+They can't run all 20. ResistScope ranks the candidates by how well their
+predicted binding holds up across the panel of known clinical resistance
+mutations, flags *which* mutations break each compound, and — grounded in
+PubMed — explains *why*, so the chemist prioritizes the compounds least
+vulnerable to escape before committing wet-lab time.
 
 **Highlights**
 - **Interactive 3D structure viewer** (Mol\*/NGL) — every mutation renders in the
@@ -31,15 +47,67 @@ the compounds least vulnerable to escape before committing wet-lab time.
   analysis that reports what the method *cannot* do.
 - **Two targets** — HIV-1 protease (validated) and HIV-1 reverse transcriptase
   (NNRTI pocket); the whole pipeline + API + UI are target-aware.
-- **Bring your own target** — in the app, upload a receptor PDB and name a
+- **Bring your own target** — in the app, upload a receptor PDB/mmCIF and name a
   protein; the structure is parsed for the pocket and a Claude agent researches
   its inhibitors + resistance mutations from PubMed, producing a new triage
-  target in seconds (demonstrated on influenza neuraminidase / Tamiflu — the
-  agent recovers H275Y, E119V, R292K, …). Triage generalizes to any target;
-  validation attaches wherever a resistance dataset exists.
+  target in seconds. Two are committed as worked examples: **influenza
+  neuraminidase / Tamiflu** (the agent recovers H275Y, E119V, R292K, …) and
+  **SARS-CoV-2 main protease (Mpro) / Paxlovid** (recovers the nirmatrelvir
+  escape set E166V, E166A, S144, …). Triage generalizes to any target;
+  validation attaches wherever a resistance dataset exists. Building a BYO
+  target's mutant receptors for live docking is GPU-gated — see
+  [docs/BYO_TARGET_GPU.md](docs/BYO_TARGET_GPU.md).
 - **Live docking, no precompute** — a custom SMILES docks live through a
   pluggable backend (local CPU, or a remote **GPU worker** you connect via
   `RESISTSCOPE_DOCKING_URL`); benchmark drugs stay a precomputed cache.
+
+---
+
+## The stack — what's in the box
+
+ResistScope is a full pipeline, HTTP API, and web app — not a notebook. Every
+layer is target-aware.
+
+**Structural / docking engine** (`services/`, Python 3.11 + conda)
+- [structure_prep.py](services/structure_prep.py) — PDB/mmCIF download, cleaning
+  (PDBFixer), point mutagenesis, and PDBQT conversion (meeko).
+- [docking.py](services/docking.py) — SMILES → 3D (RDKit) → PDBQT → **AutoDock
+  Vina** (CPU) or **Uni-Dock** (GPU) against wildtype + every mutant receptor.
+- [docking_backend.py](services/docking_backend.py) — pluggable backend resolved
+  once at startup: **local** in-process, **remote GPU** worker, or a clean
+  **503** if neither is configured. [docking_worker.py](docking_worker.py) is the
+  standalone GPU service (`POST /dock`).
+- [scoring.py](services/scoring.py) — per-mutation ΔΔG → 0–100 robustness score.
+
+**Claude intelligence layer**
+- [explanation.py](services/explanation.py) — Claude (**Haiku 4.5**; larger models
+  refuse HIV-resistance content) writes a structural mechanism per mutation, plus
+  a **Claude-as-judge** faithfulness scorer (0–2 vs. expert ground truth).
+- [literature_agent.py](services/literature_agent.py) — a **Claude tool-use
+  agent** that researches mechanisms over **live PubMed**, cites the papers it
+  read, and self-verifies grounding.
+- [target_builder.py](services/target_builder.py) / [pdb_intake.py](services/pdb_intake.py)
+  — the **bring-your-own-target** agent: from a name + structure, parse the
+  pocket and agent-propose the inhibitor + resistance-mutation set.
+
+**Validation / benchmark** (`services/`, scipy + scikit-learn)
+- [validation.py](services/validation.py) — predicted vs. measured fold-resistance,
+  correlation + figures.
+- [benchmark.py](services/benchmark.py) — permutation p-values, bootstrap CIs,
+  ROC/PR-AUC, and de-confounding.
+
+**API** — [api/main.py](api/main.py), **FastAPI**, target-aware. Endpoints:
+`/targets`, `/targets/intake|assemble|save` (BYO flow), `/benchmark`, `/drug/{abbrev}`,
+`/triage` (live docking), `/structure/receptor|ligand` (3D), `/validation/plot`, `/health`.
+
+**Frontend** — [frontend/](frontend/), **React 18 + Vite + Tailwind**, with an
+**NGL** WebGL 3D viewer. Components: `StructureViewer`, `MutationTable`, `ScoreCard`,
+`ValidationTab`, `AddTargetModal` (upload → pocket → agent → new target).
+
+**Reproducible pipeline** — `scripts/01`→`10`: download → panels → mutant cache →
+dock → validate → explain → faithfulness → rigorous benchmark → agentic ground
+truth → add BYO target. Plus [demo.py](demo.py) (CLI), `notebooks/demo.ipynb`, and
+[scripts/smoke_test.py](scripts/smoke_test.py).
 
 ---
 
@@ -73,7 +141,8 @@ the compounds least vulnerable to escape before committing wet-lab time.
 
   data pipeline: scripts/01 download → 02 panels → 03 mutant cache → 04 dock →
                  05 validate → 06 explain → 07 faithfulness →
-                 08 rigorous benchmark → 09 agentic ground truth
+                 08 rigorous benchmark → 09 agentic ground truth →
+                 10 add BYO target (agent-researched receptor + mutations)
 ```
 
 Key data:
@@ -205,13 +274,18 @@ RESISTSCOPE_DOCKING_URL=http://<gpu-host>:9000 python -m uvicorn api.main:app --
 The web app shows a live-docking status dot (green = a backend is ready) so users
 know a custom SMILES will actually run before they submit it.
 
-## Validation results
+## Results — two findings
+
+ResistScope reports two independent validations: does the *prediction* hold up,
+and does the *explanation* hold up? They are separate questions with separate
+ground truth, and we report both — including where each falls short.
+
+### Finding 1 — Predictive benchmark (does the score hold up?)
 
 Validated against measured Rhee fold-resistance across 6 PIs (1,591 drug-mutation
-pairs). Honest summary:
-
-Every number below carries a significance test or confidence interval
-(`scripts/08_benchmark.py`: permutation p-values, bootstrap CIs, ROC/PR-AUC):
+pairs). Every number carries a significance test or confidence interval
+([scripts/08_benchmark.py](scripts/08_benchmark.py): permutation p-values,
+bootstrap CIs, ROC/PR-AUC):
 
 | metric | result |
 |---|---|
@@ -220,14 +294,47 @@ Every number below carries a significance test or confidence interval
 | Darunavir major-DRM Spearman ρ | **≈ 0.40** (p = 0.03) — strong per-drug signal |
 | Per-mutation Spearman ρ (pooled) | **≈ 0.00** — the measured target is confounded by co-occurring mutations |
 | **De-confounding** (single-/≤2-mutation isolates) | does **not** rescue the magnitude correlation (ρ ≤ 0) — an honest bound |
-| Explanation **faithfulness** | **72%** correctly identify the expert mechanism (mean 1.65 / 2, n = 46) |
 
 The honest headline: rigid single-mutation docking ΔΔG is a **coarse DRM-triage
 flag, not a quantitative resistance predictor** — its extreme predictions are
 significantly enriched for real resistance mutations (≈3×, p < 0.001) even though
 it ranks at chance overall, and de-confounding the target does not rescue the
-magnitude correlation. Darunavir validates well per-drug, and the LLM
-explanations agree with expert-annotated mechanisms 72% of the time.
+magnitude correlation. Darunavir validates well per-drug.
+
+### Finding 2 — Explanation faithfulness (does the *reasoning* hold up?)
+
+The tool doesn't just score — it explains, per mutation, *why* a residue change
+threatens the compound. That explanation is itself something you can validate. We
+check whether Claude's mechanistic rationale matches the biology experts already
+documented, rather than just sounding plausible. This is the finding that's
+distinctly ours; most predictive-docking work never asks it.
+
+- **Expert ground truth.** [data/mechanism_ground_truth.json](data/mechanism_ground_truth.json)
+  — curated resistance mechanisms sourced from **IAS-USA mutation lists** and the
+  primary structural literature (e.g. V82A → *"IAS-USA 2022; King et al. 2004"*).
+  It is extended agentically: [scripts/09](scripts/09_build_ground_truth.py) +
+  [literature_agent.py](services/literature_agent.py) research each mechanism over
+  **live PubMed**, cite the papers, and self-verify grounding before an entry is
+  admitted.
+- **The check.** [scripts/07](scripts/07_faithfulness_eval.py) scores each cached
+  explanation against that ground truth with **Claude as judge** on a 0–2 rubric:
+  **0** = contradicts the known mechanism, **1** = consistent but vague, **2** =
+  identifies the correct primary mechanism. Results split by provenance
+  (hand-curated vs. agent-built) and land in
+  [data/validation/faithfulness_scores.parquet](data/validation/faithfulness_scores.parquet).
+
+| judge score | count (n = 46) | share |
+|---|---|---|
+| **2** — correct primary mechanism | 33 | **72%** |
+| **1** — consistent but vague | 10 | 22% |
+| **0** — contradicts known biology | 3 | 7% |
+| Mean faithfulness | | **1.65 / 2** |
+
+The takeaway: the LLM explanations recover the expert-annotated primary mechanism
+**72%** of the time, and most of the remainder (10 of 13 misses) under-specify
+rather than contradict — but **3 explanations do get the mechanism wrong**, which
+is exactly why the faithfulness gate exists and why the score is reported openly
+rather than assumed.
 
 ---
 
@@ -241,7 +348,10 @@ explanations agree with expert-annotated mechanisms 72% of the time.
   side chains or backbone.
 - **Confounded validation target** — per-mutation fold-resistance is averaged over
   isolates carrying *other* mutations, capping any single-mutation method.
-- **HIV-1 protease only.**
+- **Quantitative validation is HIV-1 protease only.** Triage runs on any target
+  (RT, BYO influenza NA / SARS-CoV-2 Mpro), but rigorous fold-resistance
+  validation only exists where a measured resistance dataset does — so far, the
+  Rhee/Stanford PI data.
 - **Model refusals** — Opus/Sonnet decline HIV-resistance prompts; explanations
   run on Haiku 4.5.
 
