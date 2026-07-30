@@ -126,5 +126,591 @@
       }
     ],
     "built_at": "2026-07-10T08:44:33.760310+00:00"
+  },
+  "A98G": {
+    "mechanism": "The A98G substitution reduces side-chain volume (\u0394V = \u221228.5 \u00c5\u00b3) from alanine to glycine at position 98, located in the fingers-palm subdomain at 5.6\u20137.4 \u00c5 from the NNRTI binding pocket. Although A98G does not directly contact bound inhibitors, the loss of van der Waals contacts and the increased conformational flexibility of glycine destabilizes the overall architecture of the NNRTI binding pocket, particularly as part of covarying resistance networks with mutations like Y181C, thereby reducing inhibitor binding affinity to nevirapine and other NNRTIs. A98G typically occurs as a minor accessory mutation in multi-mutant resistance patterns selected by nevirapine exposure.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "ETR",
+      "DOR",
+      "RPV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 20462946, PMID 19320243, PMID 21592625, PMID 40297528",
+    "key_interaction": "Loss of alanine van der Waals packing against the NNRTI binding pocket, increased flexibility at position 98",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "20462946",
+        "title": "Constrained patterns of covariation and clustering of HIV-1 non-nucleoside reverse transcriptase inhibitor resistance mutations",
+        "year": "2010",
+        "journal": "J Antimicrob Chemother"
+      },
+      {
+        "pmid": "19320243",
+        "title": "Compilation and prevalence of mutations associated with resistance to non-nucleoside reverse transcriptase inhibitors",
+        "year": "2009",
+        "journal": "Antivir Ther"
+      },
+      {
+        "pmid": "21592625",
+        "title": "Predicted susceptibility of etravirine in HIV patients experiencing virological failure secondary to non-nucleoside reverse transcriptase inhibitor resistance in Argentina",
+        "year": "2011",
+        "journal": "Enferm Infecc Microbiol Clin"
+      },
+      {
+        "pmid": "40297528",
+        "title": "HIV-1 cross-resistance to second-generation non-nucleoside reverse transcriptase inhibitors among individuals failing antiretroviral therapy in Cameroon: implications for the use of long-acting treatment regimens in low- and middle-income countries",
+        "year": "2025",
+        "journal": "JAC Antimicrob Resist"
+      }
+    ],
+    "built_at": "2026-07-30T05:05:22.853524+00:00"
+  },
+  "L100I": {
+    "mechanism": "L100I destabilizes NNRTI binding primarily through increased drug dissociation (koff increased ~12-fold) without changing the association rate, indicating loss of stabilizing interactions in the NNRTI pocket rim. The isoleucine substitution introduces steric and/or thermodynamic barriers that weaken van der Waals contacts between the residue and the bound inhibitor, reducing overall nevirapine affinity by ~17-fold.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "ETR",
+      "DPV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 9405155, PMID 20462946, PMID 27895013",
+    "key_interaction": "Loss of stabilizing van der Waals contacts between position 100 and the NNRTI ligand, increasing drug dissociation kinetics",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "9405155",
+        "title": "Resistance to nevirapine of HIV-1 reverse transcriptase mutants: loss of stabilizing interactions and thermodynamic or steric barriers are induced by different single amino acid substitutions",
+        "year": "1997",
+        "journal": "J Mol Biol"
+      },
+      {
+        "pmid": "20462946",
+        "title": "Constrained patterns of covariation and clustering of HIV-1 non-nucleoside reverse transcriptase inhibitor resistance mutations",
+        "year": "2010",
+        "journal": "J Antimicrob Chemother"
+      },
+      {
+        "pmid": "27895013",
+        "title": "Frequent Cross-Resistance to Dapivirine in HIV-1 Subtype C-Infected Individuals after First-Line Antiretroviral Therapy Failure in South Africa",
+        "year": "2017",
+        "journal": "Antimicrob Agents Chemother"
+      }
+    ],
+    "built_at": "2026-07-30T05:05:38.288306+00:00"
+  },
+  "K101E": {
+    "mechanism": "The K101E substitution confers NNRTI resistance by disrupting a critical salt bridge interaction between K101 and E138 in the NNRTI binding pocket, which alters the structural geometry required for optimal NNRTI binding and stabilization. The charge reversal from a positively charged lysine to negatively charged glutamate at position 101 creates electrostatic repulsion with neighboring acidic residues or unfavorable contacts with the inhibitor, reducing binding affinity for multiple NNRTIs. K101E shows markedly heightened resistance to nevirapine and delavirdine while retaining some susceptibility to efavirenz, demonstrating selective NNRTI class resistance.",
+    "affects_drugs": [
+      "NVP",
+      "DLV",
+      "RPV",
+      "ETR",
+      "DPV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 24002090",
+    "key_interaction": "Disruption of K101\u2013E138 salt bridge and electrostatic distortion of the NNRTI binding pocket geometry",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "24002090",
+        "title": "Role of the K101E substitution in HIV-1 reverse transcriptase in resistance to rilpivirine and other nonnucleoside reverse transcriptase inhibitors",
+        "year": "2013",
+        "journal": "Antimicrob Agents Chemother"
+      }
+    ],
+    "built_at": "2026-07-30T05:05:56.477156+00:00"
+  },
+  "K101P": {
+    "mechanism": "K101P eliminates the positively charged lysine residue from the NNRTI binding pocket rim, removing a hydrogen bond donor that normally contacts the inhibitor while the proline substitution (rigid cyclic structure lacking backbone NH) constrains the local binding pocket geometry. This combination reduces inhibitor accommodation and hydrogen bonding, particularly affecting nevirapine and other NNRTIs that depend on K101 interactions at the p51-p66 interface.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "ETR"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 20462946, PMID 40960051, PMID 24965933",
+    "key_interaction": "Loss of K101 positive charge and hydrogen bonding capacity; rigid proline-induced pocket constraint",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "20462946",
+        "title": "Constrained patterns of covariation and clustering of HIV-1 non-nucleoside reverse transcriptase inhibitor resistance mutations",
+        "year": "2010",
+        "journal": "J Antimicrob Chemother"
+      },
+      {
+        "pmid": "40960051",
+        "title": "Exploring the HIV-1 Reverse Transcriptase p51/p66 Interface: Structure-Based Design and Optimization of Novel 2,4,6-Trisubstituted Pyrimidines as Potent NNRTIs with Improved Resistance Profiles",
+        "year": "2025",
+        "journal": "J Med Chem"
+      },
+      {
+        "pmid": "24965933",
+        "title": "Effects of the protonation state in the interaction of an HIV-1 reverse transcriptase (RT) amino acid, Lys101, and a non nucleoside RT inhibitor, GW420867X",
+        "year": "2014",
+        "journal": "J Mol Model"
+      }
+    ],
+    "built_at": "2026-07-30T05:06:10.789920+00:00"
+  },
+  "V106A": {
+    "mechanism": "The V106A mutation reduces nevirapine binding affinity primarily through increased drug dissociation (koff increased 8.5-fold) rather than decreased binding rate, indicating loss of stabilizing van der Waals contacts between the larger valine side chain and the NNRTI binding pocket rim. The alanine substitution decreases hydrophobicity and side-chain volume at position 106, destabilizing favorable hydrophobic interactions that normally anchor the drug in the NNRTI binding pocket.",
+    "affects_drugs": [
+      "NVP"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 9405155, PMID 10723499",
+    "key_interaction": "Loss of van der Waals contact between V106 side chain and NNRTI binding pocket",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "9405155",
+        "title": "Resistance to nevirapine of HIV-1 reverse transcriptase mutants: loss of stabilizing interactions and thermodynamic or steric barriers are induced by different single amino acid substitutions",
+        "year": "1997",
+        "journal": "J Mol Biol"
+      },
+      {
+        "pmid": "10723499",
+        "title": "Sensitivity and resistance to (+)-calanolide A of wild-type and mutated forms of HIV-1 reverse transcriptase",
+        "year": "1999",
+        "journal": "Antivir Ther"
+      }
+    ],
+    "built_at": "2026-07-30T05:06:39.897201+00:00"
+  },
+  "V108I": {
+    "mechanism": "V108I confers moderate NNRTI resistance via an indirect mechanism involving steric perturbation of the critical aromatic residues Tyr181 and Tyr188, which mediate ring-stacking interactions with inhibitor ligands. The valine-to-isoleucine substitution (increase in side-chain volume of 26.7 \u00c5\u00b3) at this NNRTI pocket rim position alters the local geometry of the binding pocket, destabilizing key inhibitor-enzyme interactions without directly contacting the ligand.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "DLV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 18313784, PMID 11333879, PMID 14522102",
+    "key_interaction": "Steric perturbation of Tyr181 and Tyr188 aromatic ring-stacking with inhibitor",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "18313784",
+        "title": "Structural basis for drug resistance mechanisms for non-nucleoside inhibitors of HIV reverse transcriptase",
+        "year": "2008",
+        "journal": "Virus Res"
+      },
+      {
+        "pmid": "11333879",
+        "title": "Genotypic correlates of phenotypic resistance to efavirenz in virus isolates from patients failing nonnucleoside reverse transcriptase inhibitor therapy",
+        "year": "2001",
+        "journal": "J Virol"
+      },
+      {
+        "pmid": "14522102",
+        "title": "Mutation patterns of the reverse transcriptase genes in HIV-1 infected patients receiving combinations of nucleoside and non nucleoside inhibitors",
+        "year": "2003",
+        "journal": "Int J Antimicrob Agents"
+      }
+    ],
+    "built_at": "2026-07-30T05:07:07.108919+00:00"
+  },
+  "E138G": {
+    "mechanism": "E138G removes the negatively charged glutamic acid residue at position 138 on the p51 subunit, eliminating its role in the hydrogen-bonding network with NNRTIs and destabilizing critical water-mediated interactions that stabilize inhibitor binding in the NNRTI pocket. The glycine substitution, lacking the charge and bulky side chain, disrupts the charged interaction network at the p66/p51 subunit interface that normally positions Glu138 to maintain indirect contacts with NNRTIs through bridging water molecules, thereby reducing nevirapine binding affinity.",
+    "affects_drugs": [
+      "NVP",
+      "EFV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 16911530, PMID 21133347",
+    "key_interaction": "Loss of water-mediated hydrogen bonding network between Glu138 (p51) and NNRTIs through charge removal and side-chain volume reduction",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "16911530",
+        "title": "Structural insights into mechanisms of non-nucleoside drug resistance for HIV-1 reverse transcriptases mutated at codons 101 or 138",
+        "year": "2006",
+        "journal": "FEBS J"
+      },
+      {
+        "pmid": "21133347",
+        "title": "Rational approaches for the design of effective human immunodeficiency virus type 1 nonnucleoside reverse transcriptase inhibitors",
+        "year": "2011",
+        "journal": "J Chem Inf Model"
+      }
+    ],
+    "built_at": "2026-07-30T05:07:28.187303+00:00"
+  },
+  "E138A": {
+    "mechanism": "E138A disrupts the E138-K101 salt bridge between the p51 and p66 subunits of HIV-1 RT, reducing NNRTI-induced opening of the fingers and thumb subdomains and maintaining a catalytically competent RT-template/primer-dNTP complex despite NNRTI binding. The loss of negative charge at position 138 (glutamate to alanine) eliminates a key electrostatic interaction required for stabilizing the NNRTI-susceptible conformational state.",
+    "affects_drugs": [
+      "NVP",
+      "RPV",
+      "ETR",
+      "EFV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 25232099, PMID 23856772, PMID 23612196",
+    "key_interaction": "E138-K101 salt bridge disruption between p51 and p66 subunits",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "25232099",
+        "title": "Mechanism of allosteric inhibition of HIV-1 reverse transcriptase revealed by single-molecule and ensemble fluorescence",
+        "year": "2014",
+        "journal": "Nucleic Acids Res"
+      },
+      {
+        "pmid": "23856772",
+        "title": "Basis for early and preferential selection of the E138K mutation in HIV-1 reverse transcriptase",
+        "year": "2013",
+        "journal": "Antimicrob Agents Chemother"
+      },
+      {
+        "pmid": "23612196",
+        "title": "Effect of mutations at position E138 in HIV-1 reverse transcriptase and their interactions with the M184I mutation on defining patterns of resistance to nonnucleoside reverse transcriptase inhibitors rilpivirine and etravirine",
+        "year": "2013",
+        "journal": "Antimicrob Agents Chemother"
+      }
+    ],
+    "built_at": "2026-07-30T05:07:43.197794+00:00"
+  },
+  "E138K": {
+    "mechanism": "E138K disrupts the salt bridge between p51(E138) and p66(K101) that normally constrains the NNRTI-binding pocket, thereby opening the pocket entrance and accelerating NNRTI dissociation. This positive charge substitution increases electrostatic opening of the binding pocket, reducing equilibrium binding affinity for NNRTIs like rilpivirine, doravirine, and nevirapine while maintaining overall RT catalytic architecture.",
+    "affects_drugs": [
+      "NVP",
+      "RPV",
+      "DRV",
+      "ETR",
+      "EFV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 22955279, PMID 35858448, PMID 21997204, PMID 22993165",
+    "key_interaction": "Loss of E138\u2013K101 salt bridge and electrostatic pocket opening",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "22955279",
+        "title": "Biochemical mechanism of HIV-1 resistance to rilpivirine",
+        "year": "2012",
+        "journal": "J Biol Chem"
+      },
+      {
+        "pmid": "35858448",
+        "title": "Cryo-EM structures of wild-type and E138K/M184I mutant HIV-1 RT/DNA complexed with inhibitors doravirine and rilpivirine",
+        "year": "2022",
+        "journal": "Proc Natl Acad Sci U S A"
+      },
+      {
+        "pmid": "21997204",
+        "title": "The HIV-1 reverse transcriptase M184I mutation enhances the E138K-associated resistance to rilpivirine and decreases viral fitness",
+        "year": "2012",
+        "journal": "J Acquir Immune Defic Syndr"
+      },
+      {
+        "pmid": "22993165",
+        "title": "Molecular mechanism of antagonism between the Y181C and E138K mutations in HIV-1 reverse transcriptase",
+        "year": "2012",
+        "journal": "J Virol"
+      }
+    ],
+    "built_at": "2026-07-30T05:07:58.992666+00:00"
+  },
+  "E138Q": {
+    "mechanism": "E138Q is a primary NNRTI-resistance mutation arising in both subtype B and C HIV-1. Based on published fold-change data, E138Q reduces rilpivirine susceptibility 5.4-fold and occurs more frequently in RT-experienced subtype C individuals. The Glu138 residue is located in the palm/catalytic core but does not directly contact NNRTI ligands; resistance likely arises from allosteric effects on the NNRTI-binding pocket geometry or from charge-neutralization (negative Glu to neutral Gln) altering local electrostatic stabilization of the binding cleft.",
+    "affects_drugs": [
+      "RPV",
+      "NVP"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 24746459",
+    "key_interaction": "Loss of negative charge at position 138, eliminating unfavorable electrostatic interactions that otherwise disfavor mutant-drug binding, or allosteric distortion of nearby NNRTI-binding residues",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "24746459",
+        "title": "E138A in HIV-1 reverse transcriptase is more common in subtype C than B: implications for rilpivirine use in resource-limited settings",
+        "year": "2014",
+        "journal": "Antiviral Res"
+      }
+    ],
+    "built_at": "2026-07-30T05:08:12.748951+00:00"
+  },
+  "Y181V": {
+    "mechanism": "The Y181V substitution reduces the volume of the NNRTI binding pocket (53.6 \u0172 decrease from Tyr\u2192Val) and eliminates the aromatic \u03c0-stacking interaction that the tyrosine hydroxyl and ring normally provide for NNRTI ligands. This hydrophobic volume loss (particularly the loss of the bulky phenolic group) creates a cavity mismatch that substantially weakens NNRTI binding affinity, principally through loss of van der Waals contact and aromatic interactions, resulting in reduced binding dissociation constants and cross-resistance to multiple NNRTIs including nevirapine, efavirenz, and rilpivirine.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "RPV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 31160281, PMID 11575933, PMID 29651941",
+    "key_interaction": "Loss of aromatic \u03c0-stacking from tyrosine ring and reduction in hydrophobic van der Waals contacts upon substitution with smaller valine residue.",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "31160281",
+        "title": "Nonnucleoside Reverse Transcriptase Inhibitor Hypersusceptibility and Resistance by Mutation of Residue 181 in HIV-1 Reverse Transcriptase",
+        "year": "2019",
+        "journal": "Antimicrob Agents Chemother"
+      },
+      {
+        "pmid": "11575933",
+        "title": "Structural mechanisms of drug resistance for mutations at codons 181 and 188 in HIV-1 reverse transcriptase and the improved resilience of second generation non-nucleoside inhibitors",
+        "year": "2001",
+        "journal": "J Mol Biol"
+      },
+      {
+        "pmid": "29651941",
+        "title": "Identification of Adjacent NNRTI Binding Pocket in Multi-mutated HIV1- RT Enzyme Model: An in silico Study",
+        "year": "2018",
+        "journal": "Curr HIV Res"
+      }
+    ],
+    "built_at": "2026-07-30T05:09:24.636274+00:00"
+  },
+  "Y181I": {
+    "mechanism": "The Y181I substitution reduces NNRTI binding affinity by decreasing the volume of the aromatic side chain by ~27 \u0172, disrupting critical hydrophobic packing and direct contacts with nevirapine and other NNRTIs within the binding pocket core. The smaller isoleucine cannot maintain the hydrogen-bonding network and van der Waals contacts established by the phenolic hydroxyl and aromatic ring of tyrosine, resulting in decreased inhibitor binding affinity and compromised inhibition efficiency.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "RPV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 31160281",
+    "key_interaction": "Loss of hydrogen-bonding and aromatic contacts from Y181 phenol group to NNRTI ligand, coupled with decreased van der Waals packing interactions",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "31160281",
+        "title": "Nonnucleoside Reverse Transcriptase Inhibitor Hypersusceptibility and Resistance by Mutation of Residue 181 in HIV-1 Reverse Transcriptase",
+        "year": "2019",
+        "journal": "Antimicrob Agents Chemother"
+      }
+    ],
+    "built_at": "2026-07-30T05:09:39.893460+00:00"
+  },
+  "Y188C": {
+    "mechanism": "The Y188C mutation reduces van der Waals interactions between nevirapine and the NNRTI binding pocket by replacing the bulky aromatic tyrosine with a smaller cysteine residue. This substitution partially restores RT flexibility in the binding pocket, weakening drug binding affinity and reducing nevirapine inhibition efficacy.",
+    "affects_drugs": [
+      "NVP"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 16332074, PMID 36364174",
+    "key_interaction": "Loss of van der Waals contacts between the aromatic ring of Y188 and the bound nevirapine",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "16332074",
+        "title": "Effect of a bound non-nucleoside RT inhibitor on the dynamics of wild-type and mutant HIV-1 reverse transcriptase",
+        "year": "2005",
+        "journal": "J Am Chem Soc"
+      },
+      {
+        "pmid": "36364174",
+        "title": "Me-Better Drug Design Based on Nevirapine and Mechanism of Molecular Interactions with Y188C Mutant HIV-1 Reverse Transcriptase",
+        "year": "2022",
+        "journal": "Molecules"
+      }
+    ],
+    "built_at": "2026-07-30T05:09:52.079072+00:00"
+  },
+  "G190A": {
+    "mechanism": "The G190A substitution introduces a methyl side chain at position 190 in the NNRTI binding pocket, creating steric clashes with bound nevirapine and efavirenz, thereby reducing drug binding affinity and conferring resistance. The alanine's increased hydrophobic bulk (\u0394volume +28.5 \u00c5\u00b3) locally distorts the binding pocket geometry, unfavorably repositioning or displacing the drug ligand through van der Waals repulsion rather than through direct contact loss.",
+    "affects_drugs": [
+      "NVP",
+      "EFV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 12502865, PMID 21953939",
+    "key_interaction": "Steric clash between the G190A methyl sidechain and the NNRTI ligand (nevirapine/efavirenz) in the NNRTI-binding pocket core",
+    "confidence": "high",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "12502865",
+        "title": "Amino acid substitutions at position 190 of human immunodeficiency virus type 1 reverse transcriptase increase susceptibility to delavirdine and impair virus replication",
+        "year": "2003",
+        "journal": "J Virol"
+      },
+      {
+        "pmid": "21953939",
+        "title": "Docking analysis and resistance evaluation of clinically relevant mutations associated with the HIV-1 non-nucleoside reverse transcriptase inhibitors nevirapine, efavirenz and etravirine",
+        "year": "2011",
+        "journal": "ChemMedChem"
+      }
+    ],
+    "built_at": "2026-07-30T05:10:27.229508+00:00"
+  },
+  "G190S": {
+    "mechanism": "G190S substitutes a flexible, uncharged glycine (minimal steric footprint) with a serine that bears a hydroxyl group and increased side-chain volume (~29 \u00c5\u00b3 increase), directly contacting the NNRTI binding pocket at minimal distance (~3.7 \u00c5 to ligand). This steric expansion and altered topology disrupts van der Waals contacts and potentially creates unfavorable interactions with NNRTI ligands like nevirapine and efavirenz, reducing inhibitor binding affinity and causing high-level resistance while preserving RT catalytic function.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "DLV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 25259833, PMID 11333879, PMID 21896288, PMID 21295512",
+    "key_interaction": "Van der Waals contacts between the expanded serine side-chain and NNRTI ligand are disrupted by the ~29 \u00c5\u00b3 volume increase and polar hydroxyl group introduced at position 190 in the NNRTI binding pocket.",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "25259833",
+        "title": "A uniquely prevalent nonnucleoside reverse transcriptase inhibitor resistance mutation in Russian subtype A HIV-1 viruses",
+        "year": "2014",
+        "journal": "AIDS"
+      },
+      {
+        "pmid": "11333879",
+        "title": "Genotypic correlates of phenotypic resistance to efavirenz in virus isolates from patients failing nonnucleoside reverse transcriptase inhibitor therapy",
+        "year": "2001",
+        "journal": "J Virol"
+      },
+      {
+        "pmid": "21896288",
+        "title": "HIV-1 reverse transcriptase connection subdomain mutations involved in resistance to approved non-nucleoside inhibitors",
+        "year": "2011",
+        "journal": "Antiviral Res"
+      },
+      {
+        "pmid": "21295512",
+        "title": "Molecular and structural aspects of clinically relevant mutations related to the approved non-nucleoside inhibitors of HIV-1 reverse transcriptase",
+        "year": "2011",
+        "journal": "Drug Resist Updat"
+      }
+    ],
+    "built_at": "2026-07-30T05:10:43.885871+00:00"
+  },
+  "H221Y": {
+    "mechanism": "H221Y substitutes a histidine (positively charged, imidazole) with tyrosine (neutral, aromatic hydroxyl) in the connection subdomain, altering the local electrostatic environment near the NNRTI binding pocket. This charge neutralization and increased hydrophobic bulk modulate the conformational dynamics of the NNRTI-binding site, reducing inhibitor occupancy or stability, and the mutation synergizes with classical NNRTI resistance mutations (Y181C) to enhance nevirapine resistance through cooperative destabilization of drug binding.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "ETR"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 24885612, PMID 25637519, PMID 17686836, PMID 20462946",
+    "key_interaction": "Electrostatic and hydrophobic repositioning at the NNRTI binding pocket periphery via positive-to-neutral charge change and increased aromatic/hydrophobic bulk from H to Y substitution.",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "24885612",
+        "title": "Impact of Y181C and/or H221Y mutation patterns of HIV-1 reverse transcriptase on phenotypic resistance to available non-nucleoside and nucleoside inhibitors in China",
+        "year": "2014",
+        "journal": "BMC Infect Dis"
+      },
+      {
+        "pmid": "25637519",
+        "title": "A novel mutation, D404N, in the connection subdomain of reverse transcriptase of HIV-1 CRF08_BC subtype confers cross-resistance to NNRTIs",
+        "year": "2015",
+        "journal": "J Antimicrob Chemother"
+      },
+      {
+        "pmid": "17686836",
+        "title": "Characterization and structural analysis of novel mutations in human immunodeficiency virus type 1 reverse transcriptase involved in the regulation of resistance to nonnucleoside inhibitors",
+        "year": "2007",
+        "journal": "J Virol"
+      },
+      {
+        "pmid": "20462946",
+        "title": "Constrained patterns of covariation and clustering of HIV-1 non-nucleoside reverse transcriptase inhibitor resistance mutations",
+        "year": "2010",
+        "journal": "J Antimicrob Chemother"
+      },
+      {
+        "pmid": "21135184",
+        "title": "Characterization of the E138K resistance mutation in HIV-1 reverse transcriptase conferring susceptibility to etravirine in B and non-B HIV-1 subtypes",
+        "year": "2011",
+        "journal": "Antimicrob Agents Chemother"
+      }
+    ],
+    "built_at": "2026-07-30T05:11:17.488980+00:00"
+  },
+  "P225H": {
+    "mechanism": "The P225H substitution introduces a positively charged, histidine residue in place of the rigid cyclic proline at position 225 in the connection subdomain, located ~10 \u00c5 from the NNRTI binding pocket. This mutation sensitizes HIV-1 RT to some NNRTIs (like BHAP U-90152) but the proline-to-histidine change alters the local electrostatic environment and conformational flexibility of the connection subdomain, which can modulate long-range allosteric effects on the NNRTI binding pocket and inhibitor binding kinetics, though the specific mechanism for nevirapine resistance remains partially drug-dependent.",
+    "affects_drugs": [
+      "NVP",
+      "BHAP"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 9634074",
+    "key_interaction": "Replacement of rigid Pro225 with positively-charged His225 alters connection subdomain electrostatics and conformational dynamics, affecting allosteric communication to the NNRTI pocket",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "9634074",
+        "title": "A proline-to-histidine substitution at position 225 of human immunodeficiency virus type 1 (HIV-1) reverse transcriptase (RT) sensitizes HIV-1 RT to BHAP U-90152",
+        "year": "1998",
+        "journal": "J Gen Virol"
+      }
+    ],
+    "built_at": "2026-07-30T05:11:32.740327+00:00"
+  },
+  "F227L": {
+    "mechanism": "F227L is a secondary NNRTI-resistance mutation that confers minimal resistance as a single mutation but enhances resistance when combined with primary mutations such as K103N or Y188L. The phenylalanine-to-leucine substitution reduces the aromatic bulk at position 227 in the primer-grip NNRTI-binding wall, allowing conformational flexibility in the NNRTI pocket that partially accommodates inhibitor binding despite primary resistance mutations present.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "DLV"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 11333879",
+    "key_interaction": "Loss of aromatic ring from Phe227 reduces steric constraint on NNRTI pocket, enabling adaptive conformational changes that enhance resistance.",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "11333879",
+        "title": "Genotypic correlates of phenotypic resistance to efavirenz in virus isolates from patients failing nonnucleoside reverse transcriptase inhibitor therapy",
+        "year": "2001",
+        "journal": "J Virol"
+      }
+    ],
+    "built_at": "2026-07-30T05:11:46.299282+00:00"
+  },
+  "M230L": {
+    "mechanism": "The M230L mutation in HIV-1 RT reduces NNRTI binding affinity through altered interactions within the NNRTI binding pocket. Meta-substitution of the longer methionine with leucine at this position within the primer-grip NNRTI wall constrains the binding pocket geometry and destabilizes critical NNRTI-RT contacts, conferring cross-resistance to first-generation NNRTIs (nevirapine and efavirenz) and second-generation agents. The mutation impairs enzyme function across polymerase, RNase H, and processivity activities, reflecting broad conformational perturbation of the RT active site region.",
+    "affects_drugs": [
+      "NVP",
+      "EFV",
+      "ETR"
+    ],
+    "source": "literature agent (Claude + PubMed); PMID 20308384, PMID 20852269",
+    "key_interaction": "Loss of optimal methionine side-chain packing and NNRTI contact stabilization within the NNRTI binding pocket wall.",
+    "confidence": "medium",
+    "verified": true,
+    "provenance": "agent",
+    "citations": [
+      {
+        "pmid": "20308384",
+        "title": "The M230L nonnucleoside reverse transcriptase inhibitor resistance mutation in HIV-1 reverse transcriptase impairs enzymatic function and viral replicative capacity",
+        "year": "2010",
+        "journal": "Antimicrob Agents Chemother"
+      },
+      {
+        "pmid": "20852269",
+        "title": "Differential impact of the HIV-1 non-nucleoside reverse transcriptase inhibitor mutations K103N and M230L on viral replication and enzyme function",
+        "year": "2010",
+        "journal": "J Antimicrob Chemother"
+      }
+    ],
+    "built_at": "2026-07-30T05:12:14.825258+00:00"
   }
 }

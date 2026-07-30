@@ -79,9 +79,9 @@ def main() -> int:
 
     if args.ground_truth:
         import json
-        gt = json.loads((config.DATA_DIR / "mechanism_ground_truth.json").read_text())
+        gt = json.loads(Path(t.ground_truth_path).read_text())
         gt_pairs = {(d, mut) for mut, v in gt.items()
-                    for d in (v.get("affects_drugs") or list(config.PI_DRUGS))}
+                    for d in (v.get("affects_drugs") or list(t.drugs))}
         pairs = docking[
             docking.apply(lambda r: (r["drug"], r["mutation"]) in gt_pairs, axis=1)
         ].copy()
