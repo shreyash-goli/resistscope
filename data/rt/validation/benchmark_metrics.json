@@ -1,0 +1,152 @@
+{
+  "n_pairs": 1269,
+  "drm_base_rate": 0.08983451536643026,
+  "enrichment": [
+    {
+      "top_n": 20,
+      "precision": 0.7,
+      "base_rate": 0.08983451536643026,
+      "enrichment": 7.792105263157894,
+      "perm_p": 0.0,
+      "ci_low": 5.565789473684211,
+      "ci_high": 10.01842105263158,
+      "n_drms_in_top": 14
+    },
+    {
+      "top_n": 40,
+      "precision": 0.75,
+      "base_rate": 0.08983451536643026,
+      "enrichment": 8.348684210526315,
+      "perm_p": 0.0,
+      "ci_low": 6.678947368421052,
+      "ci_high": 9.740131578947368,
+      "n_drms_in_top": 30
+    },
+    {
+      "top_n": 60,
+      "precision": 0.7,
+      "base_rate": 0.08983451536643026,
+      "enrichment": 7.792105263157894,
+      "perm_p": 0.0,
+      "ci_low": 6.493421052631579,
+      "ci_high": 9.09078947368421,
+      "n_drms_in_top": 42
+    },
+    {
+      "top_n": 100,
+      "precision": 0.56,
+      "base_rate": 0.08983451536643026,
+      "enrichment": 6.233684210526316,
+      "perm_p": 0.0,
+      "ci_low": 5.120526315789474,
+      "ci_high": 7.346842105263158,
+      "n_drms_in_top": 56
+    }
+  ],
+  "ranking": [
+    {
+      "drug": "EFV",
+      "roc_auc": 0.7377014418999152,
+      "pr_auc": 0.5581216285673531,
+      "base_rate": 0.07092198581560284,
+      "n": 423,
+      "n_drms": 30,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "ETR",
+      "roc_auc": 0.5891758917589175,
+      "pr_auc": 0.3672486113045592,
+      "base_rate": 0.09966777408637874,
+      "n": 301,
+      "n_drms": 30,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "NVP",
+      "roc_auc": 0.768560872624912,
+      "pr_auc": 0.5549085039459034,
+      "base_rate": 0.0688836104513064,
+      "n": 421,
+      "n_drms": 29,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "RPV",
+      "roc_auc": 0.6335353535353535,
+      "pr_auc": 0.41326999937274783,
+      "base_rate": 0.20161290322580644,
+      "n": 124,
+      "n_drms": 25,
+      "roc_auc_ci_low": NaN,
+      "roc_auc_ci_high": NaN
+    },
+    {
+      "drug": "OVERALL",
+      "roc_auc": 0.6950634161160476,
+      "pr_auc": 0.44842865807788546,
+      "base_rate": 0.08983451536643026,
+      "n": 1269,
+      "n_drms": 114,
+      "roc_auc_ci_low": 0.623528565580291,
+      "roc_auc_ci_high": 0.7630085878951817
+    }
+  ],
+  "deconfounding": [
+    {
+      "subset": "all isolates (confounded)",
+      "max_mutations_per_isolate": "\u221e",
+      "n_isolates_used": 2272,
+      "min_isolates_per_mutation": 3,
+      "n_pairs": 1269,
+      "spearman_rho": -0.10583471220808859,
+      "spearman_pvalue": 0.0001586972169271526
+    },
+    {
+      "subset": "\u22643 mutations",
+      "max_mutations_per_isolate": "3",
+      "n_isolates_used": 312,
+      "min_isolates_per_mutation": 3,
+      "n_pairs": 104,
+      "spearman_rho": 0.3822562050373005,
+      "spearman_pvalue": 6.219480907928388e-05
+    },
+    {
+      "subset": "\u22642 mutations",
+      "max_mutations_per_isolate": "2",
+      "n_isolates_used": 217,
+      "min_isolates_per_mutation": 2,
+      "n_pairs": 99,
+      "spearman_rho": 0.4072020401080322,
+      "spearman_pvalue": 2.877783449745218e-05
+    },
+    {
+      "subset": "single-mutation only",
+      "max_mutations_per_isolate": "1",
+      "n_isolates_used": 123,
+      "min_isolates_per_mutation": 1,
+      "n_pairs": 86,
+      "spearman_rho": 0.3627085884516798,
+      "spearman_pvalue": 0.0005990128434195119
+    }
+  ],
+  "headline": {
+    "best_enrichment": 8.348684210526315,
+    "best_enrichment_top_n": 40,
+    "best_enrichment_perm_p": 0.0,
+    "best_enrichment_ci": [
+      6.678947368421052,
+      9.740131578947368
+    ],
+    "pooled_roc_auc": 0.6950634161160476,
+    "pooled_roc_auc_ci": [
+      0.623528565580291,
+      0.7630085878951817
+    ],
+    "deconfounding_rescues_correlation": true,
+    "roc_above_chance": true
+  }
+}

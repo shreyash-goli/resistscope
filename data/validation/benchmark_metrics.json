@@ -166,6 +166,7 @@
       0.464887570068061,
       0.5574924774419826
     ],
-    "deconfounding_rescues_correlation": false
+    "deconfounding_rescues_correlation": false,
+    "roc_above_chance": false
   }
 }

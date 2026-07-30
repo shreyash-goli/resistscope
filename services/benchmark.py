@@ -262,6 +262,16 @@ def run_benchmark(
 
     pooled = rank[rank["drug"] == "OVERALL"].iloc[0]
     best = enr.loc[enr["enrichment"].idxmax()]
+    # Per-target conclusions (previously hardcoded to the protease result).
+    # Rescue = a less-confounded isolate subset reveals a positive, significant
+    # magnitude correlation the confounded pool hides (protease: no; RT: yes).
+    decon_rescues = bool((
+        decon["max_mutations_per_isolate"].isin(["1", "2", "3"])
+        & (decon["spearman_rho"] >= 0.2)
+        & (decon["spearman_pvalue"] < 0.05)
+    ).any())
+    _ci_low = float(pooled.get("roc_auc_ci_low", np.nan))
+    roc_above_chance = bool(_ci_low == _ci_low and _ci_low > 0.5)
     summary = {
         "n_pairs": int(len(merged)),
         "drm_base_rate": float(merged[LABEL_COL].mean()),
@@ -278,7 +288,8 @@ def run_benchmark(
                 float(pooled.get("roc_auc_ci_low", np.nan)),
                 float(pooled.get("roc_auc_ci_high", np.nan)),
             ],
-            "deconfounding_rescues_correlation": False,
+            "deconfounding_rescues_correlation": decon_rescues,
+            "roc_above_chance": roc_above_chance,
         },
     }
     import json

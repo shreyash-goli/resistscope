@@ -76,13 +76,18 @@ def main() -> int:
           f"{h['best_enrichment_top_n']} "
           f"(95% CI {h['best_enrichment_ci'][0]:.2f}–{h['best_enrichment_ci'][1]:.2f}, "
           f"perm p={h['best_enrichment_perm_p']:.1e})")
+    roc_read = "above chance" if h.get("roc_above_chance") else "~chance as a global ranker"
     print(f"  Pooled DRM ROC-AUC  : {h['pooled_roc_auc']:.3f} "
           f"(95% CI {h['pooled_roc_auc_ci'][0]:.3f}–{h['pooled_roc_auc_ci'][1]:.3f}) "
-          f"→ ~chance as a global ranker")
-    print(f"  De-confounding rescues magnitude correlation? "
-          f"{'YES' if h['deconfounding_rescues_correlation'] else 'NO'}")
-    print("  Read: docking ΔΔG is a coarse DRM-triage flag, not a quantitative")
-    print("  resistance predictor.")
+          f"→ {roc_read}")
+    rescues = h["deconfounding_rescues_correlation"]
+    print(f"  De-confounding rescues magnitude correlation? {'YES' if rescues else 'NO'}")
+    if h.get("roc_above_chance") or rescues:
+        print("  Read: docking ΔΔG carries real DRM signal here; de-confounded it")
+        print("  tracks fold-resistance — a usable structure-based resistance flag.")
+    else:
+        print("  Read: docking ΔΔG is a coarse DRM-triage flag, not a quantitative")
+        print("  resistance predictor.")
     print("=" * 66)
     return 0
 
