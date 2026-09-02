@@ -30,3 +30,9 @@ frontend/dist/
 # data/ligands/, data/mechanism_ground_truth.json
 
 PLAN.md
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/missfont.log
