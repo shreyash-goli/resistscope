@@ -136,6 +136,8 @@ $|\Delta\text{volume}|$ & 0.49 / 0.14 & 0.65 / $-0.01$ \\
 
 The expert system (HIVdb) is strongest on both, and \textbf{docking never beats it retrospectively} (Table~\ref{tab:baselines}): on protease docking loses even to zero-cost prevalence; on RT it beats the docking-free baselines but not HIVdb. A leave-one-drug-out jackknife confirms the pattern is not driven by any single drug (protease ROC range [0.50, 0.53]; RT [0.67, 0.74]).
 
+\textbf{The metric the chemist actually uses.} ROC-AUC scores a full ranking, but the tool is read as the top few flagged mutations for \emph{one} compound. Per-drug precision@$k$ (Appendix~\ref{app:perdrug}) turns the same contrast into a decision-relevant number: for every NNRTI, 7--8 of the top 10 flagged mutations are genuine clinical DRMs (median precision@10 $=0.75$ vs.\ base rates 0.07--0.20, all four $p<0.001$), whereas the PI median is 0.20 against a 0.12 base rate and indinavir's top 10 contain none. The deployed ranking is useful---on exactly one of the two targets.
+
 \textbf{Why the difference.} NNRTIs bind a compact, rigid pocket where resistance is direct steric/contact disruption---what rigid \ddg{} captures. Protease resistance is flexible-active-site, co-evolving, and substrate-envelope-constrained \citep{king2004,nalam2010}---what rigid docking misses. \emph{Why docking might still be worth running} is a hypothesis rather than a result of this paper: the baselines that beat docking (prevalence, HIVdb, supervised ML) all require clinical or expert data that a novel compound or novel target does not have, whereas docking requires none. We flag this as our motivation, not a validated finding; the per-drug ROC on RT (0.63--0.77) is the nearest evidence we have, and a scaffold-holdout test is the experiment that would settle it.
 
 \subsection{Explanation faithfulness}
@@ -155,7 +157,7 @@ Under the Claude-Haiku judge, explanations recover the correct primary mechanism
 \section{Discussion}
 The two findings share one account: \textbf{structure-based methods deliver value where the non-structural shortcut fails.} For prediction, the shortcut is prevalence, expert rules, or supervised ML, and structure helps only when resistance is structurally local (the NNRTI pocket, not the protease active site). For explanation, the shortcut is the LLM's parametric biology, and structure helps only for mutations the model has not memorized---through the mutation's \emph{geometry}. We offer this as a hypothesis supported by two deliberately contrasting targets, not a law: both are HIV enzymes, and confirming it requires more targets of differing pocket biophysics. Read as a practical rule of thumb, it says: expect structure-based resistance triage to work for rigid, contact-driven pockets and single-mutation regimes, distrust it for flexible, allosteric, co-evolving sites, and reach for it in the prospective setting where clinical and expert baselines do not yet exist---the setting a scaffold-holdout experiment should test next.
 
-\textbf{Limitations.} Rigid single-structure docking (no ensemble, flexible receptor, or explicit flap water), which bounds every claim we make about docking energy; crystal waters stripped; Vina score treated as a ranking signal, not a free energy; the RT subpocket map is a coarse approximation; RT mechanism ground truth is agent-built and needs a human-expert anchor; the LLM judge's absolute scores are judge-dependent (cross-vendor $\kappa\approx0.23$--0.38 on hard cases, cross-Claude-model $\kappa\approx0.64$--0.72) though the paired contrasts reproduce across judges; per-bin $n$ is modest and many tests are reported without multiplicity correction; and compound-level scoring aggregation is underpowered (6 $+$ 4 compounds), so the deployed 0--100 robustness score is itself unvalidated and all quantitative validation is per-mutation.
+\textbf{Limitations.} Every claim about docking \emph{energy} is bounded by the protocol: rigid single-structure Vina, no ensemble or flexible receptor, crystal waters (including the conserved flap water) stripped, and the score read as a ranking signal rather than a free energy. RT ground truth is agent-built and needs a human-expert anchor; the judge's absolute scores are judge-dependent ($\kappa\approx0.23$--0.38 cross-vendor on hard cases, 0.64--0.72 cross-model) though the paired contrasts reproduce. Per-bin $n$ is modest and many tests carry no multiplicity correction. Precision@$k$ validates the \emph{ranking} the robustness score induces, but with 6$+$4 compounds its absolute 0--100 calibration is untested, so all quantitative validation here is per-mutation.
 
 \bibliographystyle{plainnat}
 \begin{thebibliography}{99}
@@ -227,5 +229,197 @@ The two findings share one account: \textbf{structure-based methods deliver valu
 \caption{\textbf{Attribution ablation.} (a) Faithfulness under full / minimal / corrupted context, both targets: context helps, corruption hurts. (b) The benefit of correct context (full $-$ minimal) by the model's prior strength: largest where the prior alone is wrong (11 of 13 such cases corrected), zero where the prior is already correct. (c) Field-level ablation: the lift comes from geometry (ligand distance, subpocket), not the docking energy or the physicochemistry.}
 \label{fig:interp}
 \end{figure}
+
+\section{Per-drug breakdown and precision@\texorpdfstring{$k$}{k}}
+\label{app:perdrug}
+
+Table~\ref{tab:perdrug} gives the per-drug metrics behind the pooled numbers in
+\S4.1, and Table~\ref{tab:patk} the decision-relevant precision@$k$. Both are
+produced by \texttt{scripts/14\_precision\_at\_k.py}.
+
+Precision@$k$ ranks a \emph{single} drug's own mutation panel by predicted \ddg{}
+(descending, matching the pooled enrichment convention) and reports how many of
+the top $k$ are known major DRMs. Significance is an exact one-sided
+hypergeometric test---the probability that drawing $k$ mutations at random from
+that drug's panel yields at least as many DRMs---which is appropriate at $k=5$
+where a bootstrap CI is uninformative.
+
+The per-drug view shows the pooled result is not an artifact of averaging. Every
+NNRTI clears its base rate by a wide margin at every $k$; among the PIs only
+atazanavir ($k=5$) and lopinavir ($k=20$) reach $p<0.05$, and indinavir---whose
+ROC-AUC of 0.388 is \emph{below} chance---returns no DRMs in its top 10. The
+protease failure is therefore not uniform noise: it is one target on which the
+method is, for some drugs, actively anti-correlated with the truth.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Per-drug metrics.} DRM-recovery ROC-AUC and magnitude Spearman \rhoo{} vs.\ measured fold-resistance, per drug. $n$ is the drug's docked panel size, $n_{\text{DRM}}$ its number of major DRMs.}
+\label{tab:perdrug}
+\begin{tabular}{llrrrrr}
+\toprule
+target & drug & $n$ & $n_{\text{DRM}}$ & base rate & ROC-AUC & \rhoo{} \\
+\midrule
+protease & ATV & 258 & 33 & 0.128 & 0.533 & $-0.058$ \\
+protease & DRV & 209 & 30 & 0.144 & 0.462 & $0.033$ \\
+protease & IDV & 282 & 33 & 0.117 & 0.388 & $-0.085$ \\
+protease & LPV & 278 & 33 & 0.119 & 0.552 & $-0.013$ \\
+protease & NFV & 284 & 33 & 0.116 & 0.615 & $0.009$ \\
+protease & SQV & 280 & 33 & 0.118 & 0.672 & $0.138^{*}$ \\
+\midrule
+RT & EFV & 423 & 30 & 0.071 & 0.738 & $0.078$ \\
+RT & ETR & 301 & 30 & 0.100 & 0.589 & $-0.003$ \\
+RT & NVP & 421 & 29 & 0.069 & 0.769 & $0.188^{**}$ \\
+RT & RPV & 124 & 25 & 0.202 & 0.634 & $0.126$ \\
+\bottomrule
+\end{tabular}
+\\[2pt]
+{\footnotesize $^{*}p<0.05$, $^{**}p<0.001$ for the Spearman correlation.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Per-drug precision@$k$}, reported as (DRMs recovered)/$k$. ${}^{*}$ marks $p<0.05$ by an exact one-sided hypergeometric test against the drug's own base rate.}
+\label{tab:patk}
+\begin{tabular}{lcccc}
+\toprule
+drug & $k=5$ & $k=10$ & $k=20$ & base rate \\
+\midrule
+\multicolumn{5}{l}{\emph{protease}} \\
+\quad ATV & 3/5$^{*}$ & 3/10 & 3/20 & 0.13 \\
+\quad DRV & 1/5 & 1/10 & 2/20 & 0.14 \\
+\quad IDV & 0/5 & 0/10 & 1/20 & 0.12 \\
+\quad LPV & 2/5 & 3/10 & 6/20$^{*}$ & 0.12 \\
+\quad NFV & 2/5 & 2/10 & 4/20 & 0.12 \\
+\quad SQV & 1/5 & 2/10 & 5/20 & 0.12 \\
+\midrule
+\multicolumn{5}{l}{\emph{RT}} \\
+\quad EFV & 4/5$^{*}$ & 8/10$^{*}$ & 15/20$^{*}$ & 0.07 \\
+\quad ETR & 3/5$^{*}$ & 7/10$^{*}$ & 11/20$^{*}$ & 0.10 \\
+\quad NVP & 4/5$^{*}$ & 8/10$^{*}$ & 15/20$^{*}$ & 0.07 \\
+\quad RPV & 3/5 & 7/10$^{*}$ & 9/20$^{*}$ & 0.20 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Worked example: one mutation through the ablation}
+\label{app:worked}
+
+To make the attribution ablation concrete, we trace a single pair---indinavir
+(IDV) and the protease flap mutation \textbf{M46I}---through all three context
+conditions. M46I is the paradigm weak-prior case: an \emph{accessory} mutation
+that does not touch the inhibitor.
+
+\textbf{Ground truth} (IAS-USA 2022): \emph{``Met46 is a flap residue that does
+not contact the inhibitor directly. M46I is an accessory flap mutation that
+alters flap dynamics and closure and compensates for active-site mutations,
+broadly contributing to PI resistance.''}
+
+Table~\ref{tab:worked} shows the context each condition receives.
+
+\begin{table}[h]
+\centering
+\caption{\textbf{Structural context supplied to the model} for IDV/M46I under each condition. \emph{Corrupted} keeps the intrinsic chemistry (volume, hydrophobicity) but deranges the pipeline-derived geometry and energy across pairs.}
+\label{tab:worked}
+\begin{tabular}{lccc}
+\toprule
+field & full (real) & minimal & corrupted \\
+\midrule
+min.\ distance to ligand (\AA)  & 7.0 & --- & 4.1 \\
+distance to ligand centroid (\AA) & 14.2 & --- & 10.7 \\
+contacts ligand directly        & \textbf{False} & --- & \textbf{True} \\
+region                          & \textbf{flap} & --- & \textbf{S2/S2$'$ subpocket} \\
+$\Delta$volume (\AA$^3$)        & $+3.8$ & --- & $+3.8$ \\
+$\Delta$hydrophobicity          & $+2.6$ & --- & $+2.6$ \\
+docking \ddg{} (\kcal)          & $-0.24$ & --- & $+0.66$ \\
+\midrule
+\textbf{judge score} & \textbf{2} & \textbf{0} & \textbf{0} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Full context} (score 2). \emph{``The M46I mutation increases
+hydrophobicity while maintaining nearly identical volume, subtly altering the
+hydrophobic landscape of the flap region 7\,\AA{} from indinavir without directly
+contacting it\ldots{} reflects reduced entropic penalty for flap closure and
+weakened indirect stabilization of inhibitor binding geometry, characteristic of
+flap mutations that achieve resistance through conformational rather than direct
+contact mechanisms.''} The judge scored 2: the correct primary mechanism.
+
+\textbf{Minimal context} (score 0). \emph{``The M46I substitution replaces a
+larger, flexible methionine with a smaller isoleucine, creating a structural
+cavity in the S1 subpocket where indinavir's P1 ligand group normally makes
+critical van der Waals contacts\ldots{}''} With only the drug and mutation name,
+the model defaults to an active-site packing story and \emph{contradicts} the
+documented mechanism.
+
+\textbf{Corrupted context} (score 0). \emph{``\ldots{}isoleucine's shorter
+branched aliphatic chain cannot maintain the same contact surface\ldots{}the
+$\sim$4\,\AA{} minimum distance suggests the residue is in direct contact with the
+ligand\ldots{}destabilizes the inhibitor by approximately 0.66\kcal, particularly
+affecting the packing interactions critical for IDV's potency in this
+region.''}
+
+The corrupted output is the informative one: the explanation \emph{quotes the
+falsified values back}---the 4\,\AA{} distance, the S2/S2$'$ region, the 0.66\kcal{}
+energy---and reaches the wrong mechanism because of them. This is direct evidence
+that the generated mechanism is conditioned on the pipeline's structural fields
+rather than retrieved from the model's prior on a famous mutation name, and it is
+the single-instance version of the aggregate result in \S4.3.
+
+\section{Reproducibility}
+\label{app:repro}
+
+\textbf{Structures and docking.} Protease: PDB 3OXC, chains A/B, catalytic Asp25
+dyad asymmetrically protonated, mutations applied to both chains of the homodimer;
+box centre $(5.341, -1.893, 14.179)$, size $22^3$\,\AA. RT: PDB 3V81, p66/p51
+heterodimer, NNRTI pocket; box centre $(41.105, 52.332, 49.098)$ (occupancy-weighted
+centroid of the chain-A nevirapine ligand---note 3V81 contains a second NVP copy
+whose inclusion moves the centroid into empty space), size $24^3$\,\AA. AutoDock
+Vina 1.2 (CPU) / Uni-Dock (GPU), \texttt{exhaustiveness} 16, 5 poses retained per
+run, best pose scored. Receptors cleaned with PDBFixer; mutants built by point
+mutagenesis with a frozen-environment clash-relief minimization of the mutated
+side chain only; ligands prepared with RDKit (\texttt{AddHs}, ETKDG) and meeko.
+Crystal waters, including the conserved flap water, are stripped.
+
+\textbf{Scale and cost.} 285 protease mutant receptors (1{,}591 drug--mutation
+pairs across 6 PIs) and 424 RT mutant receptors (1{,}269 pairs across 4 NNRTIs).
+The full RT sweep took 19 minutes on a single A100 80GB with Uni-Dock. One RT DRM
+(L100I, an isosteric Leu$\rightarrow$Ile) failed receptor construction and is
+excluded. For scale, this is roughly three orders of magnitude cheaper per
+mutation than the alchemical free-energy protocol of Hauser et al.~\citep{hauser2018}, which is
+the trade the paper is about.
+
+\textbf{Models.} Generation and judging both use \texttt{claude-haiku-4-5}
+(\texttt{max\_tokens} 1024 for generation, 512 for judging); larger Claude models
+decline HIV-resistance \emph{generation} but not judging, which is why the second
+judge (\texttt{claude-sonnet-5}) was available for the cross-model check. Scores
+are returned through a forced tool call against a fixed \texttt{report\_score}
+schema, so every verdict is machine-readable and no free-text parsing is involved.
+
+\textbf{Judge prompt} (verbatim system prompt): \emph{``You are evaluating whether
+an AI-generated explanation of HIV-1 protease drug resistance correctly identifies
+the known structural mechanism. Score 0 if the explanation contradicts the known
+mechanism, 1 if it is consistent but vague or misses the key interaction, 2 if it
+correctly identifies the primary structural basis. Judge only structural/mechanistic
+agreement, not writing style, and give a one-sentence justification.''} The enzyme
+noun is substituted per target. The judge sees the mutation, the drug, the
+ground-truth mechanism and the explanation---never the condition label, the
+\ddg, or which system produced the explanation.
+
+\textbf{Statistics.} Permutation tests use 5{,}000 label shuffles and bootstrap
+CIs 5{,}000 resamples, seed 0. Enrichment ranks by \ddg{} descending. Paired
+ablation contrasts use the one-sided Wilcoxon signed-rank test at the
+(drug, mutation) level, which is the appropriate paired non-parametric test for
+the bounded, tied, non-Gaussian 0/1/2 score differences we observe; a paired
+$t$-test would assume a normality the difference distribution violates.
+Precision@$k$ significance is the exact hypergeometric test described in
+Appendix~\ref{app:perdrug}. We report many tests without multiplicity correction;
+the headline contrasts survive at $p<10^{-3}$.
+
+\textbf{Software.} Python 3.11; pandas 2.2.3, numpy 1.26.4, scipy 1.15.3,
+scikit-learn 1.7.0, anthropic 0.74.0; RDKit, OpenMM, PDBFixer, AutoDock Vina and
+meeko via conda (\texttt{environment.yml}). The pipeline is reproduced by
+\texttt{scripts/01}--\texttt{14} in order; each number in this paper is produced by
+a named script, and the mapping is in the repository README.
 
 \end{document}

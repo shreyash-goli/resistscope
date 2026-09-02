@@ -104,10 +104,21 @@ layer is target-aware.
 **NGL** WebGL 3D viewer. Components: `StructureViewer`, `MutationTable`, `ScoreCard`,
 `ValidationTab`, `AddTargetModal` (upload → pocket → agent → new target).
 
-**Reproducible pipeline** — `scripts/01`→`10`: download → panels → mutant cache →
+**Reproducible pipeline** — `scripts/01`→`14`: download → panels → mutant cache →
 dock → validate → explain → faithfulness → rigorous benchmark → agentic ground
-truth → add BYO target. Plus [demo.py](demo.py) (CLI), `notebooks/demo.ipynb`, and
+truth → add BYO target → faithfulness ablation → baselines → field ablation →
+precision@k. Plus [demo.py](demo.py) (CLI), `notebooks/demo.ipynb`, and
 [scripts/smoke_test.py](scripts/smoke_test.py).
+
+Paper-facing analyses (branch `paper`), each producing named artifacts under
+`data/`:
+
+| script | produces | paper section |
+|---|---|---|
+| [11_faithfulness_ablation.py](scripts/11_faithfulness_ablation.py) | `data/ablation/{full,minimal,corrupted}/`, `data/validation/faithfulness_ablation.parquet` | §4.3 attribution ablation |
+| [12_baselines.py](scripts/12_baselines.py) | `data/*/validation/baseline_table.csv` | Table 1 baselines |
+| [13_field_ablation.py](scripts/13_field_ablation.py) | `data/validation/field_ablation.parquet` | §4.3 field-level ablation |
+| [14_precision_at_k.py](scripts/14_precision_at_k.py) | `data/*/validation/precision_at_k.csv`, `data/validation/per_drug_table.csv` | §4.1 + Appendix C |
 
 ---
 
@@ -291,7 +302,7 @@ bootstrap CIs, ROC/PR-AUC):
 |---|---|
 | Top-40 ΔΔG **DRM enrichment** | **2.86×** (95% CI 1.63–4.08, permutation p < 0.001) — top predictions recover known DRMs |
 | Pooled **DRM-recovery ROC-AUC** | **0.51** (95% CI 0.46–0.56) — ≈ chance as a *global* ranker |
-| Darunavir major-DRM Spearman ρ | **≈ 0.40** (p = 0.03) — strong per-drug signal |
+| Darunavir major-DRM Spearman ρ | **≈ 0.40** (p = 0.03) — a *magnitude* signal on darunavir's major DRMs only; its overall DRM-recovery ROC-AUC is 0.46 (at chance) |
 | Per-mutation Spearman ρ (pooled) | **≈ 0.00** — the measured target is confounded by co-occurring mutations |
 | **De-confounding** (single-/≤2-mutation isolates) | does **not** rescue the magnitude correlation (ρ ≤ 0) — an honest bound |
 
@@ -299,7 +310,11 @@ The honest headline: rigid single-mutation docking ΔΔG is a **coarse DRM-triag
 flag, not a quantitative resistance predictor** — its extreme predictions are
 significantly enriched for real resistance mutations (≈3×, p < 0.001) even though
 it ranks at chance overall, and de-confounding the target does not rescue the
-magnitude correlation. Darunavir validates well per-drug.
+magnitude correlation. The lone per-drug bright spot — ρ ≈ 0.40 on darunavir's
+major-DRM magnitudes — is narrow and metric-specific (darunavir's *overall*
+DRM-recovery ranks at chance, ROC-AUC 0.46), not general validation. (Reverse
+transcriptase is a different story — see the RT benchmark, where docking ΔΔG is a
+genuinely above-chance ranker.)
 
 ### Finding 2 — Explanation faithfulness (does the *reasoning* hold up?)
 
