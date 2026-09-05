@@ -3,12 +3,18 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .ipynb_checkpoints/
+.venv/
+venv/
 
 # OS / editor
 .DS_Store
+.vscode/
+.idea/
 
 # Secrets / env
 .env
+.env.*
+!.env.example
 *.key
 
 # Large, regenerable data artifacts (rebuild with scripts/01-03).
@@ -19,20 +25,34 @@ data/structures/
 # RT (reverse transcriptase) receptors — same rationale, regenerable:
 data/rt/structures/
 
-# Frontend build output
+# Frontend build output + deps
 frontend/dist/
+frontend/node_modules/
 
 # Deploy bundle
 *.tar.gz
 
 # NOTE: these small, expensive-to-regenerate outputs are committed on purpose
 # (not ignored): data/panels/, data/docking_results/, data/validation/,
-# data/ligands/, data/mechanism_ground_truth.json
+# data/ligands/, data/ablation*/, data/field_ablation/, data/rt/,
+# data/mechanism_ground_truth.json
 
+# Internal planning / drafting notes — not part of the release.
 PLAN.md
+SKILLS.md
+paper/DRAFT.md
+paper/OUTLINE.md
+paper/RED_TEAM.md
 
 # LaTeX build artifacts
 paper/*.aux
 paper/*.log
 paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
 paper/missfont.log
+texput.log
