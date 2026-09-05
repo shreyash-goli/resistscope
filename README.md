@@ -1,22 +1,38 @@
 # ResistScope
 
-**Resistance-aware triage for antiviral compounds — for any target.**
+**Resistance-aware triage for antiviral compounds, and an audit of whether it works.**
 Paste a candidate inhibitor's SMILES and ResistScope docks it against a wildtype
 receptor plus a panel of clinical resistance mutants, scores how well its binding
-*survives* the panel (a 0–100 robustness score), and — grounded in PubMed —
-explains, per mutation, *why* each one threatens the compound. It's built to
-answer two questions that are usually asked separately:
+*survives* the panel (a 0–100 robustness score), and, grounded in PubMed,
+explains per mutation *why* each one threatens the compound.
 
-1. **Does the prediction hold up?** A benchmark against measured
-   fold-resistance ([scripts/08](scripts/08_benchmark.py)): top-ΔΔG predictions
-   are **~3× enriched** for real resistance mutations (p < 0.001), reported with
-   every confidence interval and caveat — including where the method is only
-   chance-level.
-2. **Does the *explanation* hold up?** A faithfulness check
-   ([scripts/07](scripts/07_faithfulness_eval.py)) that scores each LLM-written
-   mechanism against expert-annotated biology (IAS-USA mutation lists), Claude as
-   judge — **72%** recover the correct primary mechanism. Most tools in this space
-   score; almost none ask whether the model's *reasoning* matches known biology.
+Both of those outputs have real ground truth, so this repo also contains the
+audit of both, and it is not flattering to the method:
+
+1. **Does the prediction hold up?** Mostly not. Benchmarked against measured
+   fold-resistance from Stanford HIVdb, **the docking score is beaten by its own
+   geometry**: ranking mutations by distance to the ligand, same receptor but no
+   docking run, tracks fold-resistance better than ΔΔG on both targets
+   (Spearman ρ 0.39 vs 0.00 on protease). Rigid single-structure ΔΔG is
+   chance-level on the protease active site (ROC-AUC 0.51 [0.46, 0.56]). The
+   energy earns its cost in exactly one place: the top of the ranking in the
+   rigid NNRTI pocket, where each drug's top 10 holds 7–8 genuine resistance
+   mutations against 3–4 for the distance baseline. On protease that reverses.
+   ([scripts/12](scripts/12_baselines.py), [scripts/15](scripts/15_geometry_baseline.py))
+2. **Does the *explanation* hold up?** Better. An LLM judge scoring each
+   generated mechanism against expert-annotated biology (IAS-USA + PubMed-derived
+   ground truth) marks **71–72%** as recovering the correct primary mechanism,
+   and an **attribution ablation** over real, absent and corrupted structural
+   context shows the explanations condition on the pipeline rather than
+   pattern-matching the mutation name, most strongly where the model's prior is
+   weakest. A verification using no language model reproduces the same ordering.
+   ([scripts/07](scripts/07_faithfulness_eval.py), [scripts/11](scripts/11_faithfulness_ablation.py),
+   [scripts/16](scripts/16_structural_consistency.py))
+
+Across both halves the same thing holds: structural geometry carries the signal,
+and the docking energy mostly does not. Everything needed to check that is
+committed here: docking results, generated explanations, ground truth, judge
+scores, and the ablation caches.
 
 The method is **target-agnostic**: it ships validated on **HIV-1 protease**
 (Rhee et al. 2006, Stanford HIVdb), is wired end-to-end for **HIV-1 reverse
@@ -103,21 +119,29 @@ layer is target-aware.
 **NGL** WebGL 3D viewer. Components: `StructureViewer`, `MutationTable`, `ScoreCard`,
 `ValidationTab`, `AddTargetModal` (upload → pocket → agent → new target).
 
-**Reproducible pipeline** — `scripts/01`→`14`: download → panels → mutant cache →
+**Reproducible pipeline** — `scripts/01`→`17`: download → panels → mutant cache →
 dock → validate → explain → faithfulness → rigorous benchmark → agentic ground
 truth → add BYO target → faithfulness ablation → baselines → field ablation →
-precision@k. Plus [demo.py](demo.py) (CLI), `notebooks/demo.ipynb`, and
+precision@k → geometry baselines → structural consistency → contact-preserving
+control. Plus [demo.py](demo.py) (CLI), `notebooks/demo.ipynb`, and
 [scripts/smoke_test.py](scripts/smoke_test.py).
 
-Paper-facing analyses (branch `paper`), each producing named artifacts under
-`data/`:
+Paper-facing analyses, each producing named artifacts under `data/`. Section and
+appendix numbers refer to [paper/main.pdf](paper/main.pdf):
 
 | script | produces | paper section |
 |---|---|---|
-| [11_faithfulness_ablation.py](scripts/11_faithfulness_ablation.py) | `data/ablation/{full,minimal,corrupted}/`, `data/validation/faithfulness_ablation.parquet` | §4.3 attribution ablation |
-| [12_baselines.py](scripts/12_baselines.py) | `data/*/validation/baseline_table.csv` | Table 1 baselines |
-| [13_field_ablation.py](scripts/13_field_ablation.py) | `data/validation/field_ablation.parquet` | §4.3 field-level ablation |
-| [14_precision_at_k.py](scripts/14_precision_at_k.py) | `data/*/validation/precision_at_k.csv`, `data/validation/per_drug_table.csv` | §4.1 + Appendix C |
+| [11_faithfulness_ablation.py](scripts/11_faithfulness_ablation.py) | `data/ablation*/{full,minimal,corrupted}/`, `data/*/validation/faithfulness_ablation.parquet` | §4.3 attribution ablation |
+| [12_baselines.py](scripts/12_baselines.py) | `data/*/validation/baseline_table.csv` | §4.1, Table 4 (Appendix D) |
+| [13_field_ablation.py](scripts/13_field_ablation.py) | `data/field_ablation/`, `data/validation/field_ablation.parquet` | §4.3 field-level ablation, Fig. 3b |
+| [14_precision_at_k.py](scripts/14_precision_at_k.py) | `data/*/validation/precision_at_k.csv`, `data/validation/per_drug_table.csv` | §4.1, Appendix B |
+| [15_geometry_baseline.py](scripts/15_geometry_baseline.py) | `data/validation/geometry_baseline.csv`, `geometry_precision_at_10.csv`, `dropout_sensitivity.json` | §4.1, Fig. 2, Table 5 |
+| [16_structural_consistency.py](scripts/16_structural_consistency.py) | `data/validation/structural_consistency.{csv,json}` | Appendix F (LLM-free check) |
+| [17_contact_preserving_corruption.py](scripts/17_contact_preserving_corruption.py) | `data/validation/faithfulness_ablation_contactpreserved.parquet`, `contactpreserved_paired.csv` | §4.3 contact-preserving control |
+
+Figures are regenerated from those artifacts with
+[paper/figures/make_figures.py](paper/figures/make_figures.py); `fig_toplist` and
+`fig3` read committed CSVs only, so they rebuild without a docking stack.
 
 ---
 
@@ -239,9 +263,11 @@ GPU, no Anthropic key:
 2. **Read the robustness score** and open the worst mutations (highest ΔΔG).
 3. **Click a mutation** — the 3D viewer highlights the mutated residue in the
    pocket and shows Claude's PubMed-cited mechanistic explanation.
-4. **Open the Validation tab** — the honest headline: top ΔΔG predictions are
-   ~3× enriched for real resistance mutations (p < 0.001), but this is a *coarse
-   triage flag, not a quantitative fold-resistance predictor*.
+4. **Open the Validation tab** for the honest headline: top-ΔΔG predictions are
+   ~3× enriched for real resistance mutations (p < 0.001), but that is tail
+   enrichment sitting on top of a chance-level global ranking. It is a *coarse
+   triage flag, not a quantitative fold-resistance predictor*, and on protease a
+   docking-free ligand-distance baseline ranks better (see the audit above).
 
 A **custom SMILES** is the optional live path — it only runs when a docking
 backend is configured (local stack or a `RESISTSCOPE_DOCKING_URL` GPU worker);
@@ -309,7 +335,10 @@ The honest headline: rigid single-mutation docking ΔΔG is a **coarse DRM-triag
 flag, not a quantitative resistance predictor** — its extreme predictions are
 significantly enriched for real resistance mutations (≈3×, p < 0.001) even though
 it ranks at chance overall, and de-confounding the target does not rescue the
-magnitude correlation. The lone per-drug bright spot — ρ ≈ 0.40 on darunavir's
+magnitude correlation. It is also beaten by its own geometry: ranking the same
+mutations by distance to the ligand, with no docking run at all, reaches
+ρ = 0.39 and ROC-AUC 0.96 on protease
+([scripts/15](scripts/15_geometry_baseline.py)). The lone per-drug bright spot — ρ ≈ 0.40 on darunavir's
 major-DRM magnitudes — is narrow and metric-specific (darunavir's *overall*
 DRM-recovery ranks at chance, ROC-AUC 0.46), not general validation. (Reverse
 transcriptase is a different story — see the RT benchmark, where docking ΔΔG is a
