@@ -1,0 +1,9 @@
+target,predictor,roc_auc,roc_ci_low,roc_ci_high,magnitude_rho,rho_ci_low,rho_ci_high
+protease,docking ΔΔG,0.51,0.465,0.557,0.002,-0.048,0.052
+protease,prevalence,0.719,0.686,0.751,-0.078,-0.127,-0.029
+protease,|Δvolume|,0.489,0.445,0.537,0.142,0.093,0.191
+protease,HIVdb penalty,0.863,0.828,0.897,0.36,0.321,0.395
+RT,docking ΔΔG,0.695,0.625,0.768,-0.106,-0.164,-0.045
+RT,prevalence,0.653,0.608,0.698,0.127,0.072,0.182
+RT,|Δvolume|,0.653,0.603,0.701,-0.009,-0.065,0.048
+RT,HIVdb penalty,0.929,0.896,0.959,0.267,0.209,0.322
