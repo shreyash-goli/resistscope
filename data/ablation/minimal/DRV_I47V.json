@@ -1,0 +1,10 @@
+{
+  "drug": "DRV",
+  "mutation": "I47V",
+  "condition": "minimal",
+  "delta_delta_g": -0.19500000000000028,
+  "structural_context": null,
+  "explanation": "The I47V mutation creates a cavity defect in the S2 subpocket by removing the larger isoleucine side chain and replacing it with the smaller valine, which darunavir's bulky bis-tetrahydrofuran moiety is optimized to fill through van der Waals contacts. This loss of favorable hydrophobic packing interactions destabilizes the inhibitor's binding pose, reducing binding affinity. Additionally, the reduced steric bulk allows compensatory water molecules to occupy the vacated space, further disfavoring darunavir's binding geometry compared to other protease inhibitors with smaller P2 groups that can tolerate this structural perturbation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:34.374485+00:00"
+}

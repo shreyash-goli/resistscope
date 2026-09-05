@@ -1,0 +1,10 @@
+{
+  "drug": "NFV",
+  "mutation": "N88S",
+  "condition": "minimal",
+  "delta_delta_g": -0.09799999999999898,
+  "structural_context": null,
+  "explanation": "The N88S mutation replaces a polar asparagine with a smaller, uncharged serine, eliminating a key hydrogen bond donor that nelfinavir relies on for anchoring within the S2' subpocket. This loss of the asparagine's amide side chain removes critical polar contacts with the inhibitor's carbonyl or hydroxyl groups, destabilizing the ligand-binding geometry. Additionally, the reduced side-chain volume may allow the inhibitor to shift within the binding pocket, compromising the precise electrostatic and steric complementarity required for tight binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:04.548606+00:00"
+}

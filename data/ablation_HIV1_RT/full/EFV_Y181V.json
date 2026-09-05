@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181V",
+  "condition": "full",
+  "delta_delta_g": -0.02999999999999936,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "V",
+    "wt_residue": "Tyr",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -53.6,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.5,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": -0.02999999999999936,
+    "delta_g": -11.716
+  },
+  "explanation": "The aromatic ring of Y181 makes critical van der Waals contacts with efavirenz at 3.8 \u00c5, and substitution to the smaller valine creates a cavity within the NNRTI pocket core that destabilizes inhibitor binding through loss of these hydrophobic interactions. Although the energetic penalty is modest, the reduction in binding pocket volume (\u221253.6 \u00c5\u00b3) combined with removal of the tyrosine's bulky phenyl group eliminates shape complementarity that normally stabilizes efavirenz positioning, allowing the drug to adopt suboptimal conformations or exhibit increased mobility. The mutation preserves hydrophobic character (increased by 5.5 units), but the net loss of surface contact area and aromatic interaction geometry outweighs this benefit, resulting in weakened inhibitor binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:06.350745+00:00"
+}

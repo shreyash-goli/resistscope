@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -10.894
+  },
+  "explanation": "The M46I mutation reduces nelfinavir binding through a subtle allosteric effect originating from the flap region. Although the residue does not directly contact the inhibitor, the replacement of methionine's longer, flexible sulfur-containing side chain with isoleucine's compact branched aliphatic chain (~3.8 \u00c5\u00b3 volume reduction) alters the conformational dynamics of the protease flap, which gates access to and stabilization within the active site binding pocket. This conformational shift, driven by decreased hydrophobic packing interactions (\u22122.6 kcal/mol equivalent) in the flap region, propagates to the active site and destabilizes the optimal positioning of nelfinavir, reducing binding affinity without requiring direct steric or electrostatic clash.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:19.725443+00:00"
+}

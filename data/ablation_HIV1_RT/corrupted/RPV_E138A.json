@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "E138A",
+  "condition": "corrupted",
+  "delta_delta_g": -0.009999999999999787,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 6.4,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.009999999999999787,
+    "delta_g": -11.696
+  },
+  "explanation": "The E138A mutation reduces rilpivirine binding through a subtle but consequential loss of electrostatic stabilization at the NNRTI pocket rim. Glutamate's negatively charged carboxylate group at this position (6.4 \u00c5 from the ligand) likely provides favorable electrostatic interactions with rilpivirine's polar atoms, and its replacement by alanine's nonpolar methyl side chain eliminates this long-range electrostatic contribution while simultaneously increasing the local hydrophobic environment. Although the volume decrease and indirect contact suggest this is not a simple steric mechanism, the removal of the charge combined with altered solvation properties at the pocket periphery destabilizes the bound conformation relative to the unbound state, resulting in weakened overall binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:02.818221+00:00"
+}

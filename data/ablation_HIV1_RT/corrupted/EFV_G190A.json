@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "G190A",
+  "condition": "corrupted",
+  "delta_delta_g": 0.14100000000000001,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "A",
+    "wt_residue": "Gly",
+    "mut_residue": "Ala",
+    "volume_change": "increase",
+    "volume_change_A3": 28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.2,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.14100000000000001,
+    "delta_g": -10.201
+  },
+  "explanation": "The G190A mutation introduces a methyl side chain at a position that directly contacts efavirenz within the NNRTI pocket core, creating a steric clash that destabilizes the bound inhibitor without altering electrostatic interactions. Although the substituted alanine is only 3.7 \u00c5 from the ligand at closest approach, the ~28.5 \u0172 increase in van der Waals volume forces efavirenz to adopt a less favorable binding geometry or slightly shift position, reducing favorable contact surface complementarity. This geometrical perturbation, amplified by the pocket's spatial constraints, increments the binding free energy and weakens inhibitor retention despite maintaining the overall RT-ligand binding framework.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:58.989511+00:00"
+}

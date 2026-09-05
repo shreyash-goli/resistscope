@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138G",
+  "condition": "corrupted",
+  "delta_delta_g": -0.02099999999999902,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "G",
+    "wt_residue": "Glu",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -78.3,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 3.1,
+    "distance_from_ligand_centroid_angstrom": 13.9,
+    "min_distance_to_ligand_angstrom": 9.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": -0.02099999999999902,
+    "delta_g": -10.363
+  },
+  "explanation": "The E138G mutation eliminates a negatively charged, bulky glutamate residue in the connection subdomain and replaces it with a small, flexible glycine, which reduces local structural rigidity and allows conformational relaxation of the binding pocket architecture. Although E138 does not directly contact nevirapine (~10 \u00c5 away), the loss of the large acidic side chain and its stabilizing electrostatic interactions with the surrounding protein scaffold creates a subtle destabilization of the precise geometry required to optimally position the NNRTI-binding pocket. The backbone flexibility gained at position 138 (glycine's lack of steric constraints) likely permits small shifts in the connection subdomain that collectively weaken van der Waals contacts between nevirapine and residues forming the allosteric binding site, resulting in marginally reduced binding affinity despite the small predicted energetic cost.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:53.577716+00:00"
+}

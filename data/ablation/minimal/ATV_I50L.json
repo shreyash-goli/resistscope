@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "I50L",
+  "condition": "minimal",
+  "delta_delta_g": -0.09500000000000064,
+  "structural_context": null,
+  "explanation": "The I50L mutation replaces a larger, branched hydrophobic residue (isoleucine) with a smaller linear one (leucine) at a position that likely makes critical van der Waals contacts with atazanavir's nonpolar regions, reducing the binding interface complementarity and destabilizing the inhibitor-enzyme complex. This loss of favorable hydrophobic packing is particularly consequential because position 50 sits within or near the substrate-binding pocket, where the reduction in contact surface area directly diminishes binding affinity without substantially altering the protease's catalytic geometry. The smaller leucine side chain creates a cavity in the binding site that atazanavir cannot fully occupy, resulting in entropy loss and decreased inhibitor potency despite maintaining overall protease structural integrity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:53.250772+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.19500000000000028,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.19500000000000028,
+    "delta_g": -9.207
+  },
+  "explanation": "The L76V mutation in the flap region reduces a critical hydrophobic contact with darunavir by decreasing local binding pocket volume by ~27 \u0172, weakening van der Waals interactions despite the residue remaining in direct contact with the ligand at 2.8 \u00c5. This volumetric reduction creates a subtle but energetically unfavorable binding surface, as the smaller valine side chain cannot maintain optimal dispersion forces with the inhibitor's nonpolar surface that the larger leucine originally provided. The ~0.4 unit increase in relative hydrophobicity cannot compensate for this loss of favorable contact geometry, resulting in measurably weaker binding affinity that confers resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:28:29.462549+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "V82F",
+  "condition": "corrupted",
+  "delta_delta_g": 0.911999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.911999999999999,
+    "delta_g": -8.685
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain that creates steric clashes with lopinavir's molecular scaffold within the S1/S1' subpocket, where the phenylalanine's larger ring system (>49 \u0172 volume increase) cannot be accommodated without displacing or reorienting the inhibitor. Although the direct contact distance of 3.3 \u00c5 suggests van der Waals interactions, the increased hydrophobic bulk paradoxically reduces favorable binding through geometric incompatibility rather than enhanced contact\u2014the phenylalanine's rigid aromatic geometry sterically excludes optimal positioning of lopinavir's ligand atoms that normally pack efficiently against the smaller valine. This conformational penalty destabilizes the protease-inhibitor complex by forcing the drug into suboptimal binding modes that sacrifice critical active site interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:10.141957+00:00"
+}

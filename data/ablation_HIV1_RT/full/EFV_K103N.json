@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "K103N",
+  "condition": "full",
+  "delta_delta_g": 0.4540000000000006,
+  "structural_context": {
+    "position": 103,
+    "wt_aa": "K",
+    "mut_aa": "N",
+    "wt_residue": "Lys",
+    "mut_residue": "Asn",
+    "volume_change": "decrease",
+    "volume_change_A3": -54.5,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.4540000000000006,
+    "delta_g": -11.232
+  },
+  "explanation": "The K103N substitution eliminates a positively charged lysine at the NNRTI pocket rim, removing favorable electrostatic interactions with efavirenz's polar atoms and disrupting the electrostatic environment that stabilizes ligand positioning. Additionally, the 54.5 \u0172 volume decrease from lysine to asparagine creates a subpocket mismatch, weakening van der Waals contacts at the 4.1 \u00c5 minimum distance interface and allowing efavirenz to adopt a suboptimal binding pose within the cavity. While asparagine can form hydrogen bonds, its shorter side chain cannot simultaneously maintain the geometric and electrostatic complementarity that the larger, charged lysine provided, resulting in collectively reduced binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:16.093371+00:00"
+}

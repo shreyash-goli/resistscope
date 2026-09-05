@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "Y181C",
+  "condition": "full",
+  "delta_delta_g": -0.05400000000000027,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": -0.05400000000000027,
+    "delta_g": -9.005
+  },
+  "explanation": "The Y181C mutation reduces etravirine binding through loss of favorable aromatic interactions rather than through steric disruption. Tyrosine at position 181 contributes critical van der Waals contacts and potential \u03c0-\u03c0 stacking or aromatic interactions with etravirine's aromatic moieties, which are largely forfeited when replaced by the much smaller cysteine (85 \u00c5\u00b3 volume reduction). The minimal energetic penalty (-0.054 kcal/mol) reflects a subtle but cumulative loss of binding interactions: cysteine cannot replicate the aromatic ring geometry for favorable contacts at the 3.8 \u00c5 ligand-contact distance, and its reduced hydrophobicity weakens the hydrophobic complementarity within the NNRTI pocket core, thereby destabilizing the inhibitor binding pose.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:28.680325+00:00"
+}

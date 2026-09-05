@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "E138A",
+  "condition": "full",
+  "delta_delta_g": 0.01699999999999946,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.01699999999999946,
+    "delta_g": -9.535
+  },
+  "explanation": "The E138A substitution causes resistance through an allosteric mechanism: removal of the negatively charged glutamate eliminates a critical electrostatic anchor point that stabilizes the conformational state of the palm domain required for optimal NNRTI-binding pocket geometry, despite E138 being ~43 \u00c5 distant from rilpivirine itself. The loss of the bulky, charged side chain also reduces local domain rigidity through decreased electrostatic interactions with nearby positively charged residues, allowing the binding pocket to adopt a slightly less favorable conformation that weakens rilpivirine's van der Waals contacts without directly displacing it. This long-range allosteric effect is subtle (minimal \u0394\u0394G), consistent with E138A acting as a conformational modulator rather than a direct steric or contact-disrupting variant.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:39.137261+00:00"
+}

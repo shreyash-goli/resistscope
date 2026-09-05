@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "M230L",
+  "condition": "minimal",
+  "delta_delta_g": 0.009999999999999787,
+  "structural_context": null,
+  "explanation": "The M230L substitution replaces a larger, branched hydrophobic residue with a smaller linear one, creating a cavity within the NNRTI-binding pocket that nevirapine can no longer fill optimally, thereby reducing critical van der Waals contacts that stabilize the inhibitor in its binding pose. This loss of intimate packing between the ligand and the pocket destabilizes the drug-bound conformation without significantly altering the apo protein structure, allowing the enzyme to maintain catalytic competence. The increased flexibility and reduced binding energy at this contact point effectively lowers the affinity for nevirapine while preserving wild-type enzymatic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:29.489136+00:00"
+}

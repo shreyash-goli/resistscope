@@ -1,0 +1,10 @@
+{
+  "drug": "IDV",
+  "mutation": "I84V",
+  "condition": "minimal",
+  "delta_delta_g": -0.19100000000000072,
+  "structural_context": null,
+  "explanation": "The I84V mutation reduces indinavir binding through loss of critical van der Waals contacts in the S2 subpocket. Isoleucine's larger branched side chain provides extensive hydrophobic interactions with indinavir's ligand core, while valine's smaller, more compact structure creates a cavity that weakens these favorable dispersion forces. This reduction in binding surface complementarity directly destabilizes inhibitor positioning without introducing steric clashes, effectively lowering the binding affinity through entropic penalty and reduced contact surface area.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:33.771733+00:00"
+}

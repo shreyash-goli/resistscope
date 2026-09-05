@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "K103N",
+  "condition": "corrupted",
+  "delta_delta_g": 0.6999999999999993,
+  "structural_context": {
+    "position": 103,
+    "wt_aa": "K",
+    "mut_aa": "N",
+    "wt_residue": "Lys",
+    "mut_residue": "Asn",
+    "volume_change": "decrease",
+    "volume_change_A3": -54.5,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.6999999999999993,
+    "delta_g": -8.852
+  },
+  "explanation": "The K103N mutation eliminates a positively charged lysine side chain at the core of the NNRTI binding pocket, removing favorable electrostatic interactions with efavirenz's polar atoms and losing ~54 \u0172 of van der Waals contact surface that stabilized the inhibitor. The resulting asparagine, though capable of hydrogen bonding, is substantially smaller and neutral-charged, creating a subpocket geometry mismatch where efavirenz loses critical stabilizing contacts within 3.8 \u00c5 while the pocket becomes less complementary to the inhibitor's shape and electrostatic environment. This combination of lost electrostatic attraction, reduced van der Waals packing efficiency, and altered binding pocket architecture destabilizes the EFV-RT complex by ~0.7 kcal/mol, conferring resistance despite asparagine's potential for alternative polar interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:42.390572+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "F227L",
+  "condition": "corrupted",
+  "delta_delta_g": 0.5990000000000002,
+  "structural_context": {
+    "position": 227,
+    "wt_aa": "F",
+    "mut_aa": "L",
+    "wt_residue": "Phe",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.0,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.5990000000000002,
+    "delta_g": -9.743
+  },
+  "explanation": "The phenylalanine-to-leucine substitution at position 227 removes the aromatic ring while reducing overall hydrophobic volume by ~23 \u0172, creating a binding cavity defect that destabilizes efavirenz through loss of critical van der Waals contacts within the NNRTI pocket core. Despite the minimal distance of 3.7 \u00c5 between the mutant residue and the ligand, the smaller leucine cannot effectively fill the space previously occupied by phenylalanine's bulkier aromatic system, resulting in suboptimal packing interactions and reduced desolvation entropy penalty upon inhibitor binding. The net effect is weakened hydrophobic complementarity in this microenvironment, manifesting as the ~0.6 kcal/mol binding penalty that confers resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:30.479818+00:00"
+}

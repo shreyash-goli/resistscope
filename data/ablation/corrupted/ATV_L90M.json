@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "L90M",
+  "condition": "corrupted",
+  "delta_delta_g": 0.1070000000000011,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.1070000000000011,
+    "delta_g": -10.668
+  },
+  "explanation": "The L90M mutation introduces a modest loss of hydrophobicity and reduces the nonpolar surface area within the S1/S1' subpocket, weakening favorable van der Waals contacts between the bulky leucine side chain and atazanavir's hydrophobic binding surface at the 3.3 \u00c5 interface. Although the methionine maintains overall hydrophobic character, its sulfur-containing thioether group is less efficiently packed in this confined pocket region compared to leucine's branched alkyl chain, resulting in suboptimal desolvation energetics and a slight destabilization of the inhibitor complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:01.954153+00:00"
+}

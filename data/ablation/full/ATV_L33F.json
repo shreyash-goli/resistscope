@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The L33F mutation introduces a bulky aromatic ring at position 33 in the flap hinge region, which despite being 9.1 \u00c5 from the ligand, creates conformational strain or unfavorable packing within the protease core that destabilizes the atazanavir-bound state. The 23.2 \u0172 volume increase and loss of hydrophobicity from leucine's saturated side chain to phenylalanine's \u03c0-electron system likely disrupts optimal positioning of the flap dynamics or creates unfavorable intramolecular contacts that increase the entropic cost of inhibitor binding. While L33F does not directly contact atazanavir, the structural perturbation propagates through the protein scaffold, marginally weakening the ligand binding affinity through indirect allosteric effects on the active site geometry.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:04.944214+00:00"
+}

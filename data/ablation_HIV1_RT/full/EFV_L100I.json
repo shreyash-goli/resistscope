@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "L100I",
+  "condition": "full",
+  "delta_delta_g": 0.6120000000000001,
+  "structural_context": {
+    "position": 100,
+    "wt_aa": "L",
+    "mut_aa": "I",
+    "wt_residue": "Leu",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.7,
+    "distance_from_ligand_centroid_angstrom": 9.4,
+    "min_distance_to_ligand_angstrom": 7.6,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.6120000000000001,
+    "delta_g": -11.074
+  },
+  "explanation": "L100I introduces a subtle conformational shift at the NNRTI pocket rim despite maintaining equivalent hydrophobic bulk: the branched \u03b2-carbon of isoleucine (compared to leucine's linear side chain) creates a more rigid, spatially constrained geometry that subtly reorients the local backbone and surrounding residues. This geometric perturbation propagates inward toward the binding pocket, likely reducing the optimal van der Waals packing complementarity between the pocket and efavirenz's aromatic core, thereby destabilizing the inhibitor's binding pose without directly contacting it. The 0.61 kcal/mol energetic penalty reflects cumulative loss of favorable interactions across the pocket due to this allosteric rearrangement rather than a single dramatic clash, explaining why resistance emerges from a chemically conservative substitution positioned at the pocket periphery.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:55.323746+00:00"
+}

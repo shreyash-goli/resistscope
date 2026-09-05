@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "V82A",
+  "condition": "corrupted",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The V82A mutation reduces a bulky valine to a smaller alanine in the flap region, creating a ~51 \u0172 cavity that diminishes critical van der Waals contacts with lopinavir's core scaffold at the 3.2 \u00c5 interface. This loss of hydrophobic packing interactions destabilizes the inhibitor's positioning within the binding pocket, particularly affecting the drug's accommodation in this secondary contact region. The weakened van der Waals complementarity in the flap region propagates conformational flexibility that destabilizes the protease-inhibitor complex, reducing binding affinity by approximately 0.4 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:28:54.530194+00:00"
+}

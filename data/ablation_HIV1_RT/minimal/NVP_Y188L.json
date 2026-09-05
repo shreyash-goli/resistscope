@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "Y188L",
+  "condition": "minimal",
+  "delta_delta_g": 0.31200000000000117,
+  "structural_context": null,
+  "explanation": "The Y188L substitution replaces a bulky aromatic residue with a smaller hydrophobic side chain, reducing steric occlusion of the NNRTI-binding pocket and destabilizing a critical aromatic-\u03c0 interaction that nevirapine relies upon for binding orientation and affinity. This loss of the tyrosine's hydroxyl group eliminates a hydrogen bond network that positions nevirapine within the pocket, while the smaller leucine side chain creates a cavity that allows the drug to adopt a non-productive binding conformation or dissociate more readily. The net effect is weakened van der Waals contacts and loss of directional hydrogen bonding geometry that are essential for nevirapine's nanomolar-range binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:19.250307+00:00"
+}

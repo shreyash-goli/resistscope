@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "A98G",
+  "condition": "full",
+  "delta_delta_g": 0.015000000000000568,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": 0.015000000000000568,
+    "delta_g": -8.936
+  },
+  "explanation": "The A98G mutation removes a methyl side chain at position 98, creating a localized cavity within the fingers-palm subdomain approximately 5.6 \u00c5ngstr\u00f6ms from etravirine. This loss of van der Waals packing density weakens the overall conformational stability of the NNRTI-binding pocket environment, as the surrounding protein scaffold loses hydrophobic contacts that normally constrain the ligand-binding geometry. Although the mutation does not directly contact etravirine, the reduced bulk destabilizes the protein backbone and side-chain orientations that position critical residues for optimal inhibitor engagement, resulting in modest but reproducible loss of binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:45.826949+00:00"
+}

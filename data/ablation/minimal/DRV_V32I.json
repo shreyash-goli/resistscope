@@ -1,0 +1,10 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "condition": "minimal",
+  "delta_delta_g": -0.11299999999999955,
+  "structural_context": null,
+  "explanation": "The V32I substitution introduces a bulkier, branched side chain in closer spatial proximity to darunavir's binding interactions, likely creating a steric clash that destabilizes inhibitor accommodation within the S2 subpocket. Since valine-to-isoleucine represents an increase in hydrophobic volume (addition of a methyl group on the \u03b2-carbon), this unfavorable geometric constraint disrupts the precise fit darunavir requires for optimal van der Waals contacts with the protease backbone and nearby residues, thereby reducing binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:10.002721+00:00"
+}

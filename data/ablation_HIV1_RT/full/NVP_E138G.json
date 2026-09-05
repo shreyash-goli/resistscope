@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138G",
+  "condition": "full",
+  "delta_delta_g": -0.009999999999999787,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "G",
+    "wt_residue": "Glu",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -78.3,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 3.1,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.009999999999999787,
+    "delta_g": -10.352
+  },
+  "explanation": "The E138G mutation causes minimal direct impact on nevirapine binding due to its substantial distance (>43 \u00c5) from the ligand, making the observed resistance mechanism indirect rather than through classic contact disruption. The loss of glutamate's bulky, negatively charged sidechain in favor of glycine's minimal backbone likely alters the conformational dynamics or electrostatic environment of the palm domain, subtly destabilizing the overall RT architecture needed to maintain optimal NNRTI-binding pocket geometry. This small conformational permissiveness (increased flexibility from the charge-neutral, volume-depleted substitution) may favor a slightly different RT conformation that reduces nevirapine accommodation, though the negligible binding energy penalty (\u22120.01 kcal/mol) suggests this is a low-level resistance mechanism operating primarily through entropic or allosteric effects rather than local binding disruption.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:29.417903+00:00"
+}

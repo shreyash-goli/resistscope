@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "P225H",
+  "condition": "corrupted",
+  "delta_delta_g": -0.0039999999999995595,
+  "structural_context": {
+    "position": 225,
+    "wt_aa": "P",
+    "mut_aa": "H",
+    "wt_residue": "Pro",
+    "mut_residue": "His",
+    "volume_change": "increase",
+    "volume_change_A3": 40.5,
+    "charge_change": "neutral_to_positive",
+    "hydrophobicity_change": -1.6,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0039999999999995595,
+    "delta_g": -10.346
+  },
+  "explanation": "This P225H mutation does not meaningfully reduce nevirapine binding; the predicted energetic effect is essentially neutral (\u0394\u0394G \u2248 0 kcal/mol). The histidine substitution is positioned ~43 \u00c5 away from the ligand in the palm domain\u2014far beyond the direct binding pocket\u2014and makes no direct contacts with nevirapine, indicating this mutation operates through indirect allosteric mechanisms rather than disrupting critical drug-binding interactions. The modest introduction of positive charge and loss of hydrophobicity at this remote catalytic core position likely has negligible impact on the conformational dynamics or electrostatic environment governing NNRTI binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:24.648211+00:00"
+}

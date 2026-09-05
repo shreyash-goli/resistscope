@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "V82A",
+  "condition": "corrupted",
+  "delta_delta_g": 0.3100000000000005,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.3100000000000005,
+    "delta_g": -9.789
+  },
+  "explanation": "The V82A substitution reduces a bulky hydrophobic residue to a smaller one in the flap region, creating a ~51 \u0172 cavity near the indinavir binding pocket that destabilizes critical van der Waals packing interactions that normally optimize inhibitor positioning. Although V82 does not directly contact the ligand, its proximity (6.7 \u00c5 minimum distance) means the loss of hydrophobic bulk weakens the overall structural scaffold of the binding site, reducing the favorable intermolecular contacts between indinavir and surrounding residues and compromising the precise geometry required for optimal binding affinity. This cavity formation shifts the energetic balance unfavorably, explaining the modest but measurable loss in binding free energy characteristic of flap-region mutations that act indirectly through disruption of the inhibitor's binding pocket architecture.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:20.076010+00:00"
+}

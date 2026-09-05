@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "V82F",
+  "condition": "corrupted",
+  "delta_delta_g": 0.911999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.911999999999999,
+    "delta_g": -8.685
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic ring that creates steric clashes with atazanavir's nonpolar groups within the S1/S1' binding pocket, where the residue makes direct contact at 3.3 \u00c5 from the ligand. Although the substitution adds hydrophobic character (slightly reduced hydrophobicity paradoxically indicates unfavorable positioning of the aromatic moiety), the ~50 \u00c5\u00b3 volume increase forces a conformational adjustment of either the inhibitor or the binding pocket that disrupts optimal van der Waals contacts and destabilizes the bound state. This subtle geometric incompatibility manifests as weaker binding affinity despite the maintained hydrophobic character of the mutation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:03.989343+00:00"
+}

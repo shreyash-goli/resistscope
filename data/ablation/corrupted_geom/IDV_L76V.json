@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "L76V",
+  "condition": "corrupted",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.09199999999999875,
+    "delta_g": -9.505
+  },
+  "explanation": "The L76V mutation reduces a bulky leucine to the smaller valine within the flap region, creating a cavity approximately 27 \u00c5\u00b3 in volume that destabilizes the hydrophobic packing environment surrounding indinavir. Although this residue does not directly contact the ligand, its position at 7 \u00c5 from indinavir places it within the extended binding pocket where the loss of van der Waals contacts from the methyl groups of leucine weakens the overall enthalpic stabilization of the inhibitor through reduced hydrophobic interactions with the protein scaffold. The slight decrease in local hydrophobicity (0.4 units) combined with the geometric mismatch between indinavir and the newly enlarged subpocket subtly destabilizes the inhibitor's optimal positioning, manifesting as modest but measurable loss of binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:31:09.081832+00:00"
+}

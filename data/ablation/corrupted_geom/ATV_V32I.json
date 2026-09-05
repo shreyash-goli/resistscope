@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 2.0,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -10.813
+  },
+  "explanation": "The V32I substitution introduces a bulkier isoleucine with an additional methyl branch into the S2/S2' subpocket, creating a steric clash with atazanavir's inhibitor scaffold despite the minimal thermodynamic cost. Although isoleucine is only marginally more hydrophobic than valine, its branched sidechain geometry occupies space differently at the 2.0 \u00c5 contact distance, likely displacing favorable van der Waals contacts or forcing a suboptimal inhibitor conformation to accommodate the enlarged cavity. This compensatory binding disruption accounts for the modest but measurable loss of affinity, representing a subtle resistance mechanism where the mutation exploits the spatial constraints of the binding pocket rather than introducing electrostatic or polar incompatibilities.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:02.223692+00:00"
+}

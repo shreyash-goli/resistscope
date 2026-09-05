@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "M230L",
+  "condition": "corrupted",
+  "delta_delta_g": -0.011999999999998678,
+  "structural_context": {
+    "position": 230,
+    "wt_aa": "M",
+    "mut_aa": "L",
+    "wt_residue": "Met",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": -0.011999999999998678,
+    "delta_g": -10.354
+  },
+  "explanation": "The M230L substitution minimally destabilizes etravirine binding through a subtle loss of favorable van der Waals contacts rather than direct ligand interaction. Although leucine is only slightly smaller than methionine (3.8 \u00c5\u00b3 volume reduction), the loss of methionine's sulfur atom\u2014which can engage in favorable \u03c3-hole interactions or marginal van der Waals contacts with the inhibitor at the 5.6 \u00c5 closest approach distance\u2014eliminates a low-energy contribution to binding. The increased hydrophobicity of leucine may also slightly reorient the local pocket geometry in the fingers-palm subdomain, causing cumulative loss of optimal positioning rather than direct steric clash, explaining the negligible but detectable resistance phenotype.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:40.009992+00:00"
+}

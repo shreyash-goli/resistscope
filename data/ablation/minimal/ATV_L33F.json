@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "L33F",
+  "condition": "minimal",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": null,
+  "explanation": "The substitution of leucine with the bulkier aromatic phenylalanine at position 33 introduces a larger side chain that creates a steric clash with atazanavir's backbone or peripheral ligand moieties, particularly in the S1/S1' subpockets where atazanavir makes critical hydrophobic contacts. While phenylalanine can partially compensate through its aromatic surface, the rigid geometry of the phenyl ring prevents optimal accommodation of the inhibitor's footprint compared to leucine's flexible aliphatic chain, disrupting favorable van der Waals interactions essential for binding affinity. This geometric incompatibility is exacerbated by atazanavir's bulky urea and sulfonamide groups, which are particularly sensitive to steric perturbations in this region of the binding pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:18.992423+00:00"
+}

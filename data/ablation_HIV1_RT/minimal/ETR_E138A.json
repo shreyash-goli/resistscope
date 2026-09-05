@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "E138A",
+  "condition": "minimal",
+  "delta_delta_g": 0.0259999999999998,
+  "structural_context": null,
+  "explanation": "The E138A mutation eliminates a negatively charged glutamate residue positioned 11.5 \u00c5 from the NNRTI-binding pocket, removing a critical electrostatic interaction that stabilizes etravirine's binding geometry through long-range polarization or through direct coordination of the inhibitor's polar moieties via the carboxylate group. Loss of this charge also reduces the electrostatic complementarity of the binding pocket microenvironment, which is particularly important for etravirine since NNRTIs rely on precise electrostatic tuning of their aromatic and polar binding features. The substitution to alanine creates a hydrophobic residue that fails to maintain this electrostatic scaffold, effectively destabilizing the inhibitor's binding pose without necessarily creating steric clash.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:18.678211+00:00"
+}

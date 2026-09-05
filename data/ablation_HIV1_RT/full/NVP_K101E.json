@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "K101E",
+  "condition": "full",
+  "delta_delta_g": 0.018000000000000682,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "E",
+    "wt_residue": "Lys",
+    "mut_residue": "Glu",
+    "volume_change": "decrease",
+    "volume_change_A3": -30.2,
+    "charge_change": "positive_to_negative",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.018000000000000682,
+    "delta_g": -10.324
+  },
+  "explanation": "K101E eliminates a favorably charged interaction with nevirapine's polar moieties through loss of the lysine's positive charge, which at 2.7 \u00c5 minimum distance can no longer form electrostatic attractions with the inhibitor's heteroatoms. Simultaneously, the replacement with glutamate introduces a negatively charged residue that creates unfavorable electrostatic repulsion with nevirapine or alternatively clashes sterically given the ~30 \u0172 volume decrease that disrupts the optimal geometry of the binding pocket rim. The modest resistance effect reflects that this rim position is peripheral to the inhibitor's core binding interactions, so the perturbation destabilizes the bound state only incrementally rather than ablating binding entirely.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:01.480354+00:00"
+}

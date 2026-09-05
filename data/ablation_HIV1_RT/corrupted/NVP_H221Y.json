@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "H221Y",
+  "condition": "corrupted",
+  "delta_delta_g": -0.02999999999999936,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": -0.02999999999999936,
+    "delta_g": -11.716
+  },
+  "explanation": "The H221Y mutation increases local steric bulk within the NNRTI-binding pocket core while simultaneously eliminating the positive charge of histidine's imidazole ring, which likely disrupts favorable electrostatic interactions or hydrogen bonding with nevirapine's polar moieties. The ~40 \u0172 volume expansion, combined with the 3.8 \u00c5 minimum distance indicating direct ligand contact, suggests the larger tyrosine aromatic ring creates unfavorable van der Waals contacts or conformational strain that destabilizes the inhibitor's optimal binding geometry. Loss of the imidazole's hydrogen-bonding capacity further weakens the interaction network anchoring nevirapine in the pocket, collectively resulting in modest but measurable binding destabilization.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:08.108197+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "condition": "minimal",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": null,
+  "explanation": "The L76V mutation reduces a bulky hydrophobic side chain to a smaller one, creating a cavity within the protease that destabilizes darunavir's binding through loss of favorable van der Waals contacts in the S2 subpocket region. This reduction in hydrophobic surface complementarity weakens the inhibitor's grip on the binding site, particularly affecting interactions with darunavir's larger aromatic and lipophilic moieties that evolved to nestle against the wild-type leucine. Additionally, the cavity permits water penetration or conformational relaxation of the inhibitor, reducing the enthalpic gain from desolvation and tight molecular packing that normally stabilizes this drug's exceptional binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:07.972662+00:00"
+}

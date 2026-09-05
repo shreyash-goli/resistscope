@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": 0.2599999999999998,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.2599999999999998,
+    "delta_g": -11.27
+  },
+  "explanation": "The V82F substitution introduces a bulky aromatic ring that creates steric clash with saquinavir's scaffold in the S1/S1' subpocket, where the mutation sits only 3.3 \u00c5 from the ligand. Despite the increased hydrophobicity being slightly unfavorable, the dominant effect is conformational strain: the enlarged phenyl side chain (50 \u00c5\u00b3 larger) cannot accommodate saquinavir in its native binding geometry without pushing the inhibitor away from optimal positioning or forcing local backbone rearrangement. This steric incompatibility outweighs any potential gain from enhanced hydrophobic contacts, resulting in reduced binding affinity and conferring resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:04.310235+00:00"
+}

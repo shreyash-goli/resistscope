@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "G190S",
+  "condition": "minimal",
+  "delta_delta_g": 0.5990000000000002,
+  "structural_context": null,
+  "explanation": "The G190S mutation introduces a bulky hydroxyl-bearing side chain at a position located within the NNRTI-binding pocket, directly displacing the conformational space that nevirapine occupies; glycine's lack of a side chain permits the flexibility and accessibility required for NNRTI binding, whereas serine's polar group creates steric clash and unfavorable van der Waals contacts with the inhibitor's aromatic core. Additionally, the polar character of the serine hydroxyl may reorient critical water-mediated interactions or destabilize the precise pocket geometry that stabilizes nevirapine's binding pose, effectively reducing the thermodynamic favorability of complex formation while leaving the enzyme's catalytic function largely intact.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:04.660236+00:00"
+}

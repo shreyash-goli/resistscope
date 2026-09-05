@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "V108I",
+  "condition": "full",
+  "delta_delta_g": -0.009999999999999787,
+  "structural_context": {
+    "position": 108,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 6.4,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.009999999999999787,
+    "delta_g": -11.696
+  },
+  "explanation": "V108I introduces a branched isoleucine that occupies ~27 \u0172 more volume than valine at the NNRTI pocket rim, creating a subtle conformational strain that propagates inward toward the efavirenz-binding site located 6.4 \u00c5 away. Although the mutation does not directly contact the ligand and imparts negligible thermodynamic cost (\u22120.01 kcal/mol), the increased steric bulk at this rim position likely restricts the conformational flexibility or binding-competent geometry of the pocket, effectively reducing the entropic favorability or induced-fit accommodation required for optimal efavirenz positioning. This mechanism exemplifies how allosteric perturbations at pocket periphery can modulate inhibitor affinity through indirect destabilization of the binding interface, rather than through direct ligand clash.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:25.828679+00:00"
+}

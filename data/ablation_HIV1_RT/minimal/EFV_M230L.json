@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "M230L",
+  "condition": "minimal",
+  "delta_delta_g": 0.0039999999999995595,
+  "structural_context": null,
+  "explanation": "The M230L substitution replaces a larger, branched hydrophobic residue (methionine) with a smaller linear one (leucine), creating a cavity within the NNRTI-binding pocket that destabilizes critical van der Waals contacts between the drug and the pocket walls. This loss of tight hydrophobic packing reduces the binding interface complementarity and lowers the enthalpic contribution from dispersion forces essential for efavirenz recognition. Additionally, the reduced side-chain volume in this pocket region likely permits conformational shifts in nearby pocket residues or the drug itself, preventing optimal positioning of efavirenz's aromatic moieties for stabilizing interactions and effectively lowering binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:32.369078+00:00"
+}

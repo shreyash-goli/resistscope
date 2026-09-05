@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": -0.136000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.136000000000001,
+    "delta_g": -9.733
+  },
+  "explanation": "The V32I mutation introduces an additional methyl group (approximately 27 \u00c5\u00b3 volume increase) into the S2/S2' subpocket where it makes direct contact with atazanavir at 4.1 \u00c5 distance, creating a steric clash that destabilizes the inhibitor's binding pose without compensatory interactions (no charge or significant hydrophobicity gain). This rigid geometric incompatibility forces atazanavir into a suboptimal conformation or partially out of the binding pocket, reducing favorable van der Waals contacts and weakening overall binding affinity by approximately 0.14 kcal/mol. The effect is modest because the mutation is somewhat peripheral (10.7 \u00c5 from ligand centroid), but the direct contact at close range is sufficient to impose enough steric strain to confer resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:52.772349+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "M46I",
+  "condition": "minimal",
+  "delta_delta_g": 0.745000000000001,
+  "structural_context": null,
+  "explanation": "The M46I substitution replaces a larger, more hydrophobic methionine with the smaller isoleucine, creating a cavity within the S1/S1' binding pocket that destabilizes critical van der Waals contacts between the inhibitor's nonpolar moieties and the protease binding site. This loss of intimate hydrophobic packing weakens the binding interaction without significantly altering the electrostatic environment, as both residues are nonpolar. The reduced side-chain volume near the active site also permits subtle conformational adjustments in the protease that can reorient key inhibitor-binding elements, further diminishing lopinavir's affinity while maintaining sufficient protease catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:29.233629+00:00"
+}

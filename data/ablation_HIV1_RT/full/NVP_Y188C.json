@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y188C",
+  "condition": "full",
+  "delta_delta_g": 0.3460000000000001,
+  "structural_context": {
+    "position": 188,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 9.2,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.3460000000000001,
+    "delta_g": -9.996
+  },
+  "explanation": "The Y188C substitution eliminates a bulky aromatic residue at the NNRTI pocket core, creating a substantial cavity (~85 \u0172 reduction in van der Waals volume) that destabilizes nevirapine binding despite no direct ligand contacts. This loss of the tyrosine's aromatic ring and hydroxyl group removes critical hydrophobic packing interactions that normally constrain the inhibitor within the binding pocket, allowing nevirapine to adopt a suboptimal binding pose with weaker van der Waals contacts across the 6.7 \u00c5 minimum distance to the ligand. The resulting ~0.35 kcal/mol energetic penalty reflects the entropic cost of the inhibitor exploring a larger, less well-defined conformational space within the enlarged pocket, ultimately reducing binding affinity and conferring resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:21.795624+00:00"
+}

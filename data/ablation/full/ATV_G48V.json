@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "G48V",
+  "condition": "full",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The G48V substitution introduces a bulky valine side chain at position 48 in the protease flap region, which creates a steric clash with atazanavir despite being 3.2 \u00c5 from the ligand\u2014a distance permitting van der Waals contact. This unfavorable geometric constraint destabilizes the inhibitor's optimal binding pose within the active site pocket, reducing favorable interactions. The increased hydrophobicity from the glycine-to-valine change cannot compensate for the conformational strain imposed on either the inhibitor or the flap domain's flexibility, resulting in weakened overall binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:27.815080+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "K101P",
+  "condition": "corrupted",
+  "delta_delta_g": 0.43599999999999994,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "P",
+    "wt_residue": "Lys",
+    "mut_residue": "Pro",
+    "volume_change": "decrease",
+    "volume_change_A3": -55.9,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 2.3,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.43599999999999994,
+    "delta_g": -11.25
+  },
+  "explanation": "The K101P mutation eliminates the positively charged lysine side chain that likely forms favorable electrostatic interactions or hydrogen bonds with nevirapine's polar groups, replacing it with the conformationally restricted proline that introduces a neutral, cyclic backbone geometry. The substantial volume loss (~56 \u0172) creates a cavity adjacent to the ligand binding site that cannot be compensated by nevirapine's rigid structure, reducing van der Waals contact efficiency and destabilizing the bound complex. Additionally, proline's cyclic constraint may distort the local backbone geometry of the \u03b2-sheet region flanking the NNRTI pocket, indirectly compromising the precise positioning required for optimal nevirapine engagement at this core pocket residue.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:34.854226+00:00"
+}

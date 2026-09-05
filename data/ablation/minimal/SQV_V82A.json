@@ -1,0 +1,10 @@
+{
+  "drug": "SQV",
+  "mutation": "V82A",
+  "condition": "minimal",
+  "delta_delta_g": 0.798,
+  "structural_context": null,
+  "explanation": "The V82A mutation reduces the hydrophobic surface area in the S1/S1' binding pocket by replacing valine's branched aliphatic side chain with alanine's smaller methyl group, creating a cavity that diminishes van der Waals contacts between the inhibitor's nonpolar moieties and the protease binding surface. This loss of favorable hydrophobic interactions is particularly significant for saquinavir, which relies heavily on shape complementarity and nonpolar contacts for binding affinity in this central pocket region. Additionally, the reduced steric occupancy weakens the overall binding interface without permitting compensatory conformational changes in the inhibitor, thereby destabilizing the inhibitor-protease complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:14.816474+00:00"
+}

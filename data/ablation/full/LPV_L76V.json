@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": 0.46300000000000097,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": 0.46300000000000097,
+    "delta_g": -9.636
+  },
+  "explanation": "The L76V substitution reduces a bulky branched hydrophobic side chain to a smaller one within the protease core scaffold, creating a ~27 \u0172 cavity that destabilizes the network of van der Waals contacts that normally stabilize lopinavir's bound conformation. Although Leu76 does not directly contact the ligand (minimum distance 4.8 \u00c5), the loss of hydrophobic packing density in the protein interior likely propagates conformational strain or subtle repositioning of the binding pocket architecture, weakening the overall enthalpic benefit of LPV binding. This mechanism represents a classic \"indirect\" resistance mutation where disruption of protein stability rather than direct steric clash with the inhibitor compromises drug affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:57.974771+00:00"
+}

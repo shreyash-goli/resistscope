@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "I47V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.09500000000000064,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 5.7,
+    "min_distance_to_ligand_angstrom": 2.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.09500000000000064,
+    "delta_g": -9.692
+  },
+  "explanation": "The I47V mutation reduces darunavir binding through loss of critical van der Waals contacts in the protease flap region. Isoleucine's larger branched side chain (26.7 \u00c5\u00b3 larger) creates optimal hydrophobic packing interactions with darunavir's nonpolar surface at the minimal 2.2 \u00c5 ligand distance, whereas valine's smaller methyl branch cannot maintain these favorable van der Waals contacts, resulting in a slight energetic penalty. The reduction in hydrophobicity (-0.3 units) at this flap position also diminishes the favorable desolvation effect that normally accompanies darunavir binding, collectively weakening the interaction by ~0.1 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:34.006852+00:00"
+}

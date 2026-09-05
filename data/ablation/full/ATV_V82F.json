@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.23399999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.23399999999999999,
+    "delta_g": -9.831
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain (49.9 \u00c5\u00b3 larger) into the S1/S1' subpocket, where valine's methyl branches normally provide optimal van der Waals packing with atazanavir's inhibitor scaffold at 3.3 \u00c5 distance. This steric expansion forces unfavorable contacts or slight repositioning of the inhibitor within its binding pocket, disrupting the precise geometric complementarity required for tight binding. The increased hydrophobicity paradoxically weakens binding despite improved solvent burial, suggesting the hydrophobic gain is outweighed by conformational strain in the constrained subpocket geometry rather than favorable additional interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:21:55.666153+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "E138K",
+  "condition": "full",
+  "delta_delta_g": -0.002000000000000668,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.002000000000000668,
+    "delta_g": -11.688
+  },
+  "explanation": "The E138K mutation at position 138 in the palm domain does not directly contact efavirenz but likely confers resistance through allosteric destabilization of the NNRTI-binding pocket. The substitution of a negatively charged, compact glutamate with a positively charged, bulkier lysine (30.2 \u00c5\u00b3 volume increase) propagates conformational strain through the catalytic core, subtly distorting the geometry of the distant allosteric pocket and weakening van der Waals contacts between efavirenz and binding site residues. Although the energetic penalty is minimal (near-zero \u0394\u0394G), this mechanism represents a classic allosteric resistance pathway wherein a distal mutation compromises ligand-binding affinity without directly occluding the drug-binding site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:56.724974+00:00"
+}

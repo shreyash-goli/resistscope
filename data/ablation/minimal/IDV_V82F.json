@@ -1,0 +1,10 @@
+{
+  "drug": "IDV",
+  "mutation": "V82F",
+  "condition": "minimal",
+  "delta_delta_g": -0.9879999999999995,
+  "structural_context": null,
+  "explanation": "The V82F mutation introduces a bulky aromatic ring into a constrained region of the protease active site, creating a steric clash with indinavir's molecular scaffold that destabilizes the inhibitor's optimal binding geometry. Phenylalanine's extended \u03c0-electron system occupies space previously available to the drug, forcing indinavir to adopt a higher-energy conformation or partially dissociate from key binding contacts. This unfavorable steric interaction is particularly damaging because V82 lies directly within the substrate-binding pocket where indinavir makes critical van der Waals contacts, meaning the mutation directly encroaches on the inhibitor rather than merely reshaping a peripheral pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:20.741906+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": 0.6620000000000008,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": 0.6620000000000008,
+    "delta_g": -9.437
+  },
+  "explanation": "The V32I substitution introduces a bulkier branched side chain that creates unfavorable steric clashing within the tightly packed S2/S2' subpocket, where the residue makes direct contact with lopinavir at ~4 \u00c5 distance. The 26.7 \u0172 volume increase cannot be accommodated without displacing either the inhibitor or the protein backbone, forcing lopinavir into a suboptimal binding conformation that disrupts favorable van der Waals contacts and destabilizes the bound state. This geometric incompatibility in a critical binding pocket, despite the isoleucine remaining hydrophobic (negligible charge/hydrophobicity change), imposes an entropic penalty on inhibitor binding that translates to the observed weakening of affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:02.019206+00:00"
+}

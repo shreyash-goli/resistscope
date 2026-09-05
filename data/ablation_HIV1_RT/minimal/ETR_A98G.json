@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "A98G",
+  "condition": "minimal",
+  "delta_delta_g": 0.015000000000000568,
+  "structural_context": null,
+  "explanation": "The A98G mutation replaces a larger, branched hydrophobic residue (alanine) with glycine's minimal backbone, reducing van der Waals contacts that normally stabilize etravirine's positioning within or near the NNRTI binding pocket. This loss of hydrophobic surface area weakens the drug's binding affinity by eliminating favorable nonpolar interactions that contribute to inhibitor recognition and orientation. Additionally, the increased conformational flexibility of glycine at this position may allow the binding pocket to collapse or shift away from its inhibitor-optimized conformation, further destabilizing etravirine accommodation without necessarily blocking the catalytic mechanism itself.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:29.737302+00:00"
+}

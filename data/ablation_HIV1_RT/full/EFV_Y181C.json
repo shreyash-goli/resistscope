@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181C",
+  "condition": "full",
+  "delta_delta_g": 0.43599999999999994,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.43599999999999994,
+    "delta_g": -11.25
+  },
+  "explanation": "The Y181C mutation removes the bulky aromatic ring of tyrosine and replaces it with a smaller thiol-containing cysteine, eliminating critical van der Waals contacts that stabilize efavirenz binding within the NNRTI pocket core. This 85 \u00c5\u00b3 volume loss directly weakens the binding interface at a residue positioned only 3.8 \u00c5 from the ligand, likely disrupting hydrophobic packing interactions essential for NNRTI positioning and inducing compensatory conformational changes that destabilize the inhibitor-bound state. The increased hydrophobicity change (3.8) paradoxically reflects loss of aromatic \u03c0-system interactions rather than enhanced binding, as cysteine's reduced surface area cannot maintain the enthalpic contributions provided by tyrosine's extended conjugated ring system.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:22.274143+00:00"
+}

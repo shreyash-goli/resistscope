@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "G190A",
+  "condition": "full",
+  "delta_delta_g": 0.14100000000000001,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "A",
+    "wt_residue": "Gly",
+    "mut_residue": "Ala",
+    "volume_change": "increase",
+    "volume_change_A3": 28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.2,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.14100000000000001,
+    "delta_g": -10.201
+  },
+  "explanation": "The G190A substitution introduces a methyl side chain into the NNRTI pocket core that directly contacts nevirapine at 3.7 \u00c5, creating unfavorable van der Waals steric strain within the confined binding pocket without compensatory electrostatic or hydrogen-bonding interactions (charge unchanged). This 28.5 \u0172 volume expansion forces a conformational penalty on nevirapine binding or destabilizes the complex through subtle repositioning of the inhibitor, weakly disfavoring the bound state despite the modest energetic cost (+0.14 kcal/mol) that reflects the contact occurring at the periphery of the ligand's footprint rather than at a critical interaction center.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:24.788768+00:00"
+}

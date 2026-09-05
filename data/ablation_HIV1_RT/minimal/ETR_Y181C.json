@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "Y181C",
+  "condition": "minimal",
+  "delta_delta_g": -0.05400000000000027,
+  "structural_context": null,
+  "explanation": "The Y181C mutation replaces a bulky aromatic tyrosine with a smaller, nonpolar cysteine, directly eliminating a critical aromatic ring that makes van der Waals contacts with etravirine's benzene ring within the NNRTI-binding pocket. This substitution removes not only steric complementarity but also the ability to form \u03c0-\u03c0 stacking interactions that stabilize inhibitor binding, resulting in substantially weakened binding affinity. Additionally, the loss of the tyrosine hydroxyl group eliminates a hydrogen bond donor that likely stabilizes etravirine's position, compounding the destabilization caused by the geometric mismatch between the smaller cysteine sulfur and the binding pocket architecture optimized for the larger aromatic side chain.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:16.527514+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138A",
+  "condition": "corrupted",
+  "delta_delta_g": 0.01699999999999946,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.01699999999999946,
+    "delta_g": -9.535
+  },
+  "explanation": "The E138A mutation eliminates a negatively charged glutamate residue positioned ~43 \u00c5ngstr\u00f6ms from nevirapine, removing an electrostatic interaction that indirectly stabilizes the inhibitor-binding pocket through long-range electrostatic effects or allosteric communication within the palm domain. The accompanying decrease in side-chain volume and shift toward hydrophobicity subtly alters the conformational landscape of the binding pocket, potentially destabilizing the precise geometry required for optimal nevirapine coordination without directly contacting the ligand. This indirect mechanism\u2014operating through pocket remodeling rather than direct steric clash\u2014explains the modest but measurable resistance conferred by this distal mutation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:59.237201+00:00"
+}

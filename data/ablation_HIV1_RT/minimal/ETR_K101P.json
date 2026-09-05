@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "K101P",
+  "condition": "minimal",
+  "delta_delta_g": -0.6399999999999988,
+  "structural_context": null,
+  "explanation": "The K101P mutation replaces a positively charged, extended lysine with a conformationally constrained proline, eliminating a critical electrostatic interaction or hydrogen bonding partner that etravirine depends on for optimal positioning within the NNRTI-binding pocket. Proline's cyclic backbone geometry also introduces rigidity and steric constraints that distort the local pocket architecture, preventing the inhibitor from adopting its native binding conformation or achieving full van der Waals contact complementarity. This combination of lost electrostatic stabilization and induced conformational incompatibility directly undermines etravirine's binding affinity while leaving the reverse transcriptase catalytic function largely intact.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:57.097513+00:00"
+}

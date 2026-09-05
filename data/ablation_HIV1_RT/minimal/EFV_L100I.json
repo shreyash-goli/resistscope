@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "L100I",
+  "condition": "minimal",
+  "delta_delta_g": 0.6120000000000001,
+  "structural_context": null,
+  "explanation": "The L100I substitution replaces leucine's larger branched aliphatic side chain with the smaller isoleucine, reducing steric bulk within the NNRTI-binding pocket and diminishing van der Waals contacts that normally stabilize efavirenz binding. This reduction in favorable hydrophobic interactions weakens the overall binding affinity, as efavirenz loses critical contact points needed to achieve optimal positioning within the pocket. The smaller isoleucine creates a cavity that allows efavirenz to adopt alternative conformations or shift away from its native binding geometry, reducing inhibitor potency despite the mutation remaining within the conserved drug-binding site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:37.891855+00:00"
+}

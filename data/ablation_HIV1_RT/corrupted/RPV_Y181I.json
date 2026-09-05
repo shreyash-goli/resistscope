@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.05400000000000027,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "I",
+    "wt_residue": "Tyr",
+    "mut_residue": "Ile",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": -0.05400000000000027,
+    "delta_g": -9.005
+  },
+  "explanation": "The Y181I mutation eliminates the bulky aromatic tyrosine ring while substituting a smaller, branched aliphatic isoleucine, creating a cavity within the NNRTI pocket core that rilpivirine fails to optimally fill. This ~27 \u0172 volume loss disrupts van der Waals contacts between the inhibitor and the residue at the 3.8 \u00c5 binding interface, weakening the overall binding affinity despite the modest thermodynamic penalty. The loss of the tyrosine hydroxyl group's potential hydrogen bonding capability further reduces the binding interaction network stabilizing rilpivirine in its bound conformation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:43.901733+00:00"
+}

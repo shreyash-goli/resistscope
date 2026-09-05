@@ -1,0 +1,10 @@
+{
+  "drug": "DRV",
+  "mutation": "I50V",
+  "condition": "minimal",
+  "delta_delta_g": 0.1850000000000005,
+  "structural_context": null,
+  "explanation": "The I50V mutation reduces a bulky hydrophobic side chain to a smaller one in the S2 subpocket, creating a cavity that weakens critical van der Waals contacts between the protease and darunavir's hydrophobic moieties positioned in this pocket. This loss of favorable binding interactions is compounded by the mutation's disruption of the precise steric environment darunavir requires for optimal positioning of its inhibitor scaffold, reducing binding affinity without necessarily causing steric clashes that would destabilize the enzyme itself. The smaller valine fails to maintain the tight hydrophobic complementarity that darunavir's P2 group relies upon for effective engagement with the active site, thereby diminishing inhibitory potency while allowing residual enzyme activity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:47.794805+00:00"
+}

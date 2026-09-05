@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y188L",
+  "condition": "full",
+  "delta_delta_g": 0.31200000000000117,
+  "structural_context": {
+    "position": 188,
+    "wt_aa": "Y",
+    "mut_aa": "L",
+    "wt_residue": "Tyr",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.1,
+    "distance_from_ligand_centroid_angstrom": 9.2,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.31200000000000117,
+    "delta_g": -10.03
+  },
+  "explanation": "The Y188L mutation reduces nevirapine binding through loss of a critical aromatic interaction: tyrosine's bulky phenolic ring provides \u03c0-\u03c0 stacking or aromatic contacts with nevirapine's aromatic moieties, which leucine's smaller, purely aliphatic side chain cannot maintain. The 27 \u00c5\u00b3 volume decrease creates a subtle conformational cavity within the NNRTI pocket core that destabilizes the precise ligand positioning required for optimal van der Waals contacts, since nevirapine's geometry was evolved to fit snugly against the wild-type aromatic geometry at the 6.7 \u00c5 minimum distance. This subtle loss of complementarity\u2014neither through steric clash nor electrostatic disruption, but through reduced favorable aromatic interactions and pocket volume fit\u2014incrementally weakens binding affinity without causing structural collapse of the pocket itself.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:32.233252+00:00"
+}

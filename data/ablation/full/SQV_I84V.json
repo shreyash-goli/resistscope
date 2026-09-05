@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": 1.7619999999999987,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 1.7619999999999987,
+    "delta_g": -9.768
+  },
+  "explanation": "The I84V substitution reduces a branched, larger hydrophobic side chain to a smaller one within the S1/S1' subpocket, creating a cavity of ~27 \u0172 that saquinavir cannot effectively fill despite direct contact at 2.4 \u00c5. This loss of van der Waals contacts between the inhibitor and the contracted binding pocket destabilizes the inhibitor complex by ~1.76 kcal/mol. The relatively close proximity to the ligand (9.3 \u00c5 from centroid, direct contact within the critical subpocket) means this volumetric loss directly weakens the hydrophobic complementarity that saquinavir relies upon for binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:23.813786+00:00"
+}

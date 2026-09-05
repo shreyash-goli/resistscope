@@ -1,0 +1,10 @@
+{
+  "drug": "DRV",
+  "mutation": "I84V",
+  "condition": "minimal",
+  "delta_delta_g": -0.36299999999999955,
+  "structural_context": null,
+  "explanation": "The I84V mutation replaces a larger branched hydrophobic residue with a smaller one, creating a cavity within the S2 subpocket that darunavir's bulky dimethylbenzyl group normally occupies through tight van der Waals contacts. This loss of complementary packing destabilizes the inhibitor's binding pose and reduces the favorable hydrophobic interactions that contribute significantly to darunavir's binding affinity. Additionally, the conformational flexibility introduced by the smaller valine may allow the protease flap to adopt alternative positions, further compromising the precise geometric alignment required for optimal darunavir recognition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:31.517889+00:00"
+}

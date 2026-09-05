@@ -1,0 +1,10 @@
+{
+  "drug": "SQV",
+  "mutation": "L90M",
+  "condition": "minimal",
+  "delta_delta_g": 0.379999999999999,
+  "structural_context": null,
+  "explanation": "L90M introduces a polar methionine at a position that directly contacts saquinavir's inhibitor scaffold, reducing favorable van der Waals interactions that stabilize the inhibitor's binding pose. The sulfur atom of methionine is less hydrophobic than leucine's branched aliphatic side chain, creating a less complementary surface for saquinavir's nonpolar ligand atoms, while the sulfur's lone pairs may also generate unfavorable electrostatic interactions or steric strain within the confined binding pocket. This substitution effectively destabilizes the inhibitor-protease complex without substantially compromising the protease's catalytic function on larger peptide substrates.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:54.849037+00:00"
+}

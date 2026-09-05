@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "V32I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 2.0,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -10.813
+  },
+  "explanation": "V32I introduces a subtle steric clash within the S2/S2' subpocket by adding ~27 \u00c5\u00b3 of extra methyl-group volume while maintaining the same hydrophobic character, which destabilizes the precise positioning of indinavir's ligand atoms that make critical van der Waals contacts at the 2.0 \u00c5 minimum distance. This localized increase in side-chain bulk forces a minor conformational adjustment in either the protease binding pocket or the inhibitor orientation, reducing the optimal contact geometry for the hydrophobic interaction network that normally stabilizes indinavir binding. The cumulative effect of suboptimal van der Waals packing in this constrained subpocket slightly weakens overall binding affinity despite the minimal thermodynamic cost (~0.04 kcal/mol).",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:08.646475+00:00"
+}

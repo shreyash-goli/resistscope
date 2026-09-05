@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "V82A",
+  "condition": "minimal",
+  "delta_delta_g": 0.22900000000000098,
+  "structural_context": null,
+  "explanation": "The V82A mutation replaces a bulky branched-chain residue with a smaller amino acid, creating a cavity within the S1/S1' binding pocket that lopinavir normally occupies through extensive van der Waals contacts with valine's methyl side chains. This loss of favorable hydrophobic interactions destabilizes the inhibitor's binding pose, reducing the complementarity between drug and pocket. Additionally, the increased space allows water molecules to penetrate the binding site, competing for favorable interactions and further reducing lopinavir's binding affinity through unfavorable desolvation penalties.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:05.934264+00:00"
+}

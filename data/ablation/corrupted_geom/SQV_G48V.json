@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "G48V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.19500000000000028,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.19500000000000028,
+    "delta_g": -9.207
+  },
+  "explanation": "The G48V substitution introduces a bulky valine side chain (~80 \u00c5\u00b3 increase) at a flap region position that makes direct contact with saquinavir at close proximity (2.8 \u00c5 minimum distance). This expanded hydrophobic side chain creates a steric clash with the inhibitor's binding surface, forcing unfavorable van der Waals contacts or displacing saquinavir from its optimal binding geometry within the active site pocket. The resistance mechanism is purely steric in nature\u2014the loss of glycine's conformational flexibility and minimal bulk is replaced by valine's constrained geometry, which sterically occludes the precise spatial arrangement required for favorable inhibitor-enzyme interactions in the flap region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:42.456182+00:00"
+}

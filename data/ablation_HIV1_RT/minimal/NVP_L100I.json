@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "L100I",
+  "condition": "minimal",
+  "delta_delta_g": 0.3810000000000002,
+  "structural_context": null,
+  "explanation": "The L100I substitution replaces a larger, branched hydrophobic residue with a smaller one, creating a cavity within the NNRTI-binding pocket that allows nevirapine to adopt a repositioned or rotated conformation that disrupts critical van der Waals contacts with the inhibitor's aromatic ring system. This loss of tight hydrophobic packing destabilizes the drug-bound state without significantly altering the protein backbone, thereby reducing binding affinity through entropic penalty and loss of favorable nonpolar interactions rather than direct steric hindrance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:35.287617+00:00"
+}

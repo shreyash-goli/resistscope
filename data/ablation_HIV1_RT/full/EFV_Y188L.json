@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y188L",
+  "condition": "full",
+  "delta_delta_g": 0.36599999999999966,
+  "structural_context": {
+    "position": 188,
+    "wt_aa": "Y",
+    "mut_aa": "L",
+    "wt_residue": "Tyr",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.1,
+    "distance_from_ligand_centroid_angstrom": 9.2,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.36599999999999966,
+    "delta_g": -11.32
+  },
+  "explanation": "Y188L reduces efavirenz binding by disrupting the aromatic-ligand interaction network that stabilizes the inhibitor within the NNRTI pocket. The tyrosine-to-leucine substitution eliminates the hydroxyl group and aromatic \u03c0-system while creating a cavity (~27 \u0172 loss) within the core binding pocket, causing efavirenz to lose favorable van der Waals contacts and potential \u03c0-stacking or hydrogen-bonding interactions through the phenyl ring of the wild-type tyrosine. This geometric and chemical perturbation, even though Y188 is ~7 \u00c5 from the inhibitor, propagates destabilization across the rigid NNRTI-binding pocket architecture, weakening the overall binding interaction by approximately 0.4 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:36.701011+00:00"
+}

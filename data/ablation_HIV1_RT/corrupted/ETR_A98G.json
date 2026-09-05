@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "A98G",
+  "condition": "corrupted",
+  "delta_delta_g": -0.006000000000000227,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.006000000000000227,
+    "delta_g": -8.957
+  },
+  "explanation": "The A98G mutation causes minimal resistance to etravirine through an indirect conformational mechanism rather than direct ligand displacement. Alanine's removal of ~28.5 \u0172 of hydrophobic bulk in the palm domain creates a small cavity that may allow subtle backbone rearrangements or increased flexibility in this catalytic core region, which propagates through the protein scaffold to subtly perturb the geometry of the distant NNRTI-binding pocket (43+ \u00c5 away). While the energetic cost is negligible (\u22120.006 kcal/mol), the loss of hydrophobic packing contacts from the smaller glycine residue reduces stabilizing van der Waals interactions within the protein fold, marginally destabilizing the etravirine-bound conformation despite no direct steric clash or compensatory mutations being required.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:08.455731+00:00"
+}

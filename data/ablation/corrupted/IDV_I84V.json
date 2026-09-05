@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "I84V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The I84V substitution at the flap hinge region causes a modest loss of hydrophobicity and reduces local packing density by ~27 \u0172, which destabilizes the conformational architecture of the protease flap necessary for optimal indinavir positioning. Although this mutation does not directly contact the ligand, its location at the flap hinge\u2014a critical flexible element controlling active site geometry\u2014suggests that the smaller valine side chain allows increased conformational breathing or suboptimal flap closure, subtly misaligning the binding pocket and weakening van der Waals contacts between indinavir and surrounding hydrophobic residues. The cumulative effect of reduced nonpolar interactions in this allosteric pocket, compounded by slightly weakened overall structural rigidity, collectively reduces binding affinity by ~0.15 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:50.837634+00:00"
+}

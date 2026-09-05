@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "K101P",
+  "condition": "corrupted",
+  "delta_delta_g": 0.6120000000000001,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "P",
+    "wt_residue": "Lys",
+    "mut_residue": "Pro",
+    "volume_change": "decrease",
+    "volume_change_A3": -55.9,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 2.3,
+    "distance_from_ligand_centroid_angstrom": 9.4,
+    "min_distance_to_ligand_angstrom": 7.6,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.6120000000000001,
+    "delta_g": -11.074
+  },
+  "explanation": "The K101P mutation eliminates a positively charged lysine side chain at the NNRTI pocket rim, removing favorable electrostatic interactions or direct hydrogen bonding that stabilize efavirenz orientation within the binding pocket. The conformational rigidity imposed by proline's cyclic backbone constraint, combined with the substantial loss of side-chain volume, likely creates a subtle pocket geometry distortion that propagates through the binding site architecture, destabilizing the precise aromatic and hydrophobic positioning required for optimal efavirenz contacts despite the indirect distance from the ligand. The shift toward increased hydrophobicity cannot compensate for the loss of the critical positive charge and flexibility needed to maintain van der Waals packing efficiency around the drug's polar and aromatic moieties.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:37.844659+00:00"
+}

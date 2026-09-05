@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "I84V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.23399999999999999,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.23399999999999999,
+    "delta_g": -9.831
+  },
+  "explanation": "The I84V substitution reduces darunavir's methyl group by ~27 \u00c5\u00b3, creating a hydrophobic cavity at the S1/S1' subpocket interface where the inhibitor makes direct contact at 3.3 \u00c5. This loss of van der Waals surface area weakens the complementary packing interactions that darunavir relies on in this binding pocket, as the smaller valine side chain cannot maintain the same degree of hydrophobic contact with the drug's nonpolar moieties. The modest energetic penalty (~0.23 kcal/mol) reflects a partial loss of binding affinity due to reduced shape complementarity rather than destabilization of the protease backbone, allowing the virus to tolerate this mutation while retaining catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:19.548900+00:00"
+}

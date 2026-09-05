@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "I54M",
+  "condition": "corrupted",
+  "delta_delta_g": 0.33800000000000097,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.33800000000000097,
+    "delta_g": -8.674
+  },
+  "explanation": "The I54M mutation reduces lopinavir binding primarily through loss of hydrophobic packing efficiency in the flap region rather than through direct active site disruption. Isoleucine's branched aliphatic side chain provides optimal van der Waals contacts with the drug's nonpolar surface across the 6.7 \u00c5 minimum distance, while the longer but thinner methionine side chain creates a cavity that weakens these crucial hydrophobic interactions and may allow slight repositioning of the flap domain. The minimal volume loss and absence of electrostatic or charge-based compensation means the mutation fundamentally compromises the enthalpic benefit of binding without alternative stabilizing interactions to offset the entropic cost.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:28:26.485259+00:00"
+}

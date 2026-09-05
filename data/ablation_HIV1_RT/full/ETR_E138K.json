@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "E138K",
+  "condition": "full",
+  "delta_delta_g": -0.006000000000000227,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.006000000000000227,
+    "delta_g": -8.957
+  },
+  "explanation": "The E138K mutation, located ~43 \u00c5 from etravirine in the palm domain, most likely confers resistance through an indirect allosteric mechanism rather than direct contact disruption. The charge reversal from acidic glutamate to basic lysine, combined with a substantial volume increase, likely distorts the precise geometry of the NNRTI-binding pocket by altering the conformational landscape of the palm subdomain\u2014either destabilizing the ligand-bound conformation or shifting the equilibrium toward a non-productive state that accommodates etravirine less favorably. Given the negligible \u0394\u0394G effect (-0.006 kcal/mol), this mutation causes only marginal resistance, suggesting the allosteric perturbation is modest and etravirine retention remains largely intact despite the distant structural rearrangement.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:53.822790+00:00"
+}

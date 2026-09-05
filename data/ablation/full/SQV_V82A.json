@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.798,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.798,
+    "delta_g": -10.732
+  },
+  "explanation": "The V82A mutation reduces a large hydrophobic side chain to a smaller one in direct contact with saquinavir (3.3 \u00c5 minimum distance), creating a cavity within the S1/S1' subpocket that weakens van der Waals interactions critical for binding affinity. This loss of ~51 \u00c5\u00b3 in side-chain volume, combined with decreased hydrophobicity, diminishes the favorable dispersion forces that normally stabilize the inhibitor's positioning at this key binding interface. The mutation essentially creates conformational flexibility or allows water penetration into what was previously an optimized hydrophobic pocket, destabilizing the bound state of saquinavir specifically without compensatory electrostatic or hydrogen-bonding gains.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:21:52.581841+00:00"
+}

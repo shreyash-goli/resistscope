@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181V",
+  "condition": "corrupted",
+  "delta_delta_g": 0.0,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "V",
+    "wt_residue": "Tyr",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -53.6,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.5,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.0,
+    "delta_g": -10.342
+  },
+  "explanation": "The Y181V mutation causes a substantial loss of aromatic volume (54 \u0172 decrease) at a position within the palm domain that, while not directly contacting rilpivirine, likely participates in maintaining the precise geometry of the NNRTI-binding pocket through indirect structural effects. The replacement of tyrosine's bulky aromatic ring with the smaller branched-chain valine creates a local cavity that destabilizes the scaffold architecture, reducing the binding pocket's conformational rigidity and ability to make optimal van der Waals contacts with rilpivirine's aromatic moieties. Although the mutation itself is electrostatic-silent, the geometric distortion propagates through the protein core to diminish binding affinity without substantially altering the thermodynamic cost of drug association.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:34.362161+00:00"
+}

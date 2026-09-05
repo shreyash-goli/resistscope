@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "V108I",
+  "condition": "minimal",
+  "delta_delta_g": -0.009999999999999787,
+  "structural_context": null,
+  "explanation": "The V108I mutation introduces a bulkier, branched side chain at position 108, which is located within the NNRTI-binding pocket itself. This increased steric bulk creates unfavorable van der Waals contacts with efavirenz's aromatic ring system, forcing the inhibitor into a less optimal binding geometry or partially displacing it from its native binding pose. The branched methyl group of isoleucine also reduces the conformational flexibility of the pocket, preventing the inhibitor from adopting its energetically favored conformation and thereby substantially diminishing binding affinity without requiring allosteric pocket expansion.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:05.414567+00:00"
+}

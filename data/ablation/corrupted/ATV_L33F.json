@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "L33F",
+  "condition": "corrupted",
+  "delta_delta_g": -0.11299999999999955,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.11299999999999955,
+    "delta_g": -9.125
+  },
+  "explanation": "The L33F mutation introduces a bulky aromatic ring that creates unfavorable steric clashes within the constrained S2/S2' subpocket, where the phenylalanine's \u03c0-electron system and increased van der Waals surface area (23 \u00c5\u00b3 larger) compress the binding pocket at its 4.1 \u00c5 minimum approach distance to atazanavir. Although the mutation maintains hydrophobic character, the loss of flexibility in the leucine's branched aliphatic chain\u2014replaced by the rigid aromatic scaffold\u2014prevents optimal conformational adjustment, disrupting critical van der Waals contacts that normally stabilize the inhibitor binding geometry. The net destabilization reflects a conformational incompatibility rather than loss of hydrophobic interaction, where atazanavir's accommodation of the bulkier F33 side chain requires suboptimal positioning.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:39.824742+00:00"
+}

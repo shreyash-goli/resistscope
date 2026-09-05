@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "N88S",
+  "condition": "corrupted",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The N88S mutation replaces a polar, bulky asparagine with a smaller serine, reducing the local hydrophobic environment around the nelfinavir binding pocket despite being indirectly positioned (4.8 \u00c5 minimum distance). This ~25 \u0172 decrease in side-chain volume likely creates a small hydrophobic deficiency within the core scaffold that destabilizes favorable van der Waals contacts nelfinavir makes with the protease binding site, as the drug cannot fully compensate for the lost nonpolar surface area. The loss of asparagine's amide hydrogen-bonding capacity, combined with the reduced steric complementarity, collectively weakens the binding interaction by approximately 0.33 kcal/mol, representing a modest but clinically relevant erosion of nelfinavir affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:59.058473+00:00"
+}

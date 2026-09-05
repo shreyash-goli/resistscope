@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "I54M",
+  "condition": "corrupted",
+  "delta_delta_g": -0.5030000000000001,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.5030000000000001,
+    "delta_g": -10.1
+  },
+  "explanation": "The I54M substitution reduces lopinavir binding through a subtle allosteric mechanism: while the mutation maintains similar overall hydrophobicity and volume at position 54 in the C-terminal dimer region, the shift toward a more polar sulfur-containing side chain decreases van der Waals packing efficiency in the hydrophobic core that stabilizes the protease dimer geometry. This perturbation at 8.2 \u00c5 from the ligand likely propagates conformational strain through the protein scaffold, destabilizing the active site architecture needed for optimal lopinavir positioning and coordination, rather than through direct steric clash or loss of contact at the binding pocket. The modest energetic penalty reflects an indirect destabilization of protease-inhibitor compatibility via disrupted dimer interface packing rather than a dramatic local effect.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:31:03.361426+00:00"
+}

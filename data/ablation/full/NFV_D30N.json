@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "D30N",
+  "condition": "full",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 30,
+    "wt_aa": "D",
+    "mut_aa": "N",
+    "wt_residue": "Asp",
+    "mut_residue": "Asn",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.0,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 2.0,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -10.813
+  },
+  "explanation": "The D30N mutation eliminates a negatively charged carboxylate group at position 30 that makes direct contact with nelfinavir in the S2/S2' subpocket, removing a favorable electrostatic interaction with positively charged or polar groups on the inhibitor. The replacement asparagine retains hydrogen bonding capacity through its amide but cannot provide the same electrostatic stabilization, and the loss of this critical charge complementarity destabilizes the inhibitor binding geometry in this region of the active site. Although the volumetric change is minimal, the loss of the charged interaction at close range (2.0 \u00c5 contact distance) outweighs any modest accommodation by the protein, resulting in measurably weaker binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:39.789705+00:00"
+}

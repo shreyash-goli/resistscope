@@ -1,0 +1,10 @@
+{
+  "drug": "NFV",
+  "mutation": "I84V",
+  "condition": "minimal",
+  "delta_delta_g": 0.25,
+  "structural_context": null,
+  "explanation": "The I84V substitution reduces the hydrophobic surface area in the S2 subpocket by replacing the bulkier isoleucine with valine, which diminishes favorable van der Waals contacts with nelfinavir's nonpolar regions that normally stabilize inhibitor binding. This creates a hydrophobic mismatch in a critical binding interface, forcing nelfinavir to adopt a suboptimal conformation or dissociate more readily. Additionally, the smaller valine side chain likely introduces a binding cavity that reduces the enthalpic benefit of inhibitor binding in this region without allowing compensatory repositioning of the drug.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:40.009523+00:00"
+}

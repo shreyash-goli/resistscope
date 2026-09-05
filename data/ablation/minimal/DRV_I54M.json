@@ -1,0 +1,10 @@
+{
+  "drug": "DRV",
+  "mutation": "I54M",
+  "condition": "minimal",
+  "delta_delta_g": 0.33800000000000097,
+  "structural_context": null,
+  "explanation": "The I54M mutation replaces a branched hydrophobic residue with a smaller, more linear one, reducing van der Waals contacts with darunavir's nonpolar binding elements in the S2 subpocket where isoleucine 54 normally makes critical hydrophobic interactions. This loss of packing efficiency weakens the overall binding interface without introducing steric clashes, as methionine's smaller cross-section accommodates the inhibitor geometry. The mutation essentially destabilizes darunavir binding through cumulative reduction in favorable hydrophobic contacts rather than through a dominant single interaction loss.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:58.922801+00:00"
+}

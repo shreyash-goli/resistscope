@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "G190S",
+  "condition": "minimal",
+  "delta_delta_g": 0.6419999999999995,
+  "structural_context": null,
+  "explanation": "The G190S mutation introduces a bulky polar hydroxyl group at a position immediately adjacent to the NNRTI-binding pocket, creating a steric clash with efavirenz's aromatic ring system that disrupts optimal binding geometry. This substitution of a small, flexible glycine with serine eliminates the conformational plasticity that normally allows the binding pocket to accommodate the inhibitor's shape, forcing an energetically unfavorable repositioning. The resulting loss of van der Waals contacts between efavirenz and the pocket wall, combined with potential hydrogen-bonding competition from the serine hydroxyl, substantially reduces binding affinity without compromising reverse transcriptase catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:07.151023+00:00"
+}

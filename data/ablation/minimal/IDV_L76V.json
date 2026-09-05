@@ -1,0 +1,10 @@
+{
+  "drug": "IDV",
+  "mutation": "L76V",
+  "condition": "minimal",
+  "delta_delta_g": -0.5289999999999999,
+  "structural_context": null,
+  "explanation": "The L76V mutation reduces the hydrophobic surface area within the S1' subpocket by replacing leucine's larger branched side chain with valine's smaller one, creating a cavity that weakens van der Waals contacts between indinavir's P1' moiety and the binding pocket wall. This loss of favorable hydrophobic interactions is particularly consequential for indinavir, which relies on tight packing of its aromatic P1' group in this confined subpocket to achieve binding affinity. The reduced steric complementarity destabilizes the inhibitor's binding pose without providing compensatory interactions, thereby conferring resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:10.699433+00:00"
+}

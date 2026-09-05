@@ -1,0 +1,10 @@
+{
+  "drug": "IDV",
+  "mutation": "V32I",
+  "condition": "minimal",
+  "delta_delta_g": 0.2370000000000001,
+  "structural_context": null,
+  "explanation": "The V32I substitution introduces a branched methyl group at the \u03b3-carbon position while maintaining similar overall hydrophobicity, which creates a subtle conformational shift in the S2 subpocket where valine 32 makes critical van der Waals contacts with indinavir's P2 ligand. This increased branching at position 32 likely causes a localized tightening of the binding pocket that disrupts optimal positioning of indinavir's P2 moiety, reducing binding affinity through loss of favorable hydrophobic contacts rather than creating outright steric clashes. The mutation's conservative nature explains why V32I confers only modest resistance\u2014it represents a fine-tuning of pocket geometry that slightly disfavors indinavir while potentially maintaining binding competence for natural substrates that tolerate this altered S2 environment.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:13.060370+00:00"
+}

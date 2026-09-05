@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "L33F",
+  "condition": "corrupted",
+  "delta_delta_g": 0.2370000000000001,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": 0.2370000000000001,
+    "delta_g": -10.02
+  },
+  "explanation": "The L33F substitution introduces a bulky aromatic ring that creates a steric clash with darunavir in the S2/S2' subpocket, despite maintaining hydrophobic character; the ~23 \u0172 volume increase at a position making direct ligand contact (4.1 \u00c5 minimum distance) forces unfavorable van der Waals repulsion or requires the inhibitor to adopt a suboptimal binding pose. The loss of hydrophobicity accompanying the larger aromatic side chain may additionally disrupt optimal packing interactions between the mutation site and the drug's lipophilic moieties, further destabilizing the complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:42.681938+00:00"
+}

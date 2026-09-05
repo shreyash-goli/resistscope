@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "A98G",
+  "condition": "full",
+  "delta_delta_g": -0.011999999999998678,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": -0.011999999999998678,
+    "delta_g": -10.354
+  },
+  "explanation": "The A98G mutation introduces a conformational flexibility liability rather than a direct binding defect: glycine's lack of a side chain removes steric constraints that normally stabilize the local backbone geometry near the NNRTI-binding pocket, allowing increased sampling of non-productive conformations that are incompatible with nevirapine's optimal positioning. Although the mutation is distal (5.6 \u00c5 from the ligand) and doesn't eliminate van der Waals contacts, the loss of alanine's hydrophobic side chain (~2 kcal/mol reduction in hydrophobic character) destabilizes the conformational ensemble of the binding site, shifting the equilibrium toward states with reduced nevirapine complementarity. The minimal predicted resistance (\u0394\u0394G \u2248 0 kcal/mol) reflects that A98G is a subtle perturbation operating primarily through entropic mechanisms\u2014reducing the pre-organization of the pocket rather than creating steric or electrostatic barriers to binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:40.122020+00:00"
+}

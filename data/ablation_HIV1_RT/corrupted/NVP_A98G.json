@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "A98G",
+  "condition": "corrupted",
+  "delta_delta_g": 0.6999999999999993,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.6999999999999993,
+    "delta_g": -10.986
+  },
+  "explanation": "The A98G mutation reduces nevirapine binding by eliminating critical van der Waals contacts that stabilize the inhibitor within the binding pocket. Alanine's methyl side chain provides favorable hydrophobic packing interactions with nevirapine at close range (3.7 \u00c5), whereas glycine's absence of a side chain creates a cavity that cannot maintain these stabilizing contacts, destabilizing the ligand-protein complex by approximately 0.7 kcal/mol. This loss of hydrophobic surface complementarity is particularly consequential because position 98 lies within the NNRTI pocket core, where precise spatial fitting is essential for effective nevirapine recognition and binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:01.830021+00:00"
+}

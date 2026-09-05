@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "L76V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.5030000000000001,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.5030000000000001,
+    "delta_g": -10.1
+  },
+  "explanation": "The L76V mutation reduces indinavir binding through an indirect allosteric mechanism: the loss of ~27 \u0172 of hydrophobic volume at position 76 creates a cavity in the C-terminal dimer region that destabilizes the local protein fold, propagating conformational changes that alter the geometry of the active site ligand-binding pocket despite the mutation being 8.2 \u00c5 away from the inhibitor. This local collapse likely increases the entropic cost of binding or shifts the protease conformation toward a less favorable state for accommodating indinavir's rigid core, as the decreased leucine side-chain contacts that normally stabilize the dimer interface are insufficiently compensated by the slightly more hydrophobic valine substitution.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:28:32.058359+00:00"
+}

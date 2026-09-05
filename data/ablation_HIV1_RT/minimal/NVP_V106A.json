@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "V106A",
+  "condition": "minimal",
+  "delta_delta_g": 0.3979999999999997,
+  "structural_context": null,
+  "explanation": "The V106A substitution removes a branched hydrophobic side chain at a residue positioned within or immediately adjacent to the NNRTI-binding pocket, reducing van der Waals contacts that stabilize nevirapine's aromatic scaffold within its binding cavity. This loss of favorable hydrophobic packing forces the inhibitor to adopt a suboptimal binding geometry or dissociate more readily, while the smaller alanine sidechain creates a cavity that nevirapine cannot effectively fill, destabilizing the ligand-protein complex without compromising reverse transcriptase catalytic function. The mutation preserves enzyme viability because it does not alter the polymerase active site itself, allowing resistant virus to maintain replication capacity while escaping NNRTI inhibition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:59.941891+00:00"
+}

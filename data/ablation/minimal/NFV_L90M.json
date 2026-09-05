@@ -1,0 +1,10 @@
+{
+  "drug": "NFV",
+  "mutation": "L90M",
+  "condition": "minimal",
+  "delta_delta_g": -0.15499999999999936,
+  "structural_context": null,
+  "explanation": "The L90M substitution introduces a polar methionine in place of the bulky hydrophobic leucine, disrupting critical van der Waals contacts that nelfinavir makes with the S1 subpocket wall. This polarity change, combined with the slight reduction in side-chain volume, creates a cavity that destabilizes the drug's binding geometry, forcing nelfinavir into a suboptimal conformation that loses favorable hydrophobic interactions essential for binding affinity. Additionally, the sulfur atom of methionine may reorient the local pocket architecture in a way that introduces steric incompatibility with nelfinavir's specific ligand geometry relative to other protease inhibitors, explaining this mutation's selective effect on NFV resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:52.088621+00:00"
+}

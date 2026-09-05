@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181C",
+  "condition": "corrupted",
+  "delta_delta_g": -0.17100000000000115,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.17100000000000115,
+    "delta_g": -9.723
+  },
+  "explanation": "The Y181C mutation reduces nevirapine binding by eliminating bulky aromatic van der Waals contacts that stabilize the inhibitor within the NNRTI pocket. Tyrosine's large phenolic ring at position 181 makes direct contact with nevirapine at 2.7 \u00c5, and its replacement with the significantly smaller cysteine thiol (~85 \u00c5\u00b3 volume loss) creates a cavity that allows the inhibitor to shift or adopt a sub-optimal binding pose, destabilizing critical interactions. Additionally, loss of the tyrosine's \u03c0-electron system removes favorable aromatic interactions with the inhibitor's aromatic moieties, collectively weakening the binding free energy despite the modest net effect captured in the small \u0394\u0394G value.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:45.318552+00:00"
+}

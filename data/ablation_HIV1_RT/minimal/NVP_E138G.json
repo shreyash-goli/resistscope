@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "E138G",
+  "condition": "minimal",
+  "delta_delta_g": -0.009999999999999787,
+  "structural_context": null,
+  "explanation": "The E138G mutation replaces a large, negatively charged glutamate with a small, uncharged glycine, eliminating a critical electrostatic interaction that likely stabilizes nevirapine positioning within the NNRTI-binding pocket. This charge loss removes favorable interactions between the glutamate's carboxylate and the inhibitor's positively polarized regions, destabilizing the bound conformation. Additionally, the dramatic reduction in side-chain volume creates a structural void within the confined allosteric pocket, forcing nevirapine to adopt a suboptimal binding geometry that reduces van der Waals contacts and overall binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:07.939421+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "M230L",
+  "condition": "full",
+  "delta_delta_g": 0.0039999999999995595,
+  "structural_context": {
+    "position": 230,
+    "wt_aa": "M",
+    "mut_aa": "L",
+    "wt_residue": "Met",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 9.7,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.0039999999999995595,
+    "delta_g": -11.682
+  },
+  "explanation": "The M230L substitution eliminates a longer, flexible methionine side chain in favor of the more compact leucine while maintaining hydrophobic character, subtly altering the precise shape of the NNRTI-binding pocket wall. Although the volume increase is minimal (~3.8 \u0172), the loss of methionine's extended sulfur-containing chain reduces van der Waals contact surface area with efavirenz at the critical 2.8 \u00c5 interface distance, resulting in slightly weakened hydrophobic stabilization without introducing compensatory interactions. This modest geometric perturbation of the binding pocket architecture translates to measurable resistance despite the negligible free energy penalty, likely through accumulated loss of favorable contacts rather than through steric clash or electrostatic disruption.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:57.000203+00:00"
+}

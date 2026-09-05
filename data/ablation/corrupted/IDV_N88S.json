@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "N88S",
+  "condition": "corrupted",
+  "delta_delta_g": -0.24200000000000088,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.24200000000000088,
+    "delta_g": -10.499
+  },
+  "explanation": "The N88S substitution in the flap region reduces indinavir binding through an indirect mechanism: the loss of asparagine's larger polar side chain (~25 \u00c5\u00b3 reduction) creates a cavity near the ligand (7.0 \u00c5 minimum distance) that destabilizes the local protein architecture, causing subtle conformational shifts that compromise the precise geometric positioning required for optimal indinavir contacts. Although serine maintains the polar character, its smaller size and reduced hydrogen-bonding capacity diminish the entropic penalty for flap closure, allowing the flap to adopt conformations less favorable for inhibitor accommodation without incurring significant energetic cost. This suggests N88S operates as an allosteric resistance mechanism where the flap region's structural stability, rather than direct drug-protein interactions, is compromised.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:20.462991+00:00"
+}

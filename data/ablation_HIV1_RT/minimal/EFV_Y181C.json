@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181C",
+  "condition": "minimal",
+  "delta_delta_g": 0.43599999999999994,
+  "structural_context": null,
+  "explanation": "The Y181C mutation replaces a large aromatic tyrosine with a smaller, nonpolar cysteine, eliminating critical van der Waals contacts and a potential hydrogen-bonding hydroxyl group that stabilize efavirenz within the NNRTI-binding pocket. This reduction in contact surface area creates a binding cavity that no longer optimally accommodates efavirenz's aromatic ring system, destabilizing the inhibitor's positioning in the pocket. Additionally, the loss of the tyrosine's \u03c0-stacking interactions with efavirenz's ring moieties further weakens binding affinity, allowing the enzyme to maintain catalytic activity despite NNRTI occupation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:11.408530+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "D30N",
+  "condition": "corrupted",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 30,
+    "wt_aa": "D",
+    "mut_aa": "N",
+    "wt_residue": "Asp",
+    "mut_residue": "Asn",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.0,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -10.894
+  },
+  "explanation": "The D30N mutation eliminates a negatively charged aspartate in the flap region, removing a potential electrostatic interaction or desolvation penalty that normally stabilizes nelfinavir binding, despite the residue being positioned ~7 \u00c5 from the ligand and not directly contacting it. The neutral asparagine substitution may indirectly weaken binding through altered flap dynamics or water-mediated interactions, since the loss of the charged side chain eliminates electrostatic anchoring that helps maintain the precise conformational state required for optimal inhibitor positioning. The minimal volume change suggests the resistance mechanism is electrostatic rather than steric, making the flap region less favorable for nelfinavir stabilization.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:14.218512+00:00"
+}

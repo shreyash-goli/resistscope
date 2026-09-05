@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "E138A",
+  "condition": "minimal",
+  "delta_delta_g": -0.0039999999999995595,
+  "structural_context": null,
+  "explanation": "The E138A mutation removes a negatively charged glutamate side chain positioned adjacent to the NNRTI-binding pocket, eliminating an electrostatic interaction that stabilizes nevirapine's binding geometry and likely disrupts a critical hydrogen bond network that orients the inhibitor within the pocket. The replacement with alanine's small nonpolar methyl group creates a hydrophobic mismatch in a region where the inhibitor relies on electrostatic complementarity, causing a net destabilization of the bound conformation and reducing the binding affinity. This positioning near the allosteric pocket means the charge loss directly impacts the local chemical environment that nevirapine has evolved to recognize, rather than indirectly affecting overall protein folding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:13.224665+00:00"
+}

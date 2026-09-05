@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "G48V",
+  "condition": "corrupted",
+  "delta_delta_g": 0.34800000000000075,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.34800000000000075,
+    "delta_g": -9.751
+  },
+  "explanation": "The G48V substitution introduces a bulky valine residue that directly contacts saquinavir at the S1/S1' subpocket interface, creating a steric clash that destabilizes the inhibitor binding geometry. Because glycine lacks a side chain and valine's ~80 \u0172 aliphatic bulk now occupies space at the 2.4 \u00c5 contact distance, the inhibitor must adopt a suboptimal conformation to avoid unfavorable van der Waals contacts, reducing the complementarity of binding interactions. The increased hydrophobicity from this substitution cannot compensate for the entropic cost of conformational adjustment, resulting in the modest but measurable weakening of saquinavir affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:28:06.865531+00:00"
+}

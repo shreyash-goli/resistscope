@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "L76V",
+  "condition": "corrupted",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.09199999999999875,
+    "delta_g": -9.505
+  },
+  "explanation": "The L76V mutation reduces a bulky hydrophobic residue to a smaller one in the flap region, creating a cavity approximately 27 \u0172 away from the ligand binding interface. Although the mutation doesn't directly contact lopinavir (7 \u00c5 separation), this volume loss destabilizes the local protein architecture in a region critical for flap dynamics and ligand enclosure, likely causing subtle repositioning of the flap that weakens van der Waals packing interactions between lopinavir and residues that do make direct contacts. The modest energetic penalty (~0.09 kcal/mol) reflects an indirect mechanism where loss of hydrophobic bulk propagates through the binding pocket rather than direct steric clash, consistent with the flap's role in conformational accommodation during protease inhibitor binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:31:12.522192+00:00"
+}

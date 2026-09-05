@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "N88S",
+  "condition": "corrupted",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The N88S mutation reduces atazanavir affinity through an indirect allosteric mechanism: asparagine's larger polar side chain (with its amide group) maintains critical scaffolding interactions within the protease core that stabilize the active site geometry optimal for ATV binding, while serine's smaller, less polarizable hydroxyl group cannot sustain these stabilizing contacts, causing a subtle relaxation of the protease conformation. This conformational perturbation propagates ~5 \u00c5 to the ligand-binding interface, subtly distorting the binding pocket geometry and reducing favorable van der Waals complementarity and hydrogen-bonding networks that ATV depends on for high-affinity binding. The 25 \u00c5\u00b3 cavity left by the volume loss cannot be efficiently compensated by ATV's rigid scaffold, resulting in the observed weakening of binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:53.158001+00:00"
+}

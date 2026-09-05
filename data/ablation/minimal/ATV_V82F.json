@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "V82F",
+  "condition": "minimal",
+  "delta_delta_g": -0.23399999999999999,
+  "structural_context": null,
+  "explanation": "V82F substitutes a smaller branched aliphatic residue with a larger aromatic one positioned directly within the inhibitor binding pocket, creating a steric clash that destabilizes atazanavir's optimal binding geometry. The bulkier phenyl ring of phenylalanine cannot accommodate the inhibitor's molecular envelope in the same spatial orientation, forcing either the drug to adopt a less favorable conformation or displacing it further from productive interactions with the catalytic machinery. This geometric incompatibility reduces van der Waals contacts and likely disrupts critical hydrogen bonding networks between the inhibitor and protease backbone atoms that depend on precise three-dimensional positioning.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:17.313488+00:00"
+}

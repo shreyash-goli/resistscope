@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "G190S",
+  "condition": "corrupted",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "S",
+    "wt_residue": "Gly",
+    "mut_residue": "Ser",
+    "volume_change": "increase",
+    "volume_change_A3": 28.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -9.59
+  },
+  "explanation": "The G190S substitution introduces a serine side chain (~29 \u0172 increase) in the palm domain at a distance where it can propagate conformational strain through the protein scaffold toward the distant NNRTI-binding pocket (~43 \u00c5 away). Although the mutation does not directly contact nevirapine, the increased steric bulk at this catalytic core position likely restricts the conformational flexibility required for the allosteric network to properly accommodate the inhibitor, destabilizing the inhibitor-bound state through indirect energetic coupling rather than direct steric clash. The minimal thermodynamic penalty (-0.04 kcal/mol) suggests this is a subtle, allosteric mechanism where local rigidification at the palm subtly reorients or destabilizes the NNRTI-binding pocket geometry.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:02.117265+00:00"
+}

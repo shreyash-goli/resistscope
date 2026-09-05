@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "E138A",
+  "condition": "full",
+  "delta_delta_g": -0.0030000000000001137,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0030000000000001137,
+    "delta_g": -11.689
+  },
+  "explanation": "The E138A mutation eliminates a negatively charged glutamate residue in the palm domain, removing an unfavorable electrostatic environment that may have destabilized efavirenz binding through coulombic repulsion with the drug's electron-rich aromatic system. Although E138 is positioned remotely from the ligand (~43 \u00c5 minimum distance), the loss of this charge combined with increased local hydrophobicity creates a subtly more permissive binding pocket that slightly reduces the enthalpic cost of drug accommodation. However, the negligible energetic effect (dd\u0394G \u2248 0 kcal/mol) suggests this mutation confers minimal resistance through direct binding perturbation and likely functions as a compensatory or epistatic change that stabilizes RT structure or modulates conformational dynamics affecting the NNRTI pocket indirectly.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:45.360831+00:00"
+}

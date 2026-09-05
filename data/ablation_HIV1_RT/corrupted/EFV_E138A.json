@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "E138A",
+  "condition": "corrupted",
+  "delta_delta_g": -0.002000000000000668,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.002000000000000668,
+    "delta_g": -11.688
+  },
+  "explanation": "The E138A mutation does not confer resistance to efavirenz through direct inhibitor contact, as position 138 resides ~43 \u00c5 from the ligand and makes no direct interactions with the drug. Instead, the loss of the negatively charged glutamate side chain and the substantial decrease in local volume likely destabilizes the palm domain architecture that scaffolds the NNRTI-binding pocket, potentially allowing conformational flexibility that weakens the precise geometric orientation required for efavirenz binding. The negligible predicted binding energy change suggests this mutation operates through subtle allosteric effects on pocket geometry rather than through abolishing discrete molecular interactions, consistent with a mechanism involving local perturbations of the protein fold that propagate to the distant binding site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:08.974289+00:00"
+}

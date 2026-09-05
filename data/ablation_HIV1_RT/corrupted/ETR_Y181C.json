@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "Y181C",
+  "condition": "corrupted",
+  "delta_delta_g": 0.0909999999999993,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": 0.0909999999999993,
+    "delta_g": -9.461
+  },
+  "explanation": "The Y181C mutation reduces etravirine binding primarily through loss of favorable van der Waals contacts and hydrophobic interactions with the inhibitor. Tyrosine's large aromatic ring provides extensive hydrophobic surface area that stabilizes etravirine positioning within the nearby binding pocket (5.6 \u00c5 proximity); substitution with the smaller cysteine thiol eliminates approximately 85 cubic angstroms of this complementary binding surface, creating a suboptimal fit that destabilizes the inhibitor's conformational state. Although Y181C does not directly contact the ligand, this strategic position within the fingers-palm subdomain acts as a conformational organizing element; the loss of hydrophobicity and bulky aromatic character allows increased conformational flexibility that displaces etravirine from its optimal binding geometry, accounting for the modest but measurable weakening of binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:53.540522+00:00"
+}

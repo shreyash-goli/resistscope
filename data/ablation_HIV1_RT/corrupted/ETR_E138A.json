@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "E138A",
+  "condition": "corrupted",
+  "delta_delta_g": 0.4540000000000006,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.4540000000000006,
+    "delta_g": -11.232
+  },
+  "explanation": "The E138A mutation eliminates a negatively charged glutamate that makes direct contact with etravirine at the pocket rim, replacing it with a smaller, neutral alanine that cannot maintain favorable electrostatic interactions or fill the same binding pocket volume. This loss of ~50 \u0172 and the removal of negative charge destabilizes etravirine positioning at the NNRTI binding site, likely disrupting critical hydrogen bonding or electrostatic anchoring that normally occurs at the 4.1 \u00c5 contact distance. The increased hydrophobicity of alanine cannot compensate for the loss of the glutamate's geometric and electrostatic complementarity, resulting in weaker overall binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:05.493373+00:00"
+}

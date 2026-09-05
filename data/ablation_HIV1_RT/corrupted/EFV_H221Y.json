@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "H221Y",
+  "condition": "corrupted",
+  "delta_delta_g": -0.0030000000000001137,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0030000000000001137,
+    "delta_g": -11.689
+  },
+  "explanation": "The H221Y mutation does not substantially reduce efavirenz binding, as the predicted ddG of essentially zero indicates negligible thermodynamic penalty. Position 221 is located >43 \u00c5 from efavirenz and makes no direct ligand contacts, placing it too distant from the NNRTI-binding pocket to directly perturb drug binding through steric or electrostatic mechanisms. The loss of histidine's positive charge coupled with a modest increase in side-chain volume appears insufficient to propagate allosteric effects through the intervening protein structure to alter inhibitor recognition at this remote distance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:19.369465+00:00"
+}

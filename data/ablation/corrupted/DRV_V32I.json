@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.5289999999999999,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.5289999999999999,
+    "delta_g": -10.786
+  },
+  "explanation": "The V32I substitution introduces a bulkier hydrophobic side chain into the protease core scaffold that, while maintaining the same nonpolar character, creates a ~27 \u0172 volume expansion within 4.8 \u00c5 of the ligand. This increased steric bulk at a position in close proximity to darunavir likely induces conformational strain or subtle repositioning of the inhibitor to avoid van der Waals clashes, reducing the optimal fit within the binding pocket without directly disrupting hydrogen bonding networks. The cumulative effect of this packing inefficiency\u2014despite the favorable hydrophobic environment\u2014destabilizes the complex by approximately 0.5 kcal/mol, compromising the enthalpic advantage darunavir normally derives from its shape complementarity within this region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:30.211400+00:00"
+}

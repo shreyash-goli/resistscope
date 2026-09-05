@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "E138K",
+  "condition": "corrupted",
+  "delta_delta_g": 0.6419999999999995,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.6419999999999995,
+    "delta_g": -11.044
+  },
+  "explanation": "The E138K substitution introduces a bulkier, positively charged lysine that directly contacts efavirenz within the NNRTI pocket core, creating a steric clash that destabilizes the inhibitor's binding geometry. The 30 \u0172 volume increase and charge reversal from negative to positive eliminate a stabilizing electrostatic interaction (likely a salt bridge or favorable Coulomb interaction between the glutamate carboxylate and efavirenz's electron-rich aromatic system) while simultaneously generating unfavorable electrostatic repulsion or steric occlusion within the confined binding pocket. This combination of lost attractive interactions and increased Van der Waals strain at the 3.7 \u00c5 minimum contact distance weakens binding affinity sufficiently to reduce drug efficacy.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:21.467618+00:00"
+}

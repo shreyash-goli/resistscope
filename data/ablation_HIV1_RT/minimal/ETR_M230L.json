@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "M230L",
+  "condition": "minimal",
+  "delta_delta_g": 0.04300000000000104,
+  "structural_context": null,
+  "explanation": "The M230L mutation replaces a larger, branched hydrophobic side chain (methionine) with a smaller linear one (leucine), reducing van der Waals contacts within the NNRTI-binding pocket and creating a cavity that allows etravirine to adopt a suboptimal binding geometry or shift away from its preferred position. This conformational flexibility diminishes the network of stabilizing hydrophobic interactions that normally anchor the inhibitor, particularly affecting the drug's binding affinity without necessarily causing a direct steric clash. The loss of the methionine's additional methyl group also reduces the entropic penalty of binding, shifting the thermodynamic balance away from the drug-bound state.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:35.276442+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138Q",
+  "condition": "full",
+  "delta_delta_g": -0.0129999999999999,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "Q",
+    "wt_residue": "Glu",
+    "mut_residue": "Gln",
+    "volume_change": "minimal",
+    "volume_change_A3": 5.4,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0129999999999999,
+    "delta_g": -10.355
+  },
+  "explanation": "The E138Q mutation eliminates a charged carboxylate group at position 138 in the palm domain, which despite being ~43 \u00c5 away from nevirapine, likely disrupts long-range electrostatic stabilization of the NNRTI-binding pocket architecture through altered charge distribution across the catalytic core. The minimal volume increase (5.4 \u00c5\u00b3) and neutral charge conversion suggest the resistance mechanism is primarily electrostatic rather than steric\u2014the loss of the glutamate's negative charge subtly destabilizes the conformational ensemble required for optimal nevirapine positioning, reducing binding affinity by a modest amount consistent with the near-negligible \u0394\u0394G. This illustrates how distal mutations in RT can modulate inhibitor binding through indirect effects on pocket geometry and electrostatic landscapes rather than direct contact, a common feature of NNRTI resistance beyond the immediate binding site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:59.944260+00:00"
+}

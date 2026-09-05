@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "E138K",
+  "condition": "corrupted",
+  "delta_delta_g": 0.018000000000000682,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.018000000000000682,
+    "delta_g": -10.324
+  },
+  "explanation": "The E138K mutation introduces a positively charged lysine at the NNRTI pocket rim where glutamate's negative charge previously formed stabilizing electrostatic interactions with etravirine's polar moieties; this charge reversal disrupts favorable polar contacts while the increased side-chain volume (~30 \u0172) creates steric strain within the confined binding pocket, forcing unfavorable van der Waals contacts at the 2.7 \u00c5 minimum distance. The shift from acidic to basic character at a position directly contacting the ligand destabilizes the bound conformation through combined electrostatic repulsion and spatial crowding, reducing the binding free energy by a modest but measurable amount characteristic of rim mutations that subtly reshape rather than completely abolish the inhibitor-binding interface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:18.496679+00:00"
+}

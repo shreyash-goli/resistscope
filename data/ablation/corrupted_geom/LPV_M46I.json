@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "M46I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.13700000000000045,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.13700000000000045,
+    "delta_g": -9.734
+  },
+  "explanation": "The M46I mutation in the flap region introduces a subtle conformational penalty despite minimal volume change: isoleucine's branched side chain at position 46 creates a more constrained geometry compared to methionine's flexible thioether tail, which likely restricts the flap's conformational sampling and reduces its ability to adopt the optimal binding pose for lopinavir. Though positioned ~7 \u00c5 from the ligand, this flap residue indirectly propagates steric or entropic effects that slightly destabilize lopinavir binding, as evidenced by the modest but consistent loss of binding affinity. The increased hydrophobicity with isoleucine does not compensate for the conformational rigidity penalty, resulting in weaker accommodation of the inhibitor within the binding pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:27.815481+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.002000000000000668,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "I",
+    "wt_residue": "Tyr",
+    "mut_residue": "Ile",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.8,
+    "distance_from_ligand_centroid_angstrom": 14.5,
+    "min_distance_to_ligand_angstrom": 11.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": -0.002000000000000668,
+    "delta_g": -11.688
+  },
+  "explanation": "The Y181I mutation removes the bulky aromatic tyrosine side chain, creating a significant cavity (~27 \u0172) within the connection subdomain that destabilizes the allosteric architecture of the NNRTI-binding pocket rather than directly contacting nevirapine. This loss of the tyrosine's \u03c0-system and hydroxyl hydrogen-bonding capacity, combined with the shift to a smaller branched aliphatic isoleucine, eliminates critical van der Waals contacts that normally stabilize the overall pocket geometry at the 11.9 \u00c5 interface distance. The resulting structural perturbation propagates through the pocket framework, slightly reducing nevirapine binding affinity through indirect destabilization of the inhibitor's binding environment rather than through direct steric interference.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:37.613995+00:00"
+}

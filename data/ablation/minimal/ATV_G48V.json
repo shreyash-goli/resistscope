@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "G48V",
+  "condition": "minimal",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": null,
+  "explanation": "The G48V mutation introduces a bulky valine side chain at a position adjacent to the active site that creates a steric clash with atazanavir's molecular scaffold, forcing the inhibitor into a less favorable binding geometry or partially displacing it from its optimal pose. Since glycine at this position provides flexibility and minimal steric demand, its replacement with valine's branched hydrophobic side chain likely disrupts the precise van der Waals contacts atazanavir makes within the S1/S1' binding pocket region, reducing binding affinity without necessarily abolishing interaction. This small-scale structural rearrangement is particularly detrimental for atazanavir, which relies on a conformationally constrained binding mode to achieve high potency, making it more sensitive to steric perturbations near the flap regions where G48 resides.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:41.118369+00:00"
+}

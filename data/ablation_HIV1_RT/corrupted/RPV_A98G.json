@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "A98G",
+  "condition": "corrupted",
+  "delta_delta_g": 1.061,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 1.061,
+    "delta_g": -9.281
+  },
+  "explanation": "The A98G mutation removes a methyl side chain while maintaining backbone geometry, creating a ~28.5 \u0172 cavity within the NNRTI binding pocket that rilpivirine cannot fill due to its rigid aromatic structure. This loss of hydrophobic contacts (\u0394 hydrophobicity = -2.2) at the 3.8 \u00c5 interface directly destabilizes van der Waals interactions that normally anchor the inhibitor, accounting for the +1.06 kcal/mol binding penalty. The glycine's increased conformational flexibility paradoxically fails to compensate, as the pocket collapse forces rilpivirine into a suboptimal binding register that cannot maintain critical stabilizing contacts with the surrounding protein scaffold.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:11.321046+00:00"
+}

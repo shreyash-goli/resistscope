@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "V82A",
+  "condition": "corrupted",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The V82A mutation reduces the hydrophobic surface area in the flap region's S1/S1' subpocket where atazanavir makes direct contact, creating a cavity that destabilizes van der Waals interactions critical for inhibitor positioning and binding affinity. The loss of ~51 \u0172 of nonpolar volume from valine to alanine decreases the complementary fit between the protease binding pocket and the inhibitor's aromatic/lipophilic moieties, reducing favorable dispersion forces without introducing compensatory interactions. This modest loss of binding energy (-0.40 kcal/mol) accumulates in the context of the flap's conformational dynamics, allowing increased flexibility that weakens the inhibitor's grip while maintaining sufficient residual binding to preserve protease catalytic function against substrate.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:28:48.782280+00:00"
+}

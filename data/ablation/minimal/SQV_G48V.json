@@ -1,0 +1,10 @@
+{
+  "drug": "SQV",
+  "mutation": "G48V",
+  "condition": "minimal",
+  "delta_delta_g": 0.39700000000000024,
+  "structural_context": null,
+  "explanation": "The G48V substitution introduces a bulky valine side chain at a position located in the active site flap region that directly contacts bound saquinavir. This larger hydrophobic residue creates a steric clash with saquinavir's inhibitor scaffold, likely disrupting critical van der Waals contacts the drug makes within the S1/S1' binding pocket and forcing unfavorable conformational adjustments of the protease flaps. Additionally, the increased side-chain volume at position 48 destabilizes the precise geometry required for saquinavir's P1 and P1' groups to optimally position themselves, thereby reducing binding affinity through entropic penalty and loss of favorable interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:44.249473+00:00"
+}

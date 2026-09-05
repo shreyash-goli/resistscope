@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "L100I",
+  "condition": "corrupted",
+  "delta_delta_g": 0.125,
+  "structural_context": {
+    "position": 100,
+    "wt_aa": "L",
+    "mut_aa": "I",
+    "wt_residue": "Leu",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.7,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.125,
+    "delta_g": -11.561
+  },
+  "explanation": "L100I reduces efavirenz binding through a subtle reorganization of the NNRTI pocket rim that disrupts optimal van der Waals packing with the inhibitor. Although leucine and isoleucine are nearly isosteric with identical volumes, isoleucine's branched methyl group at the \u03b2-carbon adopts a more constrained rotameric preference that slightly reorients the hydrophobic surface at position 100; this creates minor steric incompatibility with efavirenz's aromatic core at the 2.7 \u00c5 contact distance, destabilizing the ligand's binding pose without dramatically altering pocket geometry. The modest positive \u0394\u0394G reflects this incremental loss of favorable hydrophobic interactions rather than a complete loss of contact, suggesting the mutation tolerates efavirenz binding but with reduced conformational complementarity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:18.184496+00:00"
+}

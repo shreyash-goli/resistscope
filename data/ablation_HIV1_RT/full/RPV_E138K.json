@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "E138K",
+  "condition": "full",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -9.59
+  },
+  "explanation": "The E138K mutation introduces a bulky, positively charged lysine in the palm domain that, while not directly contacting rilpivirine, likely destabilizes the NNRTI-binding pocket through allosteric effects by altering the electrostatic environment and creating a steric perturbation (~30 \u0172 volume increase) in the protein core that propagates to the nearby binding site. The shift from a negatively charged glutamate to a positively charged lysine disrupts electrostatic balance in this catalytic region, potentially distorting the precise geometric arrangement of residues that comprise the rilpivirine-binding pocket, thereby weakening the van der Waals and hydrogen-bonding interactions critical for inhibitor recognition despite the mutation's distance from direct contact with the drug.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:50.900225+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "H221Y",
+  "condition": "corrupted",
+  "delta_delta_g": 0.04300000000000104,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 9.7,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.04300000000000104,
+    "delta_g": -8.908
+  },
+  "explanation": "The H221Y mutation increases local steric bulk while simultaneously eliminating the positive charge of histidine's imidazole ring, which disrupts favorable electrostatic interactions with etravirine's polar atoms at close contact distance (2.8 \u00c5). The larger aromatic tyrosine side chain creates unfavorable van der Waals compression against the inhibitor within the NNRTI-binding pocket wall, destabilizing the ligand-binding geometry despite the modest energetic cost. Loss of the histidine's charge-dependent hydrogen bonding capability further reduces binding affinity at this critical contact point in the primer grip region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:21.783700+00:00"
+}

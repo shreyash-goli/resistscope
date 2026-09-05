@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181V",
+  "condition": "corrupted",
+  "delta_delta_g": 0.0039999999999995595,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "V",
+    "wt_residue": "Tyr",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -53.6,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.5,
+    "distance_from_ligand_centroid_angstrom": 9.7,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.0039999999999995595,
+    "delta_g": -11.682
+  },
+  "explanation": "Y181V eliminates a bulky aromatic residue that makes direct van der Waals contacts with efavirenz (minimum distance 2.8 \u00c5), replacing it with the smaller valine side chain that cannot fill the same binding pocket space. This ~54 \u0172 volume reduction creates a cavity within the NNRTI-binding pocket, destabilizing efavirenz binding through loss of favorable hydrophobic contacts and potentially allowing increased conformational flexibility of the inhibitor or surrounding protein residues. The mutation's modest energetic penalty (~0.004 kcal/mol) suggests a fine-tuning effect where the loss of direct tyrosine-efavirenz interactions is partially compensated by the increased hydrophobicity of valine, but overall binding affinity is diminished due to suboptimal packing at this critical wall position.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:31.220090+00:00"
+}

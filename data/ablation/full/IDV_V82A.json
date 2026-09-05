@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": -0.06799999999999962,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.06799999999999962,
+    "delta_g": -10.325
+  },
+  "explanation": "The V82A mutation reduces indinavir binding by eliminating critical van der Waals contacts in the S1/S1' subpocket, where valine's larger hydrophobic side chain (51.4 \u00c5\u00b3 reduction upon mutation) fills a confined binding pocket that indinavir depends on for optimal positioning. At a minimum distance of 3.3 \u00c5, alanine's smaller methyl group cannot maintain the tight hydrophobic packing needed to stabilize the inhibitor's conformation, resulting in weaker interaction geometry and modest destabilization of the enzyme-inhibitor complex. This loss of van der Waals complementarity in a spatially constrained region directly adjacent to the active site explains why this seemingly conservative mutation confers resistance despite only marginal energetic penalty, as indinavir's binding pose becomes suboptimal rather than precluded.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:21:43.182609+00:00"
+}

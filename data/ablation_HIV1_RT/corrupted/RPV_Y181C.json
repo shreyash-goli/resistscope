@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181C",
+  "condition": "corrupted",
+  "delta_delta_g": 1.346,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 1.346,
+    "delta_g": -8.996
+  },
+  "explanation": "The Y181C mutation eliminates a bulky aromatic residue positioned within direct contact distance (3.8 \u00c5) of rilpivirine, replacing it with a much smaller thiol-containing residue that loses ~85 cubic angstroms of hydrophobic surface area. This volume reduction disrupts critical van der Waals contacts that normally stabilize the ligand binding geometry within the NNRTI pocket core, destabilizing the inhibitor without requiring compensatory conformational changes elsewhere. The loss of the aromatic ring's \u03c0-system and extended hydrophobic envelope directly weakens favorable dispersion interactions that rilpivirine depends on for high-affinity binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:50.599035+00:00"
+}

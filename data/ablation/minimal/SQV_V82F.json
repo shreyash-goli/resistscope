@@ -1,0 +1,10 @@
+{
+  "drug": "SQV",
+  "mutation": "V82F",
+  "condition": "minimal",
+  "delta_delta_g": 0.2599999999999998,
+  "structural_context": null,
+  "explanation": "The V82F mutation introduces a bulky aromatic ring at a position that lies within the inhibitor binding pocket, creating a steric clash with saquinavir's molecular scaffold. This enlarged side chain directly competes for space occupied by the drug's binding interactions, forcing either unfavorable conformational adjustments in the inhibitor or displacement from its optimal binding geometry. The loss of favorable van der Waals contacts between valine's smaller hydrophobic surface and saquinavir, combined with the repulsive interactions from the additional aromatic bulk of phenylalanine, substantially destabilizes the inhibitor-protease complex without significantly impairing the enzyme's catalytic function on natural substrates, which tolerate the conformational flexibility.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:26.134718+00:00"
+}

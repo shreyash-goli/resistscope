@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "K103N",
+  "condition": "minimal",
+  "delta_delta_g": 0.4540000000000006,
+  "structural_context": null,
+  "explanation": "The lysine-to-asparagine substitution at position 103 eliminates a positively charged residue positioned immediately adjacent to the NNRTI-binding pocket, removing a favorable electrostatic interaction that stabilizes efavirenz binding through cation-\u03c0 or electrostatic contacts with the drug's aromatic or electronegative moieties. The asparagine replacement, being polar but uncharged, creates a local chemical environment mismatch that destabilizes the inhibitor without providing compensatory hydrogen bonding geometry, thereby destabilizing the drug-bound conformation of the binding pocket. Additionally, the more compact side chain of asparagine may subtly alter the spatial geometry of the pocket entrance, reducing optimal van der Waals complementarity with efavirenz's bulky cyclopropyl-containing scaffold.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:06.252402+00:00"
+}

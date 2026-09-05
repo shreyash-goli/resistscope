@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "M230L",
+  "condition": "corrupted",
+  "delta_delta_g": -1.3099999999999987,
+  "structural_context": {
+    "position": 230,
+    "wt_aa": "M",
+    "mut_aa": "L",
+    "wt_residue": "Met",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -1.3099999999999987,
+    "delta_g": -10.261
+  },
+  "explanation": "The M230L substitution reduces efavirenz binding through a subtle loss of van der Waals contact complementarity at the NNRTI pocket rim. Methionine's longer, flexible sulfur-containing side chain makes optimized hydrophobic contacts with efavirenz at the 2.7 \u00c5 interface, whereas leucine's shorter branched aliphatic side chain cannot maintain the same contact surface despite minimal volume loss, creating a local binding pocket deficit. This conformational mismatch propagates from the pocket rim inward, destabilizing the inhibitor's binding pose without requiring steric clash or electrostatic perturbation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:36.695728+00:00"
+}

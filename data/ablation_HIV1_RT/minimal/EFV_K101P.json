@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "K101P",
+  "condition": "minimal",
+  "delta_delta_g": 0.125,
+  "structural_context": null,
+  "explanation": "The K101P mutation replaces a positively charged, extended lysine with a constrained cyclic proline, eliminating a key electrostatic interaction and introducing a rigid kink in the polypeptide backbone that distorts the NNRTI-binding pocket geometry. This backbone distortion directly destabilizes the precise positioning of efavirenz within the pocket, while loss of the lysine's positive charge removes favorable electrostatic complementarity with the drug's polar moieties. The conformational rigidity imposed by proline's cyclic structure prevents the local backbone flexibility required to accommodate efavirenz binding, effectively closing off or remodeling the allosteric pocket and preventing proper drug insertion.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:54.093312+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y188C",
+  "condition": "corrupted",
+  "delta_delta_g": 0.31200000000000117,
+  "structural_context": {
+    "position": 188,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 9.2,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.31200000000000117,
+    "delta_g": -10.03
+  },
+  "explanation": "The Y188C mutation reduces a large aromatic tyrosine to a much smaller cysteine, creating a substantial cavity (~85 \u0172) within the NNRTI-binding pocket core that destabilizes nevirapine's binding environment through loss of critical van der Waals contacts that normally stabilize the ligand's positioning. Although Y188 does not contact nevirapine directly, its aromatic side chain participates in the precise geometric organization of the pocket; the loss of this bulky hydrophobic scaffold allows nevirapine to adopt a suboptimal binding conformation with reduced van der Waals complementarity throughout the pocket, explaining the modest but measurable destabilization. This mechanism exemplifies indirect resistance where pocket architecture rather than direct steric clash governs NNRTI affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:46.966056+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "K101P",
+  "condition": "minimal",
+  "delta_delta_g": 0.02800000000000047,
+  "structural_context": null,
+  "explanation": "The K101P mutation replaces a large, positively charged lysine with a rigid proline, eliminating a critical electrostatic interaction and hydrogen-bonding capability that normally stabilizes nevirapine positioning within the NNRTI pocket. Proline's constrained cyclic backbone geometry restricts the conformational flexibility of the adjacent polypeptide, likely inducing a local structural distortion that shifts the geometry of the binding pocket away from the optimal orientation for nevirapine accommodation. Additionally, the loss of the lysine's extended side chain removes van der Waals contacts that fine-tune the spatial constraints of the pocket, and proline's hydrophobic ring may introduce unfavorable steric clashes or disrupt the hydrogen-bonding network that normally secures the inhibitor within the allosteric site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:51.340025+00:00"
+}

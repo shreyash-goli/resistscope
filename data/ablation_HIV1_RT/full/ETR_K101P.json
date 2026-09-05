@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "K101P",
+  "condition": "full",
+  "delta_delta_g": -0.6399999999999988,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "P",
+    "wt_residue": "Lys",
+    "mut_residue": "Pro",
+    "volume_change": "decrease",
+    "volume_change_A3": -55.9,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 2.3,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.6399999999999988,
+    "delta_g": -9.591
+  },
+  "explanation": "The K101P mutation reduces etravirine binding primarily through loss of a stabilizing electrostatic interaction: the positively charged lysine's interaction with the inhibitor is eliminated when replaced by proline's neutral, rigid ring structure, destabilizing the inhibitor-RT complex. Additionally, the substantial volume decrease (~56 \u00c5\u00b3) creates a void at the pocket rim that eliminates favorable van der Waals contacts with etravirine while the increased hydrophobicity and conformational rigidity of proline may subtly reorient the binding pocket geometry, further weakening inhibitor accommodation at this critical contact interface. The direct ligand contact at 2.7 \u00c5 distance indicates this substitution directly disrupts essential binding interactions rather than operating through allosteric effects.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:16.349669+00:00"
+}

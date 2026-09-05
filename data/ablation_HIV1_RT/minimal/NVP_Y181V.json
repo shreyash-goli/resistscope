@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181V",
+  "condition": "minimal",
+  "delta_delta_g": 1.061,
+  "structural_context": null,
+  "explanation": "Y181V eliminates a critical aromatic ring and hydroxyl group at the edge of the NNRTI-binding pocket, removing both \u03c0-stacking interactions with the drug's aromatic moieties and a hydrogen bond donor that stabilizes nevirapine's positioning. The replacement with valine, a smaller branched aliphatic residue, creates a cavity within the binding pocket that destabilizes the precise geometric fit required for nevirapine binding, while simultaneously reducing van der Waals contacts that normally contribute binding energy.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:37.879083+00:00"
+}

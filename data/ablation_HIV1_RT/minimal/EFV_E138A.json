@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "E138A",
+  "condition": "minimal",
+  "delta_delta_g": -0.0030000000000001137,
+  "structural_context": null,
+  "explanation": "The E138A mutation eliminates a negatively charged glutamate residue positioned within the allosteric NNRTI-binding pocket, removing a critical electrostatic interaction that stabilizes efavirenz binding through its polar moieties. Replacement with the smaller, nonpolar alanine creates a hydrophobic cavity mismatch that destabilizes the inhibitor's positioning, while also eliminating hydrogen-bonding contacts between the glutamate side chain and efavirenz's hydroxyl or ether functionalities. This combination of lost electrostatic anchoring and reduced binding pocket complementarity substantially weakens efavirenz affinity without significantly disrupting the overall RT architecture.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:21.885189+00:00"
+}

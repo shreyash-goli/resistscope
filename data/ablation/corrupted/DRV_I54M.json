@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "I54M",
+  "condition": "corrupted",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.09199999999999875,
+    "delta_g": -9.505
+  },
+  "explanation": "The I54M substitution reduces darunavir binding despite minimal volume loss because methionine's longer, more polar side chain (~7 \u00c5 from the ligand) disrupts the hydrophobic environment of the flap region that normally stabilizes darunavir's binding pose. Although the mutation does not directly contact the inhibitor, the increased polarity and conformational flexibility of the methionine sulfur atom destabilizes the local hydrophobic packing network that positions the flap for optimal inhibitor accommodation, resulting in a subtle but measurable loss of binding affinity. This indirect mechanism\u2014where a distal flap region mutation compromises the overall geometry and hydrophobic complementarity of the binding pocket\u2014is characteristic of DRV resistance mutations outside the active site that alter protease dynamics rather than creating steric clashes.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:28:23.185258+00:00"
+}

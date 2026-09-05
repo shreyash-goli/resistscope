@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "H221Y",
+  "condition": "minimal",
+  "delta_delta_g": 0.0010000000000012221,
+  "structural_context": null,
+  "explanation": "The H221Y mutation replaces a positively charged imidazole with a larger, hydrophobic tyrosine at a position that directly contacts the nevirapine-binding pocket, likely causing steric clash with the inhibitor's aromatic ring system and eliminating a potential electrostatic interaction that stabilizes inhibitor binding. The increased size of tyrosine compared to histidine creates unfavorable van der Waals contacts that destabilize the inhibitor's positioning, while loss of the histidine's hydrogen-bonding capacity (through its imidazole nitrogen) removes a critical electrostatic anchor that normally contributes to NNRTI recognition. This combination of steric occlusion and loss of favorable polar interactions substantially reduces nevirapine's binding affinity without compromising reverse transcriptase catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:10.070009+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "F227L",
+  "condition": "minimal",
+  "delta_delta_g": 0.08300000000000018,
+  "structural_context": null,
+  "explanation": "The F227L mutation reduces a bulky aromatic residue to a smaller aliphatic one at the entrance of the NNRTI-binding pocket, creating a cavity that allows efavirenz to adopt a repositioned or rotated conformation that diminishes critical van der Waals contacts with the inhibitor's aromatic rings. This increased conformational flexibility of the bound drug weakens the enthalpic contribution from hydrophobic interactions that normally stabilize efavirenz in its optimal binding geometry. Additionally, the loss of the \u03c0-stacking interactions between the phenylalanine's aromatic ring and efavirenz's aromatic moieties further destabilizes the inhibitor's binding without significantly altering the pocket's overall chemical environment, making this a canonical steric resistance mechanism.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:26.880329+00:00"
+}

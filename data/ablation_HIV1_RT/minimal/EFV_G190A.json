@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "G190A",
+  "condition": "minimal",
+  "delta_delta_g": 0.6999999999999993,
+  "structural_context": null,
+  "explanation": "The G190A mutation introduces a methyl side chain at a position immediately adjacent to the NNRTI-binding pocket, creating a steric clash that destabilizes efavirenz binding through direct occlusion of conformational space the inhibitor requires for optimal positioning. Glycine at position 190 normally permits the backbone flexibility needed for the pocket to accommodate efavirenz's bulky aromatic core; the alanine substitution rigidifies this region and physically crowds the binding site, forcing efavirenz into a higher-energy or misaligned conformation that weakens van der Waals contacts critical for binding affinity. This loss of entropic and enthalpic favorable interactions\u2014combined with potential local distortion of the pocket geometry\u2014reduces efavirenz occupancy without fundamentally altering the drug's chemical properties.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:01.765980+00:00"
+}

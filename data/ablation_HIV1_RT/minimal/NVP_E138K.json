@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "E138K",
+  "condition": "minimal",
+  "delta_delta_g": 0.0,
+  "structural_context": null,
+  "explanation": "The E138K mutation replaces a negatively charged, bulky glutamate with a positively charged lysine, which disrupts a critical electrostatic interaction or creates a steric incompatibility within the NNRTI-binding pocket where nevirapine makes contact. Lysine's extended side chain projects into space occupied by nevirapine's aromatic ring system, inducing a conformational clash that either displaces the inhibitor or prevents the optimally positioned binding geometry required for potent inhibition. This combination of lost electrostatic complementarity and gained steric bulk effectively destabilizes the nevirapine-bound state while maintaining sufficient RT function for viral replication.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:24.267679+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "I50L",
+  "condition": "full",
+  "delta_delta_g": -0.09500000000000064,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "L",
+    "wt_residue": "Ile",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.7,
+    "distance_from_ligand_centroid_angstrom": 5.7,
+    "min_distance_to_ligand_angstrom": 2.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.09500000000000064,
+    "delta_g": -9.692
+  },
+  "explanation": "The I50L substitution reduces atazanavir binding through a loss of optimal van der Waals contacts in the flap region, where the isoleucyl branched side chain makes critical contacts with the inhibitor at 2.2 \u00c5 distance. The leucine replacement, while maintaining hydrophobic character, has a less favorable branching geometry that diminishes favorable dispersion interactions with atazanavir's aromatic and aliphatic moieties, resulting in weakened binding despite the absence of steric clashes or unfavorable electrostatic perturbations. This modest energetic penalty (\u22120.10 kcal/mol) is characteristic of fine-tuning of van der Waals complementarity rather than disruption of major binding interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:39.907625+00:00"
+}

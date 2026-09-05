@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "V106A",
+  "condition": "corrupted",
+  "delta_delta_g": 0.02800000000000047,
+  "structural_context": {
+    "position": 106,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.02800000000000047,
+    "delta_g": -10.314
+  },
+  "explanation": "The V106A mutation reduces nevirapine binding by creating a cavity defect at the NNRTI pocket rim. Valine's larger hydrophobic side chain makes direct van der Waals contacts with nevirapine; its replacement with alanine's smaller methyl group (51.4 \u00c5\u00b3 volume loss) leaves a gap that weakens the ligand's conformational stability and reduces favorable van der Waals interactions within the binding pocket. This modest binding penalty (+0.03 kcal/mol) reflects a localized loss of tight packing rather than a catastrophic change, consistent with V106A's status as a minor resistance mutation that slightly erodes inhibitor affinity through incremental destabilization of the drug-protein interface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:44.201371+00:00"
+}

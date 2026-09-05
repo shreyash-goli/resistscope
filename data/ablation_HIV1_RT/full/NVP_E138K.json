@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138K",
+  "condition": "full",
+  "delta_delta_g": 0.0,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.0,
+    "delta_g": -10.342
+  },
+  "explanation": "The E138K substitution causes a substantial charge inversion (negative to positive) at a position 43 \u00c5 from nevirapine, disrupting a critical electrostatic network that stabilizes the NNRTI-binding pocket geometry. Although E138K makes no direct ligand contacts, the positive lysine likely perturbs the electrostatic environment of the palm domain that maintains proper conformational positioning of nevirapine's binding site, reducing binding affinity through allosteric destabilization rather than steric interference. The modest volume expansion (30 \u00c5\u00b3) combined with the fundamental charge reversal suggests the mechanism involves loss of favorable long-range electrostatic interactions that normally organize the pocket architecture, rather than local steric clashes.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:48.133088+00:00"
+}

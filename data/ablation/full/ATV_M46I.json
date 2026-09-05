@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.09199999999999875,
+    "delta_g": -9.505
+  },
+  "explanation": "The M46I substitution increases local hydrophobicity in the flap region while maintaining nearly identical van der Waals volume, subtly altering the hydrophobic environment that atazanavir's nonpolar groups depend on for optimal binding geometry. Although the mutation does not directly contact the ligand (7.0 \u00c5 separation), the increased branching of isoleucine's side chain constrains the conformational flexibility of the flap domain, modestly disrupting the precise spatial alignment needed for optimal van der Waals contacts between atazanavir and the binding pocket. This entropic and geometric perturbation, compounded by the shift in local lipophilicity, collectively destabilizes the inhibitor's binding pose by approximately 0.09 kcal/mol despite the small energetic cost.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:10.753785+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "M230L",
+  "condition": "full",
+  "delta_delta_g": 0.04300000000000104,
+  "structural_context": {
+    "position": 230,
+    "wt_aa": "M",
+    "mut_aa": "L",
+    "wt_residue": "Met",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 9.7,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.04300000000000104,
+    "delta_g": -8.908
+  },
+  "explanation": "The M230L substitution reduces etravirine binding through a subtle but consequential loss of van der Waals contacts within the NNRTI-binding pocket wall. Although the volume change is minimal, methionine's longer aliphatic side chain and greater flexibility than leucine's branched structure allows optimal positioning of the inhibitor; the leucine substitution introduces a stiffer, more constrained hydrophobic environment that locally disrupts the complementary packing geometry between the inhibitor and the binding pocket. This repositioning or slight displacement of etravirine, despite occurring at a contact distance of 2.8 \u00c5, propagates energetic strain that destabilizes the bound complex by approximately 0.04 kcal/mol, sufficient to confer clinically meaningful resistance when combined with other mutations.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:59.932855+00:00"
+}

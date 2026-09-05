@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "V82F",
+  "condition": "corrupted",
+  "delta_delta_g": 0.379999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": 0.379999999999999,
+    "delta_g": -11.15
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain (~50 \u0172 larger) into the C-terminal dimer region that, despite not directly contacting the ligand, creates a steric clash within 8.2 \u00c5 of saquinavir's core scaffold, forcing the inhibitor into a suboptimal binding conformation that loses favorable van der Waals contacts. The phenylalanine's increased rigidity and aromatic character also reduces the conformational flexibility of the binding pocket, preventing the protease from achieving the precise active site geometry required for optimal hydrogen bonding and ligand accommodation that saquinavir depends upon. This allosteric destabilization propagates from the dimer interface to weaken inhibitor binding affinity despite the mutation's distance from the direct binding interface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:41.609855+00:00"
+}

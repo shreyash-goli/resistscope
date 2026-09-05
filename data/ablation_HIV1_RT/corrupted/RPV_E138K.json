@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "E138K",
+  "condition": "corrupted",
+  "delta_delta_g": 0.3810000000000002,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 9.4,
+    "min_distance_to_ligand_angstrom": 7.6,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.3810000000000002,
+    "delta_g": -9.961
+  },
+  "explanation": "The E138K mutation replaces a negatively charged glutamate with a positively charged lysine at the NNRTI pocket rim, introducing a ~30 \u0172 volume expansion that perturbs the binding pocket geometry without directly contacting rilpivirine. This charge inversion likely disrupts a critical electrostatic environment or induces local conformational remodeling of the pocket rim that indirectly destabilizes rilpivirine positioning, as the altered sidechain geometry creates steric or electrostatic incompatibility with the inhibitor's preferred binding pose at 7.6 \u00c5 proximity. The shift from acidic to basic character may also compromise water-mediated or protein-facilitated interactions that stabilize the bound drug conformation, collectively reducing binding affinity by ~0.4 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:15.593553+00:00"
+}

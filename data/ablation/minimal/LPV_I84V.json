@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "I84V",
+  "condition": "minimal",
+  "delta_delta_g": 0.34800000000000075,
+  "structural_context": null,
+  "explanation": "The I84V substitution replaces a bulkier isoleucine with the smaller valine, creating a cavity within the S2 subpocket that weakens van der Waals contacts between the inhibitor's nonpolar groups and this critical binding surface. This loss of favorable hydrophobic packing interactions directly diminishes the binding affinity of lopinavir, which relies heavily on extensive nonpolar contacts throughout the protease active site. Additionally, the reduced side-chain volume allows compensatory water molecules or protein backbone adjustments that destabilize the inhibitor's binding geometry without substantially altering protease catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:37.053745+00:00"
+}

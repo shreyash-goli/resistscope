@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138Q",
+  "condition": "corrupted",
+  "delta_delta_g": 0.0730000000000004,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "Q",
+    "wt_residue": "Glu",
+    "mut_residue": "Gln",
+    "volume_change": "minimal",
+    "volume_change_A3": 5.4,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 6.5,
+    "contacts_ligand_directly": false,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.0730000000000004,
+    "delta_g": -10.269
+  },
+  "explanation": "The E138Q substitution eliminates a negatively charged glutamate residue that likely participates in a stabilizing electrostatic or hydrogen-bonding interaction with nevirapine or its immediate binding environment within the NNRTI pocket wall; replacement with the polar but uncharged glutamine disrupts this favorable electrostatic contribution without compensating through increased van der Waals contacts, given the minimal volume change. Although E138 does not directly contact the ligand, its position within the primer grip NNRTI wall suggests it constrains the local geometry or electrostatic landscape that optimizes nevirapine orientation; loss of the negative charge subtly destabilizes the inhibitor's binding geometry at a distance sufficient to propagate conformational or electrostatic effects through the pocket. This mechanism explains the modest but measurable resistance (\u0394\u0394G ~+0.07 kcal/mol) through indirect electrostatic modulation rather than steric occlusion.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:24.997012+00:00"
+}

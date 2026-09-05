@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "H221Y",
+  "condition": "minimal",
+  "delta_delta_g": 0.04300000000000104,
+  "structural_context": null,
+  "explanation": "The H221Y substitution replaces a polar, positively charged histidine with a larger hydrophobic tyrosine, which disrupts critical interactions within the NNRTI-binding pocket. Histidine 221 likely forms essential hydrogen bonds or electrostatic contacts with etravirine's polar moieties; the loss of this positive charge combined with increased steric bulk from tyrosine's aromatic ring creates a clash that destabilizes inhibitor binding geometry. The spatial constraint imposed by the larger tyrosine residue forces etravirine into a suboptimal conformation or physically excludes it from optimal positioning, thereby reducing binding affinity and conferring resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:15.925711+00:00"
+}

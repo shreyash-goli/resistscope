@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "G48V",
+  "condition": "corrupted",
+  "delta_delta_g": 0.25,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.25,
+    "delta_g": -10.525
+  },
+  "explanation": "The G48V mutation introduces a bulky valine side chain (~80 \u0172 volume expansion) at a position that makes direct contact with atazanavir in the S1/S1' subpocket, creating a steric clash that destabilizes the inhibitor's binding pose despite being only 2.4 \u00c5 from the ligand. Glycine's conformational flexibility normally accommodates atazanavir's geometry in this region, but valine's rigid \u03b2-branched structure forces unfavorable van der Waals contacts or requires the inhibitor to adopt a suboptimal conformation that loses stabilizing interactions elsewhere. The modest energetic penalty (0.25 kcal/mol) reflects incomplete loss of binding compatibility, suggesting atazanavir retains partial interactions but at reduced efficiency due to the geometric incompatibility imposed by this bulkier, more hydrophobic residue at a functionally critical subpocket interface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:28:03.723815+00:00"
+}

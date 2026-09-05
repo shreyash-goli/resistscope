@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "P225H",
+  "condition": "minimal",
+  "delta_delta_g": -0.02099999999999902,
+  "structural_context": null,
+  "explanation": "The P225H mutation replaces a rigid, hydrophobic proline with a larger, positively charged histidine, which disrupts the precise geometry of the NNRTI-binding pocket by introducing a bulky side chain that creates steric clash with nevirapine's aromatic rings. Histidine's charged imidazole group also alters the electrostatic environment of the pocket, potentially destabilizing favorable van der Waals contacts and \u03c0-\u03c0 interactions that nevirapine relies on for binding. This combination of increased side-chain volume and introduction of polar character at a position critical for maintaining pocket architecture directly reduces the drug's binding affinity while leaving the RT catalytic function largely intact.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:18.723310+00:00"
+}

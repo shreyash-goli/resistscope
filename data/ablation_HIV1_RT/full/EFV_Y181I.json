@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181I",
+  "condition": "full",
+  "delta_delta_g": 0.19399999999999906,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "I",
+    "wt_residue": "Tyr",
+    "mut_residue": "Ile",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.19399999999999906,
+    "delta_g": -11.492
+  },
+  "explanation": "The Y181I mutation removes the aromatic tyrosine ring and replaces it with a smaller branched isoleucine, creating a ~27 \u0172 cavity within the NNRTI-binding pocket core that efavirenz can no longer optimally fill. Since the residue directly contacts efavirenz at 3.8 \u00c5 distance, the loss of favorable \u03c0-system interactions and van der Waals surface complementarity with the drug's aromatic moieties destabilizes the inhibitor complex. The increased hydrophobicity cannot compensate for this reduction in binding interface geometry, resulting in weakened drug association and resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:14.615330+00:00"
+}

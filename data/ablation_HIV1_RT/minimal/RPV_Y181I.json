@@ -1,0 +1,10 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181I",
+  "condition": "minimal",
+  "delta_delta_g": 0.1869999999999994,
+  "structural_context": null,
+  "explanation": "The Y181I mutation replaces a bulky aromatic residue with a smaller, nonpolar isoleucine, eliminating the hydroxyl group that likely forms a critical hydrogen bond with rilpivirine's polar groups and reducing van der Waals contacts that stabilize the inhibitor within the NNRTI binding pocket. This loss of hydrogen bonding capacity and the creation of a smaller binding cavity destabilizes rilpivirine's positioning, reducing binding affinity through both direct loss of favorable interactions and indirect accommodation of alternative conformations that are incompatible with tight inhibitor binding. The reduction in aromatic surface area also diminishes the \u03c0-system interactions that may normally reinforce inhibitor orientation within the pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:51.574347+00:00"
+}

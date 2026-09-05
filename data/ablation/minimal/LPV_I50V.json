@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "I50V",
+  "condition": "minimal",
+  "delta_delta_g": -0.10599999999999987,
+  "structural_context": null,
+  "explanation": "The I50V substitution replaces the larger, branched isoleucine side chain with the smaller valine, creating a cavity adjacent to lopinavir's binding site that reduces favorable van der Waals contacts critical for the inhibitor's tight packing within the protease active site. This loss of intimate van der Waals interactions directly destabilizes the inhibitor-enzyme complex, reducing binding affinity without significantly altering the protease's catalytic capacity. The mutation essentially creates a \"breathing space\" that allows lopinavir to adopt a less optimal binding pose, diminishing the enthalpic benefit of inhibitor binding relative to wild-type protease.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:50.266800+00:00"
+}

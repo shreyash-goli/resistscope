@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "V32I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.15499999999999936,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.15499999999999936,
+    "delta_g": -10.93
+  },
+  "explanation": "The V32I substitution increases hydrophobic bulk in the C-terminal dimer region, which despite not directly contacting indinavir, likely creates a subtle conformational strain through its proximity to the ligand binding site (8.2 \u00c5 minimum distance). This additional ~27 \u00c5\u00b3 of van der Waals volume in a spatially constrained region probably distorts the local geometry of the protease dimer interface or active site architecture in a way that subtly misaligns indinavir's binding pose, reducing optimal intermolecular contacts without completely abolishing binding. The marginal effect size reflects that this is a peripheral perturbation\u2014the mutation introduces steric crowding that destabilizes the inhibitor-bound conformation more than it stabilizes the apo enzyme.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:33.603465+00:00"
+}

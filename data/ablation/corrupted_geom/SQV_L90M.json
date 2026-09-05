@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "L90M",
+  "condition": "corrupted",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The L90M substitution reduces saquinavir binding through an indirect allosteric mechanism rather than direct active site disruption. Although positioned in the flap hinge region at 9.1 \u00c5 from the ligand, the methionine's longer but thinner side chain creates a subtle conformational perturbation that propagates to the inhibitor binding pocket, likely destabilizing the precise flap positioning required for optimal saquinavir accommodation. The decreased hydrophobicity from leucine to methionine may also weaken stabilizing hydrophobic interactions within the protein core that normally lock the flap in its inhibitor-bound conformation, allowing increased dynamic motion that reduces the binding surface complementarity for this particular inhibitor.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:46.088725+00:00"
+}

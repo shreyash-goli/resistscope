@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "K101E",
+  "condition": "minimal",
+  "delta_delta_g": -1.3099999999999987,
+  "structural_context": null,
+  "explanation": "The K101E mutation replaces a positively charged lysine with a negatively charged glutamate, eliminating a critical electrostatic interaction or hydrogen bond that etravirine relies on for positioning within the NNRTI-binding pocket. This charge reversal likely disrupts favorable interactions between the drug's polar groups and the lysine's amino group, or alternatively introduces electrostatic repulsion if the drug carries partial negative character in that region. Additionally, glutamate's longer side chain may create steric incompatibility or unfavorable geometry within the confined binding pocket, further destabilizing the drug-enzyme complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:47.882532+00:00"
+}

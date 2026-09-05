@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "V82A",
+  "condition": "corrupted",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The V82A mutation reduces saquinavir binding by creating a substantial hydrophobic cavity within the flap region where valine's bulky side chain previously made van der Waals contacts with the inhibitor. The loss of 51 \u0172 of hydrophobic surface area through replacement with the smaller alanine destabilizes favorable interactions at the 3.2 \u00c5 contact interface, diminishing the binding enthalpy without compensatory interactions. Additionally, the decreased hydrophobicity at this strategically positioned flap residue likely permits conformational flexibilization of the protease active site, reducing the enthalpic penalty for saquinavir accommodation and allowing the enzyme to escape the inhibitor's binding constraints more readily.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:01.078090+00:00"
+}

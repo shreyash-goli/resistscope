@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "L76V",
+  "condition": "minimal",
+  "delta_delta_g": 0.46300000000000097,
+  "structural_context": null,
+  "explanation": "The L76V mutation reduces the hydrophobic surface area within the S1' subpocket by replacing leucine's larger branched side chain with valine's smaller one, creating a cavity that weakens van der Waals contacts between the inhibitor's nonpolar binding elements and the protease pocket. This loss of favorable hydrophobic interactions is not compensated by alternative binding modes, as the reduced volume at this critical contact point directly destabilizes lopinavir's binding geometry without introducing compensatory electrostatic or hydrogen-bonding advantages. The mutation thus achieves resistance through selective destabilization of the inhibitor's binding rather than through conformational changes that would affect catalytic activity against natural substrates.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:14.260133+00:00"
+}

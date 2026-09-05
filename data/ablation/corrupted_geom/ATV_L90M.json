@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "L90M",
+  "condition": "corrupted",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The L90M substitution reduces atazanavir binding through a subtle allosteric destabilization of the flap-hinge region rather than direct active site disruption. Although the mutation introduces minimal volume loss and occurs at a distance from the ligand (9.1 \u00c5 minimum), the replacement of leucine's branched hydrophobic side chain with methionine's linear, polar-capable architecture compromises the optimal packing geometry of the flap hinge\u2014a region critical for maintaining the precise conformational dynamics required for inhibitor accommodation. This conformational perturbation propagates to weaken the overall protease-inhibitor complex stability, as the flap hinge regions normally form a critical component of the drug-binding pocket's structural scaffold, and the local hydrophobicity loss likely reduces favorable van der Waals interactions that stabilize this essential architectural element.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:36.394576+00:00"
+}

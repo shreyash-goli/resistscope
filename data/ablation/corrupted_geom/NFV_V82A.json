@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "V82A",
+  "condition": "corrupted",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The V82A mutation reduces nelfinavir binding through loss of critical hydrophobic packing in the protease flap region. Valine's larger branched side chain makes favorable van der Waals contacts with nelfinavir's nonpolar surface; substitution with the smaller alanine creates a ~51 \u0172 cavity that cannot be optimally filled by the inhibitor, forcing nelfinavir into a less energetically favorable binding pose. This geometric incompatibility is exacerbated by the direct contact between position 82 and the ligand (3.2 \u00c5 minimum distance), where the loss of hydrophobic surface area and slight decrease in local lipophilicity destabilize inhibitor binding despite no charge redistribution occurring.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:28:57.701345+00:00"
+}

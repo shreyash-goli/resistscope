@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "G190S",
+  "condition": "full",
+  "delta_delta_g": 0.6419999999999995,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "S",
+    "wt_residue": "Gly",
+    "mut_residue": "Ser",
+    "volume_change": "increase",
+    "volume_change_A3": 28.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.6419999999999995,
+    "delta_g": -11.044
+  },
+  "explanation": "G190S introduces a ~29 \u0172 hydroxyl-bearing side chain into the confined NNRTI-binding pocket core, creating steric interference with efavirenz at close contact distance (3.7 \u00c5). The expanded serine residue likely disrupts favorable van der Waals packing that wild-type glycine permits, while the polar hydroxyl group reduces the hydrophobic complementarity efavirenz requires for optimal positioning within the pocket. This combination of steric clash and hydrophobic mismatch destabilizes the drug-bound complex despite the modest energetic penalty, enabling virologic escape.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:33.147270+00:00"
+}

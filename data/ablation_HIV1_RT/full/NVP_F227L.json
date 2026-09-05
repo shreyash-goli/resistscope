@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "F227L",
+  "condition": "full",
+  "delta_delta_g": 0.0730000000000004,
+  "structural_context": {
+    "position": 227,
+    "wt_aa": "F",
+    "mut_aa": "L",
+    "wt_residue": "Phe",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.0,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 6.5,
+    "contacts_ligand_directly": false,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.0730000000000004,
+    "delta_g": -10.269
+  },
+  "explanation": "The F227L substitution creates a cavity defect in the NNRTI-binding pocket wall by removing ~23 \u0172 of aromatic bulk without introducing compensatory polar interactions, destabilizing the precise geometric constraints that nevirapine requires for optimal positioning. Although the mutation does not directly contact nevirapine (minimum distance 6.5 \u00c5), the loss of the phenylalanine's extended aromatic ring structure compromises van der Waals packing interactions that stabilize the pocket architecture, allowing subtle conformational relaxation that displaces nevirapine from its high-affinity binding geometry. The charge-neutral nature of this substitution indicates the resistance mechanism is purely steric/entropic rather than electrostatic, reflecting degradation of the binding pocket scaffold itself rather than direct ligand interference.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:48.105262+00:00"
+}

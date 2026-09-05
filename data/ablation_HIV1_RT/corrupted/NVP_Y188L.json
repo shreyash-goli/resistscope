@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y188L",
+  "condition": "corrupted",
+  "delta_delta_g": 0.3460000000000001,
+  "structural_context": {
+    "position": 188,
+    "wt_aa": "Y",
+    "mut_aa": "L",
+    "wt_residue": "Tyr",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.1,
+    "distance_from_ligand_centroid_angstrom": 9.2,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.3460000000000001,
+    "delta_g": -9.996
+  },
+  "explanation": "The Y188L mutation reduces a bulky aromatic residue to a smaller aliphatic leucine within the NNRTI binding pocket core, creating a ~27 \u0172 cavity that destabilizes nevirapine's binding geometry. Although the tyrosine hydroxyl does not directly contact the inhibitor, its aromatic ring maintains critical van der Waals packing interactions with nevirapine's aromatic system at 6.7 \u00c5; replacing this with the smaller, less polarizable leucine side chain compromises these favorable dispersion interactions and allows the inhibitor to adopt a suboptimal conformational state. The increased hydrophobicity of leucine (+5.1) paradoxically weakens binding here because it cannot compensate for the loss of the tyrosine's shape complementarity and contributes to a less thermodynamically favorable overall solvation environment for the inhibitor within the constrained pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:56.680718+00:00"
+}

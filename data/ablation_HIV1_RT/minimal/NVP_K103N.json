@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "K103N",
+  "condition": "minimal",
+  "delta_delta_g": 0.4250000000000007,
+  "structural_context": null,
+  "explanation": "The K103N mutation replaces a positively charged lysine with a polar but uncharged asparagine, eliminating a critical electrostatic interaction that stabilizes nevirapine binding within the NNRTI-binding pocket. This loss of the positive charge disrupts favorable interactions with the drug's aromatic ring system or nearby acidic residues that anchor nevirapine in its binding pose, while the smaller asparagine side chain leaves a hydrophobic cavity that destabilizes van der Waals contacts essential for binding affinity. The mutation effectively reduces the complementarity between the inhibitor and its binding site through both charge neutralization and a loss of favorable contact surface area, causing nevirapine to dissociate more readily or adopt non-productive binding modes.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:03.011789+00:00"
+}

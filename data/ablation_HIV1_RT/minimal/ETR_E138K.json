@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "E138K",
+  "condition": "minimal",
+  "delta_delta_g": -0.006000000000000227,
+  "structural_context": null,
+  "explanation": "The E138K mutation replaces a negatively charged, bulky glutamate with a positively charged lysine, fundamentally altering the electrostatic environment and steric properties of the NNRTI-binding pocket. This charge reversal disrupts a critical interaction landscape that etravirine depends upon\u2014either by eliminating a favorable electrostatic attraction between the drug's polar moieties and the native glutamate, or by introducing electrostatic repulsion that destabilizes the inhibitor orientation. Additionally, the longer, more rigid side chain of lysine projects into the binding pocket with different van der Waals contact geometry than glutamate, causing conformational strain or steric incompatibility that forces etravirine to adopt a suboptimal binding pose with reduced affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:29.951003+00:00"
+}

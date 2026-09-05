@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138K",
+  "condition": "corrupted",
+  "delta_delta_g": 0.0010000000000012221,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 14.5,
+    "min_distance_to_ligand_angstrom": 11.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": 0.0010000000000012221,
+    "delta_g": -10.341
+  },
+  "explanation": "The E138K substitution introduces a bulkier, positively charged residue that disrupts the electrostatic environment of the allosteric NNRTI-binding pocket despite not directly contacting nevirapine. The ~30 \u0172 volume expansion and charge reversal from negative to positive at position 138 in the connection subdomain likely propagates conformational strain through the flexible architecture linking this region to the NNRTI-binding site, destabilizing the precise geometry required for optimal nevirapine accommodation at the 11.9 \u00c5 interface. This indirect mechanism\u2014altering the entropic penalty and backbone positioning of the binding pocket through electrostatic and steric perturbation of a distal but structurally coupled region\u2014accounts for the modest but measurable loss of binding affinity without requiring direct ligand-mutation contacts.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:12.554704+00:00"
+}

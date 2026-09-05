@@ -1,0 +1,10 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181V",
+  "condition": "minimal",
+  "delta_delta_g": 0.6999999999999993,
+  "structural_context": null,
+  "explanation": "The Y181V mutation replaces a bulky aromatic residue with a smaller branched aliphatic side chain, creating a cavity within the NNRTI-binding pocket that disrupts critical van der Waals contacts and \u03c0-stacking interactions that rilpivirine depends on for binding affinity. This loss of contact surface reduces the complementarity between the inhibitor and its binding site, particularly affecting the stabilization of rilpivirine's aromatic moieties through the extensive hydrophobic interactions normally provided by tyrosine's extended aromatic ring. Additionally, the reduced side-chain volume eliminates a key steric constraint that positions rilpivirine optimally within the pocket, allowing the ligand to adopt suboptimal conformations with weakened binding geometry.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:43.540435+00:00"
+}

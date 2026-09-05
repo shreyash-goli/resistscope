@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.911999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.911999999999999,
+    "delta_g": -8.685
+  },
+  "explanation": "The V82A mutation reduces the hydrophobic surface area in the S1/S1' subpocket where atazanavir makes direct van der Waals contacts, creating a cavity that the inhibitor cannot fully occupy and losing stabilizing hydrophobic interactions. The loss of valine's branched methyl groups (~51 \u0172 reduction) coupled with decreased hydrophobicity shifts the local environment away from the lipophilic character that atazanavir's aromatic and aliphatic moieties require for optimal binding geometry. This unfavorable desolvation penalty and reduced shape complementarity destabilize the inhibitor-enzyme complex by approximately 0.91 kcal/mol, despite the substitution occurring only 3.3 \u00c5 from the ligand and not introducing steric clashes.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:21:39.613491+00:00"
+}

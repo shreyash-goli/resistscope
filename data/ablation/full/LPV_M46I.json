@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": 0.745000000000001,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.745000000000001,
+    "delta_g": -9.354
+  },
+  "explanation": "The M46I substitution reduces lopinavir affinity through indirect allosteric effects rather than direct contact loss, as the mutation occurs 7 \u00c5 from the ligand in the flap region. Methionine's longer, flexible sulfur-containing side chain provides conformational plasticity that stabilizes the flap positioning optimal for lopinavir accommodation, whereas isoleucine's branched, rigid structure constrains flap mobility and shifts the binding pocket geometry unfavorably. This conformational restriction propagates to the active site architecture, destabilizing the precise van der Waals contact network and hydrogen bond geometry that lopinavir requires for high-affinity binding in the protease dimer interface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:17.032676+00:00"
+}

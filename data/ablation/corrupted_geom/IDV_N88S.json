@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "N88S",
+  "condition": "corrupted",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The N88S mutation reduces indinavir binding primarily through loss of a polar interaction network rather than direct ligand contact. Asparagine's larger polar side chain at position 88 establishes favorable hydrogen bonding or polar contacts with the inhibitor's functional groups across the ~4.8 \u00c5 distance, stabilizing the bound conformation; replacement with serine's smaller hydroxyl group eliminates this stabilizing interaction geometry while the cavity remains partially unfilled. Additionally, the increased hydrophobicity from this substitution slightly destabilizes the local electrostatic environment of the binding pocket, reducing the enthalpic favorability of IDV accommodation within the core scaffold architecture.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:56.061534+00:00"
+}

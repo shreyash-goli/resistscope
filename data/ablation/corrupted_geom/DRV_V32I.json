@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 2.0,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -10.813
+  },
+  "explanation": "The V32I mutation introduces a bulkier isoleucine with an extended methyl branch that creates steric interference within the confined S2/S2' subpocket, where the residue makes direct contact with darunavir at only 2.0 \u00c5. This additional ~27 \u00c5\u00b3 of volume forces unfavorable van der Waals contacts with the inhibitor's molecular scaffold, destabilizing the bound conformation without providing compensatory hydrophobic interactions (the marginal 0.3 unit hydrophobicity gain is insufficient given the steric cost). The modest destabilization (~0.04 kcal/mol) reflects that V32I is a conservative hydrophobic substitution that doesn't dramatically compromise binding, but the geometric constraint imposed by isoleucine's branched structure in this constrained pocket explains the selective resistance to darunavir.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:05.738642+00:00"
+}

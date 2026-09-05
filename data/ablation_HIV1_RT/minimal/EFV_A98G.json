@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "A98G",
+  "condition": "minimal",
+  "delta_delta_g": -0.0030000000000001137,
+  "structural_context": null,
+  "explanation": "The A98G substitution replaces a branched hydrophobic residue with glycine, a much smaller amino acid lacking side-chain bulk. This creates a cavity within the NNRTI-binding pocket that efavirenz can no longer fill effectively, reducing critical van der Waals contacts that normally stabilize the inhibitor in its binding pose. Additionally, the loss of the alanine methyl group eliminates hydrophobic interactions that position efavirenz correctly for optimal engagement with surrounding aromatic and nonpolar residues in the pocket, thereby destabilizing the drug-bound conformation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:27.185575+00:00"
+}

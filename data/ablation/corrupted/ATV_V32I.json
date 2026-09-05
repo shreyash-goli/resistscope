@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "condition": "corrupted",
+  "delta_delta_g": 0.39700000000000024,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": 0.39700000000000024,
+    "delta_g": -11.133
+  },
+  "explanation": "The V32I substitution introduces a bulkier \u03b2-branched side chain in the flap region that makes direct van der Waals contact with atazanavir at 3.2 \u00c5 distance, and the 26.7 \u0172 volume expansion creates a steric clash that distorts the inhibitor's optimal binding geometry without altering electrostatic properties. This conformational strain in the flap\u2014a critical dynamic element for protease function and inhibitor accommodation\u2014destabilizes the inhibitor-bound complex specifically, as the rigidity of isoleucine's additional methyl group cannot be accommodated by the narrow binding pocket near the ligand centroid. The energetic penalty (~0.4 kcal/mol) reflects compromised van der Waals contacts and increased binding strain rather than loss of favorable interactions, making atazanavir particularly vulnerable since its binding mode depends on precise fit within the constrained flap pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:27.150096+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "I54M",
+  "condition": "minimal",
+  "delta_delta_g": 0.3100000000000005,
+  "structural_context": null,
+  "explanation": "The I54M mutation replaces a branched hydrophobic residue with a longer, more linear one positioned ~8 \u00c5 from the protease active site, likely disrupting the precise van der Waals packing of lopinavir's P1 ligand moiety within the S1 binding pocket. The increased polarity of the methionine sulfur and extended side chain geometry create steric incompatibility with lopinavir's bulky cyclic urea scaffold, forcing a suboptimal binding conformation that weakens overall inhibitor affinity. This mutation exemplifies how even seemingly conservative hydrophobic substitutions can destabilize drug binding through cumulative geometric and electrostatic perturbations in the tightly constrained protease active site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:02.184709+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "G190A",
+  "condition": "corrupted",
+  "delta_delta_g": 0.19399999999999906,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "A",
+    "wt_residue": "Gly",
+    "mut_residue": "Ala",
+    "volume_change": "increase",
+    "volume_change_A3": 28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.2,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.19399999999999906,
+    "delta_g": -11.492
+  },
+  "explanation": "The substitution of glycine with alanine at position 190 introduces a methyl side chain into the NNRTI pocket core, creating a steric clash with nevirapine's aromatic scaffold at close contact distance (3.8 \u00c5). This ~28.5 \u0172 volume expansion occupies binding space that nevirapine requires for optimal positioning, forcing the inhibitor into a suboptimal conformer or partially displacing it from the pocket. The increased hydrophobicity of the methyl group further destabilizes binding by disrupting the precise van der Waals packing geometry that wild-type glycine's flexibility permits, resulting in weakened inhibitor affinity without compensatory interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:55.877067+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "G190S",
+  "condition": "corrupted",
+  "delta_delta_g": 0.0259999999999998,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "S",
+    "wt_residue": "Gly",
+    "mut_residue": "Ser",
+    "volume_change": "increase",
+    "volume_change_A3": 28.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.0259999999999998,
+    "delta_g": -8.925
+  },
+  "explanation": "The G190S substitution introduces a bulky hydroxyl-bearing side chain (~29 \u0172 volume increase) into the palm domain, which despite being ~43 \u00c5 from efavirenz, likely propagates conformational strain through the catalytic core that subtly distorts the NNRTI-binding pocket geometry. This allosteric perturbation reduces the precise van der Waals complementarity between efavirenz and its binding site, weakening favorable hydrophobic contacts and potentially creating minor steric incompatibilities that collectively disfavor drug binding without completely abolishing it. The minimal free energy penalty (+0.03 kcal/mol) reflects a localized, indirect mechanism wherein the mutation destabilizes the protein fold in a way that compromises ligand accommodation rather than creating direct steric clashes.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:05.223956+00:00"
+}

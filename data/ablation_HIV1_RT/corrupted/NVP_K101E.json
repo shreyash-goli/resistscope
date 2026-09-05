@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "K101E",
+  "condition": "corrupted",
+  "delta_delta_g": 0.3979999999999997,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "E",
+    "wt_residue": "Lys",
+    "mut_residue": "Glu",
+    "volume_change": "decrease",
+    "volume_change_A3": -30.2,
+    "charge_change": "positive_to_negative",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 10.1,
+    "min_distance_to_ligand_angstrom": 6.2,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.3979999999999997,
+    "delta_g": -9.944
+  },
+  "explanation": "The K101E mutation reduces nevirapine binding through a combination of electrostatic disruption and cavity destabilization at the NNRTI pocket rim. The charge reversal from positive lysine to negative glutamate eliminates a stabilizing electrostatic interaction or introduces a repulsive interaction that destabilizes the local environment within ~6 \u00c5ngstr\u00f6ms of the inhibitor, while the concurrent 30 \u0172 volume loss creates a subtle cavity incompatibility that subtly perturbs the precise positioning of nevirapine within its binding pocket. Although K101 does not contact the drug directly, its peripheral position allows this charge and size change to propagate allosteric effects that collectively weaken ligand accommodation without fundamentally disrupting the pocket architecture.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:25.292510+00:00"
+}

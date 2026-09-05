@@ -1,0 +1,10 @@
+{
+  "drug": "RPV",
+  "mutation": "K101E",
+  "condition": "minimal",
+  "delta_delta_g": -0.17100000000000115,
+  "structural_context": null,
+  "explanation": "The K101E mutation replaces a positively charged lysine with a negatively charged glutamate, eliminating a favorable electrostatic interaction or hydrogen bond that rilpivirine's aromatic scaffold likely forms with the wild-type lysine side chain within the NNRTI-binding pocket. This charge reversal creates electrostatic repulsion between the mutant glutamate and rilpivirine's electron-rich aromatic rings, directly destabilizing the inhibitor's binding geometry. Additionally, the longer glutamate side chain may introduce a steric clash within the confined pocket geometry, further displacing rilpivirine from its optimal binding pose.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:45.399368+00:00"
+}

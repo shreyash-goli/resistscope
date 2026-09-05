@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "I54M",
+  "condition": "minimal",
+  "delta_delta_g": -0.13700000000000045,
+  "structural_context": null,
+  "explanation": "The I54M substitution introduces a polar sulfur atom and reduces hydrophobic surface area in the S2 subpocket, disrupting favorable van der Waals contacts between atazanavir's lipophilic groups and the isoleucine side chain that normally stabilize inhibitor binding. The longer, more flexible methionine backbone creates steric incompatibility with atazanavir's rigid scaffold, particularly destabilizing the positioning of the drug's aromatic and alkyl moieties that depend on precise packing against the native isoleucine hydrophobic surface. Additionally, the increased polarity of methionine's sulfur may introduce unfavorable interactions or water-mediated displacement effects in this predominantly hydrophobic binding cavity, collectively reducing binding affinity through loss of optimal shape complementarity and hydrophobic interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:56.322627+00:00"
+}

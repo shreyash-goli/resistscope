@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "M46I",
+  "condition": "minimal",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": null,
+  "explanation": "The M46I substitution replaces a larger, branched methionine with a more compact isoleucine, creating a cavity within the S1/S1' binding pocket that destabilizes favorable van der Waals contacts between the inhibitor's core scaffold and the protease wall. This loss of intimate packing interactions with atazanavir's aromatic and aliphatic moieties significantly reduces binding affinity. Additionally, the reduced hydrophobic surface area from the methionine-to-isoleucine change diminishes the enthalpic benefit of desolvation during inhibitor binding, particularly affecting atazanavir's accommodation in this critical substrate-binding region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:23.883196+00:00"
+}

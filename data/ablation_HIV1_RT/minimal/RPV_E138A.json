@@ -1,0 +1,10 @@
+{
+  "drug": "RPV",
+  "mutation": "E138A",
+  "condition": "minimal",
+  "delta_delta_g": 0.01699999999999946,
+  "structural_context": null,
+  "explanation": "The E138A mutation removes a negatively charged glutamate residue positioned approximately 6-8 \u00c5 from the NNRTI-binding pocket, eliminating an electrostatic interaction that stabilizes rilpivirine's binding geometry. This loss of the carboxylate group disrupts either a direct hydrogen-bond network involving the inhibitor or water-mediated polar contacts that optimize the ligand's positioning within the pocket. The substitution with alanine's smaller hydrophobic side chain creates a cavity in the allosteric microenvironment, reducing van der Waals contacts that collectively contribute to binding affinity, thereby destabilizing the inhibitor-enzyme complex without requiring steric occlusion.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:15.888256+00:00"
+}

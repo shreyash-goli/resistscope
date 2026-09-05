@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "G190A",
+  "condition": "minimal",
+  "delta_delta_g": 0.14100000000000001,
+  "structural_context": null,
+  "explanation": "The G190A substitution introduces a methyl side chain at a position that directly borders the NNRTI-binding pocket, creating a steric clash that destabilizes nevirapine's optimal positioning within the pocket. Glycine's conformational flexibility at this interface normally allows the inhibitor to adopt its preferred binding geometry; the alanine substitution restricts backbone mobility and forces unfavorable van der Waals contacts between the methyl group and the drug's aromatic or aliphatic moieties. This local remodeling of the pocket geometry substantially reduces binding affinity while leaving the catalytic site and overall protein fold largely intact, preserving reverse transcriptase function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:57.898689+00:00"
+}

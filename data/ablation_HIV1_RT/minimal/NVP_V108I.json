@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "V108I",
+  "condition": "minimal",
+  "delta_delta_g": -0.009000000000000341,
+  "structural_context": null,
+  "explanation": "The V108I substitution introduces a branched methyl group on the \u03b2-carbon of isoleucine, creating a steric clash within the confined NNRTI-binding pocket that destabilizes nevirapine's aromatic ring positioning and disrupts critical van der Waals contacts essential for binding affinity. This subtle but rigid geometric change reduces the pocket's accommodation of nevirapine's geometry without significantly altering the overall fold, thereby selectively weakening inhibitor binding while preserving catalytic function. The mutation effectively narrows the accessible conformational space for the inhibitor, making the energetic cost of binding inhibitor-compatible conformations prohibitively high.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:02.707361+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "V108I",
+  "condition": "full",
+  "delta_delta_g": -0.009000000000000341,
+  "structural_context": {
+    "position": 108,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 6.4,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.009000000000000341,
+    "delta_g": -10.351
+  },
+  "explanation": "The V108I substitution introduces a ~27 \u0172 volumetric expansion at the NNRTI pocket rim that creates subtle steric incompatibility with nevirapine's binding geometry. Although the mutation does not directly contact the ligand, its position at 6.4 \u00c5 minimum distance places it within the conformational influence zone of the binding pocket; the added methyl group from isoleucine likely restricts the conformational flexibility of pocket-lining residues or induces minor backbone adjustments that collectively destabilize nevirapine's optimal binding pose. The negligible energetic cost (-0.01 kcal/mol) suggests this is a low-level resistance mechanism\u2014a marginal geometric perturbation rather than a dramatic loss of key interactions\u2014which is consistent with V108I being classified as a secondary or accessory resistance mutation rather than a primary driver of NVP resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:22.691969+00:00"
+}

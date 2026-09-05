@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "I84V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.23399999999999999,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.23399999999999999,
+    "delta_g": -9.831
+  },
+  "explanation": "The I84V substitution reduces a branched, larger hydrophobic residue to a smaller one within the S1/S1' subpocket where indinavir makes direct contact, creating a ~27 \u00c5\u00b3 cavity that destabilizes van der Waals packing interactions critical for binding affinity. Although the mutation maintains hydrophobicity (minimal charge or polarity change), the loss of the isoleucyl side chain's additional methyl branch eliminates close-range van der Waals contacts at the 3.3 \u00c5 interface, weakening the complementarity between the protease surface and indinavir's ligand geometry. This structural loosening of the inhibitor's binding pocket represents a classic mechanism of protease resistance where subtle volume reductions progressively erode non-polar binding interactions without triggering obvious compensatory interactions or steric clashes.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:23.027256+00:00"
+}

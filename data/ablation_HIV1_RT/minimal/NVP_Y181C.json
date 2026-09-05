@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181C",
+  "condition": "minimal",
+  "delta_delta_g": 1.346,
+  "structural_context": null,
+  "explanation": "Tyrosine 181 makes critical van der Waals contacts with nevirapine's aromatic ring system within the NNRTI-binding pocket; the Y181C mutation replaces a bulky aromatic residue with a smaller thiol-containing cysteine, eliminating favorable \u03c0-\u03c0 stacking interactions and reducing the surface complementarity that stabilizes the inhibitor. Additionally, the loss of the hydroxyl group removes a hydrogen-bonding interaction (either direct to NVP or via water-mediated stabilization), further destabilizing the inhibitor-protein complex. The dramatic reduction in contact surface area at this critical position within the pocket causes a substantial decrease in binding affinity without requiring compensatory conformational changes.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:08.847564+00:00"
+}

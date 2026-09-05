@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "Y188L",
+  "condition": "minimal",
+  "delta_delta_g": 0.36599999999999966,
+  "structural_context": null,
+  "explanation": "The Y188L mutation replaces a bulky aromatic residue with a smaller, nonpolar leucine, creating a cavity within the NNRTI-binding pocket that destabilizes the network of van der Waals contacts and \u03c0-stacking interactions that efavirenz normally establishes with the tyrosine ring. This loss of aromatic coordination reduces the binding free energy of the inhibitor without compromising reverse transcriptase catalytic activity, as leucine at this position is tolerated for normal enzyme function. The smaller leucine side chain also allows the surrounding pocket architecture to shift slightly, potentially altering the precise geometric orientation required for optimal efavirenz positioning and hydrogen bond geometry with other pocket residues.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:22.187733+00:00"
+}

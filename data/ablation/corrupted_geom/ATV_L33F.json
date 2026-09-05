@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "L33F",
+  "condition": "corrupted",
+  "delta_delta_g": -0.1769999999999996,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 15.3,
+    "min_distance_to_ligand_angstrom": 7.3,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.1769999999999996,
+    "delta_g": -9.774
+  },
+  "explanation": "The L33F substitution introduces a bulky aromatic ring that expands the local binding pocket volume by ~23 \u0172, creating a hydrophobic mismatch with atazanavir's ligand geometry at the C-terminal dimer interface where the minimum ligand distance is 7.3 \u00c5. Although the mutation does not directly contact the inhibitor, the increased steric footprint at this secondary binding region likely induces conformational strain or reduces optimal van der Waals packing interactions that stabilize atazanavir's binding pose within the protease dimer. The loss of hydrophobicity (-1.0 kcal/mol equivalent) further destabilizes favorable hydrophobic contacts that normally contribute to binding affinity in this peripheral subpocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:15.051558+00:00"
+}

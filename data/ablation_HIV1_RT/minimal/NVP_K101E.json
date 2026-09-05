@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "K101E",
+  "condition": "minimal",
+  "delta_delta_g": 0.018000000000000682,
+  "structural_context": null,
+  "explanation": "The K101E mutation replaces a positively charged lysine with a negatively charged glutamate, eliminating a favorable electrostatic interaction or hydrogen bond that nevirapine establishes with the backbone or surrounding residues near the allosteric NNRTI-binding pocket. This charge reversal introduces electrostatic repulsion that destabilizes nevirapine positioning, while the slightly extended side chain of glutamate may also sterically clash with the inhibitor or reorient critical binding contacts. The loss of the positive charge fundamentally alters the electrostatic landscape of the binding pocket, reducing the complementarity between drug and protein and thereby diminishing binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:43.024421+00:00"
+}

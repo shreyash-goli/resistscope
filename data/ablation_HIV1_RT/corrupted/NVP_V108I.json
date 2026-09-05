@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "V108I",
+  "condition": "corrupted",
+  "delta_delta_g": 0.28200000000000003,
+  "structural_context": {
+    "position": 108,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 9.4,
+    "min_distance_to_ligand_angstrom": 7.6,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.28200000000000003,
+    "delta_g": -8.669
+  },
+  "explanation": "The V108I substitution introduces a branched methyl group on the isoleucine sidechain that creates a steric clash with nevirapine within the confined NNRTI-binding pocket rim, despite not directly contacting the ligand. This ~27 \u0172 volume expansion at a position 7.6 \u00c5 from the nearest ligand atom destabilizes the binding pocket geometry by restricting the conformational flexibility nevirapine requires for optimal positioning, effectively reducing van der Waals complementarity. The mutation thus compromises binding through indirect geometric constraint rather than direct contact disruption, explaining the modest but measurable loss in affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:46.696527+00:00"
+}

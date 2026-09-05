@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "I47V",
+  "condition": "minimal",
+  "delta_delta_g": 0.08500000000000085,
+  "structural_context": null,
+  "explanation": "The I47V mutation replaces isoleucine with the smaller valine residue, creating a cavity within the S1' binding pocket that eliminates critical van der Waals contacts between the branched side chain and lopinavir's inhibitor scaffold. This loss of hydrophobic complementarity destabilizes the bound conformation of the drug without substantially altering the local geometry, since both residues are nonpolar and the mutation site is positioned proximal to lopinavir's core binding region. The reduced binding affinity results from entropic penalty upon accommodation rather than steric clash, as the smaller valine allows solvent ingress into what was previously an optimized binding interface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:37.451952+00:00"
+}

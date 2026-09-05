@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "L100I",
+  "condition": "corrupted",
+  "delta_delta_g": 0.015000000000000568,
+  "structural_context": {
+    "position": 100,
+    "wt_aa": "L",
+    "mut_aa": "I",
+    "wt_residue": "Leu",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.7,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": 0.015000000000000568,
+    "delta_g": -8.936
+  },
+  "explanation": "The L100I mutation introduces a more branched, compact side chain that subtly repositions the hydrophobic pocket geometry surrounding the NNRTI-binding site, despite maintaining equivalent van der Waals volume. Although L100I does not directly contact nevirapine (5.6 \u00c5 separation), this residue serves a critical role in defining the local conformational landscape of the fingers-palm subdomain; the isoleucine's \u03b2-branched structure creates unfavorable steric constraints that destabilize the precise protein backbone and side-chain orientations required for optimal ligand accommodation. The cumulative effect of this conformational perturbation slightly reduces binding affinity through entropic and enthalpic penalties during the induced-fit recognition process, rather than through direct molecular contact disruption.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:14.302584+00:00"
+}

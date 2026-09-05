@@ -1,0 +1,10 @@
+{
+  "drug": "IDV",
+  "mutation": "M46I",
+  "condition": "minimal",
+  "delta_delta_g": -0.24200000000000088,
+  "structural_context": null,
+  "explanation": "The M46I substitution replaces a larger, flexible methionine with a smaller isoleucine, creating a structural cavity in the S1 subpocket where indinavir's P1 ligand group normally makes critical van der Waals contacts; this loss of optimal packing destabilizes the inhibitor's binding geometry and reduces binding affinity. Additionally, the reduced side-chain volume at position 46 likely compromises hydrophobic interactions that stabilize the inhibitor's conformation against the protease backbone, particularly in the flap region where Met46 plays a key role in maintaining the active site architecture necessary for high-affinity ligand recognition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:26.437409+00:00"
+}

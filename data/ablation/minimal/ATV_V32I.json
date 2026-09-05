@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "condition": "minimal",
+  "delta_delta_g": -0.136000000000001,
+  "structural_context": null,
+  "explanation": "The V32I substitution introduces a branched methyl group at the \u03b3-carbon of isoleucine, creating a modest steric clash with atazanavir's ligand scaffold in the S2 subpocket where valine-32 normally makes favorable van der Waals contacts. This additional branching disrupts the precise geometric complementarity between the inhibitor and the binding pocket, destabilizing the ligand orientation necessary for optimal hydrogen bonding to the protease backbone. The cumulative loss of binding affinity from this localized steric incompatibility reduces the inhibitor's efficacy against the mutant protease.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:07.358209+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "condition": "corrupted",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.09199999999999875,
+    "delta_g": -9.505
+  },
+  "explanation": "The L76V mutation reduces a branched leucine to the smaller valine in the flap region, creating a cavity approximately 27 \u0172 in volume that is 7 \u00c5 from darunavir. Though the mutation doesn't directly contact the inhibitor, this loss of hydrophobic bulk disrupts the precise packing architecture of the flap domain that normally stabilizes the inhibitor-bound conformation. The resulting conformational flexibility of the flap allows darunavir to sample suboptimal binding geometries, reducing binding enthalpy despite maintaining similar electrostatic properties.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:31:05.944232+00:00"
+}

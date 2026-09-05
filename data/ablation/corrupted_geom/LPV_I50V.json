@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "I50V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.136000000000001,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.136000000000001,
+    "delta_g": -9.733
+  },
+  "explanation": "The I50V substitution reduces a bulky hydrophobic side chain to a smaller one within the S2/S2' subpocket, creating a cavity (27 \u00c5\u00b3 loss) that lopinavir's nonpolar scaffold cannot fully occupy despite direct contact at 4.1 \u00c5. This loss of van der Waals interactions between the protease's hydrophobic pocket and lopinavir's ligand surface weakens binding affinity. Although the mutation occurs 10.7 \u00c5 from the ligand centroid and introduces minimal electrostatic perturbation, the localized reduction in shape complementarity and favorable hydrophobic contacts is sufficient to destabilize the inhibitor-enzyme complex and confer modest resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:50.514069+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181I",
+  "condition": "minimal",
+  "delta_delta_g": 0.19399999999999906,
+  "structural_context": null,
+  "explanation": "The Y181I mutation replaces a bulky aromatic residue with a smaller, branched aliphatic side chain, creating a cavity within the NNRTI-binding pocket that reduces van der Waals contacts with efavirenz's aromatic ring system. This loss of favorable hydrophobic interactions and potential \u03c0-stacking contacts between the tyrosine aromatic ring and efavirenz destabilizes inhibitor binding without requiring compensatory conformational changes. Additionally, the removal of the tyrosine hydroxyl group eliminates a hydrogen-bonding interaction or polar contact that normally anchors efavirenz, further weakening the binding affinity and shifting the balance toward drug-resistant NNRTI-bound conformations.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:48.931337+00:00"
+}

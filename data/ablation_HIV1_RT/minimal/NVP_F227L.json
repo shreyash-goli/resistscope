@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "F227L",
+  "condition": "minimal",
+  "delta_delta_g": 0.0730000000000004,
+  "structural_context": null,
+  "explanation": "The phenylalanine-to-leucine substitution at position 227 removes a bulky aromatic ring, creating a conformational cavity within the NNRTI-binding pocket that destabilizes critical van der Waals contacts with nevirapine's aromatic moiety. This loss of \u03c0-stacking interactions and the reduction in hydrophobic surface complementarity directly weakens inhibitor binding affinity. The smaller leucine side chain also permits subtle reorientation of nearby pocket residues, potentially disrupting the precise geometric positioning required for nevirapine's optimal coordination within the allosteric binding site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:24.155580+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "DRV",
+  "mutation": "L33F",
+  "condition": "minimal",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": null,
+  "explanation": "The L33F substitution introduces a bulky aromatic ring in place of the smaller branched leucine side chain, creating a steric clash with darunavir's molecular scaffold within the protease binding pocket. This unfavorable van der Waals interaction destabilizes the inhibitor's binding pose, particularly in the S2 subpocket region where darunavir makes critical contacts. The rigid phenyl ring of phenylalanine cannot accommodate the same binding geometry as leucine, forcing darunavir into a suboptimal conformation that compromises key hydrogen bonding networks and contact surface area essential for high-affinity binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:21.387403+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "I84V",
+  "condition": "minimal",
+  "delta_delta_g": 0.39700000000000024,
+  "structural_context": null,
+  "explanation": "The I84V substitution reduces the hydrophobic surface area within the S2 subpocket by replacing the larger, branched isoleucine side chain with the smaller valine, creating a cavity that weakens van der Waals contacts between atazanavir's P2 ligand moiety and the binding pocket wall. This loss of favorable hydrophobic interactions destabilizes the inhibitor's bound conformation without significantly altering the electrostatic environment, as both residues are nonpolar and uncharged. The reduced binding affinity is attributable to entropic and enthalpic penalties rather than steric clash, making this a classic example of resistance through diminished complementarity in the ligand-binding interface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:29.060231+00:00"
+}

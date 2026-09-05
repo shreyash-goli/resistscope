@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181V",
+  "condition": "minimal",
+  "delta_delta_g": -0.02999999999999936,
+  "structural_context": null,
+  "explanation": "The Y181V mutation replaces a bulky aromatic residue with a smaller hydrophobic valine, eliminating a critical hydrogen bond donor (the tyrosine hydroxyl) that stabilizes efavirenz positioning within the NNRTI-binding pocket. This loss of polar contact weakens direct drug coordination while the reduction in side-chain volume creates a hydrophobic cavity that efavirenz cannot optimally fill, destabilizing the ligand-protein interface through diminished van der Waals contacts. Additionally, the conformational flexibility afforded by the smaller valine allows the binding pocket geometry to shift away from the drug's preferred binding mode, effectively reducing the binding free energy for this specific inhibitor.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:40.598568+00:00"
+}

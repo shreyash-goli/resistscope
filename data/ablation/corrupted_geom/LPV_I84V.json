@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "I84V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.23399999999999999,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.23399999999999999,
+    "delta_g": -9.831
+  },
+  "explanation": "The I84V mutation reduces a branched hydrophobic side chain to a smaller, more linear one within the S1/S1' subpocket where lopinavir makes direct contact, creating a cavity that weakens van der Waals packing interactions critical for binding affinity. Although the substitution maintains hydrophobicity and occurs at a distance where it doesn't create steric clashes, the loss of ~27 \u0172 of buried surface area results in suboptimal van der Waals contacts between the inhibitor and this binding pocket wall. This modest destabilization (0.23 kcal/mol) reflects the accumulated effect of reduced shape complementarity rather than a dramatic conformational rearrangement, making lopinavir binding thermodynamically less favorable.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:26.114931+00:00"
+}

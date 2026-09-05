@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "H221Y",
+  "condition": "full",
+  "delta_delta_g": -0.002000000000000668,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 14.5,
+    "min_distance_to_ligand_angstrom": 11.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": -0.002000000000000668,
+    "delta_g": -11.688
+  },
+  "explanation": "The H221Y mutation does not significantly reduce efavirenz binding, as evidenced by the negligible delta-delta-G value (~0 kcal/mol), indicating this substitution confers minimal to no resistance. Although histidine is replaced by the larger tyrosine (volume increase of 40.4 \u0172), the residue's distance from the ligand (11.9 \u00c5 minimum) places it beyond direct contact with efavirenz, limiting allosteric or steric perturbations to the NNRTI-binding pocket. The loss of histidine's positive charge and modest increase in hydrophobicity occur in the connection subdomain, regions too remote to measurably destabilize efavirenz binding through van der Waals or electrostatic interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:39.165916+00:00"
+}

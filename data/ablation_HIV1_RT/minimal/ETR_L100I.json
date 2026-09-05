@@ -1,0 +1,10 @@
+{
+  "drug": "ETR",
+  "mutation": "L100I",
+  "condition": "minimal",
+  "delta_delta_g": 0.28200000000000003,
+  "structural_context": null,
+  "explanation": "The L100I substitution replaces a larger branched hydrophobic residue (leucine) with the smaller isoleucine, reducing van der Waals contact surface within the NNRTI-binding pocket and weakening hydrophobic interactions that normally stabilize etravirine's aromatic core. Isoleucine's more compact sidechain creates a cavity adjacent to critical etravirine-binding contacts, allowing the inhibitor to shift or rotate within the pocket and escape optimal binding geometry. This conformational flexibility diminishes the binding affinity through entropic destabilization and loss of the precise steric complementarity required for etravirine's potent inhibition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:40.549399+00:00"
+}

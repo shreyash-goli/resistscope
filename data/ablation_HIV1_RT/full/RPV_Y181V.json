@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181V",
+  "condition": "full",
+  "delta_delta_g": 0.6999999999999993,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "V",
+    "wt_residue": "Tyr",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -53.6,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.5,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.6999999999999993,
+    "delta_g": -8.852
+  },
+  "explanation": "The Y181V mutation eliminates a bulky aromatic residue that makes direct van der Waals contacts with rilpivirine at 3.8 \u00c5, replacing it with the smaller valine and creating a ~54 \u0172 cavity within the NNRTI-binding pocket. This loss of intimate contact surface area destabilizes the ligand binding interface, reducing the favorable van der Waals interactions that contribute to RPV's binding affinity. Additionally, the aromatic tyrosine's \u03c0-electron system likely participates in favorable interactions with rilpivirine's aromatic moieties, which the nonpolar but smaller valine cannot adequately compensate for, resulting in the 0.70 kcal/mol loss in binding free energy.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:09.041100+00:00"
+}

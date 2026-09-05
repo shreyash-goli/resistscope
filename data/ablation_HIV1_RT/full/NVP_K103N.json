@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "K103N",
+  "condition": "full",
+  "delta_delta_g": 0.4250000000000007,
+  "structural_context": {
+    "position": 103,
+    "wt_aa": "K",
+    "mut_aa": "N",
+    "wt_residue": "Lys",
+    "mut_residue": "Asn",
+    "volume_change": "decrease",
+    "volume_change_A3": -54.5,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.4250000000000007,
+    "delta_g": -9.917
+  },
+  "explanation": "The K103N mutation eliminates a critical positive charge at the NNRTI pocket rim that normally forms favorable electrostatic interactions with nevirapine's polar groups, and replaces it with a smaller, uncharged asparagine that cannot maintain these long-range stabilizing contacts. Additionally, the substantial loss of side-chain volume (~54.5 \u0172) creates a local cavity near the ligand binding interface, destabilizing the binding geometry and reducing van der Waals contacts that normally contribute to binding affinity. Together, the loss of electrostatic complementarity and disruption of optimal van der Waals packing at this pocket-rim position weakens nevirapine accommodation by approximately 0.43 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:12.618061+00:00"
+}

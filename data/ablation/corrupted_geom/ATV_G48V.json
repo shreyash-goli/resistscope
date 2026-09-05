@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "G48V",
+  "condition": "corrupted",
+  "delta_delta_g": -0.19500000000000028,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.19500000000000028,
+    "delta_g": -9.207
+  },
+  "explanation": "The G48V substitution introduces a bulky valine residue in the flexible flap region that makes direct contact with atazanavir at a close distance (~2.8 \u00c5), creating steric clashes that destabilize the inhibitor's binding pose. The ~80 \u0172 increase in side-chain volume significantly restricts the conformational flexibility of the flap, which is critical for atazanavir accommodation, forcing the inhibitor into a higher-energy binding geometry with suboptimal van der Waals contacts. This steric incompatibility preferentially disfavors atazanavir binding while the protease retains catalytic function, since the flap's inherent mobility allows it to accommodate substrate despite the bulkier valine.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:39.543562+00:00"
+}

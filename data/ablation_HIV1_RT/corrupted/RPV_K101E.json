@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "K101E",
+  "condition": "corrupted",
+  "delta_delta_g": -0.0129999999999999,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "E",
+    "wt_residue": "Lys",
+    "mut_residue": "Glu",
+    "volume_change": "decrease",
+    "volume_change_A3": -30.2,
+    "charge_change": "positive_to_negative",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0129999999999999,
+    "delta_g": -10.355
+  },
+  "explanation": "The K101E mutation likely confers rilpivirine resistance through an indirect allosteric mechanism rather than direct contact loss. The substitution of lysine with glutamate introduces a significant negative charge reversal and reduces local volume in the palm catalytic core, which despite being ~43 \u00c5 from the NNRTI-binding pocket, can propagate conformational perturbations through the interconnected protein architecture that subtly destabilize the precise geometry required for rilpivirine binding. The modest thermodynamic cost (-0.013 kcal/mol) suggests this is a weak allosteric effect\u2014likely involving altered electrostatic environments or van der Waals packing that minutely repositions backbone elements or neighboring side chains within the binding pocket without eliminating RPV contact entirely.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:28.833033+00:00"
+}

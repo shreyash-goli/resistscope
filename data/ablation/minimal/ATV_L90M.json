@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "L90M",
+  "condition": "minimal",
+  "delta_delta_g": -0.5030000000000001,
+  "structural_context": null,
+  "explanation": "The L90M substitution introduces a smaller, polar side chain in place of a bulky hydrophobic leucine at the entrance of the protease active site, disrupting critical van der Waals contacts that anchor atazanavir's inhibitor scaffold within the binding pocket. This reduction in side-chain volume creates a cavity that destabilizes the precise three-dimensional positioning of the drug, weakening hydrophobic interactions that contribute significantly to ATV's binding affinity. Additionally, the sulfhydryl-containing methionine may establish suboptimal interactions or introduce unfavorable solvation effects compared to the nonpolar leucine, further destabilizing the inhibitor-protease complex without requiring compensatory active-site rearrangement.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:46.059551+00:00"
+}

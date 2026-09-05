@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138A",
+  "condition": "full",
+  "delta_delta_g": -0.0039999999999995595,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0039999999999995595,
+    "delta_g": -10.346
+  },
+  "explanation": "The E138A mutation removes a bulky, negatively charged glutamate far from the NNRTI-binding pocket (>43 \u00c5 away), replacing it with a small hydrophobic alanine. While this change occurs in the palm domain rather than directly within the drug-binding site, the loss of the glutamate's negative charge and significant volume reduction (~50 \u0172) likely permits subtle conformational rearrangement or increased local flexibility in the catalytic core that propagates to destabilize the precise geometry required for nevirapine coordination at the distant allosteric pocket. The minimal energetic penalty (\u0394\u0394G \u2248 0) suggests this is a marginal effect, consistent with the mutation's peripheral location\u2014the resistance mechanism is indirect, operating through perturbation of the protein scaffold rather than direct disruption of inhibitor contacts.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:35.890955+00:00"
+}

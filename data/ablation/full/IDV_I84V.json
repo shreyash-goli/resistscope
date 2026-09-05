@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": -0.19100000000000072,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.19100000000000072,
+    "delta_g": -10.448
+  },
+  "explanation": "The I84V mutation reduces indinavir binding through a subtle loss of van der Waals contacts within the S1/S1' subpocket, where isoleucine's larger branched side chain provides optimal packing interactions with the ligand at only 2.4 \u00c5 distance. The replacement with the smaller valine creates a cavity that weakens favorable hydrophobic interactions without introducing compensatory contacts, resulting in a modest but measurable destabilization of the inhibitor complex. This mechanism exemplifies how even conservative hydrophobic substitutions can erode binding affinity when they reduce shape complementarity in confined binding pockets.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:13.436625+00:00"
+}

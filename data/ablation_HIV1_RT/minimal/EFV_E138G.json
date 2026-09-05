@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "E138G",
+  "condition": "minimal",
+  "delta_delta_g": 0.005000000000000782,
+  "structural_context": null,
+  "explanation": "E138G eliminates a negatively charged glutamate residue positioned proximal to the NNRTI-binding pocket, removing a critical electrostatic interaction that stabilizes efavirenz binding through coulombic attraction or through ordered water-mediated contacts. The substitution with the small, uncharged glycine creates a cavity or reduces steric constraints that allow the binding pocket to collapse or shift conformationally, destabilizing the precise geometry required for efavirenz accommodation. This combination of lost electrostatic anchoring and increased conformational flexibility reduces the binding energy sufficiently to confer clinically relevant resistance while maintaining catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:10.522763+00:00"
+}

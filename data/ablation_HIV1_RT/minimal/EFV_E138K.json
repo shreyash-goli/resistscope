@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "E138K",
+  "condition": "minimal",
+  "delta_delta_g": -0.002000000000000668,
+  "structural_context": null,
+  "explanation": "The E138K mutation replaces a negatively charged, bulky glutamate with a positively charged lysine, fundamentally altering the electrostatic landscape at the rim of the NNRTI-binding pocket. This charge inversion disrupts a favorable electrostatic interaction that stabilizes efavirenz positioning and introduces a repulsive electrostatic clash with the drug's polar moieties or disrupts water-mediated hydrogen bonding networks that normally anchor the inhibitor. The increased positive charge and extended side-chain length of lysine at this pocket-proximal position creates steric strain that destabilizes efavirenz's bound conformation without necessarily collapsing the binding pocket, consistent with the selective resistance observed.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:32.699156+00:00"
+}

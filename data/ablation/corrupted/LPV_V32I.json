@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "V32I",
+  "condition": "corrupted",
+  "delta_delta_g": 0.911999999999999,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.911999999999999,
+    "delta_g": -8.685
+  },
+  "explanation": "The V32I substitution introduces a bulkier branched-chain side chain that creates unfavorable steric clash with lopinavir within the constrained S1/S1' subpocket, where the residue makes direct contact at 3.3 \u00c5 from the ligand. Although the mutation maintains hydrophobicity and introduces no charge change, the ~27 \u0172 volume increase forces the isoleucine's additional methyl branch into van der Waals contact distance with the inhibitor, destabilizing the binding pose and reducing complementarity. This local steric incompatibility accounts for the modest but measurable resistance despite the residue's distance from the active site centroid, highlighting that tight subpocket geometry constrains tolerable side-chain expansion.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:36.529229+00:00"
+}

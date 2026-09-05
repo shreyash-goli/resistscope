@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "A98G",
+  "condition": "full",
+  "delta_delta_g": -0.0030000000000001137,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": -0.0030000000000001137,
+    "delta_g": -11.689
+  },
+  "explanation": "The A98G mutation creates a substantial loss of hydrophobic surface area (28.5 \u0172 reduction) at position 98 in the fingers-palm subdomain, which indirectly destabilizes efavirenz binding through compromised van der Waals contacts within the NNRTI-binding pocket environment. Although position 98 does not directly contact the ligand, its proximity to the binding pocket (5.6 \u00c5 minimum distance) means that the conformational flexibility introduced by replacing alanine's methyl side chain with glycine's hydrogen likely permits subtle pocket reorganization that weakens the network of hydrophobic interactions stabilizing efavirenz. The near-neutral predicted energetic effect suggests this is a marginal resistance mechanism, possibly representing a transition state where the pocket can partially accommodate efavirenz despite reduced van der Waals complementarity from the structural scaffold supporting drug positioning.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:43.218753+00:00"
+}

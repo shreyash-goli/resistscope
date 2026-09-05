@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "K101P",
+  "condition": "corrupted",
+  "delta_delta_g": -0.009999999999999787,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "P",
+    "wt_residue": "Lys",
+    "mut_residue": "Pro",
+    "volume_change": "decrease",
+    "volume_change_A3": -55.9,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 2.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.009999999999999787,
+    "delta_g": -10.352
+  },
+  "explanation": "The K101P mutation causes a modest loss of etravirine binding affinity through an indirect allosteric mechanism rather than direct drug contact. Lysine's positive charge and extended side chain at position 101 normally stabilize the NNRTI-binding pocket architecture through long-range electrostatic interactions and favorable van der Waals contacts with pocket-lining residues; proline's cyclic backbone constraint and loss of positive charge disrupt these stabilizing interactions, causing subtle conformational destabilization of the binding pocket despite being ~43 \u00c5 away from the ligand. The modest thermodynamic effect (\u22120.01 kcal/mol) reflects that this position has only a minor allosteric role in etravirine recognition, making K101P a weak resistance mutation that likely requires additional compensatory mutations for clinically relevant resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:40.956306+00:00"
+}

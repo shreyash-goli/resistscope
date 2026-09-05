@@ -1,0 +1,10 @@
+{
+  "drug": "IDV",
+  "mutation": "L90M",
+  "condition": "minimal",
+  "delta_delta_g": -0.3420000000000005,
+  "structural_context": null,
+  "explanation": "The L90M substitution replaces a bulky hydrophobic leucine with the smaller methionine residue, creating a cavity within the S1' subpocket that normally accommodates indinavir's propylamino group through tight van der Waals contacts. This loss of complementary packing weakens the inhibitor's binding interaction in this critical subpocket without introducing steric clashes that would otherwise be compensated by inhibitor repositioning. Additionally, methionine's longer, more flexible side chain may orient away from the binding pocket, further reducing the stabilizing hydrophobic interactions that anchor indinavir in its optimal bound conformation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:49.416868+00:00"
+}

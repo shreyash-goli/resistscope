@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The L76V mutation reduces a large hydrophobic side chain to a smaller one within the protease core scaffold, creating a ~27 \u00c5\u00b3 cavity that destabilizes darunavir binding through loss of favorable van der Waals contacts even though the residue is 4.8 \u00c5 from the nearest ligand atoms. This loss of intimate hydrophobic packing in the rigid core scaffold propagates conformational strain or reduces the enthalpic benefit of ligand-induced fit, weakening overall binding affinity despite the mutation's distance from direct ligand contact.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:51.777631+00:00"
+}

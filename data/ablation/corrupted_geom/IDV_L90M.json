@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "L90M",
+  "condition": "corrupted",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The L90M mutation at the flap hinge region reduces indinavir affinity through a subtle but functionally important loss of hydrophobic complementarity rather than direct contact disruption. Leucine's branched, more rigid hydrophobic side chain provides optimal van der Waals packing against the ligand-binding pocket environment at 9.1 \u00c5 proximity, while methionine's longer, more flexible thioether chain creates a less cohesive hydrophobic interface and introduces conformational flexibility that destabilizes the precise geometry required for optimal indinavir positioning. Although the volume change is minimal (\u22123.8 \u00c5\u00b3), the decrease in hydrophobicity (\u22121.9) combined with the mutation's location in the dynamic flap hinge region propagates conformational effects that subtly weaken inhibitor engagement without causing overt steric clash, thereby conferring resistance through entropic and enthalpic destabilization of the bound state.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:40.001060+00:00"
+}

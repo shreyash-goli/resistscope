@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "L100I",
+  "condition": "full",
+  "delta_delta_g": 0.28200000000000003,
+  "structural_context": {
+    "position": 100,
+    "wt_aa": "L",
+    "mut_aa": "I",
+    "wt_residue": "Leu",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.7,
+    "distance_from_ligand_centroid_angstrom": 9.4,
+    "min_distance_to_ligand_angstrom": 7.6,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.28200000000000003,
+    "delta_g": -8.669
+  },
+  "explanation": "The L100I substitution increases hydrophobicity while maintaining nearly identical side-chain volume, which disrupts the precise van der Waals contact geometry between the pocket rim and etravirine at ~7.6 \u00c5 distance. Although isoleucine's branched \u03b2-carbon configuration creates a more constrained conformational space than leucine's flexible \u03b3-carbon, this geometric restriction at the pocket perimeter forces subtle repositioning of the inhibitor or local protein backbone to accommodate the altered hydrophobic landscape, destabilizing the bound state by ~0.28 kcal/mol. This mechanism exemplifies how rim mutations attenuate NNRTI binding through cumulative disruption of the hydrophobic complementarity rather than through direct steric clash or loss of critical interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:58.456308+00:00"
+}

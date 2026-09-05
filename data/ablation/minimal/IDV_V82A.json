@@ -1,0 +1,10 @@
+{
+  "drug": "IDV",
+  "mutation": "V82A",
+  "condition": "minimal",
+  "delta_delta_g": -0.06799999999999962,
+  "structural_context": null,
+  "explanation": "V82A reduces the hydrophobic packing interactions between valine's branched isopropyl side chain and indinavir's nonpolar surface within the S1/S1' binding pocket. The substitution to smaller alanine creates a cavity that destabilizes van der Waals contacts critical for inhibitor binding affinity, as indinavir relies on tight hydrophobic complementarity in this region to achieve effective inhibition. This loss of optimal packing is particularly consequential for indinavir compared to other protease inhibitors, as its molecular geometry positions key nonpolar features directly against the V82 position.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:03.391188+00:00"
+}

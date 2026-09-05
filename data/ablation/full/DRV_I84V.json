@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": -0.36299999999999955,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.36299999999999955,
+    "delta_g": -9.375
+  },
+  "explanation": "The I84V mutation reduces darunavir binding affinity by eliminating favorable van der Waals contacts within the S1/S1' subpocket; the loss of ~27 \u0172 of hydrophobic surface area from the smaller valine side chain creates a cavity that weakens the close packing interactions (min distance 2.4 \u00c5) critical for stabilizing the inhibitor in this binding pocket. Although the mutation retains overall hydrophobicity and introduces no unfavorable electrostatic changes, the reduced steric complementarity between the shrunken valine and darunavir's binding surface results in diminished binding energy sufficient to confer resistance despite the modest energetic penalty of -0.36 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:10.757685+00:00"
+}

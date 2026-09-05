@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "D30N",
+  "condition": "corrupted",
+  "delta_delta_g": 0.39700000000000024,
+  "structural_context": {
+    "position": 30,
+    "wt_aa": "D",
+    "mut_aa": "N",
+    "wt_residue": "Asp",
+    "mut_residue": "Asn",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.0,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.39700000000000024,
+    "delta_g": -9.2
+  },
+  "explanation": "The D30N mutation eliminates a critical negative charge at the S1/S1' subpocket that normally engages in electrostatic attraction with nelfinavir's positively charged moieties, and the neutral asparagine cannot compensate for this lost ionic interaction despite maintaining similar backbone geometry. Although the substitution introduces minimal steric perturbation (only 3 \u00c5\u00b3 volume increase), the loss of the carboxylate's hydrogen-bonding capacity and charge complementarity at a position that directly contacts the ligand (2.4 \u00c5 separation) destabilizes the inhibitor binding mode. This charge-to-polar swap specifically undermines nelfinavir's binding architecture, which likely relies on Asp30's electrostatic contribution in the protease active site cleft.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:49.419574+00:00"
+}

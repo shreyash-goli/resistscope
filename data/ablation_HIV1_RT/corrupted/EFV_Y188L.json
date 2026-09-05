@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y188L",
+  "condition": "corrupted",
+  "delta_delta_g": -0.495000000000001,
+  "structural_context": {
+    "position": 188,
+    "wt_aa": "Y",
+    "mut_aa": "L",
+    "wt_residue": "Tyr",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.1,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": -0.495000000000001,
+    "delta_g": -10.047
+  },
+  "explanation": "The Y188L substitution reduces efavirenz binding primarily through loss of the tyrosine aromatic ring's \u03c0-\u03c0 stacking and hydrogen bonding interactions with the inhibitor, which are replaced by leucine's smaller, purely hydrophobic side chain. Although leucine is more hydrophobic overall, the ~27 \u0172 volume decrease creates a binding pocket mismatch that destabilizes efavirenz positioning at this core pocket location, especially given the direct contact at 3.8 \u00c5 distance where the aromatic hydroxyl likely makes critical polar interactions. This combination of lost hydrogen bonding capacity and reduced shape complementarity explains the modest but measurable resistance without requiring a compensatory conformational change.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:59.406781+00:00"
+}

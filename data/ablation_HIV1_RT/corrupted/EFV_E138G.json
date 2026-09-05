@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "E138G",
+  "condition": "corrupted",
+  "delta_delta_g": 0.1869999999999994,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "G",
+    "wt_residue": "Glu",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -78.3,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 3.1,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.1869999999999994,
+    "delta_g": -9.365
+  },
+  "explanation": "The E138G mutation eliminates a negatively charged, bulky glutamate side chain positioned within 3.8 \u00c5 of efavirenz, removing a critical electrostatic interaction and van der Waals contact surface that normally stabilizes the inhibitor binding pose. The resulting glycine\u2014with minimal side chain volume and loss of the carboxylate group\u2014creates a less favorable electrostatic environment in the NNRTI pocket core and reduces favorable contacts, destabilizing the drug-bound conformation. This combination of lost electrostatic complementarity and reduced van der Waals interactions in direct contact with the ligand accounts for the modest but measurable reduction in binding affinity (~0.19 kcal/mol penalty).",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:56.207127+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "NFV",
+  "mutation": "D30N",
+  "condition": "minimal",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": null,
+  "explanation": "The D30N mutation replaces a negatively charged aspartate with a polar but uncharged asparagine, eliminating a critical electrostatic interaction with nelfinavir's positively charged groups (likely the piperazine ring or nearby cationic moieties). This charge loss directly destabilizes the inhibitor's binding geometry in the active site pocket where D30 normally orients the drug through favorable ionic attraction. Additionally, the smaller asparagine side chain creates a void in the binding pocket where nelfinavir previously made van der Waals contacts, reducing overall binding affinity through loss of complementary surface interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:57.540664+00:00"
+}

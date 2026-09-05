@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "H221Y",
+  "condition": "full",
+  "delta_delta_g": 0.0010000000000012221,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 14.5,
+    "min_distance_to_ligand_angstrom": 11.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": 0.0010000000000012221,
+    "delta_g": -10.341
+  },
+  "explanation": "The H221Y substitution at position 221 in the connection subdomain likely causes resistance through an indirect allosteric mechanism rather than direct ligand contact. The loss of histidine's positive charge coupled with a substantial increase in side-chain volume (40.4 \u00c5\u00b3) creates a conformational perturbation that propagates ~12 \u00c5 through the protein scaffold to destabilize the NNRTI-binding pocket geometry, reducing nevirapine's binding affinity without direct steric clash. The increased hydrophobicity and bulkier aromatic ring of tyrosine may also alter the electrostatic environment and hydrogen-bonding network that normally stabilizes the inhibitor's binding pose, collectively accounting for the modest but meaningful resistance despite the neutral predicted energetic effect.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:36.126106+00:00"
+}

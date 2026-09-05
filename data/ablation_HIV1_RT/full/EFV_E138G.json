@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "E138G",
+  "condition": "full",
+  "delta_delta_g": 0.005000000000000782,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "G",
+    "wt_residue": "Glu",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -78.3,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 3.1,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.005000000000000782,
+    "delta_g": -11.681
+  },
+  "explanation": "The E138G mutation eliminates a negatively charged glutamate residue in the palm domain, removing electrostatic interactions that stabilize the local protein environment critical for maintaining the precise geometry of the NNRTI-binding pocket despite the mutation's distance from efavirenz itself. Loss of the larger glutamate side chain (78 \u00c5\u00b3 reduction) likely permits subtle conformational relaxation or increased backbone flexibility in this catalytic region, which propagates to destabilize the rigid architecture of the allosteric binding site without directly contacting the inhibitor. The modest energetic penalty (~0.005 kcal/mol) reflects an indirect allosteric mechanism where loss of a key structural anchor rather than direct steric or electrostatic clash with efavirenz permits reduced inhibitor occupancy.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:18:32.457335+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "V32I",
+  "condition": "minimal",
+  "delta_delta_g": 0.6620000000000008,
+  "structural_context": null,
+  "explanation": "The V32I mutation introduces a bulkier, branched side chain that creates a steric clash with lopinavir's molecular scaffold within the S2 subpocket, where valine normally makes favorable van der Waals contacts with the inhibitor's nonpolar regions. The additional methyl group on isoleucine distorts the local binding pocket geometry, forcing lopinavir into a suboptimal binding pose that reduces complementarity and weakens overall inhibitor affinity without significantly altering protease catalytic function. This resistance mechanism exploits the tight spatial constraints of the binding pocket\u2014a region where even modest increases in side chain volume can substantially disrupt inhibitor accommodation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:15.845908+00:00"
+}

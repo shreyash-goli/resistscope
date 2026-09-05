@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "A98G",
+  "condition": "minimal",
+  "delta_delta_g": -0.011999999999998678,
+  "structural_context": null,
+  "explanation": "The A98G mutation replaces a larger, branched aliphatic residue (alanine) with smaller glycine, creating a cavity within the NNRTI-binding pocket that nevirapine can no longer optimally occupy; this loss of van der Waals contacts destabilizes ligand binding through reduced hydrophobic complementarity. Glycine's lack of a side chain also removes steric constraints that normally pre-organize the binding pocket geometry, allowing the pocket to collapse or shift away from the conformation required for productive nevirapine interactions. The resulting mismatch between inhibitor volume and pocket shape reduces binding affinity without directly affecting drug-protein hydrogen bonding networks, thus conferring resistance while maintaining catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:24.893240+00:00"
+}

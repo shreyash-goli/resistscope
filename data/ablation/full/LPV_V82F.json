@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.34299999999999997,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.34299999999999997,
+    "delta_g": -10.442
+  },
+  "explanation": "The valine-to-phenylalanine substitution at position 82 introduces a bulky aromatic ring that creates steric interference with lopinavir's accommodation in the S1/S1' subpocket, where the mutation makes direct contact with the inhibitor at only 3.3 \u00c5 distance. Although the additional aromatic surface slightly reduces local hydrophobicity, the ~50 \u0172 volume increase primarily causes unfavorable van der Waals clashes that distort the inhibitor's binding geometry or force it into a suboptimal conformational state. This geometric disruption weakens lopinavir binding without requiring charge or hydrogen-bonding perturbations, representing a classical steric resistance mechanism where protease structural integrity is maintained while inhibitor accommodation is compromised.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:01.461955+00:00"
+}

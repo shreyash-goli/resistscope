@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": -0.11299999999999955,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.11299999999999955,
+    "delta_g": -9.125
+  },
+  "explanation": "The V32I substitution introduces a bulkier branched side chain (isoleucine) in the S2/S2' subpocket that makes direct van der Waals contact with darunavir at 4.1 \u00c5 distance. This ~27 \u00c5\u00b3 volume increase creates subtle steric strain against the inhibitor's binding surface, reducing favorable hydrophobic packing interactions without completely displacing the ligand, thereby destabilizing the complex by ~0.11 kcal/mol. The minimal energetic penalty reflects that isoleucine, while larger, remains hydrophobic and chemically similar to valine, allowing partial compensatory interactions that make this a low-cost resistance mechanism.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:56.097611+00:00"
+}

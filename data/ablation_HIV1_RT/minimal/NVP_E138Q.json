@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "E138Q",
+  "condition": "minimal",
+  "delta_delta_g": -0.0129999999999999,
+  "structural_context": null,
+  "explanation": "E138Q replaces a negatively charged glutamate with a polar but uncharged glutamine, eliminating an unfavorable electrostatic interaction that normally destabilizes nevirapine binding in the wild-type enzyme. This charge removal allows the NNRTI-binding pocket to adopt a conformation with reduced electrostatic repulsion, potentially enabling compensatory repositioning of pocket residues that collectively weakens drug contact through cumulative loss of van der Waals interactions and hydrogen bonding networks that depend on the original electrostatic landscape. The mutation essentially converts a liability (the negative charge that antagonizes NNRTI binding) into a neutral residue, permitting alternate binding modes or pocket geometries that are inaccessible or unfavorable for nevirapine engagement.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:35.498764+00:00"
+}

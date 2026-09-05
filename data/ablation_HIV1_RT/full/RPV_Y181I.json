@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181I",
+  "condition": "full",
+  "delta_delta_g": 0.1869999999999994,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "I",
+    "wt_residue": "Tyr",
+    "mut_residue": "Ile",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.1869999999999994,
+    "delta_g": -9.365
+  },
+  "explanation": "The Y181I mutation reduces rilpivirine binding by eliminating the tyrosine hydroxyl group that makes favorable hydrogen bond or polar interactions with the ligand, while the smaller isoleucine side chain creates a hydrophobic cavity deficit within the NNRTI pocket core. Although isoleucine is more hydrophobic than tyrosine, the loss of ~27 \u0172 in buried surface area cannot be compensated by increased van der Waals packing, leaving a suboptimal interaction network at the 3.8 \u00c5 contact interface. This combination of lost polar contacts and reduced van der Waals fill destabilizes the RPV-bound state, accounting for the modest but significant resistance phenotype.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:17.315223+00:00"
+}

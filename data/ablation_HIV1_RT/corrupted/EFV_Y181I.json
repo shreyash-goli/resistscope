@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181I",
+  "condition": "corrupted",
+  "delta_delta_g": -0.6399999999999988,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "I",
+    "wt_residue": "Tyr",
+    "mut_residue": "Ile",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.8,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.6399999999999988,
+    "delta_g": -9.591
+  },
+  "explanation": "Y181I removes a bulky aromatic ring at the NNRTI pocket rim, creating a ~27 \u0172 cavity that destabilizes efavirenz positioning through loss of critical van der Waals contacts at the 2.7 \u00c5 interface despite increased local hydrophobicity. The tyrosine's hydroxyl group likely participates in a hydrogen bond or favorable polar interaction with efavirenz that is eliminated by substitution with the smaller, purely hydrophobic isoleucine, collectively weakening ligand affinity by ~0.64 kcal/mol. This resistance mechanism represents a \"pocket contraction\" strategy where the mutation compromises the geometric fit and electrostatic complementarity of the inhibitor rather than direct steric clash.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:24:41.250961+00:00"
+}

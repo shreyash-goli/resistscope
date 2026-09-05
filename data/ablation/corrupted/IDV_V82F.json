@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "V82F",
+  "condition": "corrupted",
+  "delta_delta_g": -0.19100000000000072,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.19100000000000072,
+    "delta_g": -10.448
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain that creates steric interference with indinavir's binding geometry within the S1/S1' subpocket, despite maintaining hydrophobic character. Although the aromatic ring of phenylalanine can form favorable \u03c0-interactions with indinavir, the substantial increase in side-chain volume (~50 \u00c5\u00b3) forces unfavorable repositioning or compression of the inhibitor at its closest contact point (2.4 \u00c5), disrupting optimal van der Waals packing that stabilizes the wild-type complex. The modest energetic cost reflects a balance between lost favorable contacts from the bulky substitution and partial compensation through new aromatic interactions, resulting in net destabilization of the inhibitor complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:35.137841+00:00"
+}

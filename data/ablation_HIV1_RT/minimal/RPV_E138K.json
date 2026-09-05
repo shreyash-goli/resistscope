@@ -1,0 +1,10 @@
+{
+  "drug": "RPV",
+  "mutation": "E138K",
+  "condition": "minimal",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": null,
+  "explanation": "The E138K mutation replaces a negatively charged, flexible carboxylate side chain with a positively charged lysine, fundamentally altering the electrostatic environment of the NNRTI-binding pocket. This charge inversion likely disrupts critical hydrogen bonding or salt bridge interactions that rilpivirine depends on for optimal positioning, while the larger, more rigid lysine side chain may create steric interference with the inhibitor's aromatic ring systems or other contact points. Since E138 sits at the pocket's entrance, the substitution effectively remodels the binding surface to disfavor rilpivirine's accommodation without necessarily occluding the entire binding site, explaining why this single-residue change can substantially reduce affinity for this specific NNRTI.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:27.273250+00:00"
+}

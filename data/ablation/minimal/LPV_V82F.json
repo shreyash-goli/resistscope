@@ -1,0 +1,10 @@
+{
+  "drug": "LPV",
+  "mutation": "V82F",
+  "condition": "minimal",
+  "delta_delta_g": -0.34299999999999997,
+  "structural_context": null,
+  "explanation": "The V82F mutation introduces a bulky aromatic ring at a position located in the S1'/S2' binding pocket that directly contacts lopinavir's inhibitor scaffold. This larger phenylalanine side chain creates a steric clash with lopinavir's molecular geometry, forcing the inhibitor into a suboptimal binding conformation that reduces favorable van der Waals contacts across the binding interface. Additionally, the aromatic character of phenylalanine may create unfavorable electrostatic or \u03c0-interactions with polar regions of lopinavir that were previously accommodated by valine's nonpolar aliphatic side chain, collectively destabilizing the inhibitor's binding pose.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:23.192716+00:00"
+}

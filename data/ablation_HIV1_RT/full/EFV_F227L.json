@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "F227L",
+  "condition": "full",
+  "delta_delta_g": 0.08300000000000018,
+  "structural_context": {
+    "position": 227,
+    "wt_aa": "F",
+    "mut_aa": "L",
+    "wt_residue": "Phe",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.0,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 6.5,
+    "contacts_ligand_directly": false,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.08300000000000018,
+    "delta_g": -11.603
+  },
+  "explanation": "The F227L mutation replaces a bulky aromatic phenylalanine with a smaller, linear leucine within the NNRTI-binding pocket wall, creating a cavity that destabilizes efavirenz positioning through loss of van der Waals contacts rather than direct steric clashes. Though F227 does not contact efavirenz directly, the 23 \u0172 volume loss at this pocket-lining position likely disrupts the hydrophobic scaffold that maintains the precise geometry of the binding pocket, allowing efavirenz to adopt a suboptimal conformational ensemble with weaker overall affinity. This indirect mechanism\u2014where pocket collapse diminishes the favorable hydrophobic environment\u2014explains the modest but measurable resistance despite the mutation being 6.5 \u00c5 from the ligand centroid.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:51.104730+00:00"
+}

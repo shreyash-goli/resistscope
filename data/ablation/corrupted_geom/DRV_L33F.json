@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "L33F",
+  "condition": "corrupted",
+  "delta_delta_g": -0.1769999999999996,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 15.3,
+    "min_distance_to_ligand_angstrom": 7.3,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.1769999999999996,
+    "delta_g": -9.774
+  },
+  "explanation": "The L33F mutation introduces a bulky aromatic ring at position 33 in the C-terminal dimer region, which despite being 7.3 \u00c5 from the ligand, creates unfavorable steric perturbations in the local protein environment that indirectly destabilize darunavir's binding pose. The 23.2 \u0172 volume increase and loss of hydrophobicity (shift toward a more polar aromatic) likely disrupt optimal van der Waals packing within the protease fold, either through clash with neighboring protein residues or by constraining the conformational flexibility required for darunavir accommodation. This allosteric effect on binding geometry, though modest in energetic magnitude, reduces the complementarity between the inhibitor and its binding site without directly blocking ligand contacts.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:30:18.173430+00:00"
+}

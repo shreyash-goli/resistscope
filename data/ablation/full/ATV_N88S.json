@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "N88S",
+  "condition": "full",
+  "delta_delta_g": -0.1769999999999996,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 15.3,
+    "min_distance_to_ligand_angstrom": 7.3,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.1769999999999996,
+    "delta_g": -9.774
+  },
+  "explanation": "The N88S mutation reduces atazanavir binding through a subtle allosteric mechanism rather than direct contact: asparagine's larger side chain and polar amide group contribute to stabilizing the local geometry of the C-terminal dimer region at ~7 \u00c5 from the ligand, whereas serine's smaller hydroxyl group cannot maintain equivalent conformational support, likely allowing a slight destabilization or repositioning of the protease dimer interface that propagates to weaken inhibitor contacts across the active site. The loss of ~25 \u00c5\u00b3 in buried volume, despite being indirect and charge-neutral, reduces favorable van der Waals packing interactions that normally stabilize the protease scaffold in its optimal drug-binding conformation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:22:42.915026+00:00"
+}

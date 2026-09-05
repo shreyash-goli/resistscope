@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "A98G",
+  "condition": "corrupted",
+  "delta_delta_g": 0.21000000000000085,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.21000000000000085,
+    "delta_g": -10.132
+  },
+  "explanation": "The A98G mutation reduces a hydrophobic methyl side chain to a single hydrogen atom, eliminating approximately 28.5 \u0172 of van der Waals contact surface that stabilizes efavirenz binding within the NNRTI pocket core. This loss of hydrophobic packing interactions at the ligand interface (minimum distance 3.8 \u00c5) destabilizes the inhibitor without introducing compensatory electrostatic or polar interactions, resulting in a modest but measurable weakening of binding affinity. The increased conformational flexibility of glycine at this position may also allow the binding pocket to relax slightly, further disrupting the optimal geometry for efavirenz accommodation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:04.622476+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "drug": "EFV",
+  "mutation": "H221Y",
+  "condition": "minimal",
+  "delta_delta_g": -0.002000000000000668,
+  "structural_context": null,
+  "explanation": "The H221Y substitution replaces a small, positively charged imidazole ring with a larger aromatic tyrosine, introducing a bulky hydroxyl group that projects into the NNRTI-binding pocket and creates steric incompatibility with efavirenz's binding geometry. This substitution likely disrupts a critical hydrogen-bonding network\u2014the histidine imidazole can act as both donor and acceptor, whereas tyrosine's hydroxyl is a weaker hydrogen-bond partner in this context\u2014eliminating favorable electrostatic interactions that stabilize efavirenz positioning. The increased van der Waals footprint of tyrosine, combined with loss of the histidine's adaptable charge state, effectively narrows the pocket's accommodation of the inhibitor without significantly altering the protein fold needed for catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:13.235252+00:00"
+}

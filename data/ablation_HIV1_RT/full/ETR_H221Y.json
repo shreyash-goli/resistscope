@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "H221Y",
+  "condition": "full",
+  "delta_delta_g": 0.04300000000000104,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 14.5,
+    "min_distance_to_ligand_angstrom": 11.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": 0.04300000000000104,
+    "delta_g": -8.908
+  },
+  "explanation": "The H221Y substitution increases local hydrophobicity and steric bulk in the connection subdomain without directly contacting etravirine, likely destabilizing the NNRTI-binding pocket through allosteric effects. The loss of histidine's positive charge (replaced by neutral tyrosine) eliminates a potential electrostatic interaction that may stabilize the ligand-binding site architecture, while the 40 \u0172 volume expansion creates a more constrained local environment that subtly distorts the geometry of etravirine's binding pocket. Although the mutation is positioned ~12 \u00c5 away, this conformational reorganization reduces optimal van der Waals complementarity between etravirine and its binding site, manifesting as modest but measurable binding affinity loss.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:42.219476+00:00"
+}

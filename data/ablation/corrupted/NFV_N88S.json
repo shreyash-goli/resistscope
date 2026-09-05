@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "N88S",
+  "condition": "corrupted",
+  "delta_delta_g": 0.2599999999999998,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.2599999999999998,
+    "delta_g": -11.27
+  },
+  "explanation": "The N88S mutation reduces a polar, hydrogen-bonding asparagine to a smaller serine at the S1/S1' subpocket interface, eliminating a potential hydrogen bond donor while decreasing local cavity volume by ~25 \u0172. Although the direct ligand contact at 3.3 \u00c5 is maintained, the loss of asparagine's amide group removes a stabilizing polar interaction with nelfinavir's backbone or inhibitor functional groups that the more compact serine cannot fully replace. The modest increase in hydrophobicity (2.7 units) and reduced side-chain volume create an unfavorable binding environment in this constrained subpocket, destabilizing the inhibitor-protease complex without causing steric clash but rather through loss of favorable van der Waals and hydrogen-bonding interactions that nelfinavir depends on for binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:23.803618+00:00"
+}

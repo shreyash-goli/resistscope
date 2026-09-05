@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181C",
+  "condition": "full",
+  "delta_delta_g": 1.346,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 1.346,
+    "delta_g": -8.996
+  },
+  "explanation": "The Y181C mutation reduces nevirapine binding primarily through loss of critical van der Waals contacts and \u03c0-stacking interactions. Tyrosine's large aromatic ring system makes intimate contact with the ligand at 3.8 \u00c5 (within optimal van der Waals distance), whereas cysteine's smaller thiol side chain cannot maintain these favorable hydrophobic interactions, creating a binding pocket cavity that destabilizes nevirapine positioning. The ~85 \u00c5\u00b3 volume loss represents elimination of deep hydrophobic packing that normally constrains the inhibitor, allowing nevirapine to adopt suboptimal conformations and reducing binding affinity by ~1.35 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:19.202532+00:00"
+}

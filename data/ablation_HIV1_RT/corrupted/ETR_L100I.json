@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "L100I",
+  "condition": "corrupted",
+  "delta_delta_g": 0.4250000000000007,
+  "structural_context": {
+    "position": 100,
+    "wt_aa": "L",
+    "mut_aa": "I",
+    "wt_residue": "Leu",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.7,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.4250000000000007,
+    "delta_g": -9.917
+  },
+  "explanation": "The L100I substitution reduces etravirine binding through a subtle conformational effect at the NNRTI pocket rim: leucine's longer, more extended branched chain provides optimal van der Waals packing interactions with etravirine at 4.1 \u00c5, while isoleucine's more compact, \u03b2-branched geometry creates a tighter local environment that displaces the inhibitor or forces it into a suboptimal binding pose. Although the residues are isosteric with negligible volume change, the geometric shift toward a more constrained hydrophobic pocket edge destabilizes the precise network of contacts required for etravirine's binding affinity at the rim position.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:21.254800+00:00"
+}

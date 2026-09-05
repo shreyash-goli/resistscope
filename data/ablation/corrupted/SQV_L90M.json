@@ -1,0 +1,26 @@
+{
+  "drug": "SQV",
+  "mutation": "L90M",
+  "condition": "corrupted",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -9.131
+  },
+  "explanation": "The L90M substitution at the flap hinge region reduces saquinavir binding through a combination of reduced hydrophobic complementarity and subtle conformational effects despite minimal overall volume loss. Leucine's branched aliphatic side chain creates optimal van der Waals contacts in the hydrophobic environment of the flap hinge, while methionine's longer, flexible thioether chain cannot maintain the same packing efficiency, resulting in decreased hydrophobic interactions with the surrounding protein scaffold. This perturbation at the flap hinge\u2014a critical flexible element controlling inhibitor access and binding geometry\u2014likely propagates conformational changes that subtly weaken saquinavir's positioning in the active site pocket, even though L90M does not directly contact the inhibitor itself.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:27:11.403698+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "K101E",
+  "condition": "corrupted",
+  "delta_delta_g": 0.009999999999999787,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "E",
+    "wt_residue": "Lys",
+    "mut_residue": "Glu",
+    "volume_change": "decrease",
+    "volume_change_A3": -30.2,
+    "charge_change": "positive_to_negative",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 9.7,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.009999999999999787,
+    "delta_g": -10.332
+  },
+  "explanation": "K101E substitutes a bulky, positively charged lysine with a smaller, negatively charged glutamate at a position that directly contacts etravirine within the NNRTI-binding pocket wall. The loss of van der Waals contacts from the 30 \u0172 volume reduction, combined with elimination of favorable electrostatic interactions between the lysine's positive charge and etravirine's polar atoms, destabilizes the inhibitor's binding pose. The charge reversal to glutamate may additionally introduce unfavorable electrostatic repulsion if etravirine possesses electron-rich regions near position 101, further weakening inhibitor accommodation at this critical pocket contact point.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:31.638994+00:00"
+}

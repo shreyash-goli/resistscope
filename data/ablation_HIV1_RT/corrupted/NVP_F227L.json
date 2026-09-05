@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "F227L",
+  "condition": "corrupted",
+  "delta_delta_g": 0.36599999999999966,
+  "structural_context": {
+    "position": 227,
+    "wt_aa": "F",
+    "mut_aa": "L",
+    "wt_residue": "Phe",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.0,
+    "distance_from_ligand_centroid_angstrom": 9.2,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.36599999999999966,
+    "delta_g": -11.32
+  },
+  "explanation": "The F227L substitution reduces a bulky aromatic residue to a smaller aliphatic one within the NNRTI pocket core, creating a cavity that destabilizes nevirapine binding through loss of critical van der Waals contacts. Although F227 does not directly touch the ligand, its aromatic ring likely participates in favorable hydrophobic packing interactions that stabilize the overall pocket geometry at ~6.7 \u00c5 proximity; the 23 \u0172 volume reduction upon mutation permits the pocket to collapse or shift, disrupting the precise spatial orientation required for optimal nevirapine accommodation. This allosteric effect reduces binding affinity without direct steric clash, explaining the modest but measurable resistance penalty.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:27.520114+00:00"
+}

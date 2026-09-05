@@ -1,0 +1,10 @@
+{
+  "drug": "RPV",
+  "mutation": "A98G",
+  "condition": "minimal",
+  "delta_delta_g": 0.0909999999999993,
+  "structural_context": null,
+  "explanation": "The A98G substitution removes a methyl group from the \u03b2-carbon of alanine, creating a smaller, more flexible residue positioned at the entrance to the NNRTI-binding pocket where it makes critical van der Waals contacts with rilpivirine's aromatic ring system. This loss of hydrophobic bulk reduces the steric complementarity and van der Waals interaction surface that normally stabilizes inhibitor positioning, weakening the binding geometry necessary for optimal rilpivirine orientation within the pocket. The increased backbone flexibility of glycine at this gateway position additionally permits conformational rearrangement that disrupts the precise spatial constraints rilpivirine requires for binding, while allowing the enzyme to maintain catalytic function with nucleoside substrates.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:32.703587+00:00"
+}

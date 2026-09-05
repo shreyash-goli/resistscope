@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181I",
+  "condition": "full",
+  "delta_delta_g": 0.21000000000000085,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "I",
+    "wt_residue": "Tyr",
+    "mut_residue": "Ile",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.21000000000000085,
+    "delta_g": -10.132
+  },
+  "explanation": "The Y181I mutation reduces nevirapine binding by eliminating the aromatic hydroxyl group's hydrogen-bonding capacity while simultaneously creating a smaller, more hydrophobic binding pocket. Tyrosine's bulky aromatic ring and polar hydroxyl normally form critical stabilizing interactions with nevirapine's heteroatom network; replacement with isoleucine's smaller, branched aliphatic side chain disrupts these polar contacts while the reduced volume creates unfavorable binding geometry that destabilizes the ligand's preferred conformation within the NNRTI pocket core. The enhanced hydrophobicity cannot compensate for the loss of the specific hydrogen-bonding network, resulting in measurable destabilization of the nevirapine-RT complex despite Y181's peripheral positioning relative to the ligand centroid.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:11.832420+00:00"
+}

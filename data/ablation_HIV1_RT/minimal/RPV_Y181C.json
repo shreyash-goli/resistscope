@@ -1,0 +1,10 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181C",
+  "condition": "minimal",
+  "delta_delta_g": -0.495000000000001,
+  "structural_context": null,
+  "explanation": "The Y181C mutation replaces a large aromatic residue with a smaller thiol-containing amino acid, eliminating critical \u03c0-\u03c0 stacking interactions between the tyrosine ring and rilpivirine's aromatic moieties while reducing van der Waals contact surface area within the NNRTI-binding pocket. This substitution also removes a potential hydrogen bond donor (tyrosine hydroxyl), destabilizing the inhibitor-binding geometry that depends on this residue for proper positioning. The loss of steric bulk at position 181 additionally permits conformational relaxation of the binding pocket, allowing rilpivirine to adopt suboptimal binding modes that reduce affinity without creating overt steric clashes that would completely prevent binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:20:14.161056+00:00"
+}

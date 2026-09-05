@@ -1,0 +1,10 @@
+{
+  "drug": "NFV",
+  "mutation": "V82A",
+  "condition": "minimal",
+  "delta_delta_g": 0.1070000000000011,
+  "structural_context": null,
+  "explanation": "The V82A mutation replaces a branched hydrophobic residue with a smaller, more compact one at a position that directly contacts nelfinavir's ligand-binding interface, reducing critical van der Waals interactions and creating a cavity that destabilizes the inhibitor's positioning within the active site. This size reduction weakens the hydrophobic packing interactions that normally anchor nelfinavir, allowing the drug to adopt a less favorable binding geometry with diminished complementarity to the binding pocket. Additionally, the loss of valine's branched side chain geometry may prevent optimal formation of the network of van der Waals contacts required for high-affinity binding, thereby reducing nelfinavir's inhibitory potency while the protease can still accommodate natural peptide substrates that have different shape requirements.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:09.090815+00:00"
+}

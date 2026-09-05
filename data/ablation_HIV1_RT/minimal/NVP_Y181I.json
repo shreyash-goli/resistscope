@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181I",
+  "condition": "minimal",
+  "delta_delta_g": 0.21000000000000085,
+  "structural_context": null,
+  "explanation": "The Y181I mutation replaces a bulky aromatic residue with a smaller branched aliphatic residue, directly eliminating the tyrosine's hydroxyl group and reducing van der Waals surface area within the NNRTI-binding pocket where nevirapine makes critical contacts. This creates a cavity that destabilizes nevirapine's binding geometry, forcing the inhibitor into a suboptimal conformational state that weakens key hydrophobic and hydrogen-bonding interactions with the pocket. The loss of the aromatic ring stacking and the hydroxyl hydrogen-bonding capability fundamentally disrupts the shape complementarity required for NNRTI recognition while remaining compatible with natural dNTP substrate binding through the nucleotide-binding path.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:46.331989+00:00"
+}

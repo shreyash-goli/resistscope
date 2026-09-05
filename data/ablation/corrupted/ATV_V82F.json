@@ -1,0 +1,26 @@
+{
+  "drug": "ATV",
+  "mutation": "V82F",
+  "condition": "corrupted",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain within the protease core scaffold that, despite being 4.8 \u00c5 from the nearest ligand atom, creates a steric strain environment through indirect conformational effects\u2014the ~50 \u00c5\u00b3 volume expansion likely causes local compression or reorientation of the flexible binding pocket that accommodates atazanavir's geometry. The phenylalanine's increased hydrophobic bulk and rigid aromatic ring cannot be accommodated without disrupting optimal van der Waals packing between the protease flap regions and the inhibitor, effectively reducing the favorable van der Waals contacts that stabilize the atazanavir-bound state. This allosteric destabilization from a seemingly distal position reflects how protease mutations can propagate conformational changes through the hydrophobic core to weaken inhibitor engagement.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:26:32.308456+00:00"
+}

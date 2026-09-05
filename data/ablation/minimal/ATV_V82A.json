@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "V82A",
+  "condition": "minimal",
+  "delta_delta_g": 0.911999999999999,
+  "structural_context": null,
+  "explanation": "The V82A substitution replaces a bulky branched hydrophobic residue with a smaller alanine, creating a cavity within the S1/S1' substrate-binding pocket that atazanavir normally occupies through van der Waals contacts with valine's extended side chain. Loss of these critical hydrophobic interactions destabilizes the inhibitor's binding orientation and reduces the overall binding affinity. Additionally, the reduced steric bulk allows water molecules to penetrate the binding pocket, which disrupts the dehydration penalty that normally favors inhibitor binding and can lead to compensatory conformational changes in the protease that further destabilize the atazanavir complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:00.491578+00:00"
+}

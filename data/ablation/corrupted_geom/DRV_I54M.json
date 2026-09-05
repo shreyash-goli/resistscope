@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "I54M",
+  "condition": "corrupted",
+  "delta_delta_g": -0.5030000000000001,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.5030000000000001,
+    "delta_g": -10.1
+  },
+  "explanation": "The I54M mutation reduces darunavir binding through a combination of direct and allosteric effects despite not directly contacting the ligand. Isoleucine's branched aliphatic side chain is replaced by methionine's longer, more flexible thiol-containing chain, which disrupts the hydrophobic packing environment near the C-terminal dimer interface (8.2 \u00c5 from the ligand); this conformational loosening propagates to destabilize the precise geometry of the darunavir binding pocket approximately 16 \u00c5 away. The decreased hydrophobicity and modest volume reduction create a less optimal hydrophobic environment in the protein core, destabilizing the protease structure in a way that compromises the favorable van der Waals interactions darunavir requires for optimal positioning, particularly affecting the highly geometry-dependent binding of this bulky, carefully designed inhibitor.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:31:00.122849+00:00"
+}

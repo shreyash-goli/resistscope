@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "L90M",
+  "condition": "corrupted",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The L90M substitution at the flap hinge region reduces nelfinavir affinity through a subtle allosteric mechanism: the replacement of leucine's branched aliphatic side chain with methionine's linear, sulfur-containing chain creates a localized cavity (~3.8 \u0172 deficiency) that destabilizes the precise conformational dynamics of the protease flap required for optimal inhibitor positioning. Although the mutation does not directly contact nelfinavir (9.1 \u00c5 separation), the loss of hydrophobic packing integrity in this critical hinge region compromises the conformational rigidity needed to maintain the ligand binding pocket geometry, thereby reducing binding affinity through indirect conformational penalty rather than direct steric or electrostatic disruption.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-09-04T20:29:43.092033+00:00"
+}

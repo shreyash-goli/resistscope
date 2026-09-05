@@ -1,0 +1,10 @@
+{
+  "drug": "SQV",
+  "mutation": "I84V",
+  "condition": "minimal",
+  "delta_delta_g": 1.7619999999999987,
+  "structural_context": null,
+  "explanation": "The I84V substitution replaces a larger branched hydrophobic residue with a smaller one, creating a cavity within the S2/S1' binding pocket that saquinavir normally occupies through van der Waals contacts with isoleucine's extended side chain. This loss of favorable hydrophobic packing destabilizes the inhibitor's binding geometry and reduces the binding affinity. Additionally, the conformational flexibility gained from the smaller valine may allow the protease to more readily adopt alternative active site conformations that are incompatible with saquinavir's rigid molecular scaffold, facilitating escape from inhibition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:42.762036+00:00"
+}

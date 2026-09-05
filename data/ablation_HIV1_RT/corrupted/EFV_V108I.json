@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "V108I",
+  "condition": "corrupted",
+  "delta_delta_g": 0.005000000000000782,
+  "structural_context": {
+    "position": 108,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.005000000000000782,
+    "delta_g": -11.681
+  },
+  "explanation": "The V108I substitution introduces a larger, branched hydrophobic side chain that creates a subtle conformational strain within the palm domain approximately 43 \u00c5ngstr\u00f6ms from efavirenz, likely propagating allosteric effects through the catalytic core architecture that destabilizes the precise geometry required for optimal NNRTI-binding pocket positioning. Although V108I does not directly contact efavirenz, the modest increase in local steric bulk (26.7 \u00c5\u00b3 expansion) in this structurally constrained region may cause cumulative van der Waals incompatibilities that subtly reorient the pocket or reduce the conformational flexibility needed to accommodate the drug, resulting in weakened binding despite the marginal energetic penalty (~0.005 kcal/mol). This resistance mechanism exemplifies how distant mutations in the rigid catalytic scaffold can exert allosteric leverage on distant ligand-binding sites through perturbation of the protein's conformational ensemble.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:23:50.541707+00:00"
+}

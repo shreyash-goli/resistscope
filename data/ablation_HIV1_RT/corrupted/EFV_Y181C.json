@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181C",
+  "condition": "corrupted",
+  "delta_delta_g": -0.009000000000000341,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 6.4,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.009000000000000341,
+    "delta_g": -10.351
+  },
+  "explanation": "The Y181C mutation reduces efavirenz binding through loss of critical aromatic interactions at the NNRTI pocket rim. Tyrosine's large aromatic ring provides extensive van der Waals contacts and potential \u03c0-stacking interactions with efavirenz's aromatic moieties; substitution to the much smaller cysteine thiol (85 \u00c5\u00b3 volume loss) creates a cavity that weakens these hydrophobic contacts despite the minimal energetic penalty predicted. Although Y181 doesn't directly contact the ligand, its position at the pocket rim means the reduced side-chain bulk destabilizes the precise geometry required for optimal efavirenz positioning within the hydrophobic binding pocket, causing subtle but measurable loss of binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:22:48.213979+00:00"
+}

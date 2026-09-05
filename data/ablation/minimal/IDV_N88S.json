@@ -1,0 +1,10 @@
+{
+  "drug": "IDV",
+  "mutation": "N88S",
+  "condition": "minimal",
+  "delta_delta_g": -0.22799999999999976,
+  "structural_context": null,
+  "explanation": "The N88S mutation replaces a polar asparagine with a smaller, uncharged serine, eliminating a hydrogen bond donor that likely stabilizes indinavir binding through interaction with a carbonyl or hydroxyl group on the inhibitor. This loss of a key polar contact destabilizes the inhibitor's positioning within the active site binding pocket. Additionally, the reduced side-chain volume may disrupt van der Waals packing interactions that contribute to binding affinity, weakening the overall inhibitor-enzyme interaction.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:02.105376+00:00"
+}

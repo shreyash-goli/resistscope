@@ -1,0 +1,10 @@
+{
+  "drug": "ATV",
+  "mutation": "N88S",
+  "condition": "minimal",
+  "delta_delta_g": -0.1769999999999996,
+  "structural_context": null,
+  "explanation": "The N88S mutation replaces a polar asparagine with a smaller, nonpolar serine, eliminating a key hydrogen bond donor that atazanavir likely exploits for recognition and positioning within the active site. This loss of the hydroxyl group's hydrogen-bonding capability directly weakens direct or water-mediated interactions between the inhibitor and the protease backbone or inhibitor functional groups, reducing binding affinity. Additionally, the reduction in side-chain volume may permit subtle conformational shifts in the active site geometry that destabilize the precise electrostatic and geometric complementarity required for optimal atazanavir binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:24:59.899783+00:00"
+}

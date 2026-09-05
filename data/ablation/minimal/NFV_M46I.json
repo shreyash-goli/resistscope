@@ -1,0 +1,10 @@
+{
+  "drug": "NFV",
+  "mutation": "M46I",
+  "condition": "minimal",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": null,
+  "explanation": "The M46I substitution replaces a larger, more flexible methionine with a smaller isoleucine at a position that directly contacts nelfinavir in the active site. This reduction in side-chain volume creates a cavity adjacent to the drug-binding pocket, weakening van der Waals contacts that normally stabilize the inhibitor and allowing nelfinavir to adopt a less optimal binding conformation. Additionally, the loss of methionine's longer hydrophobic reach reduces favorable hydrophobic interactions with nelfinavir's core structure, collectively diminishing binding affinity while the protease retains sufficient catalytic activity to process natural substrates.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:25:31.824236+00:00"
+}

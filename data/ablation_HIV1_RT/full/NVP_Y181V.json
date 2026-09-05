@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181V",
+  "condition": "full",
+  "delta_delta_g": 1.061,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "V",
+    "wt_residue": "Tyr",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -53.6,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.5,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 1.061,
+    "delta_g": -9.281
+  },
+  "explanation": "Y181V reduces nevirapine binding primarily through loss of a critical aromatic interaction; the tyrosine's phenolic ring provides \u03c0-stacking or hydrogen-bonding stabilization of the inhibitor that is eliminated when replaced by the smaller, aliphatic valine side chain. The 53.6 \u0172 volume reduction creates a cavity within the NNRTI pocket core that nevirapine can no longer fully occupy, compromising van der Waals contacts that normally contribute favorable binding energy at the 3.8 \u00c5 interfacial distance. This combination of lost polar/aromatic contacts and reduced surface complementarity destabilizes the ligand-protein complex by approximately 1 kcal/mol, sufficient to confer clinically relevant resistance while the mutation maintains overall fold integrity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:03.099782+00:00"
+}

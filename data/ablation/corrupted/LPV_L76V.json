@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "L76V",
+  "condition": "corrupted",
+  "delta_delta_g": 0.745000000000001,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.745000000000001,
+    "delta_g": -9.354
+  },
+  "explanation": "The L76V mutation reduces a bulky leucine to a smaller valine in the flap region, creating a cavity approximately 27 \u0172 that disrupts the hydrophobic packing landscape surrounding the lopinavir binding site. Although the mutation does not directly contact the ligand, this loss of van der Waals surface at 7.0 \u00c5 from lopinavir destabilizes the precise spatial architecture of the S1/S1' subsites and adjacent binding pockets that depend on optimal flap positioning for inhibitor accommodation. The modest decrease in local hydrophobicity (0.4 unit change) further reduces favorable nonpolar interactions that normally stabilize lopinavir's bound conformation, collectively shifting the binding equilibrium unfavorably by ~0.75 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:28:35.061241+00:00"
+}

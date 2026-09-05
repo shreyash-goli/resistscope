@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "M230L",
+  "condition": "corrupted",
+  "delta_delta_g": 0.08300000000000018,
+  "structural_context": {
+    "position": 230,
+    "wt_aa": "M",
+    "mut_aa": "L",
+    "wt_residue": "Met",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 6.5,
+    "contacts_ligand_directly": false,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.08300000000000018,
+    "delta_g": -11.603
+  },
+  "explanation": "The M230L substitution reduces nevirapine binding through a subtle conformational effect rather than direct contact: methionine's longer, flexible sulfur-containing side chain at position 230 can adopt conformations that optimize the geometry of the NNRTI-binding pocket wall, while leucine's shorter branched aliphatic chain cannot achieve the same spatial accommodation, causing minor unfavorable repositioning of nearby pocket residues that cumulate in weaker inhibitor contacts. Although M230L does not directly contact nevirapine (6.5 \u00c5 separation) and maintains hydrophobic character, the modest loss of side-chain reach (~3.8 \u00c5\u00b3 volume reduction) likely disrupts van der Waals packing interactions that stabilize the precise architecture of the primer grip region bordering the NNRTI-binding site, incrementally destabilizing the bound conformation of nevirapine.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:25:34.070254+00:00"
+}

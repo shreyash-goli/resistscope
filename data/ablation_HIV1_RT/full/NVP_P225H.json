@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "P225H",
+  "condition": "full",
+  "delta_delta_g": -0.02099999999999902,
+  "structural_context": {
+    "position": 225,
+    "wt_aa": "P",
+    "mut_aa": "H",
+    "wt_residue": "Pro",
+    "mut_residue": "His",
+    "volume_change": "increase",
+    "volume_change_A3": 40.5,
+    "charge_change": "neutral_to_positive",
+    "hydrophobicity_change": -1.6,
+    "distance_from_ligand_centroid_angstrom": 13.9,
+    "min_distance_to_ligand_angstrom": 9.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": -0.02099999999999902,
+    "delta_g": -10.363
+  },
+  "explanation": "The P225H mutation introduces a positively charged histidine that is electrostatically incompatible with the nevirapine binding pocket environment, which at 9.9 \u00c5 minimum distance experiences perturbation of the hydrophobic architecture surrounding the ligand through the nearby connection subdomain. The 40 \u00c5\u00b3 volume expansion and loss of proline's conformational rigidity allow the histidine side chain to adopt conformations that create subtle steric clashes or unfavorable electrostatic interactions with nevirapine or its binding pocket, marginally destabilizing the inhibitor without directly contacting it. This allosteric mechanism\u2014operating through conformational and electrostatic relay rather than direct steric occlusion\u2014results in the modest but measurable reduction in binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:19:44.944905+00:00"
+}

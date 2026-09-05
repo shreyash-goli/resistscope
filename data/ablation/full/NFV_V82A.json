@@ -1,0 +1,26 @@
+{
+  "drug": "NFV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.1070000000000011,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.1070000000000011,
+    "delta_g": -10.668
+  },
+  "explanation": "The V82A substitution reduces the hydrophobic contact surface within the S1/S1' subpocket where nelfinavir's nonpolar groups make critical van der Waals interactions; the loss of ~51 \u0172 of hydrophobic volume creates a cavity that weakens these favorable dispersion forces. Although the mutation is distant from the ligand centroid, the 3.3 \u00c5 minimum contact distance indicates direct engagement with the inhibitor, and the accompanying decrease in hydrophobicity (-2.4 kcal/mol equivalent) suggests that the smaller alanine side chain cannot maintain optimal packing against nelfinavir's bulky groups, resulting in suboptimal geometry and reduced binding affinity. This represents a classic resistance mechanism where the protease adapts by sacrificing favorable ligand contacts\u2014the cavity tolerance\u2014rather than through direct steric clashes that would destabilize the enzyme itself.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:21:49.615090+00:00"
+}

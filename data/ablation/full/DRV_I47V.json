@@ -1,0 +1,26 @@
+{
+  "drug": "DRV",
+  "mutation": "I47V",
+  "condition": "full",
+  "delta_delta_g": -0.19500000000000028,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.19500000000000028,
+    "delta_g": -9.207
+  },
+  "explanation": "The I47V substitution reduces a branched aliphatic side chain to a smaller, linear one within the flap region, creating a cavity of ~27 \u0172 that darunavir cannot fully occupy given its rigid scaffold. Although the mutation maintains hydrophobic character and makes direct contact with the inhibitor (2.8 \u00c5 minimum distance), the loss of van der Waals contacts from the missing methyl branch destabilizes the bound conformation without introducing compensatory interactions. This modest unfavorable energetic change reflects a subtle but measurable erosion of favorable hydrophobic packing in the flap pocket\u2014a region critical for darunavir's tight binding\u2014rather than a dramatic structural collapse.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:22.586305+00:00"
+}

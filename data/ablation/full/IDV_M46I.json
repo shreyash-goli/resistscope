@@ -1,0 +1,26 @@
+{
+  "drug": "IDV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": -0.24200000000000088,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.24200000000000088,
+    "delta_g": -10.499
+  },
+  "explanation": "The M46I mutation increases hydrophobicity while maintaining nearly identical volume, subtly altering the hydrophobic landscape of the flap region 7 \u00c5 from indinavir without directly contacting it. This hydrophobicity shift likely destabilizes the precise conformational dynamics of the protease flap needed to optimally position and stabilize indinavir's binding through cooperative hydrophobic and van der Waals interactions within the S1/S1' substrate-binding pockets. The cumulative effect\u2014though modest in energetic terms\u2014reflects reduced entropic penalty for flap closure and weakened indirect stabilization of inhibitor binding geometry, characteristic of flap mutations that achieve resistance through conformational rather than direct contact mechanisms.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:13.889683+00:00"
+}

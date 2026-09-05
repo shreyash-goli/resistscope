@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "A98G",
+  "condition": "full",
+  "delta_delta_g": 0.0909999999999993,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": 0.0909999999999993,
+    "delta_g": -9.461
+  },
+  "explanation": "The A98G mutation introduces a backbone flexibility penalty that destabilizes the ordered conformation of the fingers-palm subdomain required for optimal rilpivirine positioning. Although glycine's loss of the alanine methyl group removes stabilizing van der Waals contacts within the hydrophobic core near the NNRTI-binding pocket (5.6 \u00c5 minimum distance), the primary resistance mechanism stems from increased conformational sampling: glycine's lack of side-chain constraint allows the local backbone to adopt non-productive geometries that weaken the precise spatial organization of the binding pocket architecture. This entropic penalty translates to measurably reduced binding affinity despite the mutation being distal from direct ligand contacts, effectively destabilizing the pre-organized state rilpivirine requires for tight accommodation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:17:48.824576+00:00"
+}

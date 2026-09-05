@@ -1,0 +1,10 @@
+{
+  "drug": "NVP",
+  "mutation": "Y188C",
+  "condition": "minimal",
+  "delta_delta_g": 0.3460000000000001,
+  "structural_context": null,
+  "explanation": "The Y188C mutation removes a bulky aromatic side chain immediately adjacent to the NNRTI-binding pocket, eliminating critical van der Waals contacts and a hydrogen-bonding interaction that nevirapine relies on for proper orientation and stabilization within the pocket. The smaller, non-polar cysteine cannot provide the aromatic \u03c0-\u03c0 stacking or hydroxyl hydrogen-bond interactions that position nevirapine optimally, causing the ligand to adopt a suboptimal conformation with reduced binding affinity. Additionally, loss of the tyrosine's hydroxyl group may destabilize the local electrostatic environment that facilitates NNRTI accommodation, collectively impairing drug recognition without compromising the RT's catalytic capacity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:21:54.562413+00:00"
+}

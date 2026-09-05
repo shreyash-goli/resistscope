@@ -1,0 +1,26 @@
+{
+  "drug": "LPV",
+  "mutation": "I50V",
+  "condition": "full",
+  "delta_delta_g": -0.10599999999999987,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 5.7,
+    "min_distance_to_ligand_angstrom": 2.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.10599999999999987,
+    "delta_g": -10.205
+  },
+  "explanation": "The I50V mutation reduces a branched hydrophobic side chain to a smaller, linear one in the flap region, decreasing local van der Waals contact surface area with lopinavir by ~27 \u00c5\u00b3 despite maintaining direct contact at 2.2 \u00c5. This loss of favorable hydrophobic packing interactions, combined with slight reduction in hydrophobicity, weakens the binding enthalpy without introducing compensatory interactions, manifesting as the modest but measurable loss of binding affinity. The effect is localized to the flap region where conformational dynamics are already flexible, allowing the protease to accommodate the smaller valine while maintaining overall fold integrity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T00:23:36.896793+00:00"
+}
