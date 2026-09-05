@@ -1,0 +1,85 @@
+{
+  "n_explanations": 303,
+  "n_explicit_claims": 139,
+  "abstention_rate": 0.5412541254125413,
+  "overall_accuracy": 0.697841726618705,
+  "contact_threshold_A": 4.0,
+  "by_condition": {
+    "full": {
+      "n": 60,
+      "accuracy": 0.8833333333333333,
+      "n_correct": 53
+    },
+    "minimal": {
+      "n": 14,
+      "accuracy": 0.5714285714285714,
+      "n_correct": 8
+    },
+    "corrupted": {
+      "n": 65,
+      "accuracy": 0.5538461538461539,
+      "n_correct": 36
+    }
+  },
+  "by_target_condition": {
+    "RT/corrupted": {
+      "n": 41,
+      "accuracy": 0.5365853658536586
+    },
+    "RT/full": {
+      "n": 31,
+      "accuracy": 0.9032258064516129
+    },
+    "RT/minimal": {
+      "n": 6,
+      "accuracy": 0.6666666666666666
+    },
+    "protease/corrupted": {
+      "n": 24,
+      "accuracy": 0.5833333333333334
+    },
+    "protease/full": {
+      "n": 29,
+      "accuracy": 0.8620689655172413
+    },
+    "protease/minimal": {
+      "n": 8,
+      "accuracy": 0.5
+    }
+  },
+  "fisher_full_vs_minimal": {
+    "p": 0.012889910685444234,
+    "odds_ratio": 5.678571428571429,
+    "table": [
+      [
+        53,
+        7
+      ],
+      [
+        8,
+        6
+      ]
+    ]
+  },
+  "fisher_full_vs_corrupted": {
+    "p": 5.7195729809527126e-05,
+    "odds_ratio": 6.099206349206349,
+    "table": [
+      [
+        53,
+        7
+      ],
+      [
+        36,
+        29
+      ]
+    ]
+  },
+  "judge_vs_structure": {
+    "mean_score_structurally_correct": 1.5051546391752577,
+    "mean_score_structurally_wrong": 1.0238095238095237,
+    "n_correct": 97,
+    "n_wrong": 42,
+    "mannwhitney_p": 0.0006078662084743815
+  }
+}
