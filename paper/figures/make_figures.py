@@ -54,6 +54,61 @@ def roc_ci(y, x, nb=1000):
     return roc_auc_score(y, x), np.percentile(boot, 2.5), np.percentile(boot, 97.5)
 
 
+def fig_toplist():
+    """Per-drug precision@10, docking ΔΔG vs. the docking-free distance baseline.
+
+    The complement to Table 1: the table is the global ranking, this is the top of
+    the list, where the ordering reverses between targets. Reads only committed
+    CSVs (scripts/15), so it needs no docking stack.
+    """
+    pk = pd.read_csv("data/validation/geometry_precision_at_10.csv")
+    pk = pk.pivot(index=["target", "drug"], columns="predictor",
+                  values=["precision_at_10", "hypergeom_p", "base_rate"])
+    rows = []  # top-to-bottom: protease block, gap, RT block
+    for tgt, label in [("protease", "protease  (PIs)"), ("RT", "RT  (NNRTIs)")]:
+        block = pk.loc[tgt].sort_index()
+        rows.append((label, None, None, None, None, None))
+        for drug, r in block.iterrows():
+            rows.append((drug, r[("precision_at_10", "docking ΔΔG")],
+                         r[("precision_at_10", "-min distance")],
+                         r[("hypergeom_p", "docking ΔΔG")],
+                         r[("hypergeom_p", "-min distance")],
+                         r[("base_rate", "docking ΔΔG")]))
+
+    # Sized to print near 1:1 at \linewidth (5.5in) so the fonts survive.
+    fig, ax = plt.subplots(figsize=(5.9, 3.6))
+    yp = np.arange(len(rows))[::-1]
+    for y_, (name, dock, dist, pd_, pdist, base) in zip(yp, rows):
+        if dock is None:  # group header
+            ax.text(-0.055, y_, name, ha="right", va="center", fontsize=8.5,
+                    fontweight="bold", color="#333")
+            continue
+        ax.plot([dock, dist], [y_, y_], color="#cfcfcf", lw=2.2, zorder=1,
+                solid_capstyle="round")
+        ax.scatter([base], [y_], marker="|", s=90, color="#9a9a9a", lw=1.4, zorder=2)
+        for v, p, col in [(dock, pd_, OI["blue"]), (dist, pdist, OI["green"])]:
+            ax.scatter([v], [y_], s=62, color=col, zorder=3)
+            if p < 0.05:
+                ax.text(v, y_ + 0.26, "*", ha="center", va="center", fontsize=8, color=col)
+        ax.text(-0.055, y_, name, ha="right", va="center", fontsize=8)
+
+    ax.scatter([], [], s=62, color=OI["blue"], label="docking ΔΔG")
+    ax.scatter([], [], s=62, color=OI["green"], label="−min distance  (no docking)")
+    ax.scatter([], [], marker="|", s=90, color="#9a9a9a", lw=1.4, label="drug's base rate")
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, -0.30), ncol=3)
+
+    ax.set_yticks([]); ax.set_ylim(-0.9, len(rows) - 0.1)
+    ax.set_xlim(-0.06, 1.06); ax.set_xticks(np.arange(0, 1.01, 0.2))
+    ax.set_xlabel("precision@10  (genuine clinical DRMs in the drug's top 10)")
+    ax.set_title("The ordering reverses at the top of the list:\n"
+                 "distance wins on protease, the energy wins in the NNRTI pocket")
+    ax.spines["left"].set_visible(False)
+    ax.grid(axis="y", visible=False)
+    fig.tight_layout()
+    fig.savefig(FIG / "fig_toplist.png", bbox_inches="tight"); plt.close(fig)
+    print("wrote fig_toplist.png")
+
+
 def fig2():
     preds = [("docking ΔΔG", "delta_delta_g"), ("prevalence", "n_isolates"),
              ("|Δvolume|", "absdvol"), ("HIVdb penalty", "hivdb")]
@@ -96,22 +151,14 @@ def fig2():
 
 
 def fig3():
+    # Body figure at the printed size (\linewidth = 5.5in), so nothing is
+    # downscaled and the default 9pt style holds. The former panel (a), mean
+    # faithfulness by condition, is dropped: 4.3 states those deltas in text.
     abl = {"PR": pd.read_parquet("data/validation/faithfulness_ablation.parquet"),
            "RT": pd.read_parquet("data/rt/validation/faithfulness_ablation.parquet")}
-    conds = ["full", "minimal", "corrupted"]
-    ccol = {"full": OI["blue"], "minimal": OI["gray"], "corrupted": OI["vermillion"]}
-    fig, (axA, axB, axC) = plt.subplots(1, 3, figsize=(12.5, 3.6))
+    fig, (axB, axC) = plt.subplots(1, 2, figsize=(5.6, 2.5))
 
-    genes = ["PR", "RT"]; x = np.arange(len(genes)); w = 0.26
-    for j, cond in enumerate(conds):
-        means = [abl[g][abl[g].condition == cond].score.mean() for g in genes]
-        axA.bar(x + (j - 1) * w, means, width=w, color=ccol[cond], label=cond)
-        for xi, mv in zip(x + (j - 1) * w, means):
-            axA.text(xi, mv + 0.03, f"{mv:.2f}", ha="center", fontsize=6.5, color="#333")
-    axA.set_xticks(x); axA.set_xticklabels(["protease", "RT"]); axA.set_ylim(0, 2.1)
-    axA.set_ylabel("mean faithfulness (0–2)")
-    axA.set_title("a   Context helps, corruption hurts\n(both targets)"); axA.legend(loc="upper right")
-
+    genes = ["PR", "RT"]
     pooled = []
     for g in genes:
         wpv = abl[g].pivot_table(index=["drug", "mutation"], columns="condition", values="score")
@@ -122,14 +169,14 @@ def fig3():
     axB.bar([0, 1, 2], gains, width=0.62, color=[OI["green"] if v > 0 else OI["vermillion"] for v in gains])
     for xi, r in zip([0, 1, 2], rows):
         va = "bottom" if r[1] >= 0 else "top"
-        axB.text(xi, r[1] + (0.04 if r[1] >= 0 else -0.03), f"{r[1]:+.2f}\n{r[2]:.0f}% fixed",
-                 ha="center", va=va, fontsize=6.5, color="#333")
-    axB.set_ylim(-0.42, 1.42)
+        axB.text(xi, r[1] + (0.05 if r[1] >= 0 else -0.04), f"{r[1]:+.2f}\n{r[2]:.0f}% fixed",
+                 ha="center", va=va, fontsize=6, color="#333")
+    axB.set_ylim(-0.5, 1.62)
     axB.axhline(0, color="#888", lw=1); axB.set_xticks([0, 1, 2])
-    axB.set_xticklabels(["0\nprior wrong", "1\nprior vague", "2\nprior correct"])
-    axB.set_ylabel("faithfulness gain from context (full − minimal)")
-    axB.set_xlabel("model's prior strength (minimal-only score)")
-    axB.set_title("b   Context helps most where\nthe prior is weakest")
+    axB.set_xticklabels(["0\nwrong", "1\nvague", "2\ncorrect"])
+    axB.set_ylabel("gain (full − minimal)")
+    axB.set_xlabel("model's prior strength")
+    axB.set_title("a   Context helps most\nwhere the prior is weakest")
 
     fa = pd.read_parquet("data/validation/field_ablation.parquet")
     w3 = fa.pivot_table(index=["drug", "mutation"], columns="condition", values="score")
@@ -140,11 +187,15 @@ def fig3():
     axC.barh(yp, [d for _, d in dl], height=0.6,
              color=[OI["purple"] if d > 0.05 else OI["gray"] for _, d in dl])
     for y_, (_, d) in zip(yp, dl):
-        axC.text(d + 0.004, y_, f"{d:+.2f}", va="center", fontsize=6.5, color="#333")
-    axC.axvline(0, color="#888", lw=1); axC.set_yticks(yp); axC.set_yticklabels([n for n, _ in dl])
-    axC.set_xlabel("faithfulness lost when field dropped (full − drop)")
-    axC.set_title("c   The lift is geometric\n(distance/subpocket), not energy")
-    fig.tight_layout(); fig.savefig(FIG / "fig3_interpretability.png", bbox_inches="tight"); plt.close(fig)
+        axC.text(d + (0.004 if d >= 0 else -0.004), y_, f"{d:+.2f}", va="center",
+                 ha="left" if d >= 0 else "right", fontsize=6.5, color="#333")
+    axC.axvline(0, color="#888", lw=1); axC.set_yticks(yp)
+    axC.set_yticklabels([n for n, _ in dl]); axC.set_xlim(-0.095, 0.305)
+    axC.set_xlabel("faithfulness lost (full − drop)")
+    axC.set_title("b   The lift is geometric,\nnot energetic")
+    fig.tight_layout(w_pad=1.6)
+    fig.savefig(FIG / "fig3_interpretability.png", bbox_inches="tight")
+    plt.close(fig)
     print("wrote fig3_interpretability.png")
 
 
