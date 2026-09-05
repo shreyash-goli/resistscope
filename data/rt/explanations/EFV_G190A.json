@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "G190A",
+  "delta_delta_g": 0.6999999999999993,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "A",
+    "wt_residue": "Gly",
+    "mut_residue": "Ala",
+    "volume_change": "increase",
+    "volume_change_A3": 28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.2,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.6999999999999993,
+    "delta_g": -10.986
+  },
+  "explanation": "The G190A substitution introduces a methyl side chain into the NNRTI-binding pocket core that creates a steric clash with efavirenz, as the 28.5 \u0172 volume expansion encroaches on the ligand's binding space at a distance where direct contact occurs (3.7 \u00c5 minimum distance). This unfavorable van der Waals interaction destabilizes the inhibitor's binding geometry, particularly within the crowded pocket where glycine's conformational flexibility normally accommodates efavirenz positioning. The increased hydrophobicity of alanine further disrupts optimal ligand contacts by altering the local chemical environment without providing compensatory stabilizing interactions, thereby weakening the binding affinity by approximately 0.7 kcal/mol.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:12:36.885815+00:00"
+}

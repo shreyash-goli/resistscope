@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138K",
+  "delta_delta_g": 0.0,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.0,
+    "delta_g": -10.342
+  },
+  "explanation": "The E138K mutation, located 43 \u00c5 from nevirapine in the palm catalytic core, likely confers resistance through an indirect allosteric mechanism rather than direct ligand contact. The substitution of glutamate's negative charge with lysine's positive charge fundamentally alters the electrostatic landscape of the RT protein; this charge reversal, combined with a ~30 \u00c5\u00b3 volume increase, disrupts the conformational equilibrium that stabilizes the NNRTI-binding pocket geometry, potentially destabilizing the precise positioning of nevirapine's binding site through long-range electrostatic perturbations. Although the resistance prediction is marginal (\u0394\u0394G \u2248 0), the structural changes suggest that E138K subtly weakens binding through allosteric effects on pocket architecture rather than through steric or direct competitive mechanisms.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:30.228577+00:00"
+}

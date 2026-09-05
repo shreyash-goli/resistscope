@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "E138K",
+  "delta_delta_g": -0.006000000000000227,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.006000000000000227,
+    "delta_g": -8.957
+  },
+  "explanation": "The E138K substitution introduces a bulky positive charge in the palm domain at a distance where it likely creates unfavorable electrostatic or steric perturbations that propagate through the protein scaffold to destabilize the NNRTI-binding pocket. Although E138 does not directly contact etravirine, the 30 \u0172 volume increase and charge inversion from negative to positive may subtly distort the local protein geometry or create repulsive interactions with nearby backbone atoms or polar residues that normally stabilize the conformational state optimal for etravirine accommodation. This indirect mechanism\u2014where a distal mutation compromises inhibitor binding through allosteric effects rather than direct competition\u2014is consistent with the modest but measurable resistance signature, suggesting E138K reduces binding affinity through fine-tuning of the pocket architecture rather than gross structural collapse.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:50.590164+00:00"
+}

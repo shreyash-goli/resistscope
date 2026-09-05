@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181C",
+  "delta_delta_g": 0.43599999999999994,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.43599999999999994,
+    "delta_g": -11.25
+  },
+  "explanation": "The aromatic tyrosine at position 181 makes direct contact with efavirenz through its bulky phenolic ring, establishing van der Waals contacts and likely a pi-stacking or hydrogen-bonding interaction with the ligand at 3.8 \u00c5 proximity. Mutation to the smaller cysteine (85 \u00c5\u00b3 volume loss) creates a binding pocket deficiency, eliminating the aromatic stabilization and reducing favorable intermolecular contacts within the NNRTI core binding site. The loss of this critical tyrosine scaffold destabilizes the efavirenz complex, resulting in weakened binding affinity characteristic of NNRTI resistance.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:12:56.104209+00:00"
+}

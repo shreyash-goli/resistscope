@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "M230L",
+  "delta_delta_g": 0.0039999999999995595,
+  "structural_context": {
+    "position": 230,
+    "wt_aa": "M",
+    "mut_aa": "L",
+    "wt_residue": "Met",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 9.7,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.0039999999999995595,
+    "delta_g": -11.682
+  },
+  "explanation": "The M230L mutation minimally disrupts efavirenz binding because methionine and leucine have nearly equivalent hydrophobic bulk and volume, with the sulfur-containing side chain of methionine providing only marginal stabilization through weak van der Waals interactions at the 2.8 \u00c5 contact distance. The slight increase in hydrophobicity from the mutation does not compensate for the loss of methionine's longer, more polarizable side chain geometry, which may have enabled optimal positioning of efavirenz within the confined NNRTI pocket wall\u2014the negligible ddG change reflects this delicate balance where the structural rearrangement required to accommodate leucine's branched aliphatic structure introduces a modest entropic or conformational cost. Given the direct ligand contact and pocket constraint, even this subtle geometric perturbation at the primer grip boundary is sufficient to reduce binding affinity despite the chemically conservative nature of the substitution.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:23.445739+00:00"
+}

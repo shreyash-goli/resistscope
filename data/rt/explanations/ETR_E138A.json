@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "E138A",
+  "delta_delta_g": 0.0259999999999998,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.0259999999999998,
+    "delta_g": -8.925
+  },
+  "explanation": "The E138A mutation eliminates a negatively charged glutamate residue in the palm domain that, despite lacking direct ligand contact, likely participates in a network of electrostatic interactions that stabilize the NNRTI-binding pocket architecture. The loss of this charge coupled with the substantial decrease in side-chain volume (~50 \u0172) creates a subtle conformational relaxation or repositioning of nearby pocket-forming residues, destabilizing the precise geometry required for optimal etravirine binding without causing a global structural collapse. This allosteric effect\u2014mediated through the protein scaffold rather than direct drug contact\u2014weakens etravirine affinity through accumulated loss of favorable electrostatic context and backbone/side-chain stabilization within the distant binding site.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:01.316921+00:00"
+}

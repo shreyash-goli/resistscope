@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138Q",
+  "delta_delta_g": -0.0129999999999999,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "Q",
+    "wt_residue": "Glu",
+    "mut_residue": "Gln",
+    "volume_change": "minimal",
+    "volume_change_A3": 5.4,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0129999999999999,
+    "delta_g": -10.355
+  },
+  "explanation": "The E138Q mutation eliminates a negative charge at position 138 in the palm domain without directly contacting nevirapine, suggesting resistance operates through long-range electrostatic modulation rather than steric interference. The loss of glutamate's charged carboxylate likely disrupts an electrostatic network that maintains the precise geometry or conformational dynamics of the NNRTI-binding pocket ~43 \u00c5ngstr\u00f6ms away, potentially weakening nevirapine accommodation through indirect effects on pocket architecture or protein flexibility. While the minimal binding affinity loss indicates this is a weak resistance mechanism, the charge neutralization may destabilize favorable electrostatic interactions that orient the inhibitor or stabilize the binding-competent RT conformation.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:09.844509+00:00"
+}

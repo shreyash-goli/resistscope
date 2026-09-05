@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181C",
+  "delta_delta_g": 1.346,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 1.346,
+    "delta_g": -8.996
+  },
+  "explanation": "Y181C causes nevirapine resistance by eliminating a critical aromatic interaction at the core of the NNRTI pocket. The tyrosine-to-cysteine substitution removes the bulky aromatic ring while reducing overall volume by ~85 \u0172, disrupting stabilizing van der Waals contacts and potentially \u03c0-\u03c0 stacking or aromatic interactions that the native tyrosine maintains with nevirapine's aromatic moieties at 3.8 \u00c5 separation. The loss of the larger hydrophobic aromatic side chain creates a cavity defect in the binding pocket that destabilizes the inhibitor's accommodation, reducing binding affinity by ~1.35 kcal/mol despite retention of neutral charge at this position.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:12:30.580410+00:00"
+}

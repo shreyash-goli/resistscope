@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "G190A",
+  "delta_delta_g": 0.14100000000000001,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "A",
+    "wt_residue": "Gly",
+    "mut_residue": "Ala",
+    "volume_change": "increase",
+    "volume_change_A3": 28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.2,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.14100000000000001,
+    "delta_g": -10.201
+  },
+  "explanation": "The G190A substitution introduces a methyl side chain into the NNRTI pocket core that creates a steric clash with nevirapine's aromatic scaffold. Although glycine's lack of a side chain normally permits optimal positioning of the inhibitor at this 3.7 \u00c5 contact distance, the additional 28.5 \u0172 from alanine's methyl group forces either nevirapine into a suboptimal conformational state or displaces critical van der Waals contacts that stabilize binding. This conformational penalty destabilizes the bound state without altering electrostatic interactions, explaining the modest but measurable resistance phenotype (+0.14 kcal/mol) against this polar NNRTI.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:34.495149+00:00"
+}

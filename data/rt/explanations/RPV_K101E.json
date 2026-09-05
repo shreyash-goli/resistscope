@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "K101E",
+  "delta_delta_g": -0.17100000000000115,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "E",
+    "wt_residue": "Lys",
+    "mut_residue": "Glu",
+    "volume_change": "decrease",
+    "volume_change_A3": -30.2,
+    "charge_change": "positive_to_negative",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.17100000000000115,
+    "delta_g": -9.723
+  },
+  "explanation": "The K101E mutation replaces a bulky, positively charged lysine with a smaller, negatively charged glutamate, disrupting a stabilizing electrostatic interaction or hydrogen bond that the wild-type lysine maintains with rilpivirine's polar atoms at the pocket rim. The charge inversion from positive to negative creates electrostatic repulsion with the NNRTI ligand, destabilizing the bound conformation despite the residue being located at the periphery of the binding pocket. This combination of reduced van der Waals contacts (from the ~30 \u00c5\u00b3 volume decrease) and unfavorable electrostatic effects weakens overall binding affinity, conferring resistance to rilpivirine.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:25.553625+00:00"
+}

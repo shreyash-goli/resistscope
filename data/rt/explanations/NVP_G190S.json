@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "G190S",
+  "delta_delta_g": 0.5990000000000002,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "S",
+    "wt_residue": "Gly",
+    "mut_residue": "Ser",
+    "volume_change": "increase",
+    "volume_change_A3": 28.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.5990000000000002,
+    "delta_g": -9.743
+  },
+  "explanation": "The replacement of glycine with serine at position 190 introduces a bulky hydroxyl-bearing side chain (~29 \u00c5\u00b3 increase) into the sterically constrained NNRTI pocket core, creating a steric clash that destabilizes nevirapine binding despite the residue's proximity to the ligand (3.7 \u00c5 minimum distance). The serine's polar hydroxyl group cannot be accommodated within the hydrophobic binding pocket geometry optimized for the drug, forcing unfavorable van der Waals contacts or requiring nevirapine to adopt a suboptimal binding pose with reduced complementarity. This steric incompatibility and loss of favorable binding geometry directly weakens the protein-ligand interaction, accounting for the 0.60 kcal/mol destabilization.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:12:49.863331+00:00"
+}

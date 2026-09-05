@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "A98G",
+  "delta_delta_g": 0.0909999999999993,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": 0.0909999999999993,
+    "delta_g": -9.461
+  },
+  "explanation": "The A98G mutation reduces rilpivirine binding primarily through loss of stabilizing van der Waals contacts rather than direct ligand interaction. Alanine's methyl side chain contributes favorable hydrophobic packing interactions within the fingers-palm subdomain that position the binding pocket geometry optimally for RPV; glycine's deletion of this side chain (~28.5 \u0172 loss) creates a local cavity that destabilizes the precise conformational state required for inhibitor accommodation. Although the mutation does not directly contact rilpivirine at 5.6 \u00c5 distance, the resulting structural flexibility in this adjacent region compromises the rigid scaffold supporting the NNRTI-binding pocket, leading to entropic or conformational penalties that weaken drug binding without altering electrostatics.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:41.386253+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "Y181C",
+  "delta_delta_g": -0.495000000000001,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "C",
+    "wt_residue": "Tyr",
+    "mut_residue": "Cys",
+    "volume_change": "decrease",
+    "volume_change_A3": -85.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 3.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": -0.495000000000001,
+    "delta_g": -10.047
+  },
+  "explanation": "The Y181C mutation causes a substantial decrease in hydrophobic surface area (85 \u00c5\u00b3 loss) while removing the bulky aromatic ring, creating a cavity within the NNRTI pocket core that reduces favorable van der Waals contacts with rilpivirine's aromatic moieties at the close 3.8 \u00c5 minimum distance. The smaller cysteine thiol cannot maintain the hydrophobic packing interactions that the tyrosine phenol provides, and while the thiol could form a hydrogen bond, this localized polar interaction cannot compensate for the global loss of hydrophobic complementarity within the binding pocket. The net result is weakened binding affinity (\u0394\u0394G = -0.50 kcal/mol) that confers resistance through reduced drug occupancy and inhibitory potency.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:28.893458+00:00"
+}

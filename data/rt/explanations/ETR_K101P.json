@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "K101P",
+  "delta_delta_g": -0.6399999999999988,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "P",
+    "wt_residue": "Lys",
+    "mut_residue": "Pro",
+    "volume_change": "decrease",
+    "volume_change_A3": -55.9,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 2.3,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.6399999999999988,
+    "delta_g": -9.591
+  },
+  "explanation": "The K101P mutation eliminates a positively charged lysine side chain that likely forms critical electrostatic or hydrogen-bonding interactions with etravirine's aromatic ring system or polar groups, and replaces it with proline's rigid cyclic structure that cannot donate these interactions. The substantial loss of side-chain volume (~56 \u0172) creates a binding cavity defect at the NNRTI pocket rim, disrupting van der Waals contacts that stabilize the inhibitor's positioning despite proline's slight increase in local hydrophobicity. Additionally, proline's conformational rigidity constrains the backbone geometry near this contact region, preventing the compensatory repositioning needed to maintain optimal inhibitor engagement at the 2.7 \u0172 minimum distance interface.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:32.051878+00:00"
+}

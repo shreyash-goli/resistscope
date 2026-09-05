@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "M230L",
+  "delta_delta_g": 0.009999999999999787,
+  "structural_context": {
+    "position": 230,
+    "wt_aa": "M",
+    "mut_aa": "L",
+    "wt_residue": "Met",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 9.7,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.009999999999999787,
+    "delta_g": -10.332
+  },
+  "explanation": "The M230L mutation reduces nevirapine binding through a subtle loss of favorable van der Waals interactions at the NNRTI-binding pocket wall. Methionine's longer, flexible sulfur-containing side chain provides superior shape complementarity and polarizable contacts with nevirapine's aromatic core at the 2.8 \u00c5 binding interface, whereas leucine's shorter branched aliphatic chain cannot achieve the same contact surface area despite the minimal 3.8 \u00c5\u00b3 volume decrease. This modest energetic penalty (~0.01 kcal/mol) accumulates because methionine's unique ability to optimize van der Waals packing in the primer grip region is lost when replaced with the more constrained leucine scaffold.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:15.448392+00:00"
+}

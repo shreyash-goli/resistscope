@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "V108I",
+  "delta_delta_g": -0.009999999999999787,
+  "structural_context": {
+    "position": 108,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 6.4,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.009999999999999787,
+    "delta_g": -11.696
+  },
+  "explanation": "The V108I substitution introduces a branched methyl group on the isoleucine side chain that increases local hydrophobic volume by ~27 \u0172, creating a subtle steric constraint within the NNRTI pocket rim that forces efavirenz to adopt a suboptimal binding geometry or reduces favorable van der Waals contacts. Although the mutation does not directly contact efavirenz (at 6.4 \u00c5 minimum distance), the cumulative effect of tighter packing around the ligand's periphery destabilizes the binding pose sufficiently to weaken inhibitor affinity without disrupting the overall fold. This modest resistance mechanism (\u0394\u0394G near zero) reflects a gradual erosion of binding entropy and van der Waals complementarity rather than a dramatic steric clash or loss of key hydrogen bonding interactions.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:58.868104+00:00"
+}

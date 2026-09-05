@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "F227L",
+  "delta_delta_g": 0.0730000000000004,
+  "structural_context": {
+    "position": 227,
+    "wt_aa": "F",
+    "mut_aa": "L",
+    "wt_residue": "Phe",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": 1.0,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 6.5,
+    "contacts_ligand_directly": false,
+    "region": "primer_grip_NNRTI_wall",
+    "delta_delta_g": 0.0730000000000004,
+    "delta_g": -10.269
+  },
+  "explanation": "The F227L mutation creates a structural cavity within the NNRTI-binding pocket wall by replacing phenylalanine's bulky aromatic ring with leucine's smaller branched side chain, reducing local van der Waals contact surface area that normally stabilizes nevirapine binding. Although F227 does not directly contact the ligand (at 6.5 \u00c5 minimum distance), it forms part of the primer grip domain architecture that maintains optimal pocket geometry; the loss of aromatic stabilization and ~23 \u00c5\u00b3 volume reduction allows subtle pocket relaxation or conformational flexibility that destabilizes the precise positioning required for nevirapine's inhibitory interactions. This indirect mechanism\u2014where peripheral pocket geometry is compromised rather than direct ligand contacts\u2014results in measurable but modest resistance (\u0394\u0394G = +0.07 kcal/mol), reflecting that the mutation perturbs the scaffold supporting high-affinity binding rather than creating steric clash.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:48.138169+00:00"
+}

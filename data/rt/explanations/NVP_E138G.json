@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138G",
+  "delta_delta_g": -0.009999999999999787,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "G",
+    "wt_residue": "Glu",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -78.3,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 3.1,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.009999999999999787,
+    "delta_g": -10.352
+  },
+  "explanation": "The E138G mutation causes minimal direct resistance (\u0394\u0394G \u2248 -0.01 kcal/mol) because position 138 is structurally remote from the NNRTI-binding pocket, located >43 \u00c5 away in the palm domain. The loss of the bulky, negatively charged glutamate side chain reduces steric constraints in the catalytic core, likely permitting subtle conformational relaxation that propagates to distant allosteric effects on the NNRTI-binding site rather than through direct contact. This long-range destabilization of the inhibitor-bound state probably arises from altered domain dynamics or electrostatic topology, where the charge neutralization and volume loss disrupt the precise structural scaffold that optimally positions the binding pocket for nevirapine accommodation.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:02.756280+00:00"
+}

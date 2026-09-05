@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "K103N",
+  "delta_delta_g": 0.4540000000000006,
+  "structural_context": {
+    "position": 103,
+    "wt_aa": "K",
+    "mut_aa": "N",
+    "wt_residue": "Lys",
+    "mut_residue": "Asn",
+    "volume_change": "decrease",
+    "volume_change_A3": -54.5,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.4540000000000006,
+    "delta_g": -11.232
+  },
+  "explanation": "The K103N mutation eliminates the positively charged lysine side chain that normally establishes favorable electrostatic interactions with efavirenz's electron-rich aromatic rings and/or polar groups within the NNRTI pocket, and substitution with the smaller, uncharged asparagine creates a ~54.5 \u0172 cavity that destabilizes the ligand through loss of critical van der Waals contacts and electrostatic complementarity. Although asparagine retains some polar character through its amide group, it cannot replicate the extended electrostatic reach of the lysine cation, particularly given efavirenz's proximity at 4.1 \u00c5\u2014a distance where the loss of positive charge meaningfully reduces binding affinity despite the direct contact being retained.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:12:53.120822+00:00"
+}

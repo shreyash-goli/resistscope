@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "G190S",
+  "delta_delta_g": 0.6419999999999995,
+  "structural_context": {
+    "position": 190,
+    "wt_aa": "G",
+    "mut_aa": "S",
+    "wt_residue": "Gly",
+    "mut_residue": "Ser",
+    "volume_change": "increase",
+    "volume_change_A3": 28.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 7.1,
+    "min_distance_to_ligand_angstrom": 3.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.6419999999999995,
+    "delta_g": -11.044
+  },
+  "explanation": "The glycine-to-serine substitution at position 190 introduces a bulky hydroxyl-bearing side chain (~29 \u0172 increase) into the sterically constrained NNRTI pocket core, creating a van der Waals clash with efavirenz at the minimal 3.7 \u00c5 contact distance that destabilizes the inhibitor's binding pose. Although serine is slightly more hydrophilic than glycine, the steric penalty of accommodating the expanded side chain while maintaining favorable contacts with the ligand dominates the energetic cost, explaining the +0.64 kcal/mol destabilization. This mutation exploits the NNRTI pocket's limited flexibility\u2014glycine's inherent conformational permissiveness at position 190 is critical for achieving optimal efavirenz positioning, and even a modest polar side chain replacement forces an unfavorable trade-off between direct ligand contacts and backbone/rotamer strain.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:12:43.567689+00:00"
+}

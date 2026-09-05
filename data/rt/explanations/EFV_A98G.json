@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "A98G",
+  "delta_delta_g": -0.0030000000000001137,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": -0.0030000000000001137,
+    "delta_g": -11.689
+  },
+  "explanation": "The A98G mutation causes minimal resistance to efavirenz because the substitution of alanine with glycine removes only modest hydrophobic surface area (28.5 \u0172 decrease) at a position 5.6 \u00c5 from the ligand, too distant to directly perturb efavirenz contacts. Although glycine's smaller side chain reduces van der Waals interactions that normally stabilize the pocket architecture, this local loss of hydrophobic packing has negligible thermodynamic consequence (\u0394\u0394G \u2248 0), suggesting the NNRTI-binding pocket maintains sufficient structural integrity despite the conformational flexibility glycine introduces. This mutation likely represents a neutral variant or one where any subtle destabilization of binding pocket geometry is compensated by protein dynamics, explaining why A98G confers essentially no resistance despite the structural perturbation.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:43.959687+00:00"
+}

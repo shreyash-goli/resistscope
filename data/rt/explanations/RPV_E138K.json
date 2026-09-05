@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "E138K",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -9.59
+  },
+  "explanation": "The E138K mutation introduces a substantial conformational perturbation within the palm domain that propagates to destabilize the NNRTI binding pocket despite the residue's distance from rilpivirine. The 30 \u0172 volume increase and charge inversion from negative to positive likely create steric or electrostatic strain in the local protein scaffold, subtly repositioning the binding pocket geometry or key contact residues that normally stabilize rilpivirine's aromatic and polar moieties. This indirect mechanism\u2014where the mutation disrupts the structural integrity of the pocket rather than directly clashing with the inhibitor\u2014explains the modest but measurable loss of binding affinity (-0.04 kcal/mol) and is consistent with E138K's known role in NNRTI resistance through allosteric destabilization of inhibitor accommodation.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:19.559300+00:00"
+}

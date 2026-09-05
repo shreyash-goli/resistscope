@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "A98G",
+  "delta_delta_g": 0.015000000000000568,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": 0.015000000000000568,
+    "delta_g": -8.936
+  },
+  "explanation": "The A98G mutation reduces etravirine binding through indirect allosteric effects rather than direct ligand contact. Alanine-to-glycine substitution eliminates the methyl side chain, creating a localized cavity (~28.5 \u0172 decrease) within the fingers-palm subdomain that redistributes the surrounding protein scaffold; this conformational relaxation propagates to the NNRTI-binding pocket ~5.6 \u00c5 away, subtly destabilizing the precise geometry required for etravirine's optimal positioning and van der Waals contacts. The loss of hydrophobic packing from alanine (\u22122.2 hydrophobicity change) further destabilizes the local environment, reducing the enthalpic benefit of ligand binding without directly preventing drug accommodation, resulting in the modest but measurable resistance phenotype.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:11.974229+00:00"
+}

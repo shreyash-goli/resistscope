@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "L100I",
+  "delta_delta_g": 0.3810000000000002,
+  "structural_context": {
+    "position": 100,
+    "wt_aa": "L",
+    "mut_aa": "I",
+    "wt_residue": "Leu",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.7,
+    "distance_from_ligand_centroid_angstrom": 9.4,
+    "min_distance_to_ligand_angstrom": 7.6,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.3810000000000002,
+    "delta_g": -9.961
+  },
+  "explanation": "L100I reduces nevirapine binding through a subtle conformational perturbation mechanism rather than direct steric clash: the substitution of leucine's longer branched sidechain with isoleucine's more compact, linear geometry shifts the energetic landscape of the NNRTI pocket rim, subtly repositioning the local backbone or neighboring side-chain conformations that stabilize nevirapine's binding geometry. This conformational remodeling at the pocket perimeter, occurring ~7.6 \u00c5 from the ligand, likely reduces van der Waals complementarity with nevirapine's binding surface through indirect geometric effects, causing the cumulative loss of favorable hydrophobic contacts without introducing significant energetic strain to the protein itself.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:06.540211+00:00"
+}

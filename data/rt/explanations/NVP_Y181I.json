@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "Y181I",
+  "delta_delta_g": 0.21000000000000085,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "I",
+    "wt_residue": "Tyr",
+    "mut_residue": "Ile",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.8,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.21000000000000085,
+    "delta_g": -10.132
+  },
+  "explanation": "The Y181I mutation replaces tyrosine's larger aromatic ring with isoleucine's smaller branched aliphatic side chain, creating a cavity within the NNRTI-binding pocket that nevirapine cannot fully occupy. With a minimum distance of 3.8 \u00c5, Y181I loses the aromatic ring's van der Waals contacts and any pi-stacking or favorable interactions that stabilized nevirapine positioning, while the reduced hydrophobic surface (despite increased overall hydrophobicity) fails to provide compensatory binding energy. This ~27 \u00c5\u00b3 volume deficit at a core pocket position destabilizes the inhibitor's binding geometry without altering electrostatic complementarity, manifesting as weaker overall binding affinity.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:22.844026+00:00"
+}

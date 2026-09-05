@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "K101E",
+  "delta_delta_g": -1.3099999999999987,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "E",
+    "wt_residue": "Lys",
+    "mut_residue": "Glu",
+    "volume_change": "decrease",
+    "volume_change_A3": -30.2,
+    "charge_change": "positive_to_negative",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -1.3099999999999987,
+    "delta_g": -10.261
+  },
+  "explanation": "The K101E mutation eliminates a positively charged lysine at the NNRTI pocket rim and replaces it with a negatively charged glutamate, reversing the local electrostatic environment and eliminating a potential cation-\u03c0 or electrostatic interaction that stabilizes etravirine binding. The accompanying reduction in side-chain volume (\u221230.2 \u0172) creates a binding cavity defect near the ligand contact interface (2.7 \u00c5 minimum distance), disrupting van der Waals contacts that normally contribute favorable binding interactions. This combination of electrostatic disruption and loss of favorable nonpolar contacts destabilizes the ETR-RT complex by approximately 1.3 kcal/mol, reducing inhibitor potency despite the mutation's position at the pocket periphery.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:35.105838+00:00"
+}

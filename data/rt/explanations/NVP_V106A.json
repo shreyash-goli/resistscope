@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "V106A",
+  "delta_delta_g": 0.3979999999999997,
+  "structural_context": {
+    "position": 106,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.1,
+    "min_distance_to_ligand_angstrom": 6.2,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.3979999999999997,
+    "delta_g": -9.944
+  },
+  "explanation": "V106A creates a cavity defect within the NNRTI-binding pocket rim through loss of ~51 \u00c5\u00b3 of hydrophobic bulk, destabilizing the precise geometric scaffolding required for nevirapine positioning despite not directly contacting the ligand. The reduction in hydrophobicity at this rim position (\u22122.4 kcal/mol equivalent) weakens favorable van der Waals packing interactions that normally stabilize the pocket architecture, causing a subtle but significant conformational relaxation that propagates to disrupt the optimal binding geometry for nevirapine's aromatic core. This allosteric effect, manifested as a 0.40 kcal/mol binding penalty, highlights how mutations at the pocket periphery can erode inhibitor affinity through loss of the organized hydrophobic framework rather than through direct steric or electrostatic clash.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:03.169871+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "H221Y",
+  "delta_delta_g": -0.002000000000000668,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 14.5,
+    "min_distance_to_ligand_angstrom": 11.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": -0.002000000000000668,
+    "delta_g": -11.688
+  },
+  "explanation": "The H221Y substitution introduces a bulkier aromatic residue (40 \u00c5\u00b3 volume increase) in the connection subdomain that, despite not directly contacting efavirenz, likely perturbs the conformational dynamics or indirect stabilization networks supporting the NNRTI-binding pocket located ~12 \u00c5 away. The loss of the positively charged imidazole ring (His) in favor of a neutral hydroxyl group eliminates local electrostatic interactions that may have helped organize the protein scaffold or stabilize water-mediated interactions critical for maintaining optimal inhibitor accommodation. The minimal predicted energetic penalty (\u0394\u0394G \u2248 0 kcal/mol) suggests this is a subtle allosteric effect where the mutation subtly destabilizes the binding-competent conformation rather than creating direct steric clash with efavirenz.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:36.755818+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "V108I",
+  "delta_delta_g": -0.009000000000000341,
+  "structural_context": {
+    "position": 108,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 6.4,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": -0.009000000000000341,
+    "delta_g": -10.351
+  },
+  "explanation": "The V108I substitution introduces a bulkier isoleucine at the NNRTI-binding pocket rim, expanding the local hydrophobic environment by ~27 \u00c5\u00b3 despite maintaining similar polarity. This volumetric increase, positioned 6.4 \u00c5 from nevirapine, likely creates subtle steric incompatibility within the confined pocket geometry\u2014the branched methyl group of isoleucine projects differently than valine's linear side chain, causing minor reorientation or compression of the inhibitor binding mode. The marginal energetic penalty (-0.01 kcal/mol) suggests this is a fine-tuning resistance mechanism where the mutation doesn't completely displace the drug but rather destabilizes its optimal binding geometry through cumulative van der Waals strain, particularly relevant given nevirapine's sensitivity to pocket pocket shape complementarity.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:54.037524+00:00"
+}

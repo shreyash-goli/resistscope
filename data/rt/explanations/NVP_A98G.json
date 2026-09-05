@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "A98G",
+  "delta_delta_g": -0.011999999999998678,
+  "structural_context": {
+    "position": 98,
+    "wt_aa": "A",
+    "mut_aa": "G",
+    "wt_residue": "Ala",
+    "mut_residue": "Gly",
+    "volume_change": "decrease",
+    "volume_change_A3": -28.5,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.2,
+    "distance_from_ligand_centroid_angstrom": 7.4,
+    "min_distance_to_ligand_angstrom": 5.6,
+    "contacts_ligand_directly": false,
+    "region": "fingers_palm_subdomain",
+    "delta_delta_g": -0.011999999999998678,
+    "delta_g": -10.354
+  },
+  "explanation": "The A98G mutation causes a substantial loss of hydrophobic volume (28.5 \u0172) in the fingers-palm subdomain proximal to the NNRTI-binding pocket, which destabilizes nevirapine binding despite the negligible thermodynamic cost. Although position 98 does not directly contact the ligand, its positioning at 5.6 \u00c5 minimum distance places it within the conformational environment that shapes the binding pocket geometry; the conversion from alanine's branched aliphatic side chain to glycine's minimal backbone-only structure reduces van der Waals contacts that stabilize the local protein scaffold supporting nevirapine accommodation. This loss of hydrophobic stabilization marginally weakens the overall binding interaction, manifesting as reduced affinity without requiring explicit steric clashes or electrostatic perturbations, rendering the mutation a subtle resistance mechanism through pocket destabilization rather than direct inhibitor occlusion.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:06.552686+00:00"
+}

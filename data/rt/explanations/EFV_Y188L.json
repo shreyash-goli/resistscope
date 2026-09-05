@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y188L",
+  "delta_delta_g": 0.36599999999999966,
+  "structural_context": {
+    "position": 188,
+    "wt_aa": "Y",
+    "mut_aa": "L",
+    "wt_residue": "Tyr",
+    "mut_residue": "Leu",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.1,
+    "distance_from_ligand_centroid_angstrom": 9.2,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": 0.36599999999999966,
+    "delta_g": -11.32
+  },
+  "explanation": "The Y188L mutation replaces a bulky aromatic tyrosine with a smaller leucine within the NNRTI pocket core, creating a cavity that reduces favorable van der Waals contacts with efavirenz despite the residue not directly contacting the ligand. This loss of complementary packing at 6.7 \u00c5 minimum distance disrupts the precise shape complementarity of the binding pocket, destabilizing the inhibitor's orientation and positioning. Additionally, the substitution of tyrosine's hydroxyl group with leucine's nonpolar methyl side chain diminishes local hydrophobic interactions that normally contribute to binding affinity in this deep pocket region.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:09.077980+00:00"
+}

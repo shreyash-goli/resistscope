@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "E138A",
+  "delta_delta_g": -0.0039999999999995595,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0039999999999995595,
+    "delta_g": -10.346
+  },
+  "explanation": "The E138A mutation shows negligible impact on nevirapine binding affinity (\u0394\u0394G \u2248 0 kcal/mol), indicating this substitution does not materially weaken the drug-enzyme interaction. Located >43 \u00c5 from the ligand with no direct contacts and positioned in the palm catalytic core rather than the NNRTI allosteric pocket, residue 138 is too distant to significantly perturb nevirapine's binding geometry through steric or electrostatic mechanisms. The loss of glutamate's negative charge and the decrease in residue volume appear functionally inconsequential for NNRTI binding, suggesting E138A likely confers resistance\u2014if clinically observed\u2014through an indirect mechanism such as subtle alterations in protein conformational dynamics or thermodynamic stability rather than direct inhibitor displacement.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:47.278269+00:00"
+}

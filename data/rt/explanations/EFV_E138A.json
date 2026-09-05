@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "E138A",
+  "delta_delta_g": -0.0030000000000001137,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.0030000000000001137,
+    "delta_g": -11.689
+  },
+  "explanation": "The E138A mutation shows negligible thermodynamic impact on efavirenz binding (\u0394\u0394G \u2248 0), indicating this substitution does not substantially alter drug recognition. Located over 43 \u00c5ngstr\u00f6ms from the ligand in the palm catalytic core\u2014far beyond direct contact distance\u2014E138 does not participate in critical inhibitor interactions; the loss of the glutamate's negative charge and bulky carboxylate side chain therefore has minimal energetic consequence for efavirenz positioning or binding geometry. This mutation likely represents a structurally neutral change that does not constitute a clinically relevant resistance mechanism through direct binding perturbation.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:39.622056+00:00"
+}

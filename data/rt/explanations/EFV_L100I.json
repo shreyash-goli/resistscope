@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "L100I",
+  "delta_delta_g": 0.6120000000000001,
+  "structural_context": {
+    "position": 100,
+    "wt_aa": "L",
+    "mut_aa": "I",
+    "wt_residue": "Leu",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.7,
+    "distance_from_ligand_centroid_angstrom": 9.4,
+    "min_distance_to_ligand_angstrom": 7.6,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.6120000000000001,
+    "delta_g": -11.074
+  },
+  "explanation": "The L100I substitution reduces efavirenz binding through a subtle conformational mechanism rather than direct contact: leucine's longer, more flexible side chain permits accommodation of the NNRTI pocket geometry that positions efavirenz optimally, while isoleucine's branched-at-\u03b3 structure creates geometric constraints that shift the local backbone or adjacent side-chain orientations at the pocket rim. This reorientation propagates through the binding pocket architecture, causing efavirenz to adopt a suboptimal binding pose approximately 7.6 \u00c5 away, reducing favorable van der Waals interactions across the extended contact surface without introducing steric clashes. The 0.7 kcal/mol hydrophobicity increase and minimal volume change indicate the resistance mechanism is driven by altered spatial fit rather than energetic destabilization, consistent with the modest energetic penalty observed.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:12:46.939846+00:00"
+}

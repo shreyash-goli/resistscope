@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "K103N",
+  "delta_delta_g": 0.4250000000000007,
+  "structural_context": {
+    "position": 103,
+    "wt_aa": "K",
+    "mut_aa": "N",
+    "wt_residue": "Lys",
+    "mut_residue": "Asn",
+    "volume_change": "decrease",
+    "volume_change_A3": -54.5,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 8.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.4250000000000007,
+    "delta_g": -9.917
+  },
+  "explanation": "The K103N mutation eliminates a positively charged lysine side chain that makes favorable electrostatic interactions with nevirapine's polar atoms at the pocket rim, replacing it with a smaller, polar but uncharged asparagine that cannot provide equivalent electrostatic stabilization. Additionally, the substantial loss in side-chain volume (~55 \u00c5\u00b3) creates a binding cavity deficiency at this critical contact point just 4.1 \u00c5 from the ligand, reducing van der Waals contacts that normally stabilize the inhibitor's positioning within the NNRTI pocket. Together, these changes\u2014loss of charge complementarity and reduced molecular packing efficiency\u2014destabilize the nevirapine-enzyme complex without requiring steric clash, thus conferring resistance through progressive weakening of binding interactions.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:12:59.672310+00:00"
+}

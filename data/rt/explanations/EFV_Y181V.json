@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "Y181V",
+  "delta_delta_g": -0.02999999999999936,
+  "structural_context": {
+    "position": 181,
+    "wt_aa": "Y",
+    "mut_aa": "V",
+    "wt_residue": "Tyr",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -53.6,
+    "charge_change": "none",
+    "hydrophobicity_change": 5.5,
+    "distance_from_ligand_centroid_angstrom": 7.9,
+    "min_distance_to_ligand_angstrom": 3.8,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_core",
+    "delta_delta_g": -0.02999999999999936,
+    "delta_g": -11.716
+  },
+  "explanation": "The Y181V mutation removes the bulky aromatic tyrosine ring and its hydroxyl group, creating a smaller hydrophobic pocket that weakens van der Waals contacts with efavirenz at the NNRTI binding site\u2014the 53.6 \u00c5\u00b3 volume reduction and direct ligand contact (3.8 \u00c5 minimum distance) indicate that efavirenz loses favorable interactions with the aromatic \u03c0-system and potential hydrogen bonding with the tyrosine hydroxyl. Although the energetic penalty is modest (-0.03 kcal/mol), this reflects a subtle loss of binding complementarity rather than a dramatic clash, as the smaller valine accommodates the ligand without introducing steric strain\u2014the resistance mechanism operates through cumulative reduction in favorable interactions rather than allosteric destabilization.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:15:16.362512+00:00"
+}

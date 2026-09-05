@@ -1,0 +1,26 @@
+{
+  "drug": "RPV",
+  "mutation": "E138A",
+  "delta_delta_g": 0.01699999999999946,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "A",
+    "wt_residue": "Glu",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -49.8,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 5.3,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": 0.01699999999999946,
+    "delta_g": -9.535
+  },
+  "explanation": "The E138A mutation reduces rilpivirine binding through an indirect allosteric mechanism rather than direct contact. The negatively charged glutamate at position 138 is located ~43 \u00c5 from the NNRTI pocket, and its replacement with small, neutral alanine eliminates a critical electrostatic anchor point that stabilizes the overall three-dimensional architecture of the palm domain; loss of this negative charge removes an organizing electrostatic influence that maintains the precise geometric presentation of rilpivirine-binding residues. The 50 \u0172 volume reduction coupled with the loss of negative charge likely permits localized conformational relaxation in the NNRTI-binding pocket, destabilizing favorable van der Waals and electrostatic complementarity with the inhibitor despite the direct contact points remaining geometrically intact.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:08.554230+00:00"
+}

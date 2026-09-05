@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "K101P",
+  "delta_delta_g": 0.02800000000000047,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "P",
+    "wt_residue": "Lys",
+    "mut_residue": "Pro",
+    "volume_change": "decrease",
+    "volume_change_A3": -55.9,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 2.3,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.02800000000000047,
+    "delta_g": -10.314
+  },
+  "explanation": "The K101P substitution eliminates a positively charged lysine side chain that makes direct contact with nevirapine at the pocket rim, replacing it with the conformationally restricted proline backbone. Loss of the long, flexible positive charge removes favorable electrostatic interactions and van der Waals contacts that normally stabilize the inhibitor binding pose, while proline's cyclic constraint and reduced side-chain volume create a local geometric mismatch that destabilizes ligand accommodation. The modest energetic penalty (~0.03 kcal/mol) reflects a subtle but significant disruption of the electrostatic and hydrophobic complementarity at this critical contact interface rather than complete pocket collapse.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:57.985683+00:00"
+}

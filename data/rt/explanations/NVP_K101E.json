@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "K101E",
+  "delta_delta_g": 0.018000000000000682,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "E",
+    "wt_residue": "Lys",
+    "mut_residue": "Glu",
+    "volume_change": "decrease",
+    "volume_change_A3": -30.2,
+    "charge_change": "positive_to_negative",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.018000000000000682,
+    "delta_g": -10.324
+  },
+  "explanation": "The K101E mutation eliminates a positively charged lysine and replaces it with a negatively charged glutamate that directly contacts nevirapine (2.7 \u00c5 minimum distance), disrupting favorable electrostatic interactions with the inhibitor's aromatic ring system while introducing an unfavorable charge repulsion. The simultaneous loss of ~30 \u0172 volume removes van der Waals contacts that stabilize the inhibitor's binding pose at the pocket rim, destabilizing the bound state through cumulative loss of both electrostatic and hydrophobic complementarity. This combined effect of charge inversion and reduced surface contact weakens nevirapine affinity despite the modest predicted energetic penalty, reflecting how rim residues fine-tune inhibitor binding through multiple weak interactions rather than dominant single contacts.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:05.527263+00:00"
+}

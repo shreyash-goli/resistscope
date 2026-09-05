@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "H221Y",
+  "delta_delta_g": 0.04300000000000104,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 14.5,
+    "min_distance_to_ligand_angstrom": 11.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": 0.04300000000000104,
+    "delta_g": -8.908
+  },
+  "explanation": "The H221Y substitution introduces a bulkier aromatic residue (40.4 \u00c5\u00b3 volume increase) within the connection subdomain that, while not directly contacting etravirine, likely creates a subtle conformational distortion or steric strain in the NNRTI-binding pocket architecture approximately 12 \u00c5 away. The loss of histidine's positive charge replaced by tyrosine's neutral aromatic character may eliminate a stabilizing electrostatic interaction with the drug or destabilize a water-mediated hydrogen bonding network critical for inhibitor positioning. The marginal resistance effect (\u0394\u0394G = +0.04 kcal/mol) reflects that this is an indirect, allosteric mechanism where the volume expansion slightly compromises the precise geometric complementarity required for optimal etravirine accommodation in the binding pocket.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:51.554778+00:00"
+}

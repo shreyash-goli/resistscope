@@ -1,0 +1,26 @@
+{
+  "drug": "ETR",
+  "mutation": "L100I",
+  "delta_delta_g": 0.28200000000000003,
+  "structural_context": {
+    "position": 100,
+    "wt_aa": "L",
+    "mut_aa": "I",
+    "wt_residue": "Leu",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.7,
+    "distance_from_ligand_centroid_angstrom": 9.4,
+    "min_distance_to_ligand_angstrom": 7.6,
+    "contacts_ligand_directly": false,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.28200000000000003,
+    "delta_g": -8.669
+  },
+  "explanation": "The L100I substitution increases local hydrophobicity at the NNRTI pocket rim while maintaining essentially identical van der Waals volume, which subtly alters the electrostatic and hydrophobic balance of the binding pocket microenvironment despite being 7.6 \u00c5 from etravirine. This conformational perturbation at the pocket periphery likely propagates inward to destabilize the precise geometry required for optimal etravirine positioning, reducing favorable aromatic and hydrophobic contacts between the inhibitor and the binding site. The modest energetic penalty (+0.28 kcal/mol) reflects a cumulative effect of this indirect allosteric modulation rather than direct steric clash, consistent with L100I's location on the pocket rim where it can influence drug accommodation without catastrophic structural disruption.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:18.756281+00:00"
+}

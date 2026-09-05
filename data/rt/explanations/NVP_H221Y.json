@@ -1,0 +1,26 @@
+{
+  "drug": "NVP",
+  "mutation": "H221Y",
+  "delta_delta_g": 0.0010000000000012221,
+  "structural_context": {
+    "position": 221,
+    "wt_aa": "H",
+    "mut_aa": "Y",
+    "wt_residue": "His",
+    "mut_residue": "Tyr",
+    "volume_change": "increase",
+    "volume_change_A3": 40.4,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 1.9,
+    "distance_from_ligand_centroid_angstrom": 14.5,
+    "min_distance_to_ligand_angstrom": 11.9,
+    "contacts_ligand_directly": false,
+    "region": "connection_subdomain",
+    "delta_delta_g": 0.0010000000000012221,
+    "delta_g": -10.341
+  },
+  "explanation": "The H221Y substitution increases local hydrophobicity and van der Waals bulk within the connection subdomain, which at 11.9 \u00c5 from nevirapine creates a conformational perturbation that destabilizes the precise geometry required for optimal ligand positioning within the NNRTI-binding pocket. Loss of the positively charged imidazole ring eliminates a potential electrostatic interaction or hydrogen-bonding network that maintains the structural scaffold anchoring nevirapine; the neutral tyrosine hydroxyl cannot compensate for this electrostatic contribution at the distal location. Although the energetic cost is marginal (near the noise threshold), the cumulative effect of increased steric bulk coupled with charge neutralization likely shifts the conformational equilibrium away from the ligand-binding competent state, achieving resistance through indirect allosteric mechanisms rather than direct steric clash.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:26.880127+00:00"
+}

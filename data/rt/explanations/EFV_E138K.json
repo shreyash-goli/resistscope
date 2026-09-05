@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "E138K",
+  "delta_delta_g": -0.002000000000000668,
+  "structural_context": {
+    "position": 138,
+    "wt_aa": "E",
+    "mut_aa": "K",
+    "wt_residue": "Glu",
+    "mut_residue": "Lys",
+    "volume_change": "increase",
+    "volume_change_A3": 30.2,
+    "charge_change": "negative_to_positive",
+    "hydrophobicity_change": -0.4,
+    "distance_from_ligand_centroid_angstrom": 48.6,
+    "min_distance_to_ligand_angstrom": 43.0,
+    "contacts_ligand_directly": false,
+    "region": "palm_catalytic_core",
+    "delta_delta_g": -0.002000000000000668,
+    "delta_g": -11.688
+  },
+  "explanation": "The E138K mutation at position 138 does not directly contact efavirenz and is located ~43 \u00c5 away from the ligand, placing it far outside the NNRTI-binding pocket. The negligible change in binding free energy (\u0394\u0394G \u2248 0 kcal/mol) indicates this mutation has essentially no mechanistic impact on efavirenz binding, suggesting E138K is either a neutral variant or potentially a compensatory mutation that maintains overall RT folding and catalytic competence without affecting inhibitor recognition. The structural data does not support a resistance mechanism for this particular mutation against efavirenz.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:14:33.172297+00:00"
+}

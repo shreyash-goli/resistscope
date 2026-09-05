@@ -1,0 +1,26 @@
+{
+  "drug": "EFV",
+  "mutation": "K101P",
+  "delta_delta_g": 0.125,
+  "structural_context": {
+    "position": 101,
+    "wt_aa": "K",
+    "mut_aa": "P",
+    "wt_residue": "Lys",
+    "mut_residue": "Pro",
+    "volume_change": "decrease",
+    "volume_change_A3": -55.9,
+    "charge_change": "positive_to_neutral",
+    "hydrophobicity_change": 2.3,
+    "distance_from_ligand_centroid_angstrom": 6.3,
+    "min_distance_to_ligand_angstrom": 2.7,
+    "contacts_ligand_directly": true,
+    "region": "NNRTI_pocket_rim",
+    "delta_delta_g": 0.125,
+    "delta_g": -11.561
+  },
+  "explanation": "K101P reduces efavirenz binding primarily through loss of a critical electrostatic interaction: the positively charged lysine side chain makes favorable contacts with efavirenz's polar atoms (likely the hydroxyl or carbonyl groups), and substitution to proline\u2014a neutral, conformationally rigid residue\u2014abolishes this electrostatic complementarity while simultaneously introducing steric constraints due to proline's cyclic backbone that distort the local pocket geometry. Additionally, the 56 \u0172 volume reduction combined with increased hydrophobicity creates a suboptimal hydrophobic-hydrophilic match at the pocket rim, destabilizing the precise alignment of efavirenz's binding mode that depends on both electrostatic steering and van der Waals packing at this 2.7 \u00c5 contact distance.",
+  "citations": [],
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T05:13:38.188840+00:00"
+}
