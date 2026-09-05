@@ -1,0 +1,24 @@
+{
+  "drug": "NFV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket"
+  },
+  "explanation": "The V82A mutation reduces a bulky hydrophobic side chain to a smaller one within direct contact distance of nelfinavir (3.3 \u00c5), creating a cavity in the S1/S1' subpocket that destabilizes van der Waals contacts with the inhibitor's nonpolar scaffold. This loss of favorable hydrophobic packing is compounded by decreased electrostatic complementarity in a region critical for inhibitor recognition, effectively lowering binding affinity despite the modest distance from the ligand centroid. The 51 \u0172 volume reduction fundamentally alters the shape complementarity between protease and drug, forcing nelfinavir to either adopt suboptimal conformations or dissociate more readily from the active site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:18:16.092982+00:00"
+}

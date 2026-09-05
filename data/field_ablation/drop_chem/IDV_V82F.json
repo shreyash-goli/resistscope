@@ -1,0 +1,22 @@
+{
+  "drug": "IDV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.9879999999999995,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.9879999999999995,
+    "delta_g": -11.245
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain at the S1/S1' subpocket interface where valine maintains optimal van der Waals contacts with indinavir at 3.3 \u00c5. The larger phenyl ring of phenylalanine creates a steric clash that forces unfavorable conformational rearrangement of either the inhibitor or the protease backbone, disrupting the energetically favorable binding geometry established by the smaller branched aliphatic side chain. This steric incompatibility at a direct contact point with the ligand outweighs any potential gain from \u03c0-interactions, resulting in weakened binding affinity that confers resistance to indinavir despite the mutation's distance from the active site center.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:34.992170+00:00"
+}

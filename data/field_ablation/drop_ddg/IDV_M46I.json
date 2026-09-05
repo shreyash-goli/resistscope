@@ -1,0 +1,24 @@
+{
+  "drug": "IDV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region"
+  },
+  "explanation": "The M46I substitution reduces indinavir affinity through an indirect conformational mechanism rather than direct ligand contact. Methionine's longer, flexible sulfur-containing side chain at position 46 in the flap region permits subtle conformational plasticity that accommodates indinavir binding; isoleucine's shorter, branched aliphatic structure restricts this flexibility and likely stabilizes an alternative flap conformation that is suboptimal for the inhibitor's binding geometry. Although M46I does not directly contact indinavir (7 \u00c5 separation), the mutation's location within the flap\u2014a critical mobile element that must reposition upon inhibitor binding\u2014propagates conformational strain that destabilizes the inhibitor-bound state without significantly altering the protein's overall fold or charge distribution.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:41.506008+00:00"
+}

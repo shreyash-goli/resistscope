@@ -1,0 +1,25 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The L76V mutation reduces a hydrophobic side chain by ~27 \u0172 within 4.8 \u00c5 of the ligand, creating a small cavity or reducing favorable van der Waals contacts that darunavir exploits for binding stabilization in the S1' or nearby subpocket. Although the mutation preserves hydrophobicity and introduces no charge change, the loss of the larger leucine volume weakens the enthalpic contribution from optimal packing interactions between the protease scaffold and the inhibitor's aromatic or aliphatic moieties. This modest destabilization (~0.33 kcal/mol) reflects a subtle reduction in binding complementarity rather than a dramatic steric clash, consistent with the distal position of residue 76 relative to the active site centroid.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:48.783541+00:00"
+}

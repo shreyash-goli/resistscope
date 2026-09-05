@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": 0.46300000000000097,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": 0.46300000000000097,
+    "delta_g": -9.636
+  },
+  "explanation": "The L76V mutation reduces a large hydrophobic side chain to a smaller one, creating a ~27 \u00c5\u00b3 cavity within the S2 subpocket approximately 4.8 \u00c5 from lopinavir's surface. This loss of van der Waals contact with the inhibitor's hydrophobic scaffold\u2014particularly lopinavir's bulky ligand-binding regions\u2014destabilizes the bound complex without requiring direct compensation, as valine is too small to maintain optimal packing interactions that the larger leucine normally provides. The modest energetic penalty (+0.46 kcal/mol) reflects a gradual erosion of favorable hydrophobic interactions rather than a catastrophic structural collapse, allowing the protease to retain catalytic function while becoming selectively resistant to this bulky protease inhibitor.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:55.144378+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "drug": "ATV",
+  "mutation": "I54M",
+  "condition": "full",
+  "delta_delta_g": -0.13700000000000045,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.13700000000000045,
+    "delta_g": -9.734
+  },
+  "explanation": "The I54M substitution in the flap region reduces atazanavir binding through a loss of favorable van der Waals contacts rather than direct ligand interaction. Isoleucine's compact, branched aliphatic side chain at position 54 makes efficient hydrophobic packing with the inhibitor's binding pocket environment at ~6.7 \u00c5 distance, while methionine's longer, flexible thioether side chain cannot maintain equivalent van der Waals complementarity and may adopt conformations that subtly distort the flap geometry critical for ATV accommodation. This conformational perturbation likely decreases the binding affinity by destabilizing the optimal positioning of atazanavir without creating overt steric clashes, explaining the modest but consistent weakening of inhibitor binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:19.529844+00:00"
+}

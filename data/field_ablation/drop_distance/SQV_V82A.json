@@ -1,0 +1,23 @@
+{
+  "drug": "SQV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.798,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.798,
+    "delta_g": -10.732
+  },
+  "explanation": "The V82A mutation reduces saquinavir binding by creating a cavity defect in the S1/S1' subpocket through loss of ~51 \u0172 of van der Waals contact surface. Valine's bulkier hydrophobic side chain makes critical hydrophobic contacts with saquinavir's nonpolar moieties in this binding pocket; its replacement with the smaller alanine leaves unfavorable empty space that weakens favorable dispersion interactions without compensating electrostatic or hydrogen bonding gains. This reduction in van der Waals complementarity directly destabilizes the inhibitor-protease complex and accounts for the measurable loss in binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:21:52.410953+00:00"
+}

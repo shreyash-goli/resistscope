@@ -1,0 +1,22 @@
+{
+  "drug": "ATV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": -0.5030000000000001,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.5030000000000001,
+    "delta_g": -10.1
+  },
+  "explanation": "The L90M mutation reduces atazanavir binding through a subtle allosteric mechanism in the C-terminal dimer interface rather than direct active site disruption. While the mutation occurs 8.2 \u00c5 from the ligand, the replacement of leucine's branched hydrophobic side chain with methionine's longer, more flexible thioether chain alters the local packing geometry of the dimer interface, likely introducing minor conformational perturbations that propagate to weaken the precise active site geometry required for optimal atazanavir coordination. This indirect destabilization reduces the binding free energy by ~0.5 kcal/mol without eliminating contact, consistent with a mechanism where protease structural integrity\u2014rather than direct drug interactions\u2014is compromised.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:01.127497+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "drug": "LPV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region"
+  },
+  "explanation": "The M46I substitution introduces a more compact, branched hydrophobic side chain that subtly alters the conformational dynamics of the flap region despite not directly contacting lopinavir. The increased rigidity of isoleucine compared to methionine's flexible thioether chain likely restricts the flap's mobility and repositioning capacity needed to accommodate lopinavir's extended scaffold, effectively reducing the binding competence of the protease active site through an allosteric mechanism. At ~7 \u00c5 minimum distance, the M46I change propagates strain through the flap architecture that destabilizes the precise three-dimensional orientation required for optimal van der Waals contacts between the inhibitor and the active site pocket, thereby reducing binding affinity without requiring direct steric clash.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:44.520708+00:00"
+}

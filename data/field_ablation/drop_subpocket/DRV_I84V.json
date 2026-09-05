@@ -1,0 +1,25 @@
+{
+  "drug": "DRV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": -0.36299999999999955,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.36299999999999955,
+    "delta_g": -9.375
+  },
+  "explanation": "The I84V substitution reduces a bulky isoleucyl sidechain to the smaller valine, creating a ~27 \u00c5\u00b3 cavity within the protease binding pocket despite maintaining hydrophobic character. This volume loss at a position making direct ligand contact (2.4 \u00c5 minimum distance) allows darunavir to lose favorable van der Waals interactions that normally stabilize its binding pose, particularly in the hydrophobic subpocket region where isoleucine's branched methyl groups would otherwise engage the inhibitor. The resulting unfavorable entropic and enthalpic cost of binding\u2014reflected in the weakened affinity\u2014arises not from introducing electrostatic or steric incompatibility, but from the simple elimination of a network of stabilizing nonpolar contacts that darunavir depends on for optimal positioning within the active site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:55.530774+00:00"
+}

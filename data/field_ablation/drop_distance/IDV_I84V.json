@@ -1,0 +1,23 @@
+{
+  "drug": "IDV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": -0.19100000000000072,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.19100000000000072,
+    "delta_g": -10.448
+  },
+  "explanation": "The I84V substitution reduces a branched hydrophobic side chain to a smaller, linear one in the S1/S1' subpocket, creating a cavity adjacent to indinavir's bound conformation. This loss of van der Waals contacts with the inhibitor's nonpolar surface\u2014coupled with the decreased hydrophobicity\u2014destabilizes the binding interaction without introducing compensatory electrostatic or polar interactions. The modest energetic penalty reflects the relatively small subpocket volume loss, but the local desolvation penalty incurred when indinavir binds becomes less favorable as the intimate side-chain packing is disrupted.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:12.610065+00:00"
+}

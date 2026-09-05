@@ -1,0 +1,23 @@
+{
+  "drug": "NFV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.1070000000000011,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.1070000000000011,
+    "delta_g": -10.668
+  },
+  "explanation": "The V82A mutation reduces nelfinavir binding through loss of critical van der Waals contacts in the S1/S1' subpocket. Valine's larger branched side chain makes extensive hydrophobic interactions with nelfinavir's ligand scaffold, and its replacement with the smaller alanine creates a cavity that cannot be optimally filled, diminishing favorable dispersion forces that normally stabilize the inhibitor-protease complex. Additionally, the decreased hydrophobicity at this position weakens the hydrophobic complementarity between the drug and the subpocket, further destabilizing the bound state without introducing compensatory interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:21:49.678490+00:00"
+}

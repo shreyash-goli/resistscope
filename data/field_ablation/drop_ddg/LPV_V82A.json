@@ -1,0 +1,24 @@
+{
+  "drug": "LPV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket"
+  },
+  "explanation": "The V82A mutation reduces the S1/S1\u2032 subpocket volume by over 50 \u0172 through loss of the valine's branched methyl groups, creating a hydrophobic cavity that no longer optimally accommodates lopinavir's bulky inhibitor scaffold at the 3.3 \u00c5 contact interface. This volumetric shrinkage forces lopinavir into a suboptimal binding geometry, disrupting favorable van der Waals interactions that normally stabilize the inhibitor within this critical binding pocket and destabilizing the enzyme-inhibitor complex. The decreased hydrophobicity further weakens the hydrophobic contacts that anchor lopinavir, collectively reducing binding affinity despite the mutation occurring at the periphery of the active site (10.3 \u00c5 from ligand center).",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:18:11.902391+00:00"
+}

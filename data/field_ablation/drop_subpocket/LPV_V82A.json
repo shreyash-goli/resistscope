@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.22900000000000098,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 0.22900000000000098,
+    "delta_g": -9.87
+  },
+  "explanation": "The V82A mutation reduces a bulky valine to a smaller alanine at a position that makes direct contact with lopinavir, creating a cavity within the binding pocket that destabilizes favorable van der Waals interactions the wild-type protease normally maintains with the inhibitor. This loss of ~51 cubic angstroms of hydrophobic surface area\u2014despite the minimal 3.3 \u00c5 separation\u2014eliminates the tight molecular packing that contributes to binding affinity, forcing lopinavir to adopt a suboptimal binding geometry or leaving hydrophobic contact points underoccupied. The reduced hydrophobicity of the smaller side chain further weakens the hydrophobic interactions that stabilize the inhibitor within this critical region of the protease active site architecture.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:25.418796+00:00"
+}

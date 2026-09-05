@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "I50L",
+  "condition": "full",
+  "delta_delta_g": -0.09500000000000064,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "L",
+    "wt_residue": "Ile",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.7,
+    "distance_from_ligand_centroid_angstrom": 5.7,
+    "min_distance_to_ligand_angstrom": 2.2,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.09500000000000064,
+    "delta_g": -9.692
+  },
+  "explanation": "The I50L mutation reduces atazanavir binding through a subtle but critical loss of hydrophobic complementarity: while both residues maintain similar van der Waals volumes and occupy the same subpocket space at 2.2 \u00c5 from the ligand, leucine's slightly decreased hydrophobicity (-0.7 kcal/mol equivalent) weakens favorable nonpolar contacts with atazanavir's lipophilic surfaces. This modest destabilization is sufficient to measurably impair binding affinity at a position that makes direct protease-inhibitor contact, effectively creating a marginally less favorable binding pocket that tips the energetic balance toward drug dissociation and phenotypic resistance despite the geometric accommodation remaining intact.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:36.664763+00:00"
+}

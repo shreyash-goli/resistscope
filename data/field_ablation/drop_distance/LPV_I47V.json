@@ -1,0 +1,23 @@
+{
+  "drug": "LPV",
+  "mutation": "I47V",
+  "condition": "full",
+  "delta_delta_g": 0.08500000000000085,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "region": "flap_region",
+    "delta_delta_g": 0.08500000000000085,
+    "delta_g": -10.014
+  },
+  "explanation": "The I47V substitution reduces a critical hydrophobic contact in the flap region by decreasing van der Waals surface area (~27 \u0172); the smaller valine sidechain creates a cavity that weakens favorable hydrophobic packing interactions between the flap and lopinavir's nonpolar moieties that normally stabilize the inhibitor-bound conformation. This volumetric loss in the binding pocket slightly destabilizes the inhibitor positioning without introducing steric clashes or electrostatic disruption, accounting for the modest but measurable loss in binding affinity that confers selective resistance to lopinavir.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:23.789216+00:00"
+}

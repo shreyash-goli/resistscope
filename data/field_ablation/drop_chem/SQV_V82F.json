@@ -1,0 +1,22 @@
+{
+  "drug": "SQV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": 0.2599999999999998,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.2599999999999998,
+    "delta_g": -11.27
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic ring in place of a compact branched aliphatic side chain within the S1/S1' subpocket, creating a steric clash with saquinavir's inhibitor scaffold at the 3.3 \u00c5 contact distance. The phenylalanine's extended \u03c0-system and rigid geometry cannot accommodate the same van der Waals packing interactions that valine provides, forcing suboptimal positioning of either the inhibitor or the surrounding protease geometry. This conformational strain at a direct ligand contact point destabilizes the enzyme-inhibitor complex without fundamentally disrupting the active site architecture, explaining the modest but measurable resistance conferred.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:40.618554+00:00"
+}

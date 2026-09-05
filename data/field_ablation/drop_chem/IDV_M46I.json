@@ -1,0 +1,22 @@
+{
+  "drug": "IDV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": -0.24200000000000088,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.24200000000000088,
+    "delta_g": -10.499
+  },
+  "explanation": "The M46I mutation substitutes a longer, flexible methionine with a more compact isoleucine in the flap region, reducing van der Waals contact surface area with indinavir at ~7 \u00c5 distance and destabilizing favorable hydrophobic interactions that normally anchor the inhibitor in the binding pocket. Although the mutation doesn't directly eliminate polar contacts (M46 makes no hydrogen bonds to the inhibitor), the loss of the extended sulfur-containing side chain diminishes the enthalpic benefit of optimal packing around the ligand's core scaffold. This subtle geometric rearrangement of the flap\u2014repositioning it away from optimal inhibitor accommodation\u2014weakly disfavors binding while maintaining sufficient protease activity for viral survival, explaining the modest but reproducible resistance signal.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:48.515510+00:00"
+}

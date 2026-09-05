@@ -1,0 +1,22 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": -0.136000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.136000000000001,
+    "delta_g": -9.733
+  },
+  "explanation": "The V32I mutation introduces a bulkier \u03b2-branched side chain (isoleucine vs. valine) that creates unfavorable van der Waals contacts with atazanavir within the S2/S2' subpocket, despite the minimal energetic penalty; the additional methyl group on isoleucine's \u03b3-carbon sterically encroaches on the inhibitor's binding surface at the 4.1 \u00c5 contact distance, forcing suboptimal positioning or partial displacement of the drug. This steric incompatibility reduces the complementarity between protease and inhibitor without requiring large conformational changes, thereby weakening binding affinity modestly but sufficiently to confer resistance while maintaining catalytic function.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:26.065741+00:00"
+}

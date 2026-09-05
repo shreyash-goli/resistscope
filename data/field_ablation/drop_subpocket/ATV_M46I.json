@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": 0.09199999999999875,
+    "delta_g": -9.505
+  },
+  "explanation": "The M46I mutation reduces atazanavir binding primarily through a loss of conformational flexibility rather than direct contact, as the residue sits ~7 \u00c5 from the inhibitor and does not directly contact the ligand. Isoleucine's branched \u03b2-carbon creates a more rigid, sterically constrained side chain compared to methionine's flexible thioether tail, which likely restricts the dynamic repositioning of the protease flap region that is critical for optimal atazanavir accommodation. This conformational restriction propagates through the active site architecture, slightly destabilizing the binding geometry without introducing steric clashes, accounting for the modest but measurable thermodynamic penalty to binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:05.271659+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The L33F substitution introduces a bulky aromatic ring that, despite being ~9 \u00c5 from the ligand, likely causes indirect destabilization through allosteric perturbation of the protease backbone or nearby side-chain conformations that normally optimize atazanavir positioning. The modest loss of hydrophobicity accompanying the larger volume increase suggests the aromatic ring cannot fully compensate for the aliphatic leucine contacts in the local hydrophobic environment, potentially disrupting the precise geometry of inhibitor accommodation. This mutation exemplifies how resistance can arise through subtle conformational changes distant from direct ligand contact rather than through steric clashes, reducing binding affinity incrementally despite the mutation occurring in a peripheral position.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:59.274734+00:00"
+}

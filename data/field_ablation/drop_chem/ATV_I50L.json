@@ -1,0 +1,22 @@
+{
+  "drug": "ATV",
+  "mutation": "I50L",
+  "condition": "full",
+  "delta_delta_g": -0.09500000000000064,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "L",
+    "wt_residue": "Ile",
+    "mut_residue": "Leu",
+    "distance_from_ligand_centroid_angstrom": 5.7,
+    "min_distance_to_ligand_angstrom": 2.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.09500000000000064,
+    "delta_g": -9.692
+  },
+  "explanation": "The I50L mutation reduces atazanavir binding through loss of optimal van der Waals packing in the flap region. Isoleucine's branched \u03b2-carbon and larger hydrophobic surface area create favorable contacts with the inhibitor at the 2.2 \u00c5 minimum distance, whereas leucine's linear side chain cannot maintain equivalent shape complementarity with atazanavir's binding pocket geometry. This modest (~0.1 kcal/mol) destabilization reflects a localized packing defect rather than a dramatic conformational change, consistent with position 50's location at the periphery of the binding interface in the flap.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:16.594998+00:00"
+}

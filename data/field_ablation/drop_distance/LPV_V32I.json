@@ -1,0 +1,23 @@
+{
+  "drug": "LPV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": 0.6620000000000008,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": 0.6620000000000008,
+    "delta_g": -9.437
+  },
+  "explanation": "The V32I substitution introduces a bulkier branched side chain into the S2/S2' subpocket, where the additional ~27 \u0172 of volume creates unfavorable steric strain against lopinavir's ligand scaffold without providing compensatory favorable interactions\u2014the isoleucine's extra methyl group lacks electrostatic or hydrogen-bonding capacity to offset the entropic cost of accommodation. This steric incompatibility within the confined subpocket geometry destabilizes the inhibitor binding pose, reducing van der Waals contact optimization and shifting the energetic balance toward protease-inhibitor dissociation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:59.230487+00:00"
+}

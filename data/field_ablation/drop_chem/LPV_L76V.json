@@ -1,0 +1,22 @@
+{
+  "drug": "LPV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": 0.46300000000000097,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": 0.46300000000000097,
+    "delta_g": -9.636
+  },
+  "explanation": "The L76V substitution reduces a branched hydrophobic side chain to a smaller, linear one at a position 4.8 \u00c5 from the ligand, disrupting favorable van der Waals packing interactions that stabilize the protease core scaffold. This loss of the methyl branch constrains lopinavir's optimal positioning within the binding pocket, as the protease backbone geometry around position 76 likely depends on leucine's bulkier hydrophobic bulk to maintain the precise geometry required for optimal ligand contacts. The resulting ~0.46 kcal/mol destabilization reflects cumulative weakening of hydrophobic interactions across the core fold that indirectly compromises lopinavir's binding through altered protein scaffold conformation rather than direct inhibitor contact.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:34.392680+00:00"
+}

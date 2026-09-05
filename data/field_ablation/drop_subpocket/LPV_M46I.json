@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": 0.745000000000001,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": 0.745000000000001,
+    "delta_g": -9.354
+  },
+  "explanation": "The M46I mutation reduces lopinavir binding through indirect allosteric effects rather than direct contact disruption. Methionine's longer, flexible side chain at position 46 provides a conformational buffer that helps accommodate lopinavir's binding geometry; isoleucine's shorter, branched side chain rigidifies the local backbone and restricts the dynamic repositioning of neighboring residues that normally optimize inhibitor coordination in the S1/S1' binding pocket region. Although M46I makes no direct contacts with lopinavir and involves only modest volume changes, the loss of methionine's conformational adaptability propagates strain through the protease core, destabilizing the precise active site geometry required for optimal van der Waals complementarity with the drug's binding surface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:11.540115+00:00"
+}

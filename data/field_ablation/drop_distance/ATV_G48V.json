@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "G48V",
+  "condition": "full",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "region": "flap_region",
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The G48V substitution introduces a bulky valine side chain (~80 \u0172 increase) into the flap region, a conformationally flexible domain critical for inhibitor recognition. This steric expansion likely creates unfavorable van der Waals contacts with atazanavir's rigid scaffold or displaces the flap from its inhibitor-bound conformation, destabilizing the precise geometry required for optimal ligand accommodation and key protein-drug interactions. The increased hydrophobicity at position 48 may also disrupt favorable electrostatic or polar interactions that atazanavir makes in this pocket, further compromising binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:29.828534+00:00"
+}

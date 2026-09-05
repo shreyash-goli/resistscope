@@ -1,0 +1,22 @@
+{
+  "drug": "NFV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -10.894
+  },
+  "explanation": "The M46I substitution in the flap region reduces nelfinavir binding through a conformational destabilization mechanism rather than direct contact loss. Methionine's longer, flexible side chain permits subtle repositioning of the flap domain that maintains overall protease geometry, whereas isoleucine's branched, more rigid structure constrains the flap in a conformation that slightly misaligns the substrate-binding pocket relative to nelfinavir's binding geometry. This conformational incompatibility propagates across the ~7 \u00c5 distance to the ligand, reducing binding affinity without eliminating recognition, as reflected in the modest energetic penalty.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:56.687699+00:00"
+}

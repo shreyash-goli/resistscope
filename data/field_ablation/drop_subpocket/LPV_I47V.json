@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "I47V",
+  "condition": "full",
+  "delta_delta_g": 0.08500000000000085,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 0.08500000000000085,
+    "delta_g": -10.014
+  },
+  "explanation": "The I47V mutation reduces a critical hydrophobic contact point by removing approximately 27 \u0172 of branched aliphatic volume at the ligand interface, weakening van der Waals interactions that normally stabilize lopinavir's binding pose. Although the residue remains in direct contact with the inhibitor (2.8 \u00c5 minimum distance), the smaller valine side chain creates a hydrophobic cavity rather than maintaining the snug packing that isoleucine provides, slightly destabilizing the bound conformation without introducing compensatory interactions. This modest loss of binding free energy (~0.09 kcal/mol) arises from reduced favorable dispersion forces in the S2/S3 binding region rather than from steric clash relief, indicating the mutation permits subtle conformational flexibility that disfavors the inhibitor-bound state.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:21.658913+00:00"
+}

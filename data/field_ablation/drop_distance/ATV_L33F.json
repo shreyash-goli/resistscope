@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The L33F mutation introduces a bulky aromatic ring in the flap hinge region that creates a steric clash with atazanavir's binding pose, as the phenylalanine's \u03c0-system occupies space previously accommodated by leucine's smaller aliphatic side chain. While the increased hydrophobicity might suggest favorable van der Waals interactions, the ~23 \u0172 volume expansion forces suboptimal repositioning of the inhibitor or local backbone adjustments that destabilize the bound state, offsetting any hydrophobic benefit. The net result is weakened binding affinity despite the energetic penalty being modest, reflecting that the geometric strain imposed on ligand accommodation outweighs compensatory interactions in this conformationally constrained region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:02.999787+00:00"
+}

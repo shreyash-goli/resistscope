@@ -1,0 +1,24 @@
+{
+  "drug": "DRV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket"
+  },
+  "explanation": "I84V reduces darunavir binding through loss of critical van der Waals contacts in the S1/S1\u2032 subpocket: the 27 \u0172 reduction in side-chain volume creates a cavity adjacent to the ligand that can no longer be fully occupied by darunavir's scaffold, weakening hydrophobic packing interactions at a contact distance of 2.4 \u00c5. Although the charge remains neutral, the decreased hydrophobicity and smaller aliphatic volume of valine relative to isoleucine destabilizes the local binding environment, particularly affecting the precise orientation of the inhibitor where it makes direct contacts with this residue.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:18:37.481539+00:00"
+}

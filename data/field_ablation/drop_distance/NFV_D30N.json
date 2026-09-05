@@ -1,0 +1,23 @@
+{
+  "drug": "NFV",
+  "mutation": "D30N",
+  "condition": "full",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 30,
+    "wt_aa": "D",
+    "mut_aa": "N",
+    "wt_residue": "Asp",
+    "mut_residue": "Asn",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.0,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -10.813
+  },
+  "explanation": "The D30N mutation eliminates a critical negative charge in the S2/S2' subpocket, disrupting an electrostatic interaction between the aspartate carboxylate and a positively charged group on nelfinavir (likely the piperazine ring or a nearby basic residue interaction network). Although the asparagine substitution maintains similar backbone geometry due to minimal volume change, the loss of the negatively charged oxygen atoms prevents electrostatic stabilization of the inhibitor, reducing binding affinity by approximately 0.04 kcal/mol. This charge neutralization is particularly destabilizing in a confined subpocket where electrostatic interactions contribute significantly to binding specificity, allowing the protease to tolerate nelfinavir poorly while maintaining catalytic function with natural substrates.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:38.837118+00:00"
+}

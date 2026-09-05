@@ -1,0 +1,22 @@
+{
+  "drug": "ATV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": -0.15200000000000102,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.15200000000000102,
+    "delta_g": -9.749
+  },
+  "explanation": "The L33F mutation introduces an aromatic ring at position 33 in the flap hinge region, which despite not directly contacting atazanavir, likely causes a subtle conformational shift that propagates through the flexible flap architecture and destabilizes the precise geometry required for optimal inhibitor positioning at the active site. The aromatic side chain of phenylalanine creates different van der Waals packing interactions with nearby flap residues compared to leucine's aliphatic chain, potentially restricting flap mobility or inducing a suboptimal flap conformation that reduces atazanavir's binding affinity through long-range allosteric effects rather than direct steric clash. This modest energetic penalty (~0.15 kcal/mol) is consistent with an indirect mechanism involving altered flap dynamics rather than a major structural perturbation, a common resistance pattern for mutations at the flap hinge that modulate protease conformational flexibility.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:38.195332+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "drug": "NFV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -10.894
+  },
+  "explanation": "The M46I substitution introduces a branched isoleucine that is slightly more compact and rigid than the flexible methionine side chain, creating a tighter hydrophobic microenvironment in the S1/S1' binding pocket region despite minimal overall volume change. This rigidity propagates conformational strain through the protease dimer interface approximately 7 \u00c5 from nelfinavir's heavy atoms, subtly destabilizing the precise geometry required for optimal van der Waals contacts between the inhibitor's nonpolar surfaces and the binding pocket. The increased hydrophobicity of isoleucine relative to methionine further shifts the local lipophilic character, potentially causing unfavorable desolvation penalties or suboptimal packing interactions that collectively weaken nelfinavir's binding by ~0.12 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:15.794288+00:00"
+}

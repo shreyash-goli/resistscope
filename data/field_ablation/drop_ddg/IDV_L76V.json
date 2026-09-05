@@ -1,0 +1,24 @@
+{
+  "drug": "IDV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold"
+  },
+  "explanation": "The L76V mutation creates a cavity-forming defect in the protease core scaffold through loss of ~27 \u0172 of hydrophobic volume, which destabilizes the overall fold and protein rigidity required for optimal indinavir positioning. Although L76 does not directly contact the inhibitor, its position 4.8 \u00c5 from the ligand places it within the allosteric network that governs active site geometry; the reduced side-chain bulk permits subtle backbone or loop repositioning that propagates to the binding site, likely causing unfavorable reorientation of indinavir or loss of precise van der Waals complementarity with the flap residues and S1/S1' pockets. The modest increase in hydrophobicity cannot compensate for the structural destabilization caused by the volume loss, resulting in reduced binding affinity through indirect conformational effects rather than direct steric clash.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:20:23.774226+00:00"
+}

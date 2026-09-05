@@ -1,0 +1,25 @@
+{
+  "drug": "NFV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": 0.25,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 0.25,
+    "delta_g": -10.525
+  },
+  "explanation": "The I84V substitution reduces a branched aliphatic side chain to a smaller, linear one within 2.4 \u00c5 of nelfinavir, creating a small hydrophobic cavity that was previously occupied by isoleucine's additional methyl groups. This loss of van der Waals contacts with the ligand's nonpolar surface\u2014combined with the subtle decrease in local hydrophobicity\u2014weakens the favorable desolvation and packing interactions that normally stabilize the inhibitor in the binding pocket. The modest energetic penalty (~0.25 kcal/mol) reflects that while the direct contact is lost, the backbone geometry and other intermolecular interactions remain largely intact, allowing partial functional binding but at a reduced thermodynamic cost to the virus.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:04.394346+00:00"
+}

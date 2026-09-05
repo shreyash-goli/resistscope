@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": -0.06799999999999962,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.06799999999999962,
+    "delta_g": -10.325
+  },
+  "explanation": "The V82A mutation reduces indinavir binding through loss of favorable van der Waals contacts in the S1/S1' binding pocket. Valine's larger hydrophobic side chain makes intimate contact with indinavir (minimum distance 3.3 \u00c5), and its replacement by the smaller alanine creates a cavity within the binding site that weakens the overall hydrophobic complementarity and packing interactions critical for inhibitor stabilization. Although the energetic penalty is modest, this local loss of surface complementarity is amplified by the protease's conformational flexibility, allowing indinavir to adopt a less optimal binding geometry or enabling slight protease breathing that destabilizes the drug-bound state.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:18.813610+00:00"
+}

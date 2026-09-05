@@ -1,0 +1,22 @@
+{
+  "drug": "LPV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.34299999999999997,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.34299999999999997,
+    "delta_g": -10.442
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain into the S1/S1' subpocket where valine's compact aliphatic geometry previously accommodated lopinavir's inhibitor scaffold. The phenyl ring at position 82 creates unfavorable steric clashes with lopinavir's binding pose\u2014despite being only 3.3 \u00c5 from the ligand at closest approach, the increased van der Waals volume of phenylalanine relative to valine destabilizes the inhibitor's preferred conformation within this critical binding pocket. This steric incompatibility reduces complementarity between the protease active site and lopinavir, weakening their interaction without substantially relocating the inhibitor, thereby conferring modest resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:37.757399+00:00"
+}

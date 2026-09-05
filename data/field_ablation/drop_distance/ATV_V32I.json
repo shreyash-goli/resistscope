@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": -0.136000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.136000000000001,
+    "delta_g": -9.733
+  },
+  "explanation": "The V32I mutation introduces an additional 26.7 \u0172 of hydrophobic volume into the S2/S2' subpocket, creating steric strain that destabilizes atazanavir's binding geometry without disrupting the electrostatic landscape. This volumetric expansion forces the inhibitor to adopt a less-favorable conformational state or slightly shift its position within the binding pocket, reducing optimal van der Waals contacts between the drug's nonpolar surface and the enlarged hydrophobic cavity. The marginal loss in binding affinity reflects accumulated unfavorable packing interactions rather than a complete loss of key contacts, explaining the modest resistance magnitude.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:50.441980+00:00"
+}

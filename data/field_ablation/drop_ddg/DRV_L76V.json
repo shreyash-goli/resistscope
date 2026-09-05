@@ -1,0 +1,24 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold"
+  },
+  "explanation": "The L76V substitution creates a cavity within the protease core scaffold by removing ~27 \u0172 of hydrophobic volume, which destabilizes the rigid structural framework required to maintain optimal darunavir positioning; though the mutation does not directly contact the inhibitor at 4.8 \u00c5 distance, this conformational perturbation propagates through the protein fold to disrupt the precise geometry of darunavir's binding pocket. The loss of leucine's larger branched side chain in favor of valine's more compact structure likely permits subtle domain relaxation or reorientation that collectively shifts the inhibitor away from optimal van der Waals contacts with surrounding residues, reducing binding affinity despite the mutation's location in the structural scaffold rather than the immediate active site interface.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:20:20.241966+00:00"
+}

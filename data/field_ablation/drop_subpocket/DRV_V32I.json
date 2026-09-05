@@ -1,0 +1,25 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": -0.11299999999999955,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.11299999999999955,
+    "delta_g": -9.125
+  },
+  "explanation": "The V32I substitution introduces a ~27 \u0172 larger hydrophobic side chain that makes direct contact with darunavir at 4.1 \u00c5 distance, creating unfavorable steric clashes within the confined binding pocket that destabilize the inhibitor's optimal binding geometry. Although isoleucine maintains the hydrophobic character needed to avoid destabilizing the protein core, its branched methyl group at the \u03b3-position occupies space that darunavir's rigid scaffold cannot accommodate without adopting a higher-energy conformation. This modest but measurable loss of binding affinity (~0.11 kcal/mol) reflects cumulative van der Waals strain rather than a complete loss of contacts, allowing the protease to retain catalytic function while reducing drug potency.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:47.972662+00:00"
+}

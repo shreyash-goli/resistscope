@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.23399999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.23399999999999999,
+    "delta_g": -9.831
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain that creates steric incompatibility within the protease active site cavity, despite being positioned at a modest distance from atazanavir's center; the ~50 \u00c5\u00b3 volume increase forces unfavorable van der Waals contacts between the phenyl ring and the inhibitor or adjacent protein backbone elements at the 3.3 \u00c5 minimum distance. Although the mutation maintains hydrophobicity locally, the geometric constraint of the larger phenylalanine restricts the conformational flexibility atazanavir requires to achieve optimal binding geometry in this subpocket, destabilizing the inhibitor-protease complex by approximately 0.23 kcal/mol.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:34.376178+00:00"
+}

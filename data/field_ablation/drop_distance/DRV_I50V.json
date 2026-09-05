@@ -1,0 +1,23 @@
+{
+  "drug": "DRV",
+  "mutation": "I50V",
+  "condition": "full",
+  "delta_delta_g": 0.1850000000000005,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "region": "flap_region",
+    "delta_delta_g": 0.1850000000000005,
+    "delta_g": -8.827
+  },
+  "explanation": "The I50V mutation reduces a critical hydrophobic contact in the flap region by removing ~27 \u0172 of nonpolar surface area, creating a cavity that weakens van der Waals interactions between darunavir and the protease active site geometry. Since isoleucine's larger branched side chain makes tighter hydrophobic packing with the inhibitor's nonpolar moieties than valine's smaller structure, this substitution reduces binding affinity without introducing steric clashes or electrostatic penalties. The modest energetic cost reflects that the mutation doesn't eliminate the interaction but rather degrades the quality of the hydrophobic complementarity that darunavir relies upon for binding stabilization at this contact point in the flap.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:35.253859+00:00"
+}

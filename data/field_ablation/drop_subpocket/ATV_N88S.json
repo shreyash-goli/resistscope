@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "N88S",
+  "condition": "full",
+  "delta_delta_g": -0.1769999999999996,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 15.3,
+    "min_distance_to_ligand_angstrom": 7.3,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.1769999999999996,
+    "delta_g": -9.774
+  },
+  "explanation": "The N88S mutation reduces atazanavir binding through a loss of favorable polar interactions rather than direct contact, as the 7.3 \u00c5 minimum distance indicates the residue operates within the protease's structural scaffold rather than the inhibitor binding pocket. Asparagine's polar amide side chain likely forms stabilizing hydrogen bonds or van der Waals contacts with backbone atoms or neighboring residues that organize the protease architecture critical for optimal atazanavir positioning; substitution with serine's smaller, less polar hydroxyl group disrupts these organizing interactions, destabilizing the protein fold and inducing conformational shifts that propagate to the active site. This indirect mechanism explains the modest energetic penalty (~0.18 kcal/mol), reflecting a subtle degradation of protease geometry rather than steric collision or direct loss of drug contacts.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:28.296514+00:00"
+}

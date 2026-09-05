@@ -1,0 +1,23 @@
+{
+  "drug": "SQV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": 0.379999999999999,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": 0.379999999999999,
+    "delta_g": -11.15
+  },
+  "explanation": "The L90M substitution introduces a more polar, sulfur-containing thiolether group that displaces the purely hydrophobic branched aliphatic side chain of leucine, reducing favorable van der Waals contacts within saquinavir's binding pocket at this C-terminal dimer interface. The modest loss of hydrophobic character (-1.9 kcal/mol equivalent) destabilizes the interaction without creating steric strain, as the similar volumes permit accommodation without obvious clashes. This selective weakening of nonpolar interactions in a hydrophobic subpocket region suggests that saquinavir's binding relies on precisely optimized hydrophobic complementarity at position 90, which the more polar methionine fails to adequately satisfy.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:35.979394+00:00"
+}

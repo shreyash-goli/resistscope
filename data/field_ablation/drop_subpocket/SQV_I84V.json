@@ -1,0 +1,25 @@
+{
+  "drug": "SQV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": 1.7619999999999987,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 1.7619999999999987,
+    "delta_g": -9.768
+  },
+  "explanation": "The I84V mutation creates a cavity defect in the S2 subpocket by reducing side-chain volume by approximately 27 \u00c5\u00b3, disrupting the snug hydrophobic packing interactions that stabilize saquinavir's inhibitor scaffold at the enzyme interface. Despite maintaining direct contact with the ligand (2.4 \u00c5 minimum distance), the smaller valine side-chain cannot fill the space previously occupied by isoleucine's larger branched structure, resulting in loss of favorable van der Waals contacts and destabilization of the bound inhibitor conformation. This reduction in favorable binding interactions translates directly to the ~1.76 kcal/mol binding penalty, demonstrating that even at distances of 9.3 \u00c5 from the ligand centroid, cavity-filling mutations critically impact protease-inhibitor recognition for bulky drugs like saquinavir that depend on shape complementarity for potency.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:07.345153+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "drug": "DRV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region"
+  },
+  "explanation": "The L33F substitution introduces an aromatic ring with 23 \u0172 additional volume into the flap hinge region, creating a steric constraint that propagates through the protein scaffold despite not directly contacting darunavir. This bulkier aromatic side chain at the flap hinge\u2014a region critical for conformational dynamics\u2014likely restricts the backbone flexibility required for darunavir's optimal positioning within the active site, reducing binding affinity through indirect allosteric effects rather than direct steric clash. The modest reduction in hydrophobicity accompanying the leucine-to-phenylalanine change may further destabilize the hydrophobic environment that stabilizes the inhibitor binding pocket, collectively compromising DRV recognition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:34.321855+00:00"
+}

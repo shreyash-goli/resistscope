@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": -0.3420000000000005,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.3420000000000005,
+    "delta_g": -10.599
+  },
+  "explanation": "The L90M substitution reduces indinavir binding through a loss of optimal hydrophobic packing in a subpocket positioned ~8 \u00c5 from the ligand. Leucine's branched aliphatic side chain provides tighter van der Waals contacts with the protease scaffold and potentially with indinavir's nonpolar surface, while methionine's longer, linear thioether chain cannot occupy the same spatial geometry, resulting in a cavity that destabilizes the inhibitor's binding pose. This 3.8 \u0172 volume reduction and decreased hydrophobicity slightly weaken the cumulative nonpolar interactions that normally stabilize indinavir in the active site, despite the mutation not directly contacting the ligand.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:13.570897+00:00"
+}

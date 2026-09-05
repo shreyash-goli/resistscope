@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": 0.34800000000000075,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 0.34800000000000075,
+    "delta_g": -9.751
+  },
+  "explanation": "The I84V mutation creates a cavity at the ligand interface by reducing the hydrophobic surface volume by ~27 \u0172, weakening van der Waals contacts that normally stabilize lopinavir positioning since isoleucine's larger branched side chain maintains critical packing interactions at the 2.4 \u00c5 contact distance. The modest decrease in hydrophobicity further destabilizes the binding through loss of favorable hydrophobic effect contributions that compensate for the entropic cost of ligand binding at this subpocket location. This combination of reduced surface complementarity and diminished hydrophobic stabilization accounts for the measurable weakening of lopinavir affinity without altering the electrostatic environment.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:01.560342+00:00"
+}

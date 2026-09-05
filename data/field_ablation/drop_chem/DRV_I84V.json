@@ -1,0 +1,22 @@
+{
+  "drug": "DRV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": -0.36299999999999955,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.36299999999999955,
+    "delta_g": -9.375
+  },
+  "explanation": "The I84V mutation causes a subtle but consequential loss of van der Waals contacts with darunavir at the S1/S1' subpocket interface. Isoleucine's larger, more branched hydrophobic side chain provides tighter packing and additional nonpolar contacts within 2.4 \u00c5 of the ligand, while valine's smaller, more linear structure creates a minor cavity that weakens the hydrophobic binding surface. This modest reduction in surface complementarity and van der Waals interaction energy (~0.36 kcal/mol) is sufficient to impair darunavir's binding affinity, particularly since the mutation occurs at a direct contact point in a critical substrate-binding pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:46.432211+00:00"
+}

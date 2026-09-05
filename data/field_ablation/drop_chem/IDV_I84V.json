@@ -1,0 +1,22 @@
+{
+  "drug": "IDV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": -0.19100000000000072,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.19100000000000072,
+    "delta_g": -10.448
+  },
+  "explanation": "The I84V substitution reduces indinavir binding through a loss of favorable van der Waals contacts within the S1/S1' subpocket, where the methyl group present on isoleucine's branched side chain establishes more extensive hydrophobic interactions with the inhibitor at 2.4 \u00c5 proximity than the smaller valine can provide. Although the distance from the ligand centroid (9.3 \u00c5) indicates position 84 is not at the active site center, the direct contact at 2.4 \u00c5 reveals that isoleucine's additional branching contributes meaningfully to binding thermodynamics through cumulative hydrophobic interactions that valine cannot fully replicate. The modest energetic penalty (~0.2 kcal/mol) reflects a gradual erosion of binding affinity rather than a catastrophic disruption, making this a classical example of how subtle reductions in van der Waals surface complementarity within binding pockets confer resistance without dramatically distorting protease architecture.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:50.046461+00:00"
+}

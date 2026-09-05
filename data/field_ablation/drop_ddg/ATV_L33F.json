@@ -1,0 +1,24 @@
+{
+  "drug": "ATV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region"
+  },
+  "explanation": "The L33F substitution introduces a bulky aromatic ring into the flap hinge region that perturbs the conformational dynamics critical for atazanavir accommodation; this ~23 \u0172 expansion, positioned 9.1 \u00c5 from the inhibitor, likely causes a steric clash that restricts the flap closure motion necessary for forming the closed protease conformation that optimally positions ATV in the active site. Although the mutation does not directly contact the ligand, the reduced flexibility imposed by the larger phenylalanine side chain destabilizes the precise flap positioning required for favorable van der Waals packing interactions between ATV's bulky aromatic scaffolds and the ligand-binding pocket, thereby reducing binding affinity while the simultaneous decrease in hydrophobicity slightly disfavors the hydrophobic environment that ATV depends upon for binding stabilization.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:30.988994+00:00"
+}

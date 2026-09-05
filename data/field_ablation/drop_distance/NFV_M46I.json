@@ -1,0 +1,23 @@
+{
+  "drug": "NFV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "region": "flap_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -10.894
+  },
+  "explanation": "The M46I mutation reduces nelfinavir binding through a subtle loss of optimal van der Waals packing in the flap region's hydrophobic environment. Methionine's longer, flexible side chain provides better shape complementarity and favorable dispersion interactions with nelfinavir's nonpolar surfaces, while isoleucine's more compact branched structure creates marginal geometric mismatches despite maintaining similar overall hydrophobicity. This modest packing inefficiency, compounded by the slight volume expansion in the binding pocket, attenuates critical hydrophobic contacts that collectively stabilize the inhibitor-protease complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:18.563721+00:00"
+}

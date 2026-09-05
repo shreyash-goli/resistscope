@@ -1,0 +1,23 @@
+{
+  "drug": "IDV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": -0.24200000000000088,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "region": "flap_region",
+    "delta_delta_g": -0.24200000000000088,
+    "delta_g": -10.499
+  },
+  "explanation": "The M46I substitution introduces a more rigid, branched hydrophobic side chain in the flap region that creates a subtle steric incompatibility with indinavir's binding geometry. Although the volume change is minimal, isoleucine's constrained \u03b2-branching reduces conformational flexibility compared to methionine's longer, adaptable thiol-containing side chain, preventing optimal van der Waals packing interactions between the inhibitor and this critical flap contact point. This modest loss of binding complementarity\u2014coupled with the increased hydrophobic character\u2014likely shifts the flap conformation slightly away from the inhibitor-preferred state, destabilizing the interaction without dramatically altering the overall binding pocket architecture.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:11.667199+00:00"
+}

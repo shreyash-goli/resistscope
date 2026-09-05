@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": 0.2370000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 0.2370000000000001,
+    "delta_g": -10.02
+  },
+  "explanation": "The V32I substitution introduces a larger branched side chain that, despite being only marginally more hydrophobic, creates a steric clash with indinavir's backbone or substituents within the S1/S1' binding pocket region where V32 makes direct contact. The ~27 \u0172 volume expansion of isoleucine compared to valine forces a repositioning or destabilization of the inhibitor's binding geometry at the 4.1 \u00c5 contact interface, disrupting optimal van der Waals packing without compensating interactions. This local steric incompatibility manifests as the modest but measurable binding penalty, as the protease cannot accommodate both the enlarged hydrophobic side chain and maintain the native indinavir binding conformation simultaneously.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:52.274022+00:00"
+}

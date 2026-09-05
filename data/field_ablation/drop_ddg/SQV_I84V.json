@@ -1,0 +1,24 @@
+{
+  "drug": "SQV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket"
+  },
+  "explanation": "The I84V mutation replaces a bulkier isoleucine with a smaller valine in the S1/S1' subpocket, creating a cavity loss of ~27 \u0172 that destabilizes saquinavir's binding interface despite maintaining direct contact. Although the mutation occurs at a modest distance from the ligand centroid (9.3 \u00c5), the critical van der Waals contacts at 2.4 \u00c5 are compromised as the reduced hydrophobic surface area fails to provide the optimal packing interactions that saquinavir's larger aromatic/aliphatic moieties require for full binding stabilization. This loss of favorable hydrophobic complementarity in a subpocket region essential for inhibitor positioning directly undermines the drug's binding affinity without introducing compensatory interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:18:49.460077+00:00"
+}

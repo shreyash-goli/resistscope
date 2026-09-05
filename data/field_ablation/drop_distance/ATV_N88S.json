@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "N88S",
+  "condition": "full",
+  "delta_delta_g": -0.1769999999999996,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.1769999999999996,
+    "delta_g": -9.774
+  },
+  "explanation": "The N88S mutation reduces atazanavir binding through a loss of critical hydrogen bonding capacity at the dimer interface region near the drug binding pocket. Asparagine's polar amide side chain can form backbone and polar interactions with the inhibitor or supporting protein contacts, while serine's smaller hydroxyl group cannot replicate this interaction geometry, weakening the stabilization of the inhibitor-bound conformation. The accompanying ~25 \u0172 decrease in side-chain volume creates a subtle cavity that allows local conformational relaxation, reducing the precision of inhibitor positioning without introducing steric conflict that might otherwise be offset by favorable interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:42.062413+00:00"
+}

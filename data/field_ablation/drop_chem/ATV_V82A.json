@@ -1,0 +1,22 @@
+{
+  "drug": "ATV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.911999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.911999999999999,
+    "delta_g": -8.685
+  },
+  "explanation": "The V82A mutation removes a branched aliphatic side chain that makes critical van der Waals contacts with atazanavir in the S1/S1' subpocket (at 3.3 \u00c5 from the ligand), replacing it with a smaller methyl group that cannot maintain the same contact surface area. This loss of favorable van der Waals interactions destabilizes the inhibitor binding pose by approximately 0.91 kcal/mol, particularly affecting the conformational fit of atazanavir's bulky aromatic and lipophilic moieties in this binding pocket. The reduction in hydrophobic packing at this key interaction point allows greater conformational flexibility and reduces the enthalpic contribution to binding specificity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:17.302656+00:00"
+}

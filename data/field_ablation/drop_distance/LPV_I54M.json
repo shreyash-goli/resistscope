@@ -1,0 +1,23 @@
+{
+  "drug": "LPV",
+  "mutation": "I54M",
+  "condition": "full",
+  "delta_delta_g": 0.3100000000000005,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "region": "flap_region",
+    "delta_delta_g": 0.3100000000000005,
+    "delta_g": -9.789
+  },
+  "explanation": "The I54M substitution in the flap region reduces lopinavir binding primarily through loss of optimal hydrophobic packing, as the shorter, more polar methionine side chain (with its sulfur atom) displaces ~3.8 \u00c5\u00b3 of favorable van der Waals contacts that isoleucine's branched aliphatic structure normally provides in the inhibitor-binding pocket. Although the mutation preserves overall volume and introduces no unfavorable electrostatic changes, the decrease in hydrophobicity destabilizes the interaction with lopinavir's nonpolar binding surfaces, particularly in the S3/S1' subpockets where isoleucine's rigid branching geometry normally optimizes close-range van der Waals interactions. This modest but measurable energetic penalty (destabilizing the complex by ~0.31 kcal/mol) reflects a subtle weakening of the enthalpic contribution from hydrophobic desolvation, allowing the virus to maintain protease function while achieving drug resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:50.470115+00:00"
+}

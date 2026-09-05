@@ -1,0 +1,24 @@
+{
+  "drug": "DRV",
+  "mutation": "I47V",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region"
+  },
+  "explanation": "The I47V mutation in the protease flap region creates a cavity adjacent to darunavir's binding site by removing ~27 \u0172 of hydrophobic bulk, which destabilizes the van der Waals contact network that normally anchors the inhibitor at this critical 2.8 \u00c5 interaction point. This loss of close-packing interactions between the smaller valine and darunavir's ligand-binding surface reduces the enthalpic stabilization of the inhibitor complex without substantially altering electrostatics, thereby weakening overall binding affinity. The flap's structural role in enclosing the active site makes this peripheral loss of hydrophobic complementarity particularly consequential for maintaining the precise geometry required for inhibitor recognition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:49.935676+00:00"
+}

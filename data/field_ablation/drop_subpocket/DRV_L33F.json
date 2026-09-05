@@ -1,0 +1,25 @@
+{
+  "drug": "DRV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -9.131
+  },
+  "explanation": "The L33F substitution introduces a bulkier aromatic residue that encroaches upon darunavir's binding pocket through increased van der Waals volume (~23 \u0172), creating unfavorable steric strain despite the residue remaining ~9 \u00c5 from the ligand. Although phenylalanine is less hydrophobic than leucine, the aromatic ring's rigidity and spatial footprint distort the local geometry of the S1/S1' subpocket region, destabilizing the precise molecular contacts required for optimal darunavir positioning. The resistance arises not from direct ligand contact loss but from allosteric cavity compression that weakens the inhibitor's binding geometry without dramatically altering binding free energy.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:02.375416+00:00"
+}

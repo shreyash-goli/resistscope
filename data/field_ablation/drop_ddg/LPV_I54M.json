@@ -1,0 +1,24 @@
+{
+  "drug": "LPV",
+  "mutation": "I54M",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region"
+  },
+  "explanation": "The I54M mutation reduces lopinavir affinity through a conformational destabilization mechanism rather than direct contact loss: while the isoleucine-to-methionine substitution maintains overall hydrophobicity and volume, the replacement of isoleucine's branched aliphatic side chain with methionine's linear thioether chain alters the packing geometry within the flap region, a conformationally dynamic element critical for protease inhibitor binding. This geometric mismatch propagates allosteric effects that compromise the precise three-dimensional positioning of the binding pocket geometry, particularly affecting the accommodation of lopinavir's bulky pharmacophore at distances >6 \u00c5 from the mutation site, effectively reducing binding through entropic penalty rather than loss of favorable interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:20:16.907228+00:00"
+}

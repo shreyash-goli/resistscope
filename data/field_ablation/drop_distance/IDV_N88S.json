@@ -1,0 +1,23 @@
+{
+  "drug": "IDV",
+  "mutation": "N88S",
+  "condition": "full",
+  "delta_delta_g": -0.22799999999999976,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.22799999999999976,
+    "delta_g": -10.485
+  },
+  "explanation": "The N88S mutation reduces indinavir binding through loss of a critical hydrogen-bonding interaction rather than steric disruption. Asparagine's polar amide side chain at position 88 likely forms a stabilizing hydrogen bond with indinavir's inhibitor scaffold, and its replacement with serine's shorter hydroxyl group creates a geometric mismatch that weakens this contact while simultaneously introducing a small hydrophobic penalty. The modest energetic cost (~0.23 kcal/mol) reflects the partial compensation that serine's hydroxyl can provide, but the net loss of the optimally-positioned asparagine amide group results in measurably destabilized inhibitor binding without disrupting protease fold stability.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:44.932643+00:00"
+}

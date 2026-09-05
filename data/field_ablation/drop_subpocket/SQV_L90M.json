@@ -1,0 +1,25 @@
+{
+  "drug": "SQV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": 0.379999999999999,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": 0.379999999999999,
+    "delta_g": -11.15
+  },
+  "explanation": "The L90M substitution reduces saquinavir binding through a loss of hydrophobic contact efficiency despite minimal volume change: leucine's branched aliphatic side chain provides optimal van der Waals packing in the S1/S1' binding pocket region (~8 \u00c5 away), while methionine's longer, flexible thioether chain creates a suboptimal geometry that either withdraws hydrophobic surface area or reorients away from critical saquinavir contact points. Although the mutation maintains overall cavity occupancy, the decreased hydrophobicity and altered side-chain conformational preference destabilize the ligand-binding interface by weakening cumulative van der Waals interactions in this distal but functionally important region of the active site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:19.820477+00:00"
+}

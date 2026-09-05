@@ -1,0 +1,23 @@
+{
+  "drug": "DRV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": -0.36299999999999955,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.36299999999999955,
+    "delta_g": -9.375
+  },
+  "explanation": "The I84V mutation at position 84 reduces darunavir binding by creating a cavity defect in the S1/S1' subpocket. Isoleucine's larger branched side chain provides optimal van der Waals contacts with darunavir's ligand scaffold, while valine's smaller volume leaves a ~27 \u0172 gap that weakens these critical hydrophobic interactions without compensatory polar contacts. This modest loss of binding energy (-0.36 kcal/mol) reflects the incremental destabilization of the ligand-binding interface rather than a catastrophic conformational change, representing a classic \"passive\" resistance mechanism where reduced complementarity allows darunavir to slip partially away from optimal positioning.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:09.830334+00:00"
+}

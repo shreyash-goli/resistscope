@@ -1,0 +1,24 @@
+{
+  "drug": "IDV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket"
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic sidechain that creates a steric clash with indinavir's bound conformation, as the phenylalanine's expanded van der Waals envelope (~50 \u0172 increase) encroaches into the ligand's binding footprint within the S1/S1' subpocket where direct contacts occur (3.3 \u00c5 proximity). While the phenyl ring maintains hydrophobic character, its rigidity and geometric constraints force indinavir into a suboptimal binding pose that disrupts favorable van der Waals packing and potentially destabilizes key hydrogen bonding networks that stabilize the inhibitor-protease complex. This conformational penalty effectively weakens binding affinity without requiring charge or major electrostatic perturbations, allowing the mutant protease to maintain catalytic function while reducing drug inhibition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:18:25.409580+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "drug": "IDV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": -0.3420000000000005,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.3420000000000005,
+    "delta_g": -10.599
+  },
+  "explanation": "The L90M mutation reduces indinavir binding through a subtle allosteric mechanism rather than direct contact. Leucine's branched, hydrophobic side chain at position 90 in the C-terminal dimer region provides optimal packing that stabilizes the protease dimer interface and maintains the precise active site geometry required for indinavir coordination; substitution with methionine's longer, more flexible thioether chain disrupts this optimal packing geometry, causing minor conformational perturbations that propagate ~8 \u00c5 to weaken inhibitor contacts in the binding pocket. Although the mutation does not directly contact indinavir, the loss of efficient hydrophobic packing at this peripheral dimer-stabilizing position destabilizes the catalytic site architecture, reducing the complementarity and binding enthalpy for this bulky protease inhibitor.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:04.342929+00:00"
+}

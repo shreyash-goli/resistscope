@@ -1,0 +1,22 @@
+{
+  "drug": "IDV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": -0.06799999999999962,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.06799999999999962,
+    "delta_g": -10.325
+  },
+  "explanation": "The V82A mutation reduces indinavir binding through loss of critical van der Waals contacts in the S1/S1' subpocket: valine's larger branched side chain makes optimized hydrophobic interactions with indinavir's nonpolar surface at 3.3 \u00c5, while alanine's smaller methyl group creates a cavity that weakens these dispersive forces despite being only 0.07 kcal/mol unfavorable in isolation. This modest energetic penalty becomes magnified because the cavity left by alanine's reduced bulk cannot be readily compensated by indinavir repositioning without disrupting its optimal binding geometry elsewhere in the active site, effectively destabilizing the protease-inhibitor complex enough to confer resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:20.319510+00:00"
+}

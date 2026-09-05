@@ -1,0 +1,24 @@
+{
+  "drug": "IDV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket"
+  },
+  "explanation": "The I84V mutation creates a cavity defect in the S1/S1' subpocket by reducing side-chain volume by ~27 \u00c5\u00b3, which disrupts the tight hydrophobic packing that normally stabilizes indinavir's binding through van der Waals contacts at the 2.4 \u00c5 interface. This loss of favorable van der Waals interactions\u2014despite the minimal change in hydrophobicity\u2014weakens the binding energy because indinavir depends on complementary surface fit in this critical recognition pocket rather than compensatory electrostatic or hydrogen-bonding interactions. The recession of the smaller valine creates unfilled space adjacent to the ligand, reducing the cumulative stabilizing effect of multiple weak interactions that contribute to specificity and affinity in this tightly packed region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:18:40.622360+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "drug": "DRV",
+  "mutation": "I54M",
+  "condition": "full",
+  "delta_delta_g": 0.33800000000000097,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.33800000000000097,
+    "delta_g": -8.674
+  },
+  "explanation": "The I54M mutation reduces darunavir binding through a loss of favorable van der Waals contacts in the flap region despite maintaining similar distance from the ligand. Isoleucine's branched, compact aliphatic side chain makes optimal hydrophobic contacts with darunavir's nonpolar surface features, whereas methionine's longer, flexible thioether chain cannot maintain the same tight packing geometry and may adopt conformations that create suboptimal or transient interactions with the inhibitor. This conformational flexibility of the methionine side chain at position 54 likely destabilizes the flap positioning required for optimal darunavir recognition, reducing binding affinity without causing gross structural perturbation (as evidenced by the modest +0.34 kcal/mol effect).",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:22.414103+00:00"
+}

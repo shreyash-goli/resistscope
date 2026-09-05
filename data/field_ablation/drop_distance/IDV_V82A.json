@@ -1,0 +1,23 @@
+{
+  "drug": "IDV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": -0.06799999999999962,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.06799999999999962,
+    "delta_g": -10.325
+  },
+  "explanation": "The V82A mutation reduces the hydrophobic surface area within the S1/S1' subpocket by ~51 \u0172, creating a cavity that indinavir's ligand scaffold can no longer optimally fill, weakening van der Waals contacts that normally stabilize the inhibitor in this critical binding region. This loss of favorable hydrophobic packing interactions outweighs any potential benefit from reduced steric strain, resulting in marginally weaker overall binding affinity. The modest energetic penalty reflects that while the interaction is disrupted, the structural perturbation is localized and does not dramatically reorganize the active site geometry.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:21:44.487930+00:00"
+}

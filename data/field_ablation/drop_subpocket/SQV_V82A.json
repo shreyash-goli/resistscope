@@ -1,0 +1,25 @@
+{
+  "drug": "SQV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.798,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 0.798,
+    "delta_g": -10.732
+  },
+  "explanation": "The V82A mutation creates a cavity defect in the S1/S1' binding pocket by removing ~51 \u0172 of hydrophobic surface while maintaining the same distance to saquinavir, forcing the inhibitor to adopt a suboptimal binding pose that loses critical van der Waals contacts with the flank of the active site cleft. This loss of favorable hydrophobic packing interactions is compounded by reduced local hydrophobicity (\u20132.4 unit shift), which destabilizes the enthalpic contribution from close-range ligand-protease contacts occurring at only 3.3 \u00c5 separation. The net result is weakened binding affinity without steric clash or electrostatic perturbation, reflecting a classic \"cavity loss\" resistance mechanism where the inhibitor cannot fully occupy and exploit the narrowed hydrophobic pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:31.723618+00:00"
+}

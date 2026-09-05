@@ -1,0 +1,23 @@
+{
+  "drug": "IDV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": 0.2370000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": 0.2370000000000001,
+    "delta_g": -10.02
+  },
+  "explanation": "The V32I substitution introduces a larger, more branched hydrophobic side chain into the S2/S2' subpocket, creating a steric clash with indinavir's bound conformation that forces suboptimal positioning of the inhibitor or reduces the van der Waals contact surface complementarity in this critical binding pocket. Although both residues are hydrophobic and uncharged, the increased volume (~27 \u0172) of isoleucine's branched methyl groups crowds the local binding cavity, destabilizing the precise geometry required for optimal inhibitor accommodation without providing compensatory interactions. This unfavorable packing penalty in a spatially constrained region directly weakens the binding affinity for indinavir.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:56.384844+00:00"
+}

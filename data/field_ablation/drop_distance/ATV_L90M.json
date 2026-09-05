@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": -0.5030000000000001,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.5030000000000001,
+    "delta_g": -10.1
+  },
+  "explanation": "The L90M substitution reduces atazanavir binding through a loss of hydrophobic contacts rather than steric clash. Leucine's branched aliphatic side chain provides stronger van der Waals interactions with atazanavir's nonpolar binding surface, while methionine's extended, flexible thioether chain is less optimally positioned to maintain these critical hydrophobic contacts in the C-terminal dimer region. This hydrophobicity decrease (~2 kcal/mol equivalent) destabilizes the inhibitor-protease complex without incurring compensatory benefits, as the minimal volume change prevents structural reorganization that might restore binding through alternative interactions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:25.965779+00:00"
+}

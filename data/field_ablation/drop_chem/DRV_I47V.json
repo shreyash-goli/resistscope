@@ -1,0 +1,22 @@
+{
+  "drug": "DRV",
+  "mutation": "I47V",
+  "condition": "full",
+  "delta_delta_g": -0.19500000000000028,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.19500000000000028,
+    "delta_g": -9.207
+  },
+  "explanation": "The I47V substitution at position 47 in the flap region reduces darunavir binding through a subtle loss of van der Waals contacts rather than a dramatic conformational change. Isoleucine's larger branched aliphatic side chain makes more extensive hydrophobic interactions with darunavir at the 2.8 \u00c5 contact distance, while valine's smaller side chain diminishes these favorable van der Waals contributions in this flap-proximal binding pocket. This modest decrease in binding affinity (\u0394\u0394G \u2248 -0.2 kcal/mol) suggests the mutation achieves resistance not through steric clash avoidance, but through incremental weakening of the lipophilic network that stabilizes inhibitor positioning in this critical flap-adjacent region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:59.332169+00:00"
+}

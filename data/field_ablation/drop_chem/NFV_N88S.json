@@ -1,0 +1,22 @@
+{
+  "drug": "NFV",
+  "mutation": "N88S",
+  "condition": "full",
+  "delta_delta_g": -0.09799999999999898,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "distance_from_ligand_centroid_angstrom": 15.3,
+    "min_distance_to_ligand_angstrom": 7.3,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.09799999999999898,
+    "delta_g": -10.873
+  },
+  "explanation": "The N88S mutation at position 88, located in the C-terminal dimer region ~7.3 \u00c5 from the ligand, likely reduces nelfinavir binding through loss of a stabilizing hydrogen bond network rather than direct inhibitor contact. Asparagine's polar amide side chain can form multiple hydrogen bonds that stabilize the protease dimer interface or local protein geometry critical for maintaining optimal inhibitor-binding pocket geometry, whereas serine's smaller hydroxyl group cannot fully compensate for this interaction loss. The modest energetic penalty (~0.1 kcal/mol) reflects an indirect mechanism where compromised local structural stability or dimer interface contacts subtly distort the binding pocket geometry, rather than direct steric or electrostatic clash with nelfinavir itself.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:23.371486+00:00"
+}

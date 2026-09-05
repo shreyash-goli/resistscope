@@ -1,0 +1,23 @@
+{
+  "drug": "IDV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": -0.3420000000000005,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.3420000000000005,
+    "delta_g": -10.599
+  },
+  "explanation": "The L90M substitution reduces indinavir binding despite minimal volume change because methionine's longer, more flexible sulfur-containing side chain creates a hydrophobic environment that is less complementary to indinavir's nonpolar ligand contacts in the C-terminal dimer region. The loss of hydrophobicity (\u22121.9 unit change) weakens van der Waals interactions between the mutant residue and indinavir's alkyl moieties, as methionine's extended conformation and polarizable sulfur atom provide suboptimal packing compared to leucine's compact branched aliphatic core. This subtle energetic penalty propagates through the protease binding pocket, destabilizing the drug-bound state enough to confer modest resistance despite the C-terminal positioning and absence of electrostatic perturbation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:29.164263+00:00"
+}

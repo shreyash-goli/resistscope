@@ -1,0 +1,22 @@
+{
+  "drug": "DRV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "distance_from_ligand_centroid_angstrom": 13.5,
+    "min_distance_to_ligand_angstrom": 9.1,
+    "contacts_ligand_directly": false,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -9.131
+  },
+  "explanation": "The L33F mutation introduces a bulky aromatic ring at position 33 in the flap hinge region, which despite not directly contacting darunavir, creates steric strain in the local protein environment at ~9 \u00c5 from the ligand. This conformational constraint likely rigidifies or repositions the flap architecture that normally accommodates darunavir's binding through precise geometry, reducing the entropic favorability or structural complementarity of the binding interface. The loss of binding affinity reflects disrupted allosteric communication between the peripheral flap hinge and the active site, where the aromatic substitution's reduced conformational flexibility destabilizes the protein dynamics required for optimal inhibitor accommodation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:41.873707+00:00"
+}

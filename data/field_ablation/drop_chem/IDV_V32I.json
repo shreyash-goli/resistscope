@@ -1,0 +1,22 @@
+{
+  "drug": "IDV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": 0.2370000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": 0.2370000000000001,
+    "delta_g": -10.02
+  },
+  "explanation": "The V32I substitution introduces an additional methyl group on the \u03b2-carbon of the isoleucine side chain, which despite being only a single-carbon expansion, creates a steric clash with indinavir's P2/P2' ligand groups in the S2/S2' subpocket at the 4.1 \u00c5 contact distance. This subtle geometrical incompatibility disrupts optimal van der Waals packing between the inhibitor and the protease binding pocket, destabilizing the complex without completely abolishing interactions. The cumulative loss of favorable contact geometry in this critical subpocket accounts for the modest but measurable resistance phenotype.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:31.924056+00:00"
+}

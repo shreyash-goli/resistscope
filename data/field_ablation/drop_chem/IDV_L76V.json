@@ -1,0 +1,22 @@
+{
+  "drug": "IDV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": -0.5289999999999999,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.5289999999999999,
+    "delta_g": -10.786
+  },
+  "explanation": "The L76V substitution reduces indinavir binding through a destabilization of the protease scaffold rather than direct ligand contact. Leucine's larger, more extended side chain at position 76 provides favorable hydrophobic packing within the core structure; replacement with the more compact valine creates a subtle cavity that diminishes the overall rigidity and stability of the protein fold, indirectly compromising the precise geometry required for optimal indinavir positioning in the active site. This ~4.8 \u00c5 distance means the mutation doesn't directly clash with the inhibitor but instead propagates conformational strain through the protease architecture, slightly destabilizing the bound state without producing a favorable alternative conformation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:31.125275+00:00"
+}

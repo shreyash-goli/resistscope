@@ -1,0 +1,24 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket"
+  },
+  "explanation": "The V32I substitution introduces an additional methyl group that expands the hydrophobic core of the S2/S2' subpocket, creating a subtle steric incompatibility with atazanavir's binding geometry at the position where valine makes direct van der Waals contacts (4.1 \u00c5 distance). This volumetric perturbation of approximately 27 \u0172 shifts the local protein geometry in a way that forces either suboptimal packing of the inhibitor's ligand-binding elements or a repositioning that disrupts critical van der Waals interactions that stabilize the enzyme-inhibitor complex. Since the mutation preserves hydrophobicity (slight increase) and introduces no charge effects, the resistance mechanism operates purely through geometric strain rather than electrostatic repulsion, making it a classic example of steric clash-driven resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:18.711401+00:00"
+}

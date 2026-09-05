@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "G48V",
+  "condition": "full",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "volume_change": "increase",
+    "volume_change_A3": 79.9,
+    "charge_change": "none",
+    "hydrophobicity_change": 4.6,
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The G48V substitution introduces a bulky valine sidechain (~80 \u0172 increase) into the S2 subpocket at 3.2 \u00c5 from atazanavir, creating steric clash with the inhibitor's molecular scaffold that cannot be accommodated by local conformational adjustment. This unfavorable van der Waals contact destabilizes the inhibitor binding geometry, reducing favorable interactions and slightly weakening overall binding affinity. The increased hydrophobicity from glycine to valine provides minimal compensatory hydrophobic gain given the clash geometry, resulting in net resistance without requiring backbone remodeling.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:24.436155+00:00"
+}

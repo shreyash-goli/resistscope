@@ -1,0 +1,25 @@
+{
+  "drug": "NFV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.1070000000000011,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 0.1070000000000011,
+    "delta_g": -10.668
+  },
+  "explanation": "The V82A mutation creates a hydrophobic cavity defect in the protease active site by reducing side-chain volume by ~51 \u00c5\u00b3, causing nelfinavir to lose critical van der Waals contacts at the 3.3 \u00c5 interface where valine's branched methyl groups previously stabilized the inhibitor. This volume loss is particularly destabilizing because nelfinavir likely exploits the tight hydrophobic packing of the wild-type valine pocket, and the smaller alanine cannot maintain the optimal ligand-binding geometry, resulting in weakened binding entropy and enthalpic loss of favorable dispersion forces. The modest positive \u0394\u0394G reflects that while V82A is distal to the catalytic center, it compromises a secondary binding interaction essential for nelfinavir's potency.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:28.488360+00:00"
+}

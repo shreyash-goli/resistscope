@@ -1,0 +1,24 @@
+{
+  "drug": "NFV",
+  "mutation": "D30N",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 30,
+    "wt_aa": "D",
+    "mut_aa": "N",
+    "wt_residue": "Asp",
+    "mut_residue": "Asn",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.0,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 2.0,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket"
+  },
+  "explanation": "The D30N mutation eliminates a critical negative charge that normally engages nelfinavir's polar groups through electrostatic attraction, while the asparagine's neutral amide side chain cannot replicate this stabilizing interaction despite maintaining similar backbone geometry. Although the residue is positioned at the periphery of the active site (10.6 \u00c5 from ligand center), its direct contact with the inhibitor (2.0 \u00c5 minimum distance) indicates it makes localized interactions in the S2/S2' subpocket that are essential for proper ligand orientation and binding affinity. The loss of the carboxylate's electrostatic contribution, combined with asparagine's reduced capacity to form favorable polar contacts in this binding pocket region, destabilizes the nelfinavir-protease complex without causing steric incompatibility.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:06.082840+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "drug": "DRV",
+  "mutation": "I47V",
+  "condition": "full",
+  "delta_delta_g": -0.19500000000000028,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "region": "flap_region",
+    "delta_delta_g": -0.19500000000000028,
+    "delta_g": -9.207
+  },
+  "explanation": "The I47V substitution creates a ~27 \u0172 cavity in the flap region by replacing isoleucine's larger branched side chain with valine's more compact structure, reducing favorable van der Waals contacts between the inhibitor and this critical binding pocket. This loss of shape complementarity directly weakens darunavir's binding affinity despite the absence of charge redistribution, as darunavir relies on tight hydrophobic packing throughout its interaction surface with the protease. The modest decrease in local hydrophobicity further diminishes the thermodynamic favorability of inhibitor binding in this region of the flap that is essential for stabilizing the closed protease conformation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:21.176065+00:00"
+}

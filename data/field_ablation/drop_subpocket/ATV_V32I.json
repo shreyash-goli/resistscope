@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": -0.136000000000001,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.136000000000001,
+    "delta_g": -9.733
+  },
+  "explanation": "The V32I substitution introduces an extra methyl group on the isoleucine side chain that clashes sterically with atazanavir's bulky moieties within the narrow protease active site binding pocket, despite the increased hydrophobicity being marginally favorable. While the mutation maintains direct van der Waals contact with the ligand at ~4.1 \u00c5, the additional 27 \u0172 of side chain volume cannot be accommodated without displacing inhibitor atoms or forcing suboptimal binding geometry. This entropic and geometric penalty destabilizes the enzyme-drug complex enough to reduce binding affinity despite remaining in the same hydrophobic environment.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:44.892273+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "drug": "NFV",
+  "mutation": "D30N",
+  "condition": "full",
+  "delta_delta_g": -0.038000000000000256,
+  "structural_context": {
+    "position": 30,
+    "wt_aa": "D",
+    "mut_aa": "N",
+    "wt_residue": "Asp",
+    "mut_residue": "Asn",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.0,
+    "charge_change": "negative_to_neutral",
+    "hydrophobicity_change": 0.0,
+    "distance_from_ligand_centroid_angstrom": 10.6,
+    "min_distance_to_ligand_angstrom": 2.0,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.038000000000000256,
+    "delta_g": -10.813
+  },
+  "explanation": "The D30N mutation eliminates a critical negative charge at the ligand interface while maintaining a similar backbone position, removing an electrostatic interaction with nelfinavir's positively charged or polar groups that normally stabilize binding. Although the minimal volume increase allows the asparagine to occupy the same space without major steric consequences, the loss of the aspartate's carboxylate hydrogen-bonding network\u2014which can serve as both hydrogen bond acceptor and electrostatic anchor\u2014weakens the overall binding interface despite the residue's direct contact with the inhibitor. The modest destabilization (~0.04 kcal/mol) reflects that this single charge neutralization represents a partial rather than catastrophic loss of binding energy, consistent with D30N being a clinical resistance mutation that maintains some protease function while conferring selective advantage under drug pressure.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:23.050750+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "drug": "LPV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold"
+  },
+  "explanation": "The L76V mutation reduces the hydrophobic packing volume within the protease core scaffold by ~27 \u0172, creating a subtle cavity that destabilizes the precise protein geometry required for optimal lopinavir positioning rather than directly competing for binding interactions. Although L76 does not contact lopinavir directly, the loss of leucine's larger branched side chain at this scaffolding position likely propagates conformational perturbations through the protease core that compromise the spatial orientation or rigidity of nearby subsites, indirectly weakening lopinavir's binding geometry at distances of 4.8\u201314.4 \u00c5. The minimal hydrophobicity change suggests the resistance mechanism is primarily geometric rather than electrostatic, operating through loss of essential packing interactions that maintain the inhibitor-compatible protease conformation.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:20:27.211715+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "drug": "ATV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket"
+  },
+  "explanation": "The V82F substitution introduces a bulky aromatic ring into the S1/S1' subpocket that directly contacts atazanavir, causing steric clash with the inhibitor's binding pose and forcing unfavorable conformational adjustments or displacement of the drug from its optimal binding geometry. Although the mutation maintains hydrophobicity overall, the increased molecular volume (~50 \u00c5\u00b3) exceeds the available space in this constrained pocket, disrupting critical van der Waals contacts that normally stabilize atazanavir's binding. This repositioning of the inhibitor relative to the active site catalytic machinery substantially weakens binding affinity while the protease retains catalytic function against natural substrates, which can accommodate the altered subpocket architecture through their greater conformational flexibility.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:18:22.061930+00:00"
+}

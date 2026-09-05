@@ -1,0 +1,23 @@
+{
+  "drug": "LPV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.22900000000000098,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.22900000000000098,
+    "delta_g": -9.87
+  },
+  "explanation": "The V82A mutation decreases the hydrophobic surface area within the S1/S1' subpocket by ~51 \u0172, creating a cavity that reduces favorable van der Waals contacts between the bulkier valine side chain and lopinavir's nonpolar binding surface. This loss of intimate hydrophobic packing destabilizes the inhibitor-enzyme complex without introducing steric clash or electrostatic penalties, resulting in reduced binding affinity through entropic penalty and weakened dispersion interactions. The modest positive shift in binding free energy reflects the accumulated energetic cost of suboptimal molecular complementarity in a key substrate-binding region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:21:47.345767+00:00"
+}

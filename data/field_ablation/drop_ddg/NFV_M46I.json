@@ -1,0 +1,24 @@
+{
+  "drug": "NFV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "distance_from_ligand_centroid_angstrom": 14.2,
+    "min_distance_to_ligand_angstrom": 7.0,
+    "contacts_ligand_directly": false,
+    "region": "flap_region"
+  },
+  "explanation": "The M46I substitution reduces nelfinavir affinity through an indirect mechanism: the minimal volume increase (3.8 \u00c5\u00b3) combined with the slightly enhanced hydrophobicity of isoleucine causes subtle conformational repositioning of the flap region, which propagates allosteric effects to the active site 7 \u00c5 away and destabilizes the precise geometry required for optimal nelfinavir coordination. Although M46I does not directly contact nelfinavir, the methionine's longer side chain provides conformational flexibility that isoleucine's more rigid, branched structure constrains, disrupting the dynamic positioning of the substrate-binding pocket and reducing the entropic favorability of inhibitor binding.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:47.270821+00:00"
+}

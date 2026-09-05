@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "I50V",
+  "condition": "full",
+  "delta_delta_g": -0.10599999999999987,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 5.7,
+    "min_distance_to_ligand_angstrom": 2.2,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.10599999999999987,
+    "delta_g": -10.205
+  },
+  "explanation": "The I50V substitution reduces a branched hydrophobic side chain to a smaller, linear one within direct contact distance of lopinavir (2.2 \u00c5 minimum separation), creating a cavity that diminishes favorable van der Waals packing interactions between the protease and the inhibitor's binding surface. The loss of 26.7 \u0172 of buried volume\u2014coupled with a slight decrease in hydrophobicity\u2014weakens the entropic penalty for desolvation and reduces the stabilizing effect of tight hydrophobic contacts that normally contribute to lopinavir's binding energy. Although the effect is modest (~0.1 kcal/mol), this demonstrates how even subtle geometrical incompatibilities at the binding interface accumulate to modestly but measurably compromise inhibitor recognition.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:33.849112+00:00"
+}

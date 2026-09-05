@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": -0.19100000000000072,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "distance_from_ligand_centroid_angstrom": 9.3,
+    "min_distance_to_ligand_angstrom": 2.4,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.19100000000000072,
+    "delta_g": -10.448
+  },
+  "explanation": "The I84V mutation creates a cavity defect in the S2 subpocket by removing ~27 \u0172 of hydrophobic volume, forcing indinavir to adopt a suboptimal binding pose or leaving unfavorable voids that destabilize ligand contacts. Although valine maintains the hydrophobic character at this position, the loss of isoleucine's branched methyl group reduces favorable van der Waals contacts with indinavir's nonpolar side chain (evidenced by direct contact at 2.4 \u00c5), weakening the binding enthalpy despite the modest energetic penalty. This modest resistance mechanism is consistent with a \"cavity-loss\" model where the smaller, less-optimally-packed hydrophobic pocket compromises the drug's binding geometry without introducing steric clashes or electrostatic disruptions.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:58.867087+00:00"
+}

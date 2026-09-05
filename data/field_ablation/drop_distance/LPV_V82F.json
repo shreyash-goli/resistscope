@@ -1,0 +1,23 @@
+{
+  "drug": "LPV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.34299999999999997,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.34299999999999997,
+    "delta_g": -10.442
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain (~50 \u0172 expansion) into the S1/S1' subpocket that creates unfavorable steric clashes with lopinavir's inhibitor scaffold, destabilizing the drug's optimal binding pose without compensatory van der Waals interactions due to the phenyl ring's different geometry compared to valine's branched aliphatic surface. While the mutation maintains hydrophobicity in the local environment, the geometric mismatch between the enlarged, rigid aromatic residue and lopinavir's ligand-binding surface prevents the close complementary packing needed for favorable binding interactions, resulting in weakened inhibitor affinity and resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:01.088996+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": -0.11299999999999955,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.11299999999999955,
+    "delta_g": -9.125
+  },
+  "explanation": "The V32I substitution increases hydrophobic bulk within the S2/S2' subpocket where darunavir makes critical van der Waals contacts; this ~27 \u00c5\u00b3 volume expansion creates a steric clash with the inhibitor's ligand-binding interface, forcing suboptimal positioning of darunavir's P2 or P2' moieties and disrupting favorable contact geometry. Since the mutation preserves hydrophobicity while introducing additional methyl branching from valine to isoleucine, the tighter, more constrained binding pocket reduces the conformational flexibility needed for optimal inhibitor accommodation, resulting in weakened binding affinity. This modest resistance (\u22120.11 kcal/mol) reflects a subtle geometric incompatibility rather than a dramatic loss of interaction, explaining why V32I confers low-level clinical resistance to darunavir.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:53.523113+00:00"
+}

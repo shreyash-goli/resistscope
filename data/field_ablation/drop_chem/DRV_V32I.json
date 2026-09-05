@@ -1,0 +1,22 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": -0.11299999999999955,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": -0.11299999999999955,
+    "delta_g": -9.125
+  },
+  "explanation": "The V32I mutation introduces a branched \u03b2-carbon (isoleucine's additional methyl group) at position 32 in the S2/S2' subpocket, which creates a subtle steric constraint that disrupts optimal van der Waals packing between the protease and darunavir's inhibitor scaffold. Although isoleucine maintains similar overall hydrophobicity to valine, the repositioned branch chain at this ~4 \u00c5 distance from the ligand forces a minor conformational adjustment in the binding pocket that destabilizes critical hydrophobic contacts without sufficient compensatory interactions to maintain binding affinity. This modest (~0.1 kcal/mol) loss in binding free energy accumulates as a resistance mechanism, particularly relevant for darunavir which depends on precise shape complementarity within this constrained subpocket region.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:29.250156+00:00"
+}

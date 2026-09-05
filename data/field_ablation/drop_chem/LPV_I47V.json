@@ -1,0 +1,22 @@
+{
+  "drug": "LPV",
+  "mutation": "I47V",
+  "condition": "full",
+  "delta_delta_g": 0.08500000000000085,
+  "structural_context": {
+    "position": 47,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 10.5,
+    "min_distance_to_ligand_angstrom": 2.8,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": 0.08500000000000085,
+    "delta_g": -10.014
+  },
+  "explanation": "The I47V mutation reduces lopinavir binding through a subtle loss of van der Waals complementarity in the flap region. Isoleucine's larger branched methyl side chain makes closer, more favorable hydrophobic contacts with lopinavir at the 2.8 \u00c5 distance, while valine's smaller side chain creates a partial cavity that weakens these van der Waals interactions. Although the energetic penalty is modest (~0.09 kcal/mol), this represents a cumulative destabilization of the inhibitor-protease interface in a functionally critical flap region that undergoes conformational dynamics during substrate binding and catalysis.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:02.417104+00:00"
+}

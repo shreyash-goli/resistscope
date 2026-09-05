@@ -1,0 +1,25 @@
+{
+  "drug": "NFV",
+  "mutation": "N88S",
+  "condition": "full",
+  "delta_delta_g": -0.09799999999999898,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "distance_from_ligand_centroid_angstrom": 15.3,
+    "min_distance_to_ligand_angstrom": 7.3,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.09799999999999898,
+    "delta_g": -10.873
+  },
+  "explanation": "The N88S mutation reduces nelfinavir binding through an indirect conformational mechanism rather than direct contact loss. Asparagine's larger polar side chain at position 88 provides stabilizing van der Waals contacts and potential hydrogen bonding networks within the protease scaffold at ~7 \u00c5 from the ligand; replacement with the smaller, less polar serine creates a cavity that destabilizes the local protein fold, propagating subtle conformational changes that disrupt the precise geometry of nelfinavir's binding pocket. This structural perturbation\u2014evidenced by the ~25 \u00c5\u00b3 volume decrease\u2014compromises the optimal positioning of neighboring residues critical for nelfinavir recognition despite N88 itself making no direct ligand contacts.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:36.371729+00:00"
+}

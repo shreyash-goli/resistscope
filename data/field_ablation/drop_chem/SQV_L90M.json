@@ -1,0 +1,22 @@
+{
+  "drug": "SQV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": 0.379999999999999,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": 0.379999999999999,
+    "delta_g": -11.15
+  },
+  "explanation": "The L90M substitution introduces a flexible sulfur-containing side chain at position 90 that disrupts the hydrophobic packing environment critical for saquinavir stabilization in the C-terminal dimer region. Although the mutation does not directly contact the ligand, the longer, more polar methionine displaces the compact leucine scaffold, creating unfavorable geometric rearrangements in the protease backbone approximately 8 \u00c5ngstr\u00f6ms away that propagate to destabilize the inhibitor's binding pocket through loss of van der Waals contacts and compromised subpocket geometry. This allosteric effect reduces binding affinity despite the mutation's peripheral location, highlighting how structural integrity of the protease core depends on hydrophobic residue conservation even at secondary sites.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:09.911259+00:00"
+}

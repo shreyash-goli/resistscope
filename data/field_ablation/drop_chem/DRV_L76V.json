@@ -1,0 +1,22 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The L76V mutation reduces darunavir binding through an indirect allosteric mechanism in the protease core scaffold. The leucine-to-valine substitution removes a methyl group from the hydrophobic side chain, subtly weakening van der Waals packing interactions within the protein core approximately 4.8 \u00c5 from the inhibitor; this localized destabilization propagates through the scaffold to perturb the geometry or conformational dynamics of the darunavir binding pocket, diminishing favorable contacts without directly displacing the ligand. Though the mutation is distant from direct inhibitor contact (14.4 \u00c5 from ligand centroid), the loss of hydrophobic bulk in this core structural element compromises the rigid architecture required for optimal darunavir positioning, resulting in weaker overall binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:28.296392+00:00"
+}

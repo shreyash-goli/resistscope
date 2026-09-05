@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": -0.5030000000000001,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.9,
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.5030000000000001,
+    "delta_g": -10.1
+  },
+  "explanation": "The L90M substitution reduces atazanavir binding despite minimal volume change because the introduction of a polar sulfur atom in methionine's thioether side chain creates a localized hydrophobic deficit at position 90, which lies ~8 \u00c5 from the ligand in a region that contributes to the hydrophobic binding pocket architecture. Although the mutation does not directly contact atazanavir, the loss of ~2 kcal/mol in hydrophobicity destabilizes the optimal positioning of surrounding residues that form the inhibitor's binding cavity, effectively reducing the complementarity of the protease active site pocket. This allosteric effect propagates through the binding interface, weakening van der Waals interactions between atazanavir and multiple residues in the S1/S1' subsites rather than causing direct steric clash.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:26:10.572792+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "drug": "LPV",
+  "mutation": "I50V",
+  "condition": "full",
+  "delta_delta_g": -0.10599999999999987,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "region": "flap_region",
+    "delta_delta_g": -0.10599999999999987,
+    "delta_g": -10.205
+  },
+  "explanation": "The I50V mutation creates a small hydrophobic cavity in the flap region by replacing isoleucine's larger branched side chain with valine's more compact structure, reducing van der Waals contact surface between the protease and lopinavir's inhibitor scaffold. This ~27 \u0172 volume loss weakens the enthalpic contribution from hydrophobic packing interactions that normally stabilize the inhibitor within the binding pocket, particularly affecting lopinavir's accommodation in the S1/S1' subpocket adjacent to position 50. The modest energetic penalty (0.11 kcal/mol) reflects that while this loss of favorable van der Waals contacts provides measurable resistance, the flap region's structural flexibility allows the protease to partially compensate through modest conformational adjustment.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:38.339182+00:00"
+}

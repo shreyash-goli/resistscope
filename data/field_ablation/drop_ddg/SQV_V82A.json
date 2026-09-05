@@ -1,0 +1,24 @@
+{
+  "drug": "SQV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket"
+  },
+  "explanation": "The V82A mutation reduces saquinavir binding primarily through loss of critical van der Waals contacts in the S1/S1' subpocket, where valine's larger branched hydrophobic side chain directly contacts the ligand at only 3.3 \u00c5. Substitution with alanine's smaller methyl group creates a cavity that destabilizes the inhibitor's positioning, diminishing favorable hydrophobic interactions while potentially allowing saquinavir to adopt suboptimal conformations that reduce binding affinity. This local packing defect in a region directly engaged by the drug is particularly consequential because it perturbs the precise spatial accommodation required for saquinavir's bulky aromatic and amide moieties to achieve optimal interactions within the protease active site.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:18:18.922615+00:00"
+}

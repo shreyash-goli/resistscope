@@ -1,0 +1,22 @@
+{
+  "drug": "DRV",
+  "mutation": "I50V",
+  "condition": "full",
+  "delta_delta_g": 0.1850000000000005,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 5.7,
+    "min_distance_to_ligand_angstrom": 2.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": 0.1850000000000005,
+    "delta_g": -8.827
+  },
+  "explanation": "The I50V mutation reduces darunavir binding by eliminating favorable van der Waals contacts in the flap region. Isoleucine's larger branched side chain at position 50 makes extensive hydrophobic interactions with darunavir (minimum distance 2.2 \u00c5), while valine's smaller, more compact structure creates a cavity that weakens these critical van der Waals packing interactions at the flap-inhibitor interface. This reduction in favorable van der Waals complementarity destabilizes the bound conformation without introducing steric clashes or compensatory interactions, resulting in modest but meaningful loss of binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:11.497459+00:00"
+}

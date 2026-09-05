@@ -1,0 +1,25 @@
+{
+  "drug": "IDV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": -0.5289999999999999,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "distance_from_ligand_centroid_angstrom": 14.4,
+    "min_distance_to_ligand_angstrom": 4.8,
+    "contacts_ligand_directly": false,
+    "delta_delta_g": -0.5289999999999999,
+    "delta_g": -10.786
+  },
+  "explanation": "The L76V substitution creates a ~27 \u0172 cavity in the S2 subpocket region by replacing leucine's larger branched aliphatic side chain with valine's more compact structure, destabilizing the hydrophobic packing interactions that normally anchor indinavir's binding geometry. Although the mutation is positioned 4.8 \u00c5 from the ligand, this distance-dependent loss of van der Waals contacts with indinavir's nonpolar surface\u2014combined with the slight decrease in local hydrophobicity\u2014reduces the favorable binding enthalpic contributions without compensatory entropic gains, resulting in measurable resistance. The indirect mechanism through subpocket geometry reorganization explains why this peripherally-positioned mutation still significantly weakens inhibitor affinity despite not directly competing for active site contacts.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:27:52.129419+00:00"
+}

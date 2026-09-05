@@ -1,0 +1,24 @@
+{
+  "drug": "DRV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket"
+  },
+  "explanation": "The V32I mutation introduces a ~27 \u0172 volume expansion in the S2/S2' subpocket while maintaining hydrophobic character, creating a steric clash that directly impedes darunavir positioning at a critical contact point only 4.1 \u00c5 from the ligand. The enlarged isoleucine side chain disrupts the precise van der Waals packing geometry that darunavir requires for optimal binding in this constrained region, forcing the inhibitor into a suboptimal conformation or partial displacement that destabilizes the inhibitor-protease complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:21.540365+00:00"
+}

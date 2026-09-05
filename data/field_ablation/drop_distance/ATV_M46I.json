@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "M46I",
+  "condition": "full",
+  "delta_delta_g": 0.09199999999999875,
+  "structural_context": {
+    "position": 46,
+    "wt_aa": "M",
+    "mut_aa": "I",
+    "wt_residue": "Met",
+    "mut_residue": "Ile",
+    "volume_change": "minimal",
+    "volume_change_A3": 3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.6,
+    "region": "flap_region",
+    "delta_delta_g": 0.09199999999999875,
+    "delta_g": -9.505
+  },
+  "explanation": "The M46I substitution reduces atazanavir binding through a subtle but consequential loss of favorable hydrophobic interactions in the flap region. Methionine's longer, more flexible sulfur-containing side chain makes optimal van der Waals contacts with atazanavir's nonpolar moieties, while isoleucine's shorter, branched aliphatic side chain creates a marginal geometric mismatch that slightly weakens these hydrophobic interactions without causing steric clash. Although the volume increase is minimal, the decreased hydrophobicity combined with the flap region's critical role in inhibitor binding pocket geometry results in a measurable destabilization of the enzyme-inhibitor complex, conferring modest resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:08.552021+00:00"
+}

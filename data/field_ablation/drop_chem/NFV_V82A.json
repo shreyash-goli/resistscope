@@ -1,0 +1,22 @@
+{
+  "drug": "NFV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.1070000000000011,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.1070000000000011,
+    "delta_g": -10.668
+  },
+  "explanation": "The V82A mutation reduces nelfinavir affinity by diminishing critical van der Waals contacts within the S1/S1' subpocket: valine's larger branched hydrophobic side chain makes favorable close-range interactions with the inhibitor at ~3.3 \u00c5, while alanine's smaller methyl group cannot maintain equivalent contact surface area, creating a binding pocket mismatch. This loss of favorable hydrophobic complementarity\u2014despite the mutation occurring at a pocket-distal region (10.3 \u00c5 from ligand centroid)\u2014indicates that V82 contributes distributed stabilizing interactions rather than a single critical contact, making the binding interface less thermodynamically favorable overall.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:26.321198+00:00"
+}

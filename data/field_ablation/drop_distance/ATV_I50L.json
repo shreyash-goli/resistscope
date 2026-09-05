@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "I50L",
+  "condition": "full",
+  "delta_delta_g": -0.09500000000000064,
+  "structural_context": {
+    "position": 50,
+    "wt_aa": "I",
+    "mut_aa": "L",
+    "wt_residue": "Ile",
+    "mut_residue": "Leu",
+    "volume_change": "minimal",
+    "volume_change_A3": 0.0,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.7,
+    "region": "flap_region",
+    "delta_delta_g": -0.09500000000000064,
+    "delta_g": -9.692
+  },
+  "explanation": "The I50L mutation reduces atazanavir binding through a subtle loss of hydrophobic complementarity in the flap region rather than through steric disruption. Isoleucine's branched \u03b2-carbon creates favorable van der Waals contacts with atazanavir's nonpolar binding surface, while leucine's linear side chain is less able to fill this binding pocket optimally, reducing van der Waals interaction energy despite maintaining the same overall volume. This localized decrease in hydrophobic packing efficiency in a critical flap contact region weakens inhibitor engagement without introducing compensatory favorable interactions, resulting in modest but measurable resistance.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:40.838843+00:00"
+}

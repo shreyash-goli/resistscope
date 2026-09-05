@@ -1,0 +1,22 @@
+{
+  "drug": "SQV",
+  "mutation": "G48V",
+  "condition": "full",
+  "delta_delta_g": 0.39700000000000024,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": 0.39700000000000024,
+    "delta_g": -11.133
+  },
+  "explanation": "The G48V substitution replaces a conformationally flexible glycine with the bulkier valine residue in the flap region, introducing steric clash with saquinavir at the 3.2 \u00c5ngstrom contact interface. This restricted backbone flexibility impairs the flap's dynamic repositioning during inhibitor binding, a critical conformational adaptation required for optimal saquinavir accommodation in the protease active site. The unfavorable entropic and steric cost of accommodating the valine's methyl groups destabilizes the inhibitor-bound state, reducing binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:07.449655+00:00"
+}

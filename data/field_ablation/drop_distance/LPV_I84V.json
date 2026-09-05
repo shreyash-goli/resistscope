@@ -1,0 +1,23 @@
+{
+  "drug": "LPV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": 0.34800000000000075,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.34800000000000075,
+    "delta_g": -9.751
+  },
+  "explanation": "The I84V mutation reduces a critical hydrophobic contact by removing ~27 \u0172 of side-chain volume from the S1/S1' subpocket, weakening van der Waals interactions between the isoleucyl methyl groups and lopinavir's nonpolar scaffold. This volumetric loss is compounded by the slight decrease in hydrophobicity, resulting in suboptimal packing geometry within the binding pocket and destabilization of the inhibitor-protein interface. The substitution essentially creates additional void space that lopinavir cannot fully exploit for favorable interactions, translating to measurably weaker binding affinity despite the absence of steric clashes or electrostatic perturbations.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:16.943215+00:00"
+}

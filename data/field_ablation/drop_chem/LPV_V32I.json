@@ -1,0 +1,22 @@
+{
+  "drug": "LPV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": 0.6620000000000008,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket",
+    "delta_delta_g": 0.6620000000000008,
+    "delta_g": -9.437
+  },
+  "explanation": "The V32I mutation introduces a branched methyl group on the \u03b2-carbon of isoleucine, which creates a steric clash with lopinavir despite the minimal increase in side-chain volume. At 4.1 \u00c5 from the ligand, this repositioned branching alters the precise van der Waals packing geometry in the S2/S2' subpocket, destabilizing optimal contacts that wild-type valine maintains with the inhibitor's backbone or side chains. The conformational rigidity imposed by isoleucine's branched topology forces suboptimal positioning of either the residue itself or compensatory shifts in lopinavir orientation, collectively reducing binding entropy and favorable interactions without completely abolishing contact.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:35.019032+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "drug": "IDV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": -0.5289999999999999,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.5289999999999999,
+    "delta_g": -10.786
+  },
+  "explanation": "The L76V mutation reduces a bulky leucine to a smaller valine in the protease core scaffold, creating a ~27 \u0172 cavity that destabilizes indinavir binding through loss of critical van der Waals contacts between the inhibitor's nonpolar surface and the protease hydrophobic interior. This volumetric deficit in the S1/S1' binding pocket region diminishes the favorable hydrophobic packing interactions that normally stabilize indinavir's binding pose, resulting in weakened overall affinity. The modest hydrophobicity decrease accompanying this substitution further compromises the desolvation penalty compensation that indinavir relies upon for favorable binding thermodynamics.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:56.302748+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "I54M",
+  "condition": "full",
+  "delta_delta_g": -0.13700000000000045,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "volume_change": "minimal",
+    "volume_change_A3": -3.8,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.6,
+    "region": "flap_region",
+    "delta_delta_g": -0.13700000000000045,
+    "delta_g": -9.734
+  },
+  "explanation": "The I54M substitution reduces atazanavir binding through a subtle loss of hydrophobic contacts rather than steric disruption. Isoleucine's branched aliphatic side chain provides optimal van der Waals packing within the flap region's binding cavity, while methionine's longer, linear thioether chain\u2014despite maintaining similar overall volume\u2014creates a less efficient hydrophobic interface with the inhibitor's nonpolar surface. This modest (~3.8 \u0172) volume reduction combined with decreased hydrophobicity (-2.6 units) results in weakened dispersion interactions between the inhibitor and the protease flap, manifesting as reduced binding affinity that escapes strong enthalpic compensation in the overall free energy.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:43.902813+00:00"
+}

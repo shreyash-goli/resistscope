@@ -1,0 +1,22 @@
+{
+  "drug": "NFV",
+  "mutation": "L90M",
+  "condition": "full",
+  "delta_delta_g": -0.15499999999999936,
+  "structural_context": {
+    "position": 90,
+    "wt_aa": "L",
+    "mut_aa": "M",
+    "wt_residue": "Leu",
+    "mut_residue": "Met",
+    "distance_from_ligand_centroid_angstrom": 16.0,
+    "min_distance_to_ligand_angstrom": 8.2,
+    "contacts_ligand_directly": false,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.15499999999999936,
+    "delta_g": -10.93
+  },
+  "explanation": "The L90M substitution at position 90 causes modest nelfinavir resistance through an indirect allosteric mechanism rather than direct active site disruption, as the mutation site is 8.2 \u00c5 from the ligand and makes no direct contacts. The replacement of leucine's branched aliphatic side chain with methionine's longer, more flexible thioether chain likely alters the conformational dynamics of the C-terminal dimer interface, subtly destabilizing the protease geometry necessary for optimal nelfinavir accommodation within the binding pocket. This conformational perturbation propagates to disrupt the precise orientation of active site residues that form critical van der Waals and hydrogen bonding interactions with nelfinavir's backbone and functional groups, reducing binding affinity without eliminating it entirely.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:30:07.210694+00:00"
+}

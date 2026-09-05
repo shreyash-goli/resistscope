@@ -1,0 +1,22 @@
+{
+  "drug": "ATV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.23399999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.23399999999999999,
+    "delta_g": -9.831
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic ring into the S1/S1' subpocket, where valine's minimal branched side chain normally fits snugly at 3.3 \u00c5 from atazanavir. This larger phenylalanine creates a steric clash that destabilizes the inhibitor's binding pose, forcing a conformational adjustment that disrupts optimal van der Waals contacts with the ligand and surrounding protease geometry. The aromatic side chain's rigidity and increased hydrophobic footprint fundamentally alter the subpocket's shape, reducing the complementarity that atazanavir achieved with the wild-type protease despite the apparent modest energetic cost.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:29:31.878362+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "drug": "LPV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.34299999999999997,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": -0.34299999999999997,
+    "delta_g": -10.442
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic ring that creates steric clash with lopinavir's binding pose, despite the favorable hydrophobic environment; the 50 \u0172 volume increase forces unfavorable repositioning of the inhibitor or displacement of ordered water molecules that normally mediate binding interactions. The direct contact at 3.3 \u00c5 distance indicates the phenyl ring's rigid geometry disrupts critical van der Waals contacts that wild-type valine maintains, and the loss of hydrophobic complementarity (reduced by 1.4 units) further destabilizes the binding interface even as the mutation preserves the hydrophobic character of the pocket.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:41.061612+00:00"
+}

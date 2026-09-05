@@ -1,0 +1,22 @@
+{
+  "drug": "ATV",
+  "mutation": "G48V",
+  "condition": "full",
+  "delta_delta_g": -0.4009999999999998,
+  "structural_context": {
+    "position": 48,
+    "wt_aa": "G",
+    "mut_aa": "V",
+    "wt_residue": "Gly",
+    "mut_residue": "Val",
+    "distance_from_ligand_centroid_angstrom": 8.2,
+    "min_distance_to_ligand_angstrom": 3.2,
+    "contacts_ligand_directly": true,
+    "region": "flap_region",
+    "delta_delta_g": -0.4009999999999998,
+    "delta_g": -9.998
+  },
+  "explanation": "The G48V mutation introduces a branched aliphatic side chain (valine) at position 48 in the protease flap region, which creates unfavorable van der Waals clashes with atazanavir at the close contact distance of 3.2 \u00c5 where direct ligand interactions occur. Glycine's lack of a side chain permits the flap to adopt conformations optimal for inhibitor binding, whereas valine's \u03b2-branched structure sterically constrains flap positioning and forces the inhibitor into a suboptimal binding geometry. This conformational rigidity and steric incompatibility weakens the binding interface despite the residue's proximity to the active site, thereby reducing the thermodynamic stability of the atazanavir-protease complex.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:05.045042+00:00"
+}

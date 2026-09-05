@@ -1,0 +1,23 @@
+{
+  "drug": "DRV",
+  "mutation": "L33F",
+  "condition": "full",
+  "delta_delta_g": -0.11899999999999977,
+  "structural_context": {
+    "position": 33,
+    "wt_aa": "L",
+    "mut_aa": "F",
+    "wt_residue": "Leu",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 23.2,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.0,
+    "region": "flap_hinge_region",
+    "delta_delta_g": -0.11899999999999977,
+    "delta_g": -9.131
+  },
+  "explanation": "The L33F substitution introduces a bulky aromatic ring within the flap hinge region that creates a steric clash with darunavir's inhibitor scaffold, destabilizing the bound conformation by ~0.12 kcal/mol. Although the mutation maintains the hydrophobic character of the subpocket, the 23 \u0172 volume increase from the additional aromatic ring forces unfavorable van der Waals contacts or requires darunavir to adopt a suboptimal binding geometry that reduces complementarity with the protease active site. The loss of conformational flexibility in the flap region, a critical gating element, may also restrict the inhibitor's accessible binding modes, further compromising inhibitor occupancy despite the mutation preserving the overall hydrophobic environment.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:05.911662+00:00"
+}

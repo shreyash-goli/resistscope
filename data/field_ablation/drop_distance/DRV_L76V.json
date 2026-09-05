@@ -1,0 +1,23 @@
+{
+  "drug": "DRV",
+  "mutation": "L76V",
+  "condition": "full",
+  "delta_delta_g": -0.3330000000000002,
+  "structural_context": {
+    "position": 76,
+    "wt_aa": "L",
+    "mut_aa": "V",
+    "wt_residue": "Leu",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.4,
+    "region": "core_scaffold",
+    "delta_delta_g": -0.3330000000000002,
+    "delta_g": -9.345
+  },
+  "explanation": "The L76V mutation reduces a hydrophobic side chain within the protease core scaffold, creating a ~27 \u0172 cavity that darunavir cannot fully occupy, weakening van der Waals contacts that normally stabilize the inhibitor's binding pose. Although the charge remains neutral and hydrophobicity decreases only marginally, the substantial loss of bulk in this scaffolding region destabilizes the rigid geometry required for optimal complementarity between the inhibitor and the binding pocket. This structural relaxation likely permits compensatory backbone or loop movements that subtly reorient the active site geometry away from darunavir's fixed pharmacophore, explaining the modest but consistent resistance phenotype.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:23:53.495084+00:00"
+}

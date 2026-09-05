@@ -1,0 +1,23 @@
+{
+  "drug": "NFV",
+  "mutation": "N88S",
+  "condition": "full",
+  "delta_delta_g": -0.09799999999999898,
+  "structural_context": {
+    "position": 88,
+    "wt_aa": "N",
+    "mut_aa": "S",
+    "wt_residue": "Asn",
+    "mut_residue": "Ser",
+    "volume_change": "decrease",
+    "volume_change_A3": -25.1,
+    "charge_change": "none",
+    "hydrophobicity_change": 2.7,
+    "region": "C_terminal_dimer_region",
+    "delta_delta_g": -0.09799999999999898,
+    "delta_g": -10.873
+  },
+  "explanation": "The N88S mutation reduces nelfinavir binding primarily through loss of a critical hydrogen-bonding interaction, as asparagine's polar side chain is replaced by serine's shorter hydroxyl group, which cannot maintain the same geometric orientation or strength of contact with the inhibitor in the C-terminal dimer region. The concurrent 25 \u0172 decrease in side-chain volume creates a small cavity that destabilizes favorable van der Waals contacts between the inhibitor and this binding pocket, weakening the overall binding interface despite the modest energetic penalty. The increased hydrophobicity of serine cannot compensate for these losses, as nelfinavir binding relies more heavily on the specific polar interactions that asparagine provides at this structural position.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:47.946329+00:00"
+}

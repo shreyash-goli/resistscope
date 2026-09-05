@@ -1,0 +1,23 @@
+{
+  "drug": "ATV",
+  "mutation": "I84V",
+  "condition": "full",
+  "delta_delta_g": 0.39700000000000024,
+  "structural_context": {
+    "position": 84,
+    "wt_aa": "I",
+    "mut_aa": "V",
+    "wt_residue": "Ile",
+    "mut_residue": "Val",
+    "volume_change": "decrease",
+    "volume_change_A3": -26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": -0.3,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": 0.39700000000000024,
+    "delta_g": -9.2
+  },
+  "explanation": "The I84V mutation reduces the hydrophobic packing efficiency within the S1/S1' subpocket by eliminating ~27 \u0172 of nonpolar surface area, which atazanavir relies upon for favorable van der Waals contacts to stabilize its binding pose. This loss of bulk from isoleucine's larger branched side chain to valine's more compact structure creates a hydrophobic void that weakens the drug's interactions with the protease pocket without introducing steric clash, effectively destabilizing the inhibitor-enzyme complex. The modest reduction in hydrophobicity combined with the significant volume loss means atazanavir cannot optimize its binding geometry as effectively, resulting in the observed weakening of binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:22:07.026322+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "drug": "LPV",
+  "mutation": "I54M",
+  "condition": "full",
+  "delta_delta_g": 0.3100000000000005,
+  "structural_context": {
+    "position": 54,
+    "wt_aa": "I",
+    "mut_aa": "M",
+    "wt_residue": "Ile",
+    "mut_residue": "Met",
+    "distance_from_ligand_centroid_angstrom": 11.9,
+    "min_distance_to_ligand_angstrom": 6.7,
+    "contacts_ligand_directly": false,
+    "region": "flap_region",
+    "delta_delta_g": 0.3100000000000005,
+    "delta_g": -9.789
+  },
+  "explanation": "The I54M mutation reduces lopinavir binding through a loss of optimal van der Waals packing in the flap region. Isoleucine's branched aliphatic side chain at position 54 provides favorable hydrophobic contacts with lopinavir's nonpolar surface elements at ~6.7 \u00c5 distance, while methionine's longer, more flexible thioether chain cannot maintain the same tight packing geometry and creates a suboptimal interaction surface. This geometric mismatch in the flap pocket\u2014a critical region for protease inhibitor binding\u2014destabilizes the inhibitor's bound conformation without disrupting direct hydrogen bonds or creating steric clashes, resulting in measurable loss of binding affinity.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:31:25.015680+00:00"
+}

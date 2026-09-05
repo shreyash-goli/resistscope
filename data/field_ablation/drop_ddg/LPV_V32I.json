@@ -1,0 +1,24 @@
+{
+  "drug": "LPV",
+  "mutation": "V32I",
+  "condition": "full",
+  "delta_delta_g": null,
+  "structural_context": {
+    "position": 32,
+    "wt_aa": "V",
+    "mut_aa": "I",
+    "wt_residue": "Val",
+    "mut_residue": "Ile",
+    "volume_change": "increase",
+    "volume_change_A3": 26.7,
+    "charge_change": "none",
+    "hydrophobicity_change": 0.3,
+    "distance_from_ligand_centroid_angstrom": 10.7,
+    "min_distance_to_ligand_angstrom": 4.1,
+    "contacts_ligand_directly": true,
+    "region": "S2_S2prime_subpocket"
+  },
+  "explanation": "The V32I mutation introduces a branched isoleucyl side chain that increases hydrophobic volume within the S2/S2' subpocket, creating a steric clash with lopinavir's bound conformation at the 4.1 \u00c5 contact interface. This volumetric expansion (26.7 \u0172) forces lopinavir into a suboptimal binding geometry, disrupting favorable van der Waals contacts and reducing the complementarity between the inhibitor's molecular surface and the protease binding pocket. The spatial constraint imposed by the longer, branched architecture of isoleucine thus destabilizes the inhibitor-bound state without significantly altering the electrostatic environment, lowering binding affinity through entropic and van der Waals penalty rather than direct electrostatic incompatibility.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:19:27.651145+00:00"
+}

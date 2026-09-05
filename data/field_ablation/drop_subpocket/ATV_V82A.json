@@ -1,0 +1,25 @@
+{
+  "drug": "ATV",
+  "mutation": "V82A",
+  "condition": "full",
+  "delta_delta_g": 0.911999999999999,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "A",
+    "wt_residue": "Val",
+    "mut_residue": "Ala",
+    "volume_change": "decrease",
+    "volume_change_A3": -51.4,
+    "charge_change": "none",
+    "hydrophobicity_change": -2.4,
+    "distance_from_ligand_centroid_angstrom": 10.3,
+    "min_distance_to_ligand_angstrom": 3.3,
+    "contacts_ligand_directly": true,
+    "delta_delta_g": 0.911999999999999,
+    "delta_g": -8.685
+  },
+  "explanation": "The V82A mutation reduces a bulky hydrophobic side chain to a smaller methyl group, creating a ~51 \u0172 cavity in the protease binding pocket that atazanavir normally occupies through van der Waals contacts. This loss of favorable hydrophobic packing at the 3.3 \u00c5 interface destabilizes the inhibitor's binding geometry, particularly disrupting the optimized van der Waals envelope that atazanavir relies on for tight binding in this critical subpocket. The reduced hydrophobicity (\u0394-2.4) further weakens the desolvation penalty compensation that normally drives inhibitor binding, collectively accounting for the ~0.9 kcal/mol binding penalty.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:25:16.072971+00:00"
+}

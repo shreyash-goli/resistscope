@@ -1,0 +1,23 @@
+{
+  "drug": "IDV",
+  "mutation": "V82F",
+  "condition": "full",
+  "delta_delta_g": -0.9879999999999995,
+  "structural_context": {
+    "position": 82,
+    "wt_aa": "V",
+    "mut_aa": "F",
+    "wt_residue": "Val",
+    "mut_residue": "Phe",
+    "volume_change": "increase",
+    "volume_change_A3": 49.9,
+    "charge_change": "none",
+    "hydrophobicity_change": -1.4,
+    "region": "S1_S1prime_subpocket",
+    "delta_delta_g": -0.9879999999999995,
+    "delta_g": -11.245
+  },
+  "explanation": "The V82F mutation introduces a bulky aromatic side chain into the S1/S1' subpocket, creating unfavorable steric clashes with indinavir's P1/P1' moieties that are geometrically incompatible with the inhibitor's binding geometry in this confined pocket. Although the phenylalanine is more hydrophobic than valine, this property advantage is outweighed by the ~50 \u0172 volume increase, which forces conformational displacement of the inhibitor or destabilizes its optimal positioning without compensatory polar interactions. The loss of binding energy reflects disruption of the precise spatial complementarity required for indinavir's potent inhibition, rather than elimination of favorable contacts.",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-07-30T20:21:58.418240+00:00"
+}
