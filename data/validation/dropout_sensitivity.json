@@ -1,0 +1,30 @@
+[
+  {
+    "target": "protease",
+    "n_attempted": 1597,
+    "n_excluded": 6,
+    "excl_frac": 0.003757044458359424,
+    "drm_rate_excluded": 0.0,
+    "drm_rate_kept": 0.12256442489000628,
+    "n_drms_excluded": 0,
+    "fisher_p": 1.0,
+    "odds_ratio": 0.0,
+    "roc_observed": 0.509916611564176,
+    "roc_worst_case": 0.5077343721423607,
+    "roc_median_impute": 0.509863199092871
+  },
+  {
+    "target": "RT",
+    "n_attempted": 1366,
+    "n_excluded": 97,
+    "excl_frac": 0.07101024890190337,
+    "drm_rate_excluded": 0.0,
+    "drm_rate_kept": 0.08983451536643026,
+    "n_drms_excluded": 0,
+    "fisher_p": 0.00036332148266782444,
+    "odds_ratio": 0.0,
+    "roc_observed": 0.6950634161160476,
+    "roc_worst_case": 0.6412126562412422,
+    "roc_median_impute": 0.6949021915811895
+  }
+]
