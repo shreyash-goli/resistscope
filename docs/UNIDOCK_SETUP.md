@@ -55,7 +55,7 @@ gitignored, so either **regenerate** them (self-contained) or **copy** them.
 
 **Regenerate (recommended — reproducible):**
 ```bash
-git clone <repo> && cd gladstone-hackathon
+git clone <repo> && cd resistscope
 conda env create -f environment.yml && conda activate resistscope
 python -m pip install gemmi                     # meeko needs it (see README)
 python scripts/01_download_data.py              # Rhee dataset + 3OXC
@@ -130,4 +130,4 @@ Uni-Dock's `--gpu_batch` batches *many ligands against one receptor*. The curren
 backend calls Uni-Dock once per (drug, receptor) — already GPU-fast, but a future
 optimization is to invert the loop (iterate receptors, batch all 6 drugs per
 receptor via `--gpu_batch`) to exploit Uni-Dock's ligand batching. Left as an
-enhancement; not required for the hackathon.
+enhancement; not required to reproduce the paper.

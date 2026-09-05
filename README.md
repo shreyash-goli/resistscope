@@ -21,8 +21,7 @@ answer two questions that are usually asked separately:
 The method is **target-agnostic**: it ships validated on **HIV-1 protease**
 (Rhee et al. 2006, Stanford HIVdb), is wired end-to-end for **HIV-1 reverse
 transcriptase**, and a Claude agent stands up a brand-new target — influenza
-neuraminidase, SARS-CoV-2 Mpro, whatever PDB/mmCIF you upload — in seconds. Built
-for the *Built with Claude: Life Sciences* hackathon (Gladstone Institutes).
+neuraminidase, SARS-CoV-2 Mpro, whatever PDB/mmCIF you upload — in seconds.
 
 **Who it's for.** An antiviral medicinal chemist has 20 candidate inhibitors
 (for HIV protease, SARS-CoV-2 Mpro, influenza NA — pick a target) and needs to
